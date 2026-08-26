@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>YouTube | KIM SOO HYUN STREAM</title>
+
+    <meta
+            name="description"
+            content="Kim Soo Hyun YouTube archive."
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =========================================================
+           YouTube Archive
+           ========================================================= */
+
+        .youtube-page {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px 80px;
+        }
+
+
+        /* ---------------------------------------------------------
+           Page Header
+           --------------------------------------------------------- */
+
+        .archive-page-head {
+            padding: 70px 0 40px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .archive-page-head .eyebrow {
+            margin-bottom: 10px;
+        }
+
+        .archive-page-head h1 {
+            margin: 0;
+            font-size: clamp(32px, 5vw, 52px);
+            letter-spacing: -0.04em;
+        }
+
+        .archive-page-head p {
+            margin: 14px 0 0;
+            color: #777;
+        }
+
+
+        /* ---------------------------------------------------------
+           Toolbar
+           --------------------------------------------------------- */
+
+        .archive-toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 24px 0;
+        }
+
+        .archive-count {
+            color: #777;
+            font-size: 14px;
+        }
+
+        .archive-count strong {
+            color: #111;
+        }
+
+        .sort-select {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fff;
+            padding: 9px 12px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+
+        /* ---------------------------------------------------------
+           Video Grid
+           --------------------------------------------------------- */
+
+        .youtube-grid {
+            display: grid;
+            grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+            gap: 30px 20px;
+        }
+
+
+        /* ---------------------------------------------------------
+           Video Card
+           --------------------------------------------------------- */
+
+        .video-card {
+            display: block;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .video-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            background: #eee;
+            border-radius: 10px;
+        }
+
+        .video-thumb img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .3s ease;
+        }
+
+        .video-card:hover .video-thumb img {
+            transform: scale(1.035);
+        }
+
+        .play-button {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 48px;
+            height: 34px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 9px;
+
+            background: rgba(255,255,255,.94);
+            color: #111;
+
+            font-size: 15px;
+        }
+
+
+        /* ---------------------------------------------------------
+           Video Information
+           --------------------------------------------------------- */
+
+        .video-info {
+            padding-top: 13px;
+        }
+
+        .video-title {
+            margin: 0;
+
+            font-size: 15px;
+            line-height: 1.45;
+            font-weight: 600;
+
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .video-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+
+            margin-top: 8px;
+
+            color: #888;
+            font-size: 12px;
+        }
+
+        .video-views {
+            color: #333;
+            font-weight: 600;
+        }
+
+        .view-increase {
+            color: #777;
+        }
+
+
+        /* ---------------------------------------------------------
+           Loading / Error
+           --------------------------------------------------------- */
+
+        .loading {
+            grid-column: 1 / -1;
+
+            padding: 80px 20px;
+
+            text-align: center;
+            color: #888;
+        }
+
+
+        /* ---------------------------------------------------------
+           Mobile
+           --------------------------------------------------------- */
+
+        @media (max-width: 1000px) {
+
+            .youtube-grid {
+                grid-template-columns:
+          repeat(3, minmax(0, 1fr));
+            }
+        }
+
+
+        @media (max-width: 700px) {
+
+            .youtube-page {
+                padding: 0 16px 60px;
+            }
+
+            .archive-page-head {
+                padding: 45px 0 30px;
+            }
+
+            .archive-toolbar {
+                padding: 18px 0;
+            }
+
+            .youtube-grid {
+                grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+
+                gap: 25px 12px;
+            }
+
+            .video-thumb {
+                border-radius: 7px;
+            }
+
+            .play-button {
+                width: 38px;
+                height: 28px;
+                border-radius: 7px;
+                font-size: 12px;
+            }
+
+            .video-title {
+                font-size: 13px;
+            }
+
+            .video-meta {
+                font-size: 11px;
+                gap: 5px;
+            }
+        }
+
+
+        @media (max-width: 420px) {
+
+            .youtube-grid {
+                gap: 22px 10px;
+            }
+
+            .archive-toolbar {
+                align-items: flex-start;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+<!-- =========================================================
+     Header
+     ========================================================= -->
+
+<header class="site-header">
+
+    <div class="brand">
+
+        <a
+                href="index.html"
+                style="color:inherit;text-decoration:none;"
+        >
+            <strong>KIM SOO HYUN STREAM</strong>
+        </a>
+
+        <span>
+        김수현 공식 영상 · 인스타그램 · 트위터 아카이브
+      </span>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     Main
+     ========================================================= -->
+
+<main class="youtube-page">
+
+
+    <!-- Page Header -->
+
+    <section class="archive-page-head">
+
+        <p class="eyebrow">
+            YOUTUBE ARCHIVE
+        </p>
+
+        <h1>
+            YOUTUBE
+        </h1>
+
+        <p>
+            김수현 관련 YouTube 영상을 기록합니다.
+        </p>
+
+    </section>
+
+
+    <!-- Toolbar -->
+
+    <div class="archive-toolbar">
+
+        <div class="archive-count">
+            전체 <strong id="video-count">-</strong>개
+        </div>
+
+
+        <select
+                id="sort-select"
+                class="sort-select"
+                aria-label="정렬"
+        >
+            <option value="latest">
+                최신순
+            </option>
+
+            <option value="views">
+                조회수순
+            </option>
+
+<!--            <option value="increase">-->
+<!--                조회수 증가순-->
+<!--            </option>-->
+        </select>
+
+    </div>
+
+
+    <!-- Video Grid -->
+
+    <section
+            id="youtube-grid"
+            class="youtube-grid"
+            aria-label="YouTube 영상 목록"
+    >
+
+        <div class="loading">
+            영상을 불러오는 중...
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<!-- =========================================================
+     Footer
+     ========================================================= -->
+
+<footer>
+
+    <span>
+      © 2026 KIM SOO HYUN ARCHIVE.
+      All rights reserved.
+    </span>
+
+    <span>
+      Last Updated:
+      <b id="updated">-</b>
+    </span>
+
+</footer>
+
+
+<!-- =========================================================
+     Script
+     ========================================================= -->
+
+<script>
+
+    let videos = [];
+
+
+    // ---------------------------------------------------------
+    // 숫자 포맷
+    // ---------------------------------------------------------
+
+    function formatNumber(number) {
+
+        return Number(number || 0)
+            .toLocaleString('en-US');
+
+    }
+
+
+    // ---------------------------------------------------------
+    // YouTube JSON 불러오기
+    // ---------------------------------------------------------
+
+    async function loadVideos() {
+
+        try {
+
+            const response =
+                await fetch('data/youtube.json');
+
+            if (!response.ok) {
+                throw new Error(
+                    'youtube.json을 불러올 수 없습니다.'
+                );
+            }
+
+
+            const data =
+                await response.json();
+
+
+            videos =
+                Array.isArray(data.items)
+                    ? data.items
+                    : [];
+
+
+            document
+                .getElementById('video-count')
+                .textContent =
+                videos.length.toLocaleString();
+
+
+            document
+                .getElementById('updated')
+                .textContent =
+                data.updatedAt || '-';
+
+
+            renderVideos();
+
+
+        } catch (error) {
+
+            console.error(error);
+
+            document
+                .getElementById('youtube-grid')
+                .innerHTML = `
+            <div class="loading">
+              영상을 불러오지 못했습니다.
+            </div>
+          `;
+        }
+    }
+
+
+    // ---------------------------------------------------------
+    // 정렬
+    // ---------------------------------------------------------
+
+    function sortVideos(list, type) {
+
+        return [...list].sort(
+            (a, b) => {
+
+                if (type === 'views') {
+
+                    return (
+                        Number(b.views || 0)
+                        -
+                        Number(a.views || 0)
+                    );
+                }
+
+
+                if (type === 'increase') {
+
+                    return (
+                        Number(b.viewIncrease || 0)
+                        -
+                        Number(a.viewIncrease || 0)
+                    );
+                }
+
+
+                // 최신순
+                return (
+                    new Date(b.date || 0)
+                    -
+                    new Date(a.date || 0)
+                );
+            }
+        );
+    }
+
+
+    // ---------------------------------------------------------
+    // 카드 생성
+    // ---------------------------------------------------------
+
+    function renderVideos() {
+
+        const grid =
+            document.getElementById(
+                'youtube-grid'
+            );
+
+
+        const sortType =
+            document.getElementById(
+                'sort-select'
+            ).value;
+
+
+        const sorted =
+            sortVideos(
+                videos,
+                sortType
+            );
+
+
+        if (!sorted.length) {
+
+            grid.innerHTML = `
+          <div class="loading">
+            등록된 영상이 없습니다.
+          </div>
+        `;
+
+            return;
+        }
+
+
+        grid.innerHTML =
+            sorted.map(video => {
+
+
+                const increase =
+                    Number(
+                        video.viewIncrease || 0
+                    );
+
+
+                const increaseText =
+                    increase > 0
+                        ? `↑ ${formatNumber(increase)}`
+                        : '';
+
+
+                return `
+
+            <a
+              class="video-card"
+              href="${escapeHtml(video.url)}"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <div class="video-thumb">
+
+                <img
+                  src="${escapeHtml(video.thumbnail)}"
+                  alt=""
+                  loading="lazy"
+                >
+
+                <span class="play-button">
+                  ▶
+                </span>
+
+              </div>
+
+
+              <div class="video-info">
+
+                <h2 class="video-title">
+                  ${escapeHtml(video.title)}
+                </h2>
+
+
+                <div class="video-meta">
+
+                  <span>
+                    ${escapeHtml(video.date || '')}
+                  </span>
+
+                  <span>·</span>
+
+                  <span class="video-views">
+                    ${formatNumber(video.views)}
+                  </span>
+
+                  <span>
+                    views
+                  </span>
+
+                  ${
+                    increaseText
+                        ? `
+                        <span
+                          class="view-increase"
+                        >
+                          ${increaseText}
+                        </span>
+                      `
+                        : ''
+                }
+
+                </div>
+
+              </div>
+
+            </a>
+
+          `;
+
+            }).join('');
+    }
+
+
+    // ---------------------------------------------------------
+    // HTML Escape
+    // ---------------------------------------------------------
+
+    function escapeHtml(value) {
+
+        return String(value ?? '')
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#039;');
+
+    }
+
+
+    // ---------------------------------------------------------
+    // 정렬 변경
+    // ---------------------------------------------------------
+
+    document
+        .getElementById('sort-select')
+        .addEventListener(
+            'change',
+            renderVideos
+        );
+
+
+    // ---------------------------------------------------------
+    // 실행
+    // ---------------------------------------------------------
+
+    loadVideos();
+
+</script>
+
+</body>
+</html>
