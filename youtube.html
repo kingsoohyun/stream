@@ -72,6 +72,12 @@
             color: #111;
         }
 
+        .archive-filters {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
         .sort-select {
             border: 1px solid #ddd;
             border-radius: 8px;
@@ -89,7 +95,7 @@
         .youtube-grid {
             display: grid;
             grid-template-columns:
-        repeat(4, minmax(0, 1fr));
+                repeat(4, minmax(0, 1fr));
             gap: 30px 20px;
         }
 
@@ -189,6 +195,30 @@
 
 
         /* ---------------------------------------------------------
+           Tags
+           --------------------------------------------------------- */
+
+        .video-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+
+            margin-top: 9px;
+        }
+
+        .video-tag {
+            padding: 4px 7px;
+
+            border-radius: 4px;
+            background: #f3f3f3;
+
+            color: #777;
+            font-size: 10px;
+            line-height: 1;
+        }
+
+
+        /* ---------------------------------------------------------
            Loading / Error
            --------------------------------------------------------- */
 
@@ -210,8 +240,9 @@
 
             .youtube-grid {
                 grid-template-columns:
-          repeat(3, minmax(0, 1fr));
+                    repeat(3, minmax(0, 1fr));
             }
+
         }
 
 
@@ -229,9 +260,13 @@
                 padding: 18px 0;
             }
 
+            .archive-filters {
+                gap: 6px;
+            }
+
             .youtube-grid {
                 grid-template-columns:
-          repeat(2, minmax(0, 1fr));
+                    repeat(2, minmax(0, 1fr));
 
                 gap: 25px 12px;
             }
@@ -255,6 +290,7 @@
                 font-size: 11px;
                 gap: 5px;
             }
+
         }
 
 
@@ -267,6 +303,16 @@
             .archive-toolbar {
                 align-items: flex-start;
             }
+
+            .archive-filters {
+                width: 100%;
+            }
+
+            .sort-select {
+                flex: 1;
+                min-width: 0;
+            }
+
         }
 
     </style>
@@ -274,6 +320,7 @@
 
 
 <body>
+
 
 <!-- =========================================================
      Header
@@ -291,8 +338,7 @@
         </a>
 
         <span>
-<!--        김수현 공식 영상 · 인스타그램 · 트위터 아카이브-->
-      </span>
+        </span>
 
     </div>
 
@@ -310,18 +356,6 @@
 
     <section class="archive-page-head">
 
-<!--        <p class="eyebrow">-->
-<!--            YOUTUBE ARCHIVE-->
-<!--        </p>-->
-
-<!--        <h1>-->
-<!--            YOUTUBE-->
-<!--        </h1>-->
-
-<!--        <p>-->
-<!--            김수현 관련 YouTube 영상을 기록합니다.-->
-<!--        </p>-->
-
     </section>
 
 
@@ -334,23 +368,43 @@
         </div>
 
 
-        <select
-                id="sort-select"
-                class="sort-select"
-                aria-label="정렬"
-        >
-            <option value="latest">
-                최신순
-            </option>
+        <div class="archive-filters">
 
-            <option value="views">
-                조회수순
-            </option>
 
-<!--            <option value="increase">-->
-<!--                조회수 증가순-->
-<!--            </option>-->
-        </select>
+            <!-- Tag Filter -->
+
+            <select
+                    id="tag-select"
+                    class="sort-select"
+                    aria-label="태그 필터"
+            >
+
+                <option value="all">
+                    전체
+                </option>
+
+            </select>
+
+
+            <!-- Sort -->
+
+            <select
+                    id="sort-select"
+                    class="sort-select"
+                    aria-label="정렬"
+            >
+
+                <option value="latest">
+                    최신순
+                </option>
+
+                <option value="views">
+                    조회수순
+                </option>
+
+            </select>
+
+        </div>
 
     </div>
 
@@ -380,13 +434,13 @@
 <footer>
 
     <span>
-      © 2026 KIM SOO HYUN STREAM.
-      All rights reserved.
+        © 2026 KIM SOO HYUN STREAM.
+        All rights reserved.
     </span>
 
     <span>
-      Last Updated:
-      <b id="updated">-</b>
+        Last Updated:
+        <b id="updated">-</b>
     </span>
 
 </footer>
@@ -422,12 +476,17 @@
         try {
 
             const response =
-                await fetch('data/youtube.json');
+                await fetch(
+                    'data/youtube.json'
+                );
+
 
             if (!response.ok) {
+
                 throw new Error(
                     'youtube.json을 불러올 수 없습니다.'
                 );
+
             }
 
 
@@ -453,6 +512,8 @@
                 data.updatedAt || '-';
 
 
+            buildTagFilter();
+
             renderVideos();
 
 
@@ -460,14 +521,126 @@
 
             console.error(error);
 
+
             document
                 .getElementById('youtube-grid')
                 .innerHTML = `
-            <div class="loading">
-              영상을 불러오지 못했습니다.
-            </div>
-          `;
+                    <div class="loading">
+                        영상을 불러오지 못했습니다.
+                    </div>
+                `;
+
         }
+
+    }
+
+
+    // ---------------------------------------------------------
+    // Tag Filter 생성
+    // ---------------------------------------------------------
+
+    function buildTagFilter() {
+
+        const select =
+            document.getElementById(
+                'tag-select'
+            );
+
+
+        const tagSet =
+            new Set();
+
+
+        videos.forEach(video => {
+
+            if (!Array.isArray(video.tags)) {
+                return;
+            }
+
+
+            video.tags.forEach(tag => {
+
+                if (tag) {
+                    tagSet.add(tag);
+                }
+
+            });
+
+        });
+
+
+        const tags =
+            [...tagSet].sort(
+                (a, b) =>
+                    a.localeCompare(b)
+            );
+
+
+        select.innerHTML =
+            '<option value="all">전체</option>';
+
+
+        tags.forEach(tag => {
+
+            const option =
+                document.createElement(
+                    'option'
+                );
+
+
+            option.value = tag;
+
+            option.textContent =
+                formatTag(tag);
+
+
+            select.appendChild(option);
+
+        });
+
+    }
+
+
+    // ---------------------------------------------------------
+    // Tag 표시명
+    // ---------------------------------------------------------
+
+    function formatTag(tag) {
+
+        const names = {
+
+            queenoftears:
+                'QUEEN OF TEARS',
+
+            mlfs:
+                'MLFS',
+
+            ost:
+                'OST',
+
+            drama:
+                'DRAMA',
+
+            ad:
+                'AD',
+
+            event:
+                'EVENT',
+
+            airport:
+                'AIRPORT',
+
+            'pre-clip':
+                'PRE-CLIP'
+
+        };
+
+
+        return names[tag]
+            || tag
+                .replace(/-/g, ' ')
+                .toUpperCase();
+
     }
 
 
@@ -487,27 +660,50 @@
                         -
                         Number(a.views || 0)
                     );
-                }
 
-
-                if (type === 'increase') {
-
-                    return (
-                        Number(b.viewIncrease || 0)
-                        -
-                        Number(a.viewIncrease || 0)
-                    );
                 }
 
 
                 // 최신순
+
                 return (
-                    new Date(b.date || 0)
+                    parseDate(b.date)
                     -
-                    new Date(a.date || 0)
+                    parseDate(a.date)
                 );
+
             }
         );
+
+    }
+
+
+    // ---------------------------------------------------------
+    // 날짜 변환
+    // ---------------------------------------------------------
+
+    function parseDate(date) {
+
+        if (!date) {
+            return 0;
+        }
+
+
+        const parts =
+            String(date).split('.');
+
+
+        if (parts.length !== 3) {
+            return 0;
+        }
+
+
+        return new Date(
+            Number(parts[0]),
+            Number(parts[1]) - 1,
+            Number(parts[2])
+        ).getTime();
+
     }
 
 
@@ -524,114 +720,212 @@
 
 
         const sortType =
-            document.getElementById(
-                'sort-select'
-            ).value;
+            document
+                .getElementById(
+                    'sort-select'
+                )
+                .value;
 
+
+        const selectedTag =
+            document
+                .getElementById(
+                    'tag-select'
+                )
+                .value;
+
+
+        // -----------------------------------------------------
+        // Tag Filter
+        // -----------------------------------------------------
+
+        let filtered =
+            videos;
+
+
+        if (selectedTag !== 'all') {
+
+            filtered =
+                videos.filter(
+                    video =>
+                        Array.isArray(
+                            video.tags
+                        )
+                        &&
+                        video.tags.includes(
+                            selectedTag
+                        )
+                );
+
+        }
+
+
+        // -----------------------------------------------------
+        // Sort
+        // -----------------------------------------------------
 
         const sorted =
             sortVideos(
-                videos,
+                filtered,
                 sortType
             );
 
 
+        // -----------------------------------------------------
+        // Count
+        // -----------------------------------------------------
+
+        document
+            .getElementById(
+                'video-count'
+            )
+            .textContent =
+            sorted.length.toLocaleString();
+
+
+        // -----------------------------------------------------
+        // Empty
+        // -----------------------------------------------------
+
         if (!sorted.length) {
 
             grid.innerHTML = `
-          <div class="loading">
-            등록된 영상이 없습니다.
-          </div>
-        `;
+                <div class="loading">
+                    등록된 영상이 없습니다.
+                </div>
+            `;
 
             return;
+
         }
 
 
+        // -----------------------------------------------------
+        // Cards
+        // -----------------------------------------------------
+
         grid.innerHTML =
-            sorted.map(video => {
+            sorted
+                .map(video => {
 
 
-                const increase =
-                    Number(
-                        video.viewIncrease || 0
-                    );
+                    const increase =
+                        Number(
+                            video.viewIncrease || 0
+                        );
 
 
-                const increaseText =
-                    increase > 0
-                        ? `↑ ${formatNumber(increase)}`
-                        : '';
+                    const increaseText =
+                        increase > 0
+                            ? `↑ ${formatNumber(increase)}`
+                            : '';
 
 
-                return `
-
-            <a
-              class="video-card"
-              href="${escapeHtml(video.url)}"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-
-              <div class="video-thumb">
-
-                <img
-                  src="${escapeHtml(video.thumbnail)}"
-                  alt=""
-                  loading="lazy"
-                >
-
-                <span class="play-button">
-                  ▶
-                </span>
-
-              </div>
+                    const tags =
+                        Array.isArray(
+                            video.tags
+                        )
+                            ? video.tags
+                            : [];
 
 
-              <div class="video-info">
+                    const tagHTML =
+                        tags
+                            .map(
+                                tag => `
+                                    <span class="video-tag">
+                                        ${escapeHtml(
+                                    formatTag(tag)
+                                )}
+                                    </span>
+                                `
+                            )
+                            .join('');
 
-                <h2 class="video-title">
-                  ${escapeHtml(video.title)}
-                </h2>
 
+                    return `
 
-                <div class="video-meta">
-
-                  <span>
-                    ${escapeHtml(video.date || '')}
-                  </span>
-
-                  <span>·</span>
-
-                  <span class="video-views">
-                    ${formatNumber(video.views)}
-                  </span>
-
-                  <span>
-                    views
-                  </span>
-
-                  ${
-                    increaseText
-                        ? `
-                        <span
-                          class="view-increase"
+                        <a
+                            class="video-card"
+                            href="${escapeHtml(video.url)}"
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
-                          ${increaseText}
-                        </span>
-                      `
-                        : ''
-                }
 
-                </div>
+                            <div class="video-thumb">
 
-              </div>
+                                <img
+                                    src="${escapeHtml(video.thumbnail)}"
+                                    alt=""
+                                    loading="lazy"
+                                >
 
-            </a>
+                                <span class="play-button">
+                                    ▶
+                                </span>
 
-          `;
+                            </div>
 
-            }).join('');
+
+                            <div class="video-info">
+
+                                <h2 class="video-title">
+                                    ${escapeHtml(video.title)}
+                                </h2>
+
+
+                                <div class="video-meta">
+
+                                    <span>
+                                        ${escapeHtml(
+                        video.date || ''
+                    )}
+                                    </span>
+
+                                    <span>·</span>
+
+                                    <span class="video-views">
+                                        ${formatNumber(
+                        video.views
+                    )}
+                                    </span>
+
+                                    <span>
+                                        views
+                                    </span>
+
+                                    ${
+                        increaseText
+                            ? `
+                                                <span>
+                                                    ${increaseText}
+                                                </span>
+                                            `
+                            : ''
+                    }
+
+                                </div>
+
+
+                                ${
+                        tagHTML
+                            ? `
+                                            <div class="video-tags">
+                                                ${tagHTML}
+                                            </div>
+                                        `
+                            : ''
+                    }
+
+                            </div>
+
+                        </a>
+
+                    `;
+
+                })
+                .join('');
+
     }
 
 
@@ -649,6 +943,18 @@
             .replace(/'/g, '&#039;');
 
     }
+
+
+    // ---------------------------------------------------------
+    // 필터 변경
+    // ---------------------------------------------------------
+
+    document
+        .getElementById('tag-select')
+        .addEventListener(
+            'change',
+            renderVideos
+        );
 
 
     // ---------------------------------------------------------
@@ -670,6 +976,7 @@
     loadVideos();
 
 </script>
+
 
 </body>
 </html>
