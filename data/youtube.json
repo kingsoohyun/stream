@@ -1,13 +1,13 @@
 {
-  "updatedAt" : "2026-09-01 05:14",
+  "updatedAt" : "2026-09-01 05:56",
   "items" : [ {
     "videoId" : "Nrpu6CSXzNI",
     "title" : "[1화 선공개] 귀여운 허세♥ 김지원에게 훅 들어온 김수현의 고백! \"나 어때요?\" #눈물의여왕 EP.1",
     "date" : "2024.03.09",
     "views" : 227506,
-    "previousViews" : 227505,
-    "viewIncrease" : 1,
-    "tags" : [ "눈물의여왕" ],
+    "previousViews" : 227506,
+    "viewIncrease" : 0,
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/Nrpu6CSXzNI/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=Nrpu6CSXzNI"
   }, {
@@ -17,15 +17,15 @@
     "views" : 50738,
     "previousViews" : 50738,
     "viewIncrease" : 0,
-    "tags" : [ "넉오프" ],
+    "tags" : [ "🎬넉오프" ],
     "thumbnail" : "https://i.ytimg.com/vi/CmbEUFhjbkc/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=CmbEUFhjbkc"
   }, {
     "videoId" : "yPq0w1dhGro",
     "title" : "Happy 39th Anniversary from Kim Soo Hyun!",
     "date" : "2026.08.05",
-    "views" : 10025,
-    "previousViews" : 10025,
+    "views" : 10040,
+    "previousViews" : 10040,
     "viewIncrease" : 0,
     "tags" : [ "광고" ],
     "thumbnail" : "https://i.ytimg.com/vi/yPq0w1dhGro/hqdefault.jpg",
@@ -34,8 +34,8 @@
     "videoId" : "TJ6XPI2w7js",
     "title" : "PECAH! Kedatangan Kim Soo Hyun Bikin Satu Studio Heboh!! | Mahakarya RCTI 37",
     "date" : "2026.08.24",
-    "views" : 105835,
-    "previousViews" : 105835,
+    "views" : 105843,
+    "previousViews" : 105843,
     "viewIncrease" : 0,
     "tags" : [ "방송" ],
     "thumbnail" : "https://i.ytimg.com/vi/TJ6XPI2w7js/hqdefault.jpg",
@@ -44,12 +44,82 @@
     "videoId" : "SvB3d37nWps",
     "title" : "김수현, \"약 1년 5개월 만에 공식 일정 마치고 귀국\" l KIM SOOHYUN, \"Had his first schedules in🇮🇩after 1yr&5months\" [공항]",
     "date" : "2026.08.25",
-    "views" : 28714,
-    "previousViews" : 28714,
+    "views" : 28715,
+    "previousViews" : 28715,
     "viewIncrease" : 0,
-    "tags" : [ "공항" ],
+    "tags" : [ "공항✈️" ],
     "thumbnail" : "https://i.ytimg.com/vi/SvB3d37nWps/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=SvB3d37nWps"
+  }, {
+    "videoId" : "n7r4qCSe4GQ",
+    "title" : "김수현, \"올블랙하면 김수맨, 오늘도 환한 미소에 심쿵\" l KIM SOOHYUN, \"His bright smile makes heart flutter\" [공항]",
+    "date" : "2024.11.15",
+    "views" : 34388,
+    "previousViews" : 34388,
+    "viewIncrease" : 0,
+    "tags" : [ "공항✈️" ],
+    "thumbnail" : "https://i.ytimg.com/vi/n7r4qCSe4GQ/hqdefault.jpg",
+    "url" : "https://www.youtube.com/watch?v=n7r4qCSe4GQ"
+  }, {
+    "videoId" : "KJqulW1WR10",
+    "title" : "김수현, \"모닝 힐링, 훈훈한 스마일\" l KIM SOOHYUN, \"Morning healing. Heartwarming smile\" [공항]",
+    "date" : "2024.06.14",
+    "views" : 63292,
+    "previousViews" : 63292,
+    "viewIncrease" : 0,
+    "tags" : [ "공항✈️" ],
+    "thumbnail" : "https://i.ytimg.com/vi/KJqulW1WR10/hqdefault.jpg",
+    "url" : "https://www.youtube.com/watch?v=KJqulW1WR10"
+  }, {
+    "videoId" : "yDKlbftw1FA",
+    "title" : "김수현, \"올블랙 시크지만, 미소는 밝게~아이 눈부셔\" l KIM SOOHYUN, \"It's all black chic, but with a bright smile\" [공항]",
+    "date" : "2024.12.26",
+    "views" : 17279,
+    "previousViews" : 17279,
+    "viewIncrease" : 0,
+    "tags" : [ "공항✈️" ],
+    "thumbnail" : "https://i.ytimg.com/vi/yDKlbftw1FA/hqdefault.jpg",
+    "url" : "https://www.youtube.com/watch?v=yDKlbftw1FA"
+  }, {
+    "videoId" : "YBneb8gNvLc",
+    "title" : "김수현, \"마지막 팬미팅 출국길까지 찬란하다\" l KIM SOOHYUN, \"So brilliant also last Departure for 'EYES ON YOU'\" [공항]",
+    "date" : "2024.09.06",
+    "views" : 22960,
+    "previousViews" : 22960,
+    "viewIncrease" : 0,
+    "tags" : [ "공항✈️" ],
+    "thumbnail" : "https://i.ytimg.com/vi/YBneb8gNvLc/hqdefault.jpg",
+    "url" : "https://www.youtube.com/watch?v=YBneb8gNvLc"
+  }, {
+    "videoId" : "rumT1Sz6gWw",
+    "title" : "김수현, \"남자는 역시 핑크! 심쿵 모먼트\"l KIM SOOHYUN, \"Of course! Men's color is pink! Heart-fluttering moment\"[공항]",
+    "date" : "2024.07.27",
+    "views" : 40738,
+    "previousViews" : 40738,
+    "viewIncrease" : 0,
+    "tags" : [ "공항✈️" ],
+    "thumbnail" : "https://i.ytimg.com/vi/rumT1Sz6gWw/hqdefault.jpg",
+    "url" : "https://www.youtube.com/watch?v=rumT1Sz6gWw"
+  }, {
+    "videoId" : "4oGOHammH30",
+    "title" : "김수현, \"바쁜 출국길에도 훈훈함 폭발\" l KIM SOOHYUN, \"An explosion of warmth even on a busy way\" [공항]",
+    "date" : "2024.07.05",
+    "views" : 46828,
+    "previousViews" : 46828,
+    "viewIncrease" : 0,
+    "tags" : [ "공항✈️" ],
+    "thumbnail" : "https://i.ytimg.com/vi/4oGOHammH30/hqdefault.jpg",
+    "url" : "https://www.youtube.com/watch?v=4oGOHammH30"
+  }, {
+    "videoId" : "sjLs60piKGg",
+    "title" : "[4K] 김수현, 편지 받느라~ 인사하느라~ 바쁘다 바빠 김수맨(출국)✈️ ‘Kim Soo-hyun’ Airport Departure 24.6.20 Newsen",
+    "date" : "2024.06.20",
+    "views" : 40600,
+    "previousViews" : 40600,
+    "viewIncrease" : 0,
+    "tags" : [ "공항✈️" ],
+    "thumbnail" : "https://i.ytimg.com/vi/sjLs60piKGg/hqdefault.jpg",
+    "url" : "https://www.youtube.com/watch?v=sjLs60piKGg"
   }, {
     "videoId" : "ftxYUzFTCzk",
     "title" : "[2화 선공개] \"당장 구급차 불러주세요!\" 김지원 당황하게 한 김수현의 과보호 #눈물의여왕 EP.2",
@@ -57,7 +127,7 @@
     "views" : 157277,
     "previousViews" : 157277,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/ftxYUzFTCzk/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=ftxYUzFTCzk"
   }, {
@@ -67,7 +137,7 @@
     "views" : 189220,
     "previousViews" : 189220,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/zkAfdaUVkls/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=zkAfdaUVkls"
   }, {
@@ -77,7 +147,7 @@
     "views" : 333089,
     "previousViews" : 333089,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/xL2JqoSdToc/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=xL2JqoSdToc"
   }, {
@@ -87,7 +157,7 @@
     "views" : 563634,
     "previousViews" : 563634,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/0AEwozoJqIM/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=0AEwozoJqIM"
   }, {
@@ -97,7 +167,7 @@
     "views" : 381992,
     "previousViews" : 381992,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/mpfdMP0B1sw/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=mpfdMP0B1sw"
   }, {
@@ -107,7 +177,7 @@
     "views" : 497264,
     "previousViews" : 497264,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/AgdwBiQSXFk/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=AgdwBiQSXFk"
   }, {
@@ -117,7 +187,7 @@
     "views" : 1067706,
     "previousViews" : 1067706,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/lxv_64aCS4g/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=lxv_64aCS4g"
   }, {
@@ -127,7 +197,7 @@
     "views" : 548286,
     "previousViews" : 548286,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/ku57DXzeqtg/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=ku57DXzeqtg"
   }, {
@@ -137,7 +207,7 @@
     "views" : 638054,
     "previousViews" : 638054,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/Iyx_KJsA6Pk/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=Iyx_KJsA6Pk"
   }, {
@@ -147,7 +217,7 @@
     "views" : 597705,
     "previousViews" : 597705,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/r3nHHP1oh_s/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=r3nHHP1oh_s"
   }, {
@@ -157,17 +227,17 @@
     "views" : 815175,
     "previousViews" : 815175,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/oAi1LJ3sFt4/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=oAi1LJ3sFt4"
   }, {
     "videoId" : "D_LABiiD8DY",
     "title" : "[9화 선공개] 사랑꾼 김수현의 모닝루틴?! 김지원 꿀잠 챙기기♥ #눈물의여왕 EP.9",
     "date" : "2024.04.06",
-    "views" : 954420,
+    "views" : 954421,
     "previousViews" : 954420,
-    "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "viewIncrease" : 1,
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/D_LABiiD8DY/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=D_LABiiD8DY"
   }, {
@@ -177,7 +247,7 @@
     "views" : 876120,
     "previousViews" : 876120,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/EStOGr16DlU/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=EStOGr16DlU"
   }, {
@@ -187,7 +257,7 @@
     "views" : 1528439,
     "previousViews" : 1528439,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/LDFPLLmtRfM/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=LDFPLLmtRfM"
   }, {
@@ -197,7 +267,7 @@
     "views" : 1709721,
     "previousViews" : 1709721,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/5BIweM4ZWOI/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=5BIweM4ZWOI"
   }, {
@@ -207,7 +277,7 @@
     "views" : 865502,
     "previousViews" : 865502,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/iWgEjpGSvpk/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=iWgEjpGSvpk"
   }, {
@@ -217,7 +287,7 @@
     "views" : 769773,
     "previousViews" : 769773,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/ipfw0zaV5qY/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=ipfw0zaV5qY"
   }, {
@@ -227,7 +297,7 @@
     "views" : 518334,
     "previousViews" : 518334,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/jC0YKWA13d0/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=jC0YKWA13d0"
   }, {
@@ -237,7 +307,7 @@
     "views" : 1102519,
     "previousViews" : 1102519,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/GYBFP5ZTICQ/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=GYBFP5ZTICQ"
   }, {
@@ -247,7 +317,7 @@
     "views" : 916276,
     "previousViews" : 916276,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/APWVa3FOz4Y/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=APWVa3FOz4Y"
   }, {
@@ -257,7 +327,7 @@
     "views" : 634055,
     "previousViews" : 634055,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/s9bcTFnDvi4/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=s9bcTFnDvi4"
   }, {
@@ -267,17 +337,17 @@
     "views" : 1429081,
     "previousViews" : 1429081,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/HVOcb47dGoI/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=HVOcb47dGoI"
   }, {
     "videoId" : "1jsWWjA3fMc",
     "title" : "[에필로그] 김수현x김지원 결혼식 비디오에 담긴 서로를 향한 진심! #눈물의여왕 EP.1 | tvN 240309 방송",
     "date" : "2024.03.09",
-    "views" : 59487,
+    "views" : 59488,
     "previousViews" : 59487,
-    "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "viewIncrease" : 1,
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/1jsWWjA3fMc/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=1jsWWjA3fMc"
   }, {
@@ -287,7 +357,7 @@
     "views" : 71927,
     "previousViews" : 71927,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/kXWJoENzi6U/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=kXWJoENzi6U"
   }, {
@@ -297,7 +367,7 @@
     "views" : 58169,
     "previousViews" : 58169,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/qlobAy_P090/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=qlobAy_P090"
   }, {
@@ -307,7 +377,7 @@
     "views" : 79501,
     "previousViews" : 79501,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/oY7WJjOEL1w/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=oY7WJjOEL1w"
   }, {
@@ -315,9 +385,9 @@
     "title" : "[에필로그] 김지원 손에 직접 생명선 연장해 준 김수현 #눈물의여왕 EP.5 | tvN 240323 방송",
     "date" : "2024.03.23",
     "views" : 179795,
-    "previousViews" : 179789,
-    "viewIncrease" : 6,
-    "tags" : [ "눈물의여왕" ],
+    "previousViews" : 179795,
+    "viewIncrease" : 0,
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/lsugT8pdruU/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=lsugT8pdruU"
   }, {
@@ -327,7 +397,7 @@
     "views" : 812155,
     "previousViews" : 812155,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/s-Sle4gidnM/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=s-Sle4gidnM"
   }, {
@@ -337,17 +407,17 @@
     "views" : 336201,
     "previousViews" : 336201,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/13mSHRjDPYI/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=13mSHRjDPYI"
   }, {
     "videoId" : "0AH1zA6NHvs",
     "title" : "[에필로그] \"남편이 제 옆에서 살고 싶대요ㅠㅠ\" 김지원의 서글픈 눈물 #눈물의여왕 EP.8 | tvN 240331 방송",
     "date" : "2024.03.31",
-    "views" : 297072,
-    "previousViews" : 297072,
+    "views" : 297073,
+    "previousViews" : 297073,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/0AH1zA6NHvs/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=0AH1zA6NHvs"
   }, {
@@ -355,19 +425,19 @@
     "title" : "[에필로그] mp3와 함께 고이 간직해온 김수현의 이상형 ☞ 김지원 #눈물의여왕 EP.9 | tvN 240406 방송",
     "date" : "2024.04.06",
     "views" : 171230,
-    "previousViews" : 171227,
-    "viewIncrease" : 3,
-    "tags" : [ "눈물의여왕" ],
+    "previousViews" : 171230,
+    "viewIncrease" : 0,
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/wL9Lw_3PlkY/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=wL9Lw_3PlkY"
   }, {
     "videoId" : "BFKyy_E6fYA",
     "title" : "[에필로그1] 김수현, 김지원의 귀여운 질투에 귀염(?) 필살기 안 쓰기 약속~ #눈물의여왕 EP.10 | tvN 240407 방송",
     "date" : "2024.04.07",
-    "views" : 867600,
+    "views" : 867602,
     "previousViews" : 867600,
-    "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "viewIncrease" : 2,
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/BFKyy_E6fYA/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=BFKyy_E6fYA"
   }, {
@@ -377,7 +447,7 @@
     "views" : 495369,
     "previousViews" : 495369,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/93qXxSAU3pA/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=93qXxSAU3pA"
   }, {
@@ -385,9 +455,9 @@
     "title" : "[에필로그] 백현우, 내 욕은 참아도 홍해인 욕은 못 참아🔥.🔥 #눈물의여왕 EP.11 | tvN 240413 방송",
     "date" : "2024.04.13",
     "views" : 145158,
-    "previousViews" : 145157,
-    "viewIncrease" : 1,
-    "tags" : [ "눈물의여왕" ],
+    "previousViews" : 145158,
+    "viewIncrease" : 0,
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/t0lveO5KiA4/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=t0lveO5KiA4"
   }, {
@@ -397,7 +467,7 @@
     "views" : 145805,
     "previousViews" : 145805,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/9a3YE5k8Rs4/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=9a3YE5k8Rs4"
   }, {
@@ -407,7 +477,7 @@
     "views" : 249919,
     "previousViews" : 249919,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/GYyR9538gXc/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=GYyR9538gXc"
   }, {
@@ -417,17 +487,17 @@
     "views" : 313757,
     "previousViews" : 313757,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/_djDRDqnOzw/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=_djDRDqnOzw"
   }, {
     "videoId" : "f7gn_4mn_Qc",
     "title" : "[에필로그] '찐커플 감별사' 탐정 홍진경이 분석하는 홍해인X윤은성의 관계 #눈물의여왕 EP.15 | tvN 240427 방송",
     "date" : "2024.04.27",
-    "views" : 102646,
-    "previousViews" : 102646,
+    "views" : 102647,
+    "previousViews" : 102647,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/f7gn_4mn_Qc/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=f7gn_4mn_Qc"
   }, {
@@ -437,7 +507,7 @@
     "views" : 699691,
     "previousViews" : 699691,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕" ],
+    "tags" : [ "🎬눈물의여왕" ],
     "thumbnail" : "https://i.ytimg.com/vi/ejz4DAOzKNk/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=ejz4DAOzKNk"
   }, {
@@ -447,97 +517,97 @@
     "views" : 6670849,
     "previousViews" : 6670849,
     "viewIncrease" : 0,
-    "tags" : [ "별에서온그대", "OST" ],
+    "tags" : [ "🎬별에서온그대", "OST🎧" ],
     "thumbnail" : "https://i.ytimg.com/vi/U0s7qyZWsvM/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=U0s7qyZWsvM"
   }, {
     "videoId" : "Dbxzh078jr4",
     "title" : "[MV] 성시경 _ Every Moment Of You(너의 모든 순간) (Original) (My Love From the Star(별에서 온 그대) OST)",
     "date" : "2014.02.26",
-    "views" : 27789680,
-    "previousViews" : 27789680,
+    "views" : 27789768,
+    "previousViews" : 27789768,
     "viewIncrease" : 0,
-    "tags" : [ "별에서온그대", "OST" ],
+    "tags" : [ "🎬별에서온그대", "OST🎧" ],
     "thumbnail" : "https://i.ytimg.com/vi/Dbxzh078jr4/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=Dbxzh078jr4"
   }, {
     "videoId" : "Z4qVfCi_lUI",
     "title" : "[MV] Crush - Love You With All My Heart(미안해 미워해 사랑해)",
     "date" : "2024.03.24",
-    "views" : 64823451,
-    "previousViews" : 64823451,
+    "views" : 64824236,
+    "previousViews" : 64824236,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕", "OST" ],
+    "tags" : [ "🎬눈물의여왕", "OST🎧" ],
     "thumbnail" : "https://i.ytimg.com/vi/Z4qVfCi_lUI/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=Z4qVfCi_lUI"
   }, {
     "videoId" : "jRRCWFLAO6k",
     "title" : "[MV] Heize(헤이즈) - Hold Me Back(멈춰줘)",
     "date" : "2024.03.17",
-    "views" : 21548911,
-    "previousViews" : 21548911,
+    "views" : 21549276,
+    "previousViews" : 21549276,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕", "OST" ],
+    "tags" : [ "🎬눈물의여왕", "OST🎧" ],
     "thumbnail" : "https://i.ytimg.com/vi/jRRCWFLAO6k/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=jRRCWFLAO6k"
   }, {
     "videoId" : "ucpb4BYNJ6s",
     "title" : "[MV] BSS(부석순)(SEVENTEEN) - The Reasons of My Smiles(자꾸만 웃게 돼)",
     "date" : "2024.03.10",
-    "views" : 40817593,
-    "previousViews" : 40817593,
+    "views" : 40818148,
+    "previousViews" : 40818148,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕", "OST" ],
+    "tags" : [ "🎬눈물의여왕", "OST🎧" ],
     "thumbnail" : "https://i.ytimg.com/vi/ucpb4BYNJ6s/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=ucpb4BYNJ6s"
   }, {
     "videoId" : "_j0BOGdmh38",
     "title" : "[MV] 10CM - Tell Me It's Not a Dream(고장난걸까)",
     "date" : "2024.03.16",
-    "views" : 16409511,
-    "previousViews" : 16409511,
+    "views" : 16409647,
+    "previousViews" : 16409647,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕", "OST" ],
+    "tags" : [ "🎬눈물의여왕", "OST🎧" ],
     "thumbnail" : "https://i.ytimg.com/vi/_j0BOGdmh38/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=_j0BOGdmh38"
   }, {
     "videoId" : "TcHIPSX8Kww",
     "title" : "[MV] So Soo Bin(소수빈) - Last Chance",
     "date" : "2024.04.13",
-    "views" : 12993754,
-    "previousViews" : 12993754,
+    "views" : 12994007,
+    "previousViews" : 12994007,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕", "OST" ],
+    "tags" : [ "🎬눈물의여왕", "OST🎧" ],
     "thumbnail" : "https://i.ytimg.com/vi/TcHIPSX8Kww/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=TcHIPSX8Kww"
   }, {
     "videoId" : "jbjZ9kcmvD0",
     "title" : "[MV] Isaac Hong(홍이삭) - Fallin'",
     "date" : "2024.03.30",
-    "views" : 18757393,
-    "previousViews" : 18757393,
-    "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕", "OST" ],
+    "views" : 18757776,
+    "previousViews" : 18757707,
+    "viewIncrease" : 69,
+    "tags" : [ "🎬눈물의여왕", "OST🎧" ],
     "thumbnail" : "https://i.ytimg.com/vi/jbjZ9kcmvD0/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=jbjZ9kcmvD0"
   }, {
     "videoId" : "weIz_Vzi-nQ",
     "title" : "[MV] Choi Yu Ree(최유리) - Promise",
     "date" : "2024.04.14",
-    "views" : 8981821,
-    "previousViews" : 8981821,
+    "views" : 8981932,
+    "previousViews" : 8981932,
     "viewIncrease" : 0,
-    "tags" : [ "눈물의여왕", "OST" ],
+    "tags" : [ "🎬눈물의여왕", "OST🎧" ],
     "thumbnail" : "https://i.ytimg.com/vi/weIz_Vzi-nQ/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=weIz_Vzi-nQ"
   }, {
     "videoId" : "723dp-TbhzY",
     "title" : "[MV] Kim Na Young(김나영) - From Bottom of My Heart(일기)",
     "date" : "2024.04.07",
-    "views" : 5959757,
-    "previousViews" : 5959753,
-    "viewIncrease" : 4,
-    "tags" : [ "눈물의여왕", "OST" ],
+    "views" : 5959814,
+    "previousViews" : 5959814,
+    "viewIncrease" : 0,
+    "tags" : [ "🎬눈물의여왕", "OST🎧" ],
     "thumbnail" : "https://i.ytimg.com/vi/723dp-TbhzY/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=723dp-TbhzY"
   }, {
@@ -547,47 +617,47 @@
     "views" : 35359061,
     "previousViews" : 35359399,
     "viewIncrease" : -338,
-    "tags" : [ "사이코지만괜찮아", "OST" ],
+    "tags" : [ "🎬사이코지만괜찮아", "OST🎧" ],
     "thumbnail" : "https://i.ytimg.com/vi/IK2pql-ZLLE/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=IK2pql-ZLLE"
   }, {
     "videoId" : "8vNtDy7cnGA",
     "title" : "[M/V] Sam Kim(샘김) - Breath(숨)",
     "date" : "2020.06.28",
-    "views" : 22346376,
-    "previousViews" : 22346376,
-    "viewIncrease" : 0,
-    "tags" : [ "사이코지만괜찮아", "OST" ],
+    "views" : 22346434,
+    "previousViews" : 22346428,
+    "viewIncrease" : 6,
+    "tags" : [ "🎬사이코지만괜찮아", "OST🎧" ],
     "thumbnail" : "https://i.ytimg.com/vi/8vNtDy7cnGA/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=8vNtDy7cnGA"
   }, {
     "videoId" : "nrCbIy98rlI",
     "title" : "[M/V] Kim Feel(김필) - Hallelujah(나도 모르는 노래)",
     "date" : "2020.07.19",
-    "views" : 8183020,
-    "previousViews" : 8183020,
-    "viewIncrease" : 0,
-    "tags" : [ "사이코지만괜찮아", "OST" ],
+    "views" : 8183061,
+    "previousViews" : 8183053,
+    "viewIncrease" : 8,
+    "tags" : [ "🎬사이코지만괜찮아", "OST🎧" ],
     "thumbnail" : "https://i.ytimg.com/vi/nrCbIy98rlI/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=nrCbIy98rlI"
   }, {
     "videoId" : "xQTrJyi1sdQ",
     "title" : "[M/V] Heize(헤이즈) - You're Cold (더 많이 사랑한 쪽이 아프대)",
     "date" : "2020.06.22",
-    "views" : 16927639,
-    "previousViews" : 16927639,
-    "viewIncrease" : 0,
-    "tags" : [ "사이코지만괜찮아", "OST" ],
+    "views" : 16927723,
+    "previousViews" : 16927712,
+    "viewIncrease" : 11,
+    "tags" : [ "🎬사이코지만괜찮아", "OST🎧" ],
     "thumbnail" : "https://i.ytimg.com/vi/xQTrJyi1sdQ/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=xQTrJyi1sdQ"
   }, {
     "videoId" : "yvhfxMVVNgQ",
     "title" : "[M/V] Janet Suhh(자넷서) - In Silence",
     "date" : "2020.07.18",
-    "views" : 13825540,
-    "previousViews" : 13825540,
-    "viewIncrease" : 0,
-    "tags" : [ "사이코지만괜찮아", "OST" ],
+    "views" : 13825665,
+    "previousViews" : 13825648,
+    "viewIncrease" : 17,
+    "tags" : [ "🎬사이코지만괜찮아", "OST🎧" ],
     "thumbnail" : "https://i.ytimg.com/vi/yvhfxMVVNgQ/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=yvhfxMVVNgQ"
   }, {
@@ -597,27 +667,27 @@
     "views" : 4322372,
     "previousViews" : 4322372,
     "viewIncrease" : 0,
-    "tags" : [ "사이코지만괜찮아", "OST" ],
+    "tags" : [ "🎬사이코지만괜찮아", "OST🎧" ],
     "thumbnail" : "https://i.ytimg.com/vi/8_kHf9RR2JU/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=8_kHf9RR2JU"
   }, {
     "videoId" : "D07Q2k04uCU",
     "title" : "[MV] Lyn(린) _ My Destiny(My Love From the Star(별에서 온 그대)OST Part 1)",
     "date" : "2014.01.20",
-    "views" : 40091602,
-    "previousViews" : 40091602,
-    "viewIncrease" : 0,
-    "tags" : [ "사이코지만괜찮아", "OST" ],
+    "views" : 40091676,
+    "previousViews" : 40091665,
+    "viewIncrease" : 11,
+    "tags" : [ "🎬별에서온그대", "OST🎧" ],
     "thumbnail" : "https://i.ytimg.com/vi/D07Q2k04uCU/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=D07Q2k04uCU"
   }, {
     "videoId" : "CYyD1cQoIJY",
     "title" : "[MV] Hyolyn(효린) _ Good bye(안녕) (My Love From the Star(별에서 온 그대) OST Part 4)",
     "date" : "2014.02.07",
-    "views" : 13383605,
-    "previousViews" : 13383605,
+    "views" : 13383633,
+    "previousViews" : 13383633,
     "viewIncrease" : 0,
-    "tags" : [ "별에서온그대", "OST" ],
+    "tags" : [ "🎬별에서온그대", "OST🎧" ],
     "thumbnail" : "https://i.ytimg.com/vi/CYyD1cQoIJY/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=CYyD1cQoIJY"
   }, {
@@ -627,17 +697,17 @@
     "views" : 63526,
     "previousViews" : 63526,
     "viewIncrease" : 0,
-    "tags" : [ "어느날", "OST" ],
+    "tags" : [ "🎬어느날", "OST🎧" ],
     "thumbnail" : "https://i.ytimg.com/vi/jcJrbJpPu2E/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=jcJrbJpPu2E"
   }, {
     "videoId" : "fdAQCEh9z00",
     "title" : "[SUB] 첫 만남은 너무 어.려.워! 계획대로 되지 않은 내향인들 | EP.32 김수현 김지원 박성훈 | 살롱드립2",
     "date" : "2024.03.19",
-    "views" : 13215665,
-    "previousViews" : 13215662,
-    "viewIncrease" : 3,
-    "tags" : [ "눈물의여왕", "방송" ],
+    "views" : 13215714,
+    "previousViews" : 13215714,
+    "viewIncrease" : 0,
+    "tags" : [ "🎬눈물의여왕", "방송" ],
     "thumbnail" : "https://i.ytimg.com/vi/fdAQCEh9z00/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=fdAQCEh9z00"
   }, {
@@ -654,19 +724,19 @@
     "videoId" : "ohu6x1NPXcs",
     "title" : "김수현(Kim Soo Hyun) & 아이유(IU) - 사랑하면 안될까(Can't I Love You Lyrics) | 케전드 | KBS 110215 방송",
     "date" : "2022.01.19",
-    "views" : 6777798,
-    "previousViews" : 6777798,
+    "views" : 6777865,
+    "previousViews" : 6777865,
     "viewIncrease" : 0,
-    "tags" : [ "드림하이" ],
+    "tags" : [ "🎬드림하이" ],
     "thumbnail" : "https://i.ytimg.com/vi/ohu6x1NPXcs/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=ohu6x1NPXcs"
   }, {
     "videoId" : "CpzMAiDwfHc",
     "title" : "[굿데이] 10년째 어려운 내 친구 지드래곤..★ 역대급 라인업으로 88나라에 모인 동갑내기 친구들ㅣ#GD #김수현 #정해인 #광희 #임시완 #이수혁 MBC250223방송",
     "date" : "2025.02.24",
-    "views" : 4329360,
-    "previousViews" : 4329360,
-    "viewIncrease" : 0,
+    "views" : 4329394,
+    "previousViews" : 4329388,
+    "viewIncrease" : 6,
     "tags" : [ "방송" ],
     "thumbnail" : "https://i.ytimg.com/vi/CpzMAiDwfHc/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=CpzMAiDwfHc"
@@ -695,8 +765,8 @@
     "title" : "시상식에서 냅다 요들송 부르는 김수현",
     "date" : "2023.12.21",
     "views" : 15052169,
-    "previousViews" : 15052137,
-    "viewIncrease" : 32,
+    "previousViews" : 15052169,
+    "viewIncrease" : 0,
     "tags" : [ "시상식" ],
     "thumbnail" : "https://i.ytimg.com/vi/bFgXP7Ga3eM/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=bFgXP7Ga3eM"
@@ -727,7 +797,7 @@
     "views" : 139381,
     "previousViews" : 139381,
     "viewIncrease" : 0,
-    "tags" : [ "어느날" ],
+    "tags" : [ "🎬어느날" ],
     "thumbnail" : "https://i.ytimg.com/vi/3f7rwP8LSUs/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=3f7rwP8LSUs"
   }, {
@@ -737,7 +807,7 @@
     "views" : 361620,
     "previousViews" : 361620,
     "viewIncrease" : 0,
-    "tags" : [ "어느날" ],
+    "tags" : [ "🎬어느날" ],
     "thumbnail" : "https://i.ytimg.com/vi/pRlHzLZ6h4E/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=pRlHzLZ6h4E"
   }, {
@@ -747,7 +817,7 @@
     "views" : 371228,
     "previousViews" : 371228,
     "viewIncrease" : 0,
-    "tags" : [ "광고" ],
+    "tags" : [ "광고", "인터뷰" ],
     "thumbnail" : "https://i.ytimg.com/vi/TjXt8qYOYxQ/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=TjXt8qYOYxQ"
   }, {
@@ -785,8 +855,8 @@
     "title" : "🎁 김수현(KIM SOO HYUN) 2025 시즌 그리팅 비하인드 필름 | KIM SOO HYUN 2025 SEASON’S GREETINGS BEHIND FILM",
     "date" : "2025.02.10",
     "views" : 18786,
-    "previousViews" : 18777,
-    "viewIncrease" : 9,
+    "previousViews" : 18787,
+    "viewIncrease" : -1,
     "tags" : [ "기타" ],
     "thumbnail" : "https://i.ytimg.com/vi/TlclF5KK8Lk/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=TlclF5KK8Lk"
@@ -814,9 +884,9 @@
     "videoId" : "Rh5ok0ljrzA",
     "title" : "[MV] IU(아이유) _ Ending Scene(이런 엔딩)",
     "date" : "2017.04.24",
-    "views" : 45894082,
-    "previousViews" : 45894069,
-    "viewIncrease" : 13,
+    "views" : 45894143,
+    "previousViews" : 45894143,
+    "viewIncrease" : 0,
     "tags" : [ "기타" ],
     "thumbnail" : "https://i.ytimg.com/vi/Rh5ok0ljrzA/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=Rh5ok0ljrzA"
@@ -844,8 +914,8 @@
     "videoId" : "ZC-zoOiU51c",
     "title" : "이홍기 & 김수현 'Wind' 라이브 LIVE / 170627[이홍기의 키스 더 라디오]",
     "date" : "2017.06.28",
-    "views" : 3171760,
-    "previousViews" : 3171760,
+    "views" : 3171763,
+    "previousViews" : 3171763,
     "viewIncrease" : 0,
     "tags" : [ "방송" ],
     "thumbnail" : "https://i.ytimg.com/vi/ZC-zoOiU51c/hqdefault.jpg",
@@ -855,9 +925,9 @@
     "title" : "[숏드] [프로듀사 Special] 800번 봐도 모자른 프로듀사 NG잼 🤳 ㅣ KBS방송",
     "date" : "2020.12.11",
     "views" : 420671,
-    "previousViews" : 420666,
-    "viewIncrease" : 5,
-    "tags" : [ "프로듀사" ],
+    "previousViews" : 420671,
+    "viewIncrease" : 0,
+    "tags" : [ "🎬프로듀사" ],
     "thumbnail" : "https://i.ytimg.com/vi/rRNERGRLTHQ/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=rRNERGRLTHQ"
   }, {
@@ -887,7 +957,7 @@
     "views" : 6837,
     "previousViews" : 6837,
     "viewIncrease" : 0,
-    "tags" : [ "넉오프" ],
+    "tags" : [ "🎬넉오프" ],
     "thumbnail" : "https://i.ytimg.com/vi/6cTcCqZDUaQ/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=6cTcCqZDUaQ"
   }, {
@@ -897,15 +967,15 @@
     "views" : 5611,
     "previousViews" : 5611,
     "viewIncrease" : 0,
-    "tags" : [ "시상식", "사이코지만괜찮아" ],
+    "tags" : [ "시상식", "🎬사이코지만괜찮아" ],
     "thumbnail" : "https://i.ytimg.com/vi/NQ6Hs6k30TU/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=NQ6Hs6k30TU"
   }, {
     "videoId" : "WRwGIE5RPFU",
     "title" : "[영상] 김수현-이홍기(Kimsoohyun-Leehonggi), 프로볼러 선발전 동반 도전…스트라이크도 거뜬한 수준급 실력 '깜짝'",
     "date" : "2016.10.22",
-    "views" : 784941,
-    "previousViews" : 784941,
+    "views" : 784942,
+    "previousViews" : 784942,
     "viewIncrease" : 0,
     "tags" : [ "기타" ],
     "thumbnail" : "https://i.ytimg.com/vi/WRwGIE5RPFU/hqdefault.jpg",
@@ -917,7 +987,7 @@
     "views" : 1679870,
     "previousViews" : 1679870,
     "viewIncrease" : 0,
-    "tags" : [ "프로듀사" ],
+    "tags" : [ "🎬프로듀사" ],
     "thumbnail" : "https://i.ytimg.com/vi/YfSG2fTtlV0/hqdefault.jpg",
     "url" : "https://www.youtube.com/watch?v=YfSG2fTtlV0"
   } ]
