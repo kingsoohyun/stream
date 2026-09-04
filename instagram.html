@@ -1,0 +1,780 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Instagram | KIM SOO HYUN STREAM</title>
+
+    <meta
+            name="description"
+            content="Kim Soo Hyun Instagram content archive."
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =========================================================
+           Instagram Archive
+           ========================================================= */
+
+        .instagram-page {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px 80px;
+        }
+
+
+        /* ---------------------------------------------------------
+           Page Header
+           --------------------------------------------------------- */
+
+        .archive-page-head {
+            padding: 70px 0 40px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .archive-page-head .eyebrow {
+            margin-bottom: 10px;
+        }
+
+        .archive-page-head h1 {
+            margin: 0;
+            font-size: clamp(32px, 5vw, 52px);
+            letter-spacing: -0.04em;
+        }
+
+        .archive-page-head p {
+            margin: 14px 0 0;
+            color: #777;
+        }
+
+
+        /* ---------------------------------------------------------
+           Toolbar
+           --------------------------------------------------------- */
+
+        .archive-toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 24px 0;
+        }
+
+        .archive-count {
+            color: #777;
+            font-size: 14px;
+        }
+
+        .archive-count strong {
+            color: #111;
+        }
+
+        .archive-filters {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sort-select {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fff;
+            padding: 9px 12px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+
+        /* ---------------------------------------------------------
+           Instagram Grid
+           --------------------------------------------------------- */
+
+        .instagram-grid {
+            display: grid;
+            grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+            gap: 30px 20px;
+        }
+
+
+        /* ---------------------------------------------------------
+           Instagram Card
+           --------------------------------------------------------- */
+
+        .instagram-card {
+            display: block;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .instagram-thumb {
+            position: relative;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            background: #eee;
+            border-radius: 10px;
+        }
+
+        .instagram-thumb img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .3s ease;
+        }
+
+        .instagram-card:hover .instagram-thumb img {
+            transform: scale(1.035);
+        }
+
+
+        /* ---------------------------------------------------------
+           Instagram Icon
+           --------------------------------------------------------- */
+
+        .instagram-icon {
+            position: absolute;
+            right: 12px;
+            top: 12px;
+
+            width: 34px;
+            height: 34px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,.94);
+            color: #111;
+
+            font-size: 16px;
+        }
+
+
+        /* ---------------------------------------------------------
+           Information
+           --------------------------------------------------------- */
+
+        .instagram-info {
+            padding-top: 13px;
+        }
+
+        .instagram-source {
+            margin: 0;
+
+            font-size: 14px;
+            line-height: 1.4;
+            font-weight: 600;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .instagram-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+
+            margin-top: 8px;
+
+            color: #888;
+            font-size: 12px;
+        }
+
+        .instagram-likes {
+            color: #333;
+            font-weight: 600;
+        }
+
+        .like-increase {
+            color: #777;
+        }
+
+
+        /* ---------------------------------------------------------
+           Loading / Error
+           --------------------------------------------------------- */
+
+        .loading {
+            grid-column: 1 / -1;
+
+            padding: 80px 20px;
+
+            text-align: center;
+            color: #888;
+        }
+
+
+        /* ---------------------------------------------------------
+           Mobile
+           --------------------------------------------------------- */
+
+        @media (max-width: 1000px) {
+
+            .instagram-grid {
+                grid-template-columns:
+          repeat(3, minmax(0, 1fr));
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            .instagram-page {
+                padding: 0 16px 60px;
+            }
+
+            .archive-page-head {
+                padding: 45px 0 30px;
+            }
+
+            .archive-toolbar {
+                padding: 18px 0;
+            }
+
+            .instagram-grid {
+                grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+
+                gap: 25px 12px;
+            }
+
+            .instagram-thumb {
+                border-radius: 7px;
+            }
+
+            .instagram-icon {
+                right: 8px;
+                top: 8px;
+
+                width: 28px;
+                height: 28px;
+
+                font-size: 13px;
+            }
+
+            .instagram-source {
+                font-size: 13px;
+            }
+
+            .instagram-meta {
+                font-size: 11px;
+                gap: 5px;
+            }
+
+        }
+
+
+        @media (max-width: 420px) {
+
+            .instagram-grid {
+                gap: 22px 10px;
+            }
+
+            .archive-toolbar {
+                align-items: flex-start;
+            }
+
+            .archive-filters {
+                width: 100%;
+            }
+
+            .sort-select {
+                flex: 1;
+                min-width: 0;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     Header
+     ========================================================= -->
+
+<header class="site-header">
+
+    <div class="brand">
+
+        <a
+                href="index.html"
+                style="color:inherit;text-decoration:none;"
+        >
+            <strong>KIM SOO HYUN STREAM</strong>
+        </a>
+
+        <span>
+      배우 김수현 관련 콘텐츠 큐레이션
+    </span>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     Main
+     ========================================================= -->
+
+<main class="instagram-page">
+
+
+    <!-- Page Header -->
+
+    <section class="archive-page-head">
+
+        <p class="eyebrow">ARCHIVE</p>
+
+        <h1>INSTAGRAM</h1>
+
+        <p>
+            배우 김수현 관련 Instagram 콘텐츠 모음
+        </p>
+
+    </section>
+
+
+    <!-- Toolbar -->
+
+    <div class="archive-toolbar">
+
+        <div class="archive-count">
+            전체 <strong id="post-count">-</strong>개
+        </div>
+
+
+        <div class="archive-filters">
+
+            <select
+                    id="sort-select"
+                    class="sort-select"
+                    aria-label="정렬"
+            >
+
+                <option value="latest">
+                    최신순
+                </option>
+
+                <option value="likes">
+                    좋아요순
+                </option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+
+    <!-- Instagram Grid -->
+
+    <section
+            id="instagram-grid"
+            class="instagram-grid"
+            aria-label="Instagram 게시물 목록"
+    >
+
+        <div class="loading">
+            게시물을 불러오는 중...
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<!-- =========================================================
+     Footer
+     ========================================================= -->
+
+<footer>
+
+  <span>
+    © 2026 KIM SOO HYUN STREAM.
+    All rights reserved.
+  </span>
+
+    <span>
+    Last Updated:
+    <b id="updated">-</b>
+  </span>
+
+</footer>
+
+
+<!-- =========================================================
+     Script
+     ========================================================= -->
+
+<script>
+
+    let posts = [];
+
+
+    // ---------------------------------------------------------
+    // 숫자 포맷
+    // ---------------------------------------------------------
+
+    function formatNumber(number) {
+
+        return Number(number || 0)
+            .toLocaleString('en-US');
+
+    }
+
+
+    // ---------------------------------------------------------
+    // Instagram JSON 불러오기
+    // ---------------------------------------------------------
+
+    async function loadPosts() {
+
+        try {
+
+            const response =
+                await fetch(
+                    'data/instagram.json'
+                );
+
+
+            if (!response.ok) {
+
+                throw new Error(
+                    'instagram.json을 불러올 수 없습니다.'
+                );
+
+            }
+
+
+            const data =
+                await response.json();
+
+
+            posts =
+                Array.isArray(data.items)
+                    ? data.items
+                    : [];
+
+
+            document
+                .getElementById('post-count')
+                .textContent =
+                posts.length.toLocaleString();
+
+
+            document
+                .getElementById('updated')
+                .textContent =
+                data.updatedAt || '-';
+
+
+            renderPosts();
+
+
+        } catch (error) {
+
+            console.error(error);
+
+
+            document
+                .getElementById('instagram-grid')
+                .innerHTML = `
+          <div class="loading">
+            게시물을 불러오지 못했습니다.
+          </div>
+        `;
+
+        }
+
+    }
+
+
+    // ---------------------------------------------------------
+    // 날짜 변환
+    // ---------------------------------------------------------
+
+    function parseDate(date) {
+
+        if (!date) {
+            return 0;
+        }
+
+
+        const parts =
+            String(date).split('.');
+
+
+        if (parts.length !== 3) {
+            return 0;
+        }
+
+
+        return new Date(
+            Number(parts[0]),
+            Number(parts[1]) - 1,
+            Number(parts[2])
+        ).getTime();
+
+    }
+
+
+    // ---------------------------------------------------------
+    // 정렬
+    // ---------------------------------------------------------
+
+    function sortPosts(list, type) {
+
+        return [...list].sort(
+            (a, b) => {
+
+                if (type === 'likes') {
+
+                    return (
+                        Number(b.likes || 0)
+                        -
+                        Number(a.likes || 0)
+                    );
+
+                }
+
+
+                // 최신순
+
+                return (
+                    parseDate(b.date)
+                    -
+                    parseDate(a.date)
+                );
+
+            }
+        );
+
+    }
+
+
+    // ---------------------------------------------------------
+    // 게시물 렌더링
+    // ---------------------------------------------------------
+
+    function renderPosts() {
+
+        const grid =
+            document.getElementById(
+                'instagram-grid'
+            );
+
+
+        const sortType =
+            document
+                .getElementById(
+                    'sort-select'
+                )
+                .value;
+
+
+        const sorted =
+            sortPosts(
+                posts,
+                sortType
+            );
+
+
+        // -------------------------------------------------------
+        // Count
+        // -------------------------------------------------------
+
+        document
+            .getElementById(
+                'post-count'
+            )
+            .textContent =
+            sorted.length.toLocaleString();
+
+
+        // -------------------------------------------------------
+        // Empty
+        // -------------------------------------------------------
+
+        if (!sorted.length) {
+
+            grid.innerHTML = `
+        <div class="loading">
+          등록된 게시물이 없습니다.
+        </div>
+      `;
+
+            return;
+
+        }
+
+
+        // -------------------------------------------------------
+        // Cards
+        // -------------------------------------------------------
+
+        grid.innerHTML =
+            sorted
+                .map(post => {
+
+
+                    const increase =
+                        Number(
+                            post.likeIncrease || 0
+                        );
+
+
+                    const increaseText =
+                        increase > 0
+                            ? `↑ ${formatNumber(increase)}`
+                            : '';
+
+
+                    const source =
+                        post.caption || 'Instagram';
+
+
+                    return `
+
+            <a
+              class="instagram-card"
+              href="${escapeHtml(post.url)}"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <div class="instagram-thumb">
+
+                <img
+                  src="${escapeHtml(post.thumbnail)}"
+                  alt=""
+                  loading="lazy"
+                >
+
+                <span
+                  class="instagram-icon"
+                  aria-hidden="true"
+                >
+                  ◎
+                </span>
+
+              </div>
+
+
+              <div class="instagram-info">
+
+                <h2 class="instagram-source">
+                  ${escapeHtml(source)}
+                </h2>
+
+
+                <div class="instagram-meta">
+
+                  ${
+                        post.date
+                            ? `
+                        <span>
+                          ${escapeHtml(post.date)}
+                        </span>
+                      `
+                            : ''
+                    }
+
+
+                  ${
+                        post.date && post.likes
+                            ? '<span>·</span>'
+                            : ''
+                    }
+
+
+                  ${
+                        post.likes
+                            ? `
+                        <span class="instagram-likes">
+                          ${formatNumber(post.likes)}
+                        </span>
+
+                        <span>
+                          likes
+                        </span>
+                      `
+                            : ''
+                    }
+
+
+                  ${
+                        increaseText
+                            ? `
+                        <span class="like-increase">
+                          ${increaseText}
+                        </span>
+                      `
+                            : ''
+                    }
+
+                </div>
+
+              </div>
+
+            </a>
+
+          `;
+
+                })
+                .join('');
+
+    }
+
+
+    // ---------------------------------------------------------
+    // HTML Escape
+    // ---------------------------------------------------------
+
+    function escapeHtml(value) {
+
+        return String(value ?? '')
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#039;');
+
+    }
+
+
+    // ---------------------------------------------------------
+    // 정렬 변경
+    // ---------------------------------------------------------
+
+    document
+        .getElementById('sort-select')
+        .addEventListener(
+            'change',
+            renderPosts
+        );
+
+
+    // ---------------------------------------------------------
+    // 실행
+    // ---------------------------------------------------------
+
+    loadPosts();
+
+</script>
+
+
+</body>
+</html>
