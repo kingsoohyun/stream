@@ -1,0 +1,759 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Twitter | KIM SOO HYUN STREAM</title>
+
+    <meta
+            name="description"
+            content="Kim Soo Hyun Twitter content stream."
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =========================================================
+           Twitter Archive
+           ========================================================= */
+
+        .twitter-page {
+            max-width: 1200px;
+            margin: auto;
+            padding: 42px 20px;
+        }
+
+
+        /* ---------------------------------------------------------
+           Page Header
+           --------------------------------------------------------- */
+
+        .archive-page-head {
+            text-align: center;
+            padding: 15px 0 35px;
+        }
+
+        .archive-page-head .eyebrow {
+            font-size: 11px;
+            letter-spacing: .18em;
+            color: #727784;
+            margin: 0 0 8px;
+        }
+
+        .archive-page-head h1 {
+            font-size: 42px;
+            margin: 0;
+            letter-spacing: -.03em;
+        }
+
+        .archive-page-head p {
+            margin: 12px 0 0;
+            color: #656b75;
+            font-size: 14px;
+        }
+
+
+        /* ---------------------------------------------------------
+           Toolbar
+           --------------------------------------------------------- */
+
+        .twitter-toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .twitter-count {
+            font-size: 12px;
+            color: #858b95;
+        }
+
+        .twitter-count strong {
+            color: #151922;
+        }
+
+        .sort-select {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 7px 10px;
+            background: #fff;
+            color: #151922;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+
+        /* ---------------------------------------------------------
+           Grid
+           --------------------------------------------------------- */
+
+        .twitter-archive-cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+
+        /* ---------------------------------------------------------
+           Card
+           --------------------------------------------------------- */
+
+        .twitter-card {
+            display: block;
+            color: inherit;
+            text-decoration: none;
+            background: #fff;
+            border: 1px solid #e8e9ed;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: .2s;
+        }
+
+        .twitter-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 22px rgba(20, 25, 35, .08);
+        }
+
+
+        /* ---------------------------------------------------------
+           Thumbnail
+           --------------------------------------------------------- */
+
+        .twitter-thumbnail {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            display: block;
+            background: #dfe2e7;
+        }
+
+
+        /* ---------------------------------------------------------
+           Card Body
+           --------------------------------------------------------- */
+
+        .twitter-card-body {
+            padding: 12px;
+        }
+
+
+        .twitter-account {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+
+        .twitter-account-icon {
+            width: 30px;
+            height: 30px;
+            flex: 0 0 30px;
+
+            border-radius: 50%;
+
+            background: #111;
+            color: #fff;
+
+            display: grid;
+            place-items: center;
+
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+
+        .twitter-account-info {
+            min-width: 0;
+            flex: 1;
+        }
+
+
+        .twitter-display-name {
+            font-size: 12px;
+            font-weight: 700;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+
+        .twitter-username {
+            margin-top: 2px;
+
+            font-size: 10px;
+            color: #90959e;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+
+        .twitter-date {
+            margin-left: auto;
+            align-self: flex-start;
+
+            color: #90959e;
+            font-size: 10px;
+            white-space: nowrap;
+        }
+
+
+        /* ---------------------------------------------------------
+           Description
+           --------------------------------------------------------- */
+
+        .twitter-title {
+            font-size: 12px;
+            line-height: 1.5;
+
+            margin: 12px 0 0;
+
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+
+        /* ---------------------------------------------------------
+           Empty / Loading
+           --------------------------------------------------------- */
+
+        .twitter-loading {
+            grid-column: 1 / -1;
+
+            padding: 70px 20px;
+
+            text-align: center;
+
+            color: #858b95;
+            font-size: 12px;
+        }
+
+
+        /* ---------------------------------------------------------
+           Mobile
+           --------------------------------------------------------- */
+
+        @media (max-width: 900px) {
+
+            .twitter-archive-cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            .twitter-page {
+                padding: 28px 12px;
+            }
+
+            .archive-page-head h1 {
+                font-size: 30px;
+            }
+
+            .twitter-archive-cards {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+
+            .twitter-card-body {
+                padding: 10px;
+            }
+
+            .twitter-account-icon {
+                width: 26px;
+                height: 26px;
+                flex-basis: 26px;
+                font-size: 11px;
+            }
+
+            .twitter-display-name {
+                font-size: 11px;
+            }
+
+            .twitter-username,
+            .twitter-date {
+                font-size: 9px;
+            }
+
+            .twitter-title {
+                font-size: 11px;
+            }
+
+        }
+
+
+        @media (max-width: 480px) {
+
+            .twitter-archive-cards {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =======================================================
+     Header
+     ======================================================= -->
+
+<header class="site-header">
+
+    <div class="brand">
+
+        <a
+                href="index.html"
+                style="color:inherit;text-decoration:none;"
+        >
+            <strong>KIM SOO HYUN STREAM</strong>
+        </a>
+
+        <span>
+        배우 김수현 콘텐츠 모음
+      </span>
+
+    </div>
+
+</header>
+
+
+<!-- =======================================================
+     Main
+     ======================================================= -->
+
+<main class="twitter-page">
+
+
+    <!-- Page Header -->
+
+    <section class="archive-page-head">
+
+        <!--        <p class="eyebrow">-->
+        <!--            ARCHIVE-->
+        <!--        </p>-->
+
+        <!--        <h1>-->
+        <!--            𝕏 TWITTER-->
+        <!--        </h1>-->
+
+        <!--        <p>-->
+        <!--            배우 김수현 관련 X 콘텐츠 모음-->
+        <!--        </p>-->
+
+    </section>
+
+
+    <!-- =====================================================
+         Toolbar
+         ===================================================== -->
+
+    <div class="twitter-toolbar">
+
+        <div class="twitter-count">
+
+            전체
+            <strong id="tweet-count">-</strong>
+            개
+
+        </div>
+
+
+        <select
+                id="sort-select"
+                class="sort-select"
+                aria-label="정렬"
+        >
+
+            <option value="latest">
+                최신순
+            </option>
+
+            <option value="oldest">
+                오래된순
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <!-- =====================================================
+         Tweet Grid
+         ===================================================== -->
+
+    <section
+            id="twitter-cards"
+            class="twitter-archive-cards"
+            aria-label="Twitter 콘텐츠 목록"
+    >
+
+        <div class="twitter-loading">
+            콘텐츠를 불러오는 중...
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<!-- =======================================================
+     Footer
+     ======================================================= -->
+
+<footer>
+
+    <span>
+      © 2026 KIM SOO HYUN STREAM. All rights reserved.
+    </span>
+
+    <span>
+      Last Updated:
+      <b id="updated">-</b>
+    </span>
+
+</footer>
+
+
+<!-- =======================================================
+     Script
+     ======================================================= -->
+
+<script>
+
+    let tweets = [];
+
+
+    // -------------------------------------------------------
+    // 날짜 변환
+    // -------------------------------------------------------
+
+    function parseDate(date) {
+
+        if (!date) {
+            return 0;
+        }
+
+        const parts =
+            String(date).split('.');
+
+        if (parts.length !== 3) {
+            return 0;
+        }
+
+        return new Date(
+            Number(parts[0]),
+            Number(parts[1]) - 1,
+            Number(parts[2])
+        ).getTime();
+
+    }
+
+
+    // -------------------------------------------------------
+    // HTML Escape
+    // -------------------------------------------------------
+
+    function escapeHtml(value) {
+
+        return String(value ?? '')
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#039;');
+
+    }
+
+
+    // -------------------------------------------------------
+    // JSON Load
+    // -------------------------------------------------------
+
+    async function loadTweets() {
+
+        try {
+
+            const response =
+                await fetch(
+                    'data/twitter.json'
+                );
+
+
+            if (!response.ok) {
+
+                throw new Error(
+                    'tweets.json을 불러오지 못했습니다.'
+                );
+
+            }
+
+
+            const data =
+                await response.json();
+
+
+            tweets =
+                Array.isArray(data.items)
+                    ? data.items
+                    : [];
+
+
+            document
+                .getElementById('tweet-count')
+                .textContent =
+                tweets.length.toLocaleString();
+
+
+            document
+                .getElementById('updated')
+                .textContent =
+                data.updatedAt || '-';
+
+
+            renderTweets();
+
+
+        } catch (error) {
+
+            console.error(error);
+
+
+            document
+                .getElementById('twitter-cards')
+                .innerHTML = `
+
+            <div class="twitter-loading">
+              콘텐츠를 불러오지 못했습니다.
+            </div>
+
+          `;
+
+        }
+
+    }
+
+
+    // -------------------------------------------------------
+    // Sort
+    // -------------------------------------------------------
+
+    function sortTweets(list, type) {
+
+        return [...list].sort(
+            (a, b) => {
+
+                const dateA =
+                    parseDate(a.date);
+
+                const dateB =
+                    parseDate(b.date);
+
+
+                if (type === 'oldest') {
+
+                    return dateA - dateB;
+
+                }
+
+
+                return dateB - dateA;
+
+            }
+        );
+
+    }
+
+
+    // -------------------------------------------------------
+    // Render
+    // -------------------------------------------------------
+
+    function renderTweets() {
+
+        const container =
+            document.getElementById(
+                'twitter-cards'
+            );
+
+
+        const sortType =
+            document
+                .getElementById(
+                    'sort-select'
+                )
+                .value;
+
+
+        const sorted =
+            sortTweets(
+                tweets,
+                sortType
+            );
+
+
+        if (!sorted.length) {
+
+            container.innerHTML = `
+
+          <div class="twitter-loading">
+            등록된 콘텐츠가 없습니다.
+          </div>
+
+        `;
+
+            return;
+
+        }
+
+
+        container.innerHTML =
+            sorted
+                .map(tweet => {
+
+
+                    const displayName =
+                        tweet.displayName ||
+                        tweet.username ||
+                        'Twitter';
+
+
+                    const username =
+                        tweet.username
+                            ? '@' + tweet.username
+                            : '';
+
+
+                    const thumbnail =
+                        tweet.thumbnail || '';
+
+
+                    return `
+
+              <a
+                href="${escapeHtml(tweet.url)}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="twitter-card"
+              >
+
+
+                ${
+                        thumbnail
+                            ? `
+
+                      <img
+                        class="twitter-thumbnail"
+                        src="${escapeHtml(thumbnail)}"
+                        alt=""
+                        loading="lazy"
+                      >
+
+                    `
+                            : `
+
+                      <div
+                        class="twitter-thumbnail"
+                        style="
+                          display:grid;
+                          place-items:center;
+                          color:#858b95;
+                          font-size:24px;
+                        "
+                      >
+                        𝕏
+                      </div>
+
+                    `
+                    }
+
+
+                <div class="twitter-card-body">
+
+
+                  <div class="twitter-account">
+
+
+                    <div class="twitter-account-icon">
+                      𝕏
+                    </div>
+
+
+                    <div class="twitter-account-info">
+
+                      <div class="twitter-display-name">
+                        ${escapeHtml(displayName)}
+                      </div>
+
+                      ${
+                        username
+                            ? `
+
+                            <div class="twitter-username">
+                              ${escapeHtml(username)}
+                            </div>
+
+                          `
+                            : ''
+                    }
+
+                    </div>
+
+
+                    ${
+                        tweet.date
+                            ? `
+
+                          <div class="twitter-date">
+                            ${escapeHtml(tweet.date)}
+                          </div>
+
+                        `
+                            : ''
+                    }
+                  </div>
+                </div>
+              </a>
+            `;
+
+                })
+                .join('');
+
+    }
+
+
+    // -------------------------------------------------------
+    // Sort Change
+    // -------------------------------------------------------
+
+    document
+        .getElementById('sort-select')
+        .addEventListener(
+            'change',
+            renderTweets
+        );
+
+
+    // -------------------------------------------------------
+    // Start
+    // -------------------------------------------------------
+
+    loadTweets();
+
+</script>
+
+</body>
+</html>
