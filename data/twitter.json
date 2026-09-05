@@ -1,10 +1,29 @@
 {
-  "updatedAt": "2026-08-26 14:00",
+  "updatedAt": "2026-09-05 03:52",
   "items": [
-    {"author":"KIM SOO HYUN","date":"2026.08.24","text":"샘플 트윗입니다. 실제 데이터로 교체하세요.","likes":1200,"reposts":8700,"views":25000,"url":"https://twitter.com/"},
-    {"author":"KIM SOO HYUN","date":"2026.08.20","text":"샘플 트윗 2입니다.","likes":1500,"reposts":9800,"views":28000,"url":"https://twitter.com/"},
-    {"author":"KIM SOO HYUN","date":"2026.08.15","text":"샘플 트윗 3입니다.","likes":2100,"reposts":15000,"views":42000,"url":"https://twitter.com/"},
-    {"author":"KIM SOO HYUN","date":"2026.08.10","text":"샘플 트윗 4입니다.","likes":1300,"reposts":10000,"views":30000,"url":"https://twitter.com/"},
-    {"author":"KIM SOO HYUN","date":"2026.08.05","text":"샘플 트윗 5입니다.","likes":1100,"reposts":8200,"views":26000,"url":"https://twitter.com/"}
+    {
+      "url": "https://x.com/starnewskorea/status/2094547662997762550",
+      "tweetId": "2094547662997762550",
+      "username": "starnewskorea",
+      "displayName": "스타뉴스 X AAA2026",
+      "date": "2026.09.02",
+      "thumbnail": "images/twitter/2094547662997762550.jpg"
+    },
+    {
+      "url": "https://x.com/thefact_TMA/status/2093187274360189084",
+      "tweetId": "2093187274360189084",
+      "username": "thefact_TMA",
+      "displayName": "더팩트 뮤직 어워즈 (TMA)",
+      "date": "2026.08.28",
+      "thumbnail": "images/twitter/2093187274360189084.jpg"
+    },
+    {
+      "url": "https://x.com/CJnDrama/status/1765203144831910050",
+      "tweetId": "1765203144831910050",
+      "username": "CJnDrama",
+      "displayName": "tvN drama",
+      "date": "2024.03.06",
+      "thumbnail": "images/twitter/1765203144831910050.jpg"
+    }
   ]
 }
