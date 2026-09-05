@@ -92,18 +92,23 @@ footer{max-width:1200px;margin:auto;padding:20px;color:#8a9099;font-size:10px;di
 
 @media(max-width:800px){
 
-    main{padding:28px 12px}
+    main{
+        padding:28px 12px
+    }
 
-    .hero h1{font-size:30px}
+    .hero h1{
+        font-size:30px
+    }
 
     .platform-nav{
         grid-template-columns:1fr;
         gap:10px
     }
 
+    /* YouTube / Instagram */
+
     .youtube-cards,
-    .instagram-cards,
-    .twitter-cards{
+    .instagram-cards{
         grid-template-columns:1fr
     }
 
@@ -119,6 +124,35 @@ footer{max-width:1200px;margin:auto;padding:20px;color:#8a9099;font-size:10px;di
         aspect-ratio:auto
     }
 
+    /* Twitter */
+
+    .twitter-cards{
+        grid-template-columns:repeat(2,1fr);
+        gap:10px
+    }
+
+    .tweet .thumb{
+        aspect-ratio:16/9
+    }
+
+    .tweet .card-body{
+        padding:10px
+    }
+
+    .tweet-head{
+        gap:6px
+    }
+
+    .avatar{
+        width:24px;
+        height:24px;
+        font-size:11px
+    }
+
+    .tweet-date{
+        font-size:9px
+    }
+
     .section-head>div{
         gap:8px;
         flex-wrap:wrap
@@ -126,10 +160,6 @@ footer{max-width:1200px;margin:auto;padding:20px;color:#8a9099;font-size:10px;di
 
     .section-head span{
         width:100%
-    }
-
-    .twitter-cards{
-        gap:8px
     }
 
     .site-header{
