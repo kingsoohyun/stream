@@ -37,11 +37,18 @@ function renderTwitter(data) {
       <a class="card tweet" href="${escapeHtml(v.url)}" target="_blank" rel="noopener">
 
         <img class="thumb" src="${escapeHtml(v.thumbnail)}" alt="" loading="lazy">
-        <div class="card-body"><div class="tweet-head"><span class="avatar">𝕏</span><div style="min-width:0;flex:1">
+        <div class="card-body">
+          <div class="tweet-head">
+            <div style="min-width:0;flex:1">
               <b>${escapeHtml(v.displayName)}</b>
+            </div>
 
-              </div>
-        </div></div></a>
+            <span class="tweet-date">
+              ${escapeHtml(v.date)}
+            </span>
+          </div>
+
+        </div>
     `).join("");
 }
 
