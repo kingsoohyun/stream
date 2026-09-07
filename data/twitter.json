@@ -1,5 +1,170 @@
 {
-  "updatedAt": "2026-09-08 02:55",
+  "updatedAt": "2026-09-08 03:55",
+  "categories": [
+    {
+      "id": "debut",
+      "name": "✨ 데뷔 19주년",
+      "order": 1
+    },
+    {
+      "id": "birthday",
+      "name": "🎂 2026 생일",
+      "order": 2
+    }
+  ],
   "items": [
+    {
+      "url": "https://x.com/kimfact_withu/status/2080071581943136573",
+      "tweetId": "2080071581943136573",
+      "username": "kimfact_withu",
+      "title": "🖤김수현 한국 & 글로벌 팬연합 데뷔 기념 광고 일정 안내🖤 김수현 배우의 19번째 데뷔 기념일을 맞아 전 세계 팬들의 응원의 마음을 가득 담아 준비한 광고/행사 내용입니다. 지난 7월 14일 벤치 광고 촬영으로 다시 활동을 시작한 배우 김수현이 다시 본래의 자리를 찾고, 차기...",
+      "date": "2026.07.23",
+      "tags": ["✨ 데뷔 19주년"],
+      "thumbnail": "https://pbs.twimg.com/media/HN3czG7bIAAVFlP.jpg:large"
+    },
+    {
+      "url": "https://x.com/kimfact_withu/status/2080449327202468278",
+      "tweetId": "2080449327202468278",
+      "username": "kimfact_withu",
+      "title": "‘벤치 X 배우 김수현 한국&글로벌 팬연합’ ✨김수현 ✨ 데뷔 19주년 맞아 초록우산에 의류 기부✨ 이번 기부는 팬연합을 중심으로 전 세계 114개국 팬들이 뜻을 모아 ‘True in Every Moment’, 세상에 다정한 온기로 닿기를’이라는 메시지 아래 김수현 ✨ 데뷔 19주년 의미...",
+      "date": "2026.07.24",
+      "tags": ["✨ 데뷔 19주년"],
+      "thumbnail": "https://pbs.twimg.com/media/HN89oiKbUAAGZZ0.jpg:large"
+    },
+    {
+      "url": "https://x.com/myballoon_korea/status/2081542919283187945",
+      "tweetId": "2081542919283187945",
+      "username": "myballoon_korea",
+      "title": "Kim Soo Hyun&#x27;s debut anniversary gift has been delivered with love. Your thoughtful gift surely made this milestone even more meaningful. We&#x27;d love...",
+      "date": "2026.07.27",
+      "tags": ["✨ 데뷔 19주년"],
+      "thumbnail": "https://pbs.twimg.com/media/HOMgGmGaIAAznkA.jpg:large"
+    },
+    {
+      "url": "https://x.com/EchoesOfKSH_CN/status/2080505665131544758",
+      "tweetId": "2080505665131544758",
+      "username": "EchoesOfKSH_CN",
+      "title": "【留影机应援】20260724｜金秀贤出道19周年应援（七） 𝑯𝒂𝒑𝒑𝒚 𝟏𝟗𝒕𝒉 𝑫𝒆𝒃𝒖𝒕 𝑨𝒏𝒏𝒊𝒗𝒆𝒓𝒔𝒂𝒓𝒚｜𝑷𝒂𝒓𝒕 𝟕 ❣️留影机定制的出道纪念日鲜花气球蛋糕 已送达金牌🎂💐🎈 留影机送给金秀贤的出道19周年纪念日蛋糕，已经在韩国时间...",
+      "date": "2026.07.24",
+      "tags": ["✨ 데뷔 19주년"],
+      "thumbnail": "https://pbs.twimg.com/media/HN9w3gzaoAAIJhU.jpg:large"
+    },
+    {
+      "url": "https://x.com/EchoesOfKSH_CN/status/2080513534350500327",
+      "tweetId": "2080513534350500327",
+      "username": "EchoesOfKSH_CN",
+      "title": "Echoes of Kim Soo Hyun_CN (@EchoesOfKSH_CN) on X",
+      "date": "2026.07.24",
+      "tags": ["✨ 데뷔 19주년"],
+      "thumbnail": "https://pbs.twimg.com/media/HN94BsFbEAAVRYG.jpg:large"
+    },
+    {
+      "url": "https://x.com/_ksh216/status/2080481612677210117",
+      "tweetId": "2080481612677210117",
+      "username": "_ksh216",
+      "title": "김수현 ✨ 데뷔 19주년 서포트💕 자체 제작한 디저트와 정성 가득 선물들 가득 담아 김수현 종합선물세트 완성🎁🥰 #금방또올게 #TrueInEveryMoment #김수현데뷔19주년축하해 #김수현너의모든순간을응원해",
+      "date": "2026.07.24",
+      "tags": ["✨ 데뷔 19주년"],
+      "thumbnail": "https://pbs.twimg.com/media/HN9a_Y2bIAAlVKR.jpg:large"
+    },
+    {
+      "url": "https://x.com/880216_ksh/status/2080521569194115421",
+      "tweetId": "2080521569194115421",
+      "username": "880216_ksh",
+      "title": "True in Every Moment 김수현 너의 모든 순간을 응원해 @kimsoohyun_no1 @star_kshthanks @hidy_ksh0216 @twinkle_ksh @dallyeohu @aaabangsoo @bravokimsooman @jnyang01",
+      "date": "2026.07.24",
+      "tags": ["✨ 데뷔 19주년"],
+      "thumbnail": "https://pbs.twimg.com/media/HN9_VU4akAAMJis.jpg:large"
+    },
+    {
+      "url": "https://x.com/Yunko2042923/status/2080318713618919932",
+      "tweetId": "2080318713618919932",
+      "username": "Yunko2042923",
+      "title": "Happy 19th Debut Anniversary 🎉🎉🎉 スヒョンくん、19年間俳優の道を 真っ直ぐに歩いてきてくれて 本当にありがとうございます✨✨ これからもずっとずっとあなたの演技と あなたの笑顔を見ていたいです♡♡ #TrueInEveryMoment #김수현데뷔19주년축하해 #김수현너...",
+      "date": "2026.07.24",
+      "tags": ["✨ 데뷔 19주년"],
+      "thumbnail": "https://pbs.twimg.com/media/HN7G1A9aYAEomih.jpg:large"
+    },
+    {
+      "url": "https://x.com/Yunko2042923/status/2083534983478812718",
+      "tweetId": "2083534983478812718",
+      "username": "Yunko2042923",
+      "title": "今回は、初めて事務所前まで お邪魔する事ができました✨ 静かで暗くて(← ドキドキしましたが スタッフさんは優しく 電気もつけてくれて 写真撮ってる間も待ってくれて🙏 韓国語と英語と日本語と? よく分からない言葉だったけど😂 感謝の気持ちを伝えられたように思います😌 ありがとうございました。",
+      "date": "2026.08.01",
+      "tags": ["✨ 데뷔 19주년"],
+      "thumbnail": "https://pbs.twimg.com/media/HOo0AeoawAAmdY4.jpg:large"
+    },
+    {
+      "url": "https://x.com/EchoesOfKSH_CN/status/2024822552770806038",
+      "tweetId": "2024822552770806038",
+      "username": "EchoesOfKSH_CN",
+      "title": "[Updated] 🌍 𝟐𝟎𝟐𝟔 𝑯𝒂𝒑𝒑𝒚 𝑺𝒐𝒐𝒉𝒚𝒖𝒏 𝑫𝒂𝒚 | Global Fans Birthday Support Recap 📝 For Kim Soohyun’s 2026 birthday, global fans from over 25 coun...",
+      "date": "2026.02.20",
+      "tags": ["🎂 2026 생일"],
+      "thumbnail": "https://pbs.twimg.com/media/HBmdXxuawAALPrq.jpg:large"
+    },
+    {
+      "url": "https://x.com/HKKimsCircle/status/2022671543277621322",
+      "tweetId": "2022671543277621322",
+      "username": "HKKimsCircle",
+      "title": "【2026.2.16 #happysoohyunday 】 Sending beautiful yellow flowers with King Donald Duck (= King KSH) + heart + smile flowers+ touching message card to our belov...",
+      "date": "2026.02.14",
+      "tags": ["🎂 2026 생일"],
+      "thumbnail": "https://pbs.twimg.com/media/HBH5BsoboAAXOZQ.jpg:large"
+    },
+    {
+      "url": "https://x.com/j_y_sn_KJ/status/2021975132538122282",
+      "tweetId": "2021975132538122282",
+      "username": "j_y_sn_KJ",
+      "title": "センイル渡韓1日目 濃厚な1日が終わりましたー😆 @hWdBqxYgQjodLbv @formpinoko_o @shk220320068121 お預かりした💌と🎁を持って事務所へ。出くわしたスタッフさんに日本からスヒョンさんの誕生日祝いを届けに来たと伝えるととても対応良く受け取ってもらえましたー🥰",
+      "date": "2026.02.13",
+      "tags": ["🎂 2026 생일"],
+      "thumbnail": "https://pbs.twimg.com/media/HA9_qLlbkAAaJz6.jpg:large"
+    },
+    {
+      "url": "https://x.com/With_ActorKSH/status/2022979244322943027",
+      "tweetId": "2022979244322943027",
+      "username": "With_ActorKSH",
+      "title": "곧 따뜻한 봄이 찾아올 것 같습니다. 긴 시간을 지나 마주하는 봄이기에 더욱 소중하게 느껴집니다. 그 봄이 오면, 누구보다 멋지게 날아오를 김수현 배우님의 새로운 시간들이 시작될 거라 믿습니다. 그 시간을 곁에서 함께하겠습니다. 김수현 배우님의 생일을 진심으로 축하드립니다. #김수현",
+      "date": "2026.02.15",
+      "tags": ["🎂 2026 생일"],
+      "thumbnail": "https://pbs.twimg.com/media/HBMQ5b8boAA1Cf-.jpg:large"
+    },
+    {
+      "url": "https://x.com/With_ActorKSH/status/2022985739496292578",
+      "tweetId": "2022985739496292578",
+      "username": "With_ActorKSH",
+      "title": "동행의 메세지를 담은 포춘쿠키와 라이딩의 평온한 동반자가 되길 바라는 마음으로 준비한 선물입니다. 잠시나마 김수현배우님께 평온을 드릴 수 있는 시간이 되길 바랍니다. #김수현 #KimSooHyun #WeStandwithKimSooHyun #김수현생일축하해",
+      "date": "2026.02.15",
+      "tags": ["🎂 2026 생일"],
+      "thumbnail": "https://pbs.twimg.com/media/HBMWzbYbUAAlxfy.jpg:large"
+    },
+    {
+      "url": "https://x.com/KimSoohyunshiph/status/2023215161721724946",
+      "tweetId": "2023215161721724946",
+      "username": "KimSoohyunshiph",
+      "title": "Elegant Matt Pastel Bouquet Daisy & Tulip Balloon Ribbon message: “Kim Soohyun, Fighting! (Stay strong / We support you!)” Like these flower balloons, may yo...",
+      "date": "2026.02.16",
+      "tags": ["🎂 2026 생일"],
+      "thumbnail": "https://pbs.twimg.com/media/HBPnd5XbIAA7h_L.jpg:large"
+    },
+    {
+      "url": "https://x.com/KimSoohyunshiph/status/2023218367008854455",
+      "tweetId": "2023218367008854455",
+      "username": "KimSoohyunshiph",
+      "title": "And we added a touch of sweetness with this Starbucks Rabbit Tin Can filled with chocolates 🍫💙 Perfect for Soohyun to enjoy! #김수현생일축하해 #HappySoohyunDay #HB...",
+      "date": "2026.02.16",
+      "tags": ["🎂 2026 생일"],
+      "thumbnail": "https://pbs.twimg.com/media/HBPqXCXbQAAzPh4.jpg:large"
+    },
+    {
+      "url": "https://x.com/KimSoohyunshiph/status/2023254635566477678",
+      "tweetId": "2023254635566477678",
+      "username": "KimSoohyunshiph",
+      "title": "Each card holds our love and heartfelt wishes for you 💙 Happy Birthday, Soohyun! Your smile lights up our hearts 💌 #김수현생일축하해 #HappySoohyunDay #HBD김수현 #KimS...",
+      "date": "2026.02.16",
+      "tags": ["🎂 2026 생일"],
+      "thumbnail": "https://pbs.twimg.com/media/HBQLXQ9bgAAgAbE.jpg:large"
+    }
   ]
 }

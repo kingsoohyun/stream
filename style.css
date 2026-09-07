@@ -121,6 +121,20 @@ main{
     font-weight:700
 }
 
+.content-notice {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 20px 10px;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #888;
+    text-align: center;
+}
+
+.content-notice p {
+    margin: 2px 0;
+}
+
 .youtube .icon{
     background:#f11
 }

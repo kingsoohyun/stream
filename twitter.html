@@ -75,6 +75,12 @@
             color: #151922;
         }
 
+        .twitter-filters {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
         .sort-select {
             border: 1px solid #e5e7eb;
             border-radius: 8px;
@@ -91,9 +97,8 @@
            --------------------------------------------------------- */
 
         .twitter-archive-cards {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 18px;
+            column-count: 4;
+            column-gap: 18px;
         }
 
 
@@ -102,7 +107,12 @@
            --------------------------------------------------------- */
 
         .twitter-card {
-            display: block;
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+            break-inside: avoid;
+            -webkit-column-break-inside: avoid;
+            margin: 0 0 18px;
             color: inherit;
             text-decoration: none;
             background: #fff;
@@ -124,8 +134,9 @@
 
         .twitter-thumbnail {
             width: 100%;
-            aspect-ratio: 16 / 9;
-            object-fit: cover;
+            height: auto;
+            aspect-ratio: auto;
+            object-fit: contain;
             display: block;
             background: #dfe2e7;
         }
@@ -243,7 +254,7 @@
         @media (max-width: 900px) {
 
             .twitter-archive-cards {
-                grid-template-columns: repeat(3, 1fr);
+                column-count: 3;
             }
 
         }
@@ -255,13 +266,17 @@
                 padding: 28px 12px;
             }
 
+            .twitter-filters {
+                gap: 6px;
+            }
+
             .archive-page-head h1 {
                 font-size: 30px;
             }
 
             .twitter-archive-cards {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 12px;
+                column-count: 2;
+                column-gap: 12px;
             }
 
             .twitter-card-body {
@@ -294,7 +309,7 @@
         @media (max-width: 480px) {
 
             .twitter-archive-cards {
-                grid-template-columns: 1fr;
+                column-count: 1;
             }
 
         }
@@ -371,21 +386,33 @@
         </div>
 
 
-        <select
-                id="sort-select"
-                class="sort-select"
-                aria-label="정렬"
-        >
+        <div class="twitter-filters">
 
-            <option value="latest">
-                최신순
-            </option>
+            <select
+                    id="category-select"
+                    class="sort-select"
+                    aria-label="카테고리 필터"
+            >
+                <option value="all">전체</option>
+            </select>
 
-            <option value="oldest">
-                오래된순
-            </option>
+            <select
+                    id="sort-select"
+                    class="sort-select"
+                    aria-label="정렬"
+            >
 
-        </select>
+                <option value="latest">
+                    최신순
+                </option>
+
+                <option value="oldest">
+                    오래된순
+                </option>
+
+            </select>
+
+        </div>
 
     </div>
 
@@ -410,22 +437,36 @@
 </main>
 
 
-<!-- =======================================================
+<!-- =========================================================
+     Content Notice
+     ========================================================= -->
+
+<div class="content-notice">
+    <p>
+        Non-commercial fan page. Not for sale.
+    </p>
+    <p>
+        All rights belong to their respective copyright holders and original creators.
+        Please refer to the original post for the source.
+    </p>
+</div>
+
+
+<!-- =========================================================
      Footer
-     ======================================================= -->
+     ========================================================= -->
 
 <footer>
 
     <span>
-      © 2026 KIM SOO HYUN STREAM. All rights reserved.
+        © 2026 KIM SOO HYUN STREAM.
+        All rights reserved.
     </span>
 
     <span>
-      Last Updated:
-      <b id="updated">-</b>
+        Last Updated:
+        <b id="updated">-</b>
     </span>
-
-</footer>
 
 
 <!-- =======================================================
@@ -435,6 +476,7 @@
 <script>
 
     let tweets = [];
+    let categories = [];
 
 
     // -------------------------------------------------------
@@ -511,6 +553,13 @@
                     ? data.items
                     : [];
 
+            categories =
+                Array.isArray(data.categories)
+                    ? data.categories
+                    : [];
+
+            buildCategoryFilter();
+
 
             document
                 .getElementById('tweet-count')
@@ -543,6 +592,90 @@
           `;
 
         }
+
+    }
+
+
+    // -------------------------------------------------------
+    // Category Filter
+    // -------------------------------------------------------
+
+    function buildCategoryFilter() {
+
+        const select =
+            document.getElementById(
+                'category-select'
+            );
+
+
+        const sortedCategories =
+            [...categories].sort(
+                (a, b) =>
+                    Number(a.order || 999)
+                    -
+                    Number(b.order || 999)
+            );
+
+
+        select.innerHTML =
+            '<option value="all">전체</option>';
+
+
+        sortedCategories.forEach(category => {
+
+            const option =
+                document.createElement('option');
+
+            option.value =
+                category.id || '';
+
+            option.textContent =
+                category.name || category.id || '';
+
+            select.appendChild(option);
+
+        });
+
+    }
+
+
+    function getTweetCategory(tweet) {
+
+        if (tweet.category) {
+            return tweet.category;
+        }
+
+
+        if (!Array.isArray(tweet.tags)) {
+            return null;
+        }
+
+
+        for (const category of categories) {
+
+            const categoryName =
+                String(category.name || '').trim();
+
+
+            if (!categoryName) {
+                continue;
+            }
+
+
+            if (
+                tweet.tags.some(tag =>
+                    String(tag || '')
+                        .trim()
+                        .startsWith(categoryName)
+                )
+            ) {
+                return category.id;
+            }
+
+        }
+
+
+        return null;
 
     }
 
@@ -598,11 +731,41 @@
                 .value;
 
 
+        const selectedCategory =
+            document
+                .getElementById(
+                    'category-select'
+                )
+                .value;
+
+
+        let filtered =
+            tweets;
+
+
+        if (selectedCategory !== 'all') {
+
+            filtered =
+                tweets.filter(
+                    tweet =>
+                        getTweetCategory(tweet)
+                        === selectedCategory
+                );
+
+        }
+
+
         const sorted =
             sortTweets(
-                tweets,
+                filtered,
                 sortType
             );
+
+
+        document
+            .getElementById('tweet-count')
+            .textContent =
+            sorted.length.toLocaleString();
 
 
         if (!sorted.length) {
@@ -727,6 +890,18 @@
 
 
     // -------------------------------------------------------
+    // Category Change
+    // -------------------------------------------------------
+
+    document
+        .getElementById('category-select')
+        .addEventListener(
+            'change',
+            renderTweets
+        );
+
+
+    // -------------------------------------------------------
     // Sort Change
     // -------------------------------------------------------
 
@@ -747,4 +922,6 @@
 </script>
 
 </body>
+
+
 </html>
