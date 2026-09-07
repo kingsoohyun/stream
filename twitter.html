@@ -16,7 +16,7 @@
     <style>
 
         /* =========================================================
-           Twitter Archive
+           Twitter Curation
            ========================================================= */
 
         .twitter-page {
@@ -162,15 +162,11 @@
             width: 30px;
             height: 30px;
             flex: 0 0 30px;
-
             border-radius: 50%;
-
             background: #111;
             color: #fff;
-
             display: grid;
             place-items: center;
-
             font-size: 13px;
             font-weight: 700;
         }
@@ -185,7 +181,6 @@
         .twitter-display-name {
             font-size: 12px;
             font-weight: 700;
-
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
@@ -194,10 +189,8 @@
 
         .twitter-username {
             margin-top: 2px;
-
             font-size: 10px;
             color: #90959e;
-
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
@@ -207,7 +200,6 @@
         .twitter-date {
             margin-left: auto;
             align-self: flex-start;
-
             color: #90959e;
             font-size: 10px;
             white-space: nowrap;
@@ -221,7 +213,6 @@
         .twitter-title {
             font-size: 12px;
             line-height: 1.5;
-
             margin: 12px 0 0;
 
             display: -webkit-box;
@@ -237,11 +228,8 @@
 
         .twitter-loading {
             grid-column: 1 / -1;
-
             padding: 70px 20px;
-
             text-align: center;
-
             color: #858b95;
             font-size: 12px;
         }
@@ -337,8 +325,8 @@
         </a>
 
         <span>
-        배우 김수현 콘텐츠 모음
-      </span>
+            배우 김수현 콘텐츠 모음
+        </span>
 
     </div>
 
@@ -356,17 +344,19 @@
 
     <section class="archive-page-head">
 
-        <!--        <p class="eyebrow">-->
-        <!--            ARCHIVE-->
-        <!--        </p>-->
+        <!--
+        <p class="eyebrow">
+            CURATION
+        </p>
 
-        <!--        <h1>-->
-        <!--            𝕏 TWITTER-->
-        <!--        </h1>-->
+        <h1>
+            𝕏 TWITTER
+        </h1>
 
-        <!--        <p>-->
-        <!--            배우 김수현 관련 X 콘텐츠 모음-->
-        <!--        </p>-->
+        <p>
+            배우 김수현 관련 X 콘텐츠 모음
+        </p>
+        -->
 
     </section>
 
@@ -438,35 +428,18 @@
 
 
 <!-- =========================================================
-     Content Notice
-     ========================================================= -->
-
-<div class="content-notice">
-    <p>
-        Non-commercial fan page. Not for sale.
-    </p>
-    <p>
-        All rights belong to their respective copyright holders and original creators.
-        Please refer to the original post for the source.
-    </p>
-</div>
-
-
-<!-- =========================================================
      Footer
      ========================================================= -->
 
 <footer>
-
-    <span>
-        © 2026 KIM SOO HYUN STREAM.
-        All rights reserved.
-    </span>
-
-    <span>
-        Last Updated:
-        <b id="updated">-</b>
-    </span>
+    <div class="footer-notice">
+        <p>
+            KIM SOO HYUN STREAM is a non-commercial content curation site and is not for sale.
+            All content remains the property of its respective copyright holders and original creators.
+            All posts are linked to their original sources.
+        </p>
+    </div>
+</footer>
 
 
 <!-- =======================================================
@@ -538,7 +511,7 @@
             if (!response.ok) {
 
                 throw new Error(
-                    'tweets.json을 불러오지 못했습니다.'
+                    'twitter.json을 불러오지 못했습니다.'
                 );
 
             }
@@ -558,6 +531,7 @@
                     ? data.categories
                     : [];
 
+
             buildCategoryFilter();
 
 
@@ -565,12 +539,6 @@
                 .getElementById('tweet-count')
                 .textContent =
                 tweets.length.toLocaleString();
-
-
-            document
-                .getElementById('updated')
-                .textContent =
-                data.updatedAt || '-';
 
 
             renderTweets();
@@ -585,11 +553,11 @@
                 .getElementById('twitter-cards')
                 .innerHTML = `
 
-            <div class="twitter-loading">
-              콘텐츠를 불러오지 못했습니다.
-            </div>
+                <div class="twitter-loading">
+                    콘텐츠를 불러오지 못했습니다.
+                </div>
 
-          `;
+            `;
 
         }
 
@@ -630,7 +598,9 @@
                 category.id || '';
 
             option.textContent =
-                category.name || category.id || '';
+                category.name ||
+                category.id ||
+                '';
 
             select.appendChild(option);
 
@@ -639,6 +609,7 @@
 
         // 최초 진입 시 기본 카테고리
         select.value = 'debut';
+
     }
 
 
@@ -775,11 +746,11 @@
 
             container.innerHTML = `
 
-          <div class="twitter-loading">
-            등록된 콘텐츠가 없습니다.
-          </div>
+                <div class="twitter-loading">
+                    등록된 콘텐츠가 없습니다.
+                </div>
 
-        `;
+            `;
 
             return;
 
@@ -809,82 +780,86 @@
 
                     return `
 
-              <a
-                href="${escapeHtml(tweet.url)}"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="twitter-card"
-              >
+                        <a
+                            href="${escapeHtml(tweet.url)}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="twitter-card"
+                        >
 
-
-                ${
+                            ${
                         thumbnail
                             ? `
 
-                      <img
-                        class="twitter-thumbnail"
-                        src="${escapeHtml(thumbnail)}"
-                        alt=""
-                        loading="lazy"
-                      >
+                                        <img
+                                            class="twitter-thumbnail"
+                                            src="${escapeHtml(thumbnail)}"
+                                            alt=""
+                                            loading="lazy"
+                                        >
 
-                    `
+                                    `
                             : `
 
-                      <div
-                        class="twitter-thumbnail"
-                        style="
-                          display:grid;
-                          place-items:center;
-                          color:#858b95;
-                          font-size:24px;
-                        "
-                      >
-                        𝕏
-                      </div>
+                                        <div
+                                            class="twitter-thumbnail"
+                                            style="
+                                                display:grid;
+                                                place-items:center;
+                                                color:#858b95;
+                                                font-size:24px;
+                                            "
+                                        >
+                                            𝕏
+                                        </div>
 
-                    `
+                                    `
                     }
 
+                            <div class="twitter-card-body">
 
-                <div class="twitter-card-body">
-                  <div class="twitter-account">
-                    <div class="twitter-account-info">
+                                <div class="twitter-account">
 
-                      <div class="twitter-display-name">
-                        ${escapeHtml(displayName)}
-                      </div>
+                                    <div class="twitter-account-info">
 
-                      ${
+                                        <div class="twitter-display-name">
+                                            ${escapeHtml(displayName)}
+                                        </div>
+
+                                        ${
                         username
                             ? `
 
-                            <div class="twitter-username">
-                              ${escapeHtml(username)}
-                            </div>
+                                                    <div class="twitter-username">
+                                                        ${escapeHtml(username)}
+                                                    </div>
 
-                          `
+                                                `
                             : ''
                     }
 
-                    </div>
+                                    </div>
 
 
-                    ${
+                                    ${
                         tweet.date
                             ? `
 
-                          <div class="twitter-date">
-                            ${escapeHtml(tweet.date)}
-                          </div>
+                                                <div class="twitter-date">
+                                                    ${escapeHtml(tweet.date)}
+                                                </div>
 
-                        `
+                                            `
                             : ''
                     }
-                  </div>
-                </div>
-              </a>
-            `;
+
+                                </div>
+
+                            </div>
+
+                        </a>
+
+                    `;
 
                 })
                 .join('');
@@ -924,7 +899,6 @@
 
 </script>
 
+
 </body>
-
-
 </html>
