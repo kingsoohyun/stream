@@ -121,23 +121,23 @@ main{
     font-weight:700
 }
 
+
 /* ---------------------------------------------------------
    Content Notice
    --------------------------------------------------------- */
 
-.content-notice {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 24px 24px 10px;
-
-    color: #888;
-    font-size: 12px;
-    line-height: 1.6;
-    text-align: center;
+.content-notice{
+    max-width:1280px;
+    margin:0 auto;
+    padding:24px 24px 10px;
+    color:#888;
+    font-size:12px;
+    line-height:1.6;
+    text-align:center
 }
 
-.content-notice p {
-    margin: 2px 0;
+.content-notice p{
+    margin:2px 0
 }
 
 .youtube .icon{
@@ -292,8 +292,14 @@ main{
     font-size:10px
 }
 
+
+/* =========================================================
+   Instagram Thumbnail
+   ========================================================= */
+
 .ig-thumb{
-    aspect-ratio:1/1
+    aspect-ratio:4/5;
+    object-fit:cover
 }
 
 
@@ -410,10 +416,16 @@ footer{
         grid-template-columns:120px 1fr
     }
 
-    .youtube-cards .thumb,
-    .instagram-cards .thumb{
+    .youtube-cards .thumb{
         height:100%;
         aspect-ratio:auto
+    }
+
+    .instagram-cards .thumb{
+        width:100%;
+        height:auto;
+        aspect-ratio:4/5;
+        object-fit:cover
     }
 
 
