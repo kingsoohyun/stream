@@ -388,32 +388,15 @@
      Content Notice
      ========================================================= -->
 
-<div class="content-notice">
-    <p>
-        Non-commercial fan page. Not for sale.
-    </p>
-    <p>
-        All rights belong to their respective copyright holders and original creators.
-        Please refer to the original post for the source.
-    </p>
-</div>
-
-
-<!-- =========================================================
-     Footer
-     ========================================================= -->
-
 <footer>
-
-    <span>
-        © 2026 KIM SOO HYUN STREAM.
-        All rights reserved.
-    </span>
-
-    <span>
-        Last Updated:
-        <b id="updated">-</b>
-    </span>
+    <div class="footer-notice">
+        <p>
+            KIM SOO HYUN STREAM is a non-commercial content curation site and is not for sale.
+            All content remains the property of its respective copyright holders and original creators.
+            All posts are linked to their original sources.
+        </p>
+    </div>
+</footer>
 
 
 <!-- =========================================================
@@ -474,12 +457,6 @@
                 .getElementById('post-count')
                 .textContent =
                 posts.length.toLocaleString();
-
-
-            document
-                .getElementById('updated')
-                .textContent =
-                data.updatedAt || '-';
 
 
             renderPosts();
