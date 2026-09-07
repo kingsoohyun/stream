@@ -6,7 +6,7 @@ async function loadData() {
     ]);
     renderYoutube(youtube);
     renderInstagram(instagram);
-    renderTwitter(twitter);
+    // renderTwitter(twitter);
     const updated = [youtube.updatedAt, instagram.updatedAt, twitter.updatedAt].filter(Boolean).sort().pop();
     document.querySelector("#updated").textContent = updated || "-";
 }
