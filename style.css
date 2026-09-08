@@ -32,6 +32,13 @@ body{
     flex-direction:column
 }
 
+.brand a{
+    display:flex;
+    flex-direction:column;
+    color:inherit;
+    text-decoration:none
+}
+
 .brand strong{
     font-size:20px;
     letter-spacing:.02em
