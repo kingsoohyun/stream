@@ -1,3 +1,4 @@
+
 async function loadEvents() {
 
     const data = await fetch("data/events.json").then(r => {
@@ -66,14 +67,41 @@ async function renderMap(events) {
 
 
     /* =====================================================
+       Remove Polar Regions
+       ===================================================== */
+
+    /*
+     * 010 = Antarctica
+     * 304 = Greenland
+     *
+     * 남극과 그린란드를 지도에서 제외한다.
+     */
+
+    const visibleCountries = {
+        type: "FeatureCollection",
+        features: countries.features.filter(feature => {
+
+            const code = String(feature.id);
+
+            return code !== "010" && code !== "304";
+
+        })
+    };
+
+
+    /* =====================================================
        Projection
        ===================================================== */
 
     const projection = d3.geoNaturalEarth1()
-        .scale(190)
+        .scale(220)
         .translate([
             width / 2,
             height / 2 + 20
+        ])
+        .clipExtent([
+            [0, 55],
+            [width, 505]
         ]);
 
 
@@ -82,20 +110,41 @@ async function renderMap(events) {
 
 
     /* =====================================================
-       Count Events by Country
+       Country Codes
+       ===================================================== */
+
+    const countryCodes = {
+
+        "대한민국": "410",
+        "일본": "392",
+        "태국": "764",
+        "필리핀": "608",
+        "대만": "158",
+        "미국": "840",
+        "홍콩": "344",
+        "인도네시아": "360",
+        "말레이시아": "458",
+        "싱가포르": "702",
+        "이탈리아": "380"
+
+    };
+
+
+    /* =====================================================
+       Count Events
        ===================================================== */
 
     const countryCounts = {};
 
     events.forEach(event => {
 
-        const country = event.country;
+        const code =
+            countryCodes[event.country];
 
-        if (!countryCounts[country]) {
-            countryCounts[country] = 0;
-        }
+        if (!code) return;
 
-        countryCounts[country]++;
+        countryCounts[code] =
+            (countryCounts[code] || 0) + 1;
     });
 
 
@@ -106,56 +155,19 @@ async function renderMap(events) {
 
 
     /* =====================================================
-       Country Name → Map ID
+       Gold → Brown Color Scale
        ===================================================== */
 
-    const countryMap = {
-
-        "대한민국": "Korea",
-        "일본": "Japan",
-        "태국": "Thailand",
-        "필리핀": "Philippines",
-        "대만": "Taiwan",
-        "홍콩": "Hong Kong",
-        "인도네시아": "Indonesia",
-        "미국": "United States of America",
-        "말레이시아": "Malaysia",
-        "싱가포르": "Singapore",
-        "이탈리아": "Italy"
-
-    };
-
-
-    /* =====================================================
-       Color Scale
-       ===================================================== */
-
-    function getCountryColor(count) {
-
-        if (!count) {
-            return "#f1f2f4";
-        }
-
-        const ratio = count / maxCount;
-
-        if (ratio <= .2) {
-            return "#e5e7ea";
-        }
-
-        if (ratio <= .4) {
-            return "#c9ccd1";
-        }
-
-        if (ratio <= .6) {
-            return "#9da2aa";
-        }
-
-        if (ratio <= .8) {
-            return "#686e78";
-        }
-
-        return "#151922";
-    }
+    const goldScale = d3.scaleLinear()
+        .domain([
+            1,
+            maxCount
+        ])
+        .range([
+            "#E8D6A3",
+            "#74351F"
+        ])
+        .interpolate(d3.interpolateRgb);
 
 
     /* =====================================================
@@ -164,26 +176,34 @@ async function renderMap(events) {
 
     svg.append("g")
         .selectAll("path")
-        .data(countries.features)
+        .data(visibleCountries.features)
         .join("path")
-        .attr("class", "country")
-        .attr("d", path)
-        .attr("fill", feature => {
 
-            const countryName =
-                getCountryName(feature);
+        .attr("class", feature => {
+
+            const code =
+                String(feature.id);
+
+            return countryCounts[code]
+                ? "country active"
+                : "country";
+
+        })
+
+        .attr("d", path)
+
+        .style("fill", feature => {
+
+            const code =
+                String(feature.id);
 
             const count =
-                getEventCount(countryName);
+                countryCounts[code] || 0;
 
-            return getCountryColor(count);
-        })
-        .classed("active", feature => {
+            return count
+                ? goldScale(count)
+                : "#f1f2f4";
 
-            const countryName =
-                getCountryName(feature);
-
-            return getEventCount(countryName) > 0;
         });
 
 
@@ -198,88 +218,112 @@ async function renderMap(events) {
 
 
     /* =====================================================
-       Country Hover
+       Hover
        ===================================================== */
 
-    svg.selectAll(".country")
-        .filter(feature => {
+    svg.selectAll(".country.active")
 
-            const countryName =
-                getCountryName(feature);
-
-            return getEventCount(countryName) > 0;
-
-        })
         .on("mouseenter", function(event, feature) {
 
-            const countryName =
-                getCountryName(feature);
+            const code =
+                String(feature.id);
 
-            const count =
-                getEventCount(countryName);
 
             const countryEvents =
                 events.filter(item =>
-                    item.country === countryName
+                    countryCodes[item.country] === code
                 );
 
-            const city =
-                countryEvents[0]?.city || "";
+
+            if (!countryEvents.length) {
+                return;
+            }
+
+
+            const countryName =
+                countryEvents[0].country;
+
+
+            const count =
+                countryEvents.length;
+
+
+            /* ---------------------------------------------
+               모든 활동 표시
+               --------------------------------------------- */
+
+            const eventList =
+                countryEvents.map(item => {
+
+                    const city =
+                        item.city
+                            ? ` · ${escapeHtml(item.city)}`
+                            : "";
+
+
+                    return `
+<div class="event-item">
+
+    <span class="event-date">
+    ${escapeHtml(item.date)}${city}
+    </span>
+
+<span class="event-title">
+                                ${escapeHtml(item.title)}
+                            </span>
+
+</div>
+`;
+
+                }).join("");
 
 
             tooltip
                 .html(`
-<strong>${escapeHtml(countryName)}</strong>
-<span>${escapeHtml(city)}</span>
+<strong>
+${escapeHtml(countryName)}
+</strong>
 
 <div class="event-count">
-    주요 활동 <b>${count}</b>건
+    총 ${count}건
+</div>
+
+<div class="event-list">
+    ${eventList}
 </div>
     `)
+
                 .style("display", "block");
+
+
+            d3.select(this)
+                .style("stroke", "#8a6500")
+                .style("stroke-width", 1.2);
+
 
             moveTooltip(event);
 
         })
+
+
         .on("mousemove", function(event) {
 
             moveTooltip(event);
 
         })
+
+
         .on("mouseleave", function() {
 
             tooltip
                 .style("display", "none");
 
+
+            d3.select(this)
+                .style("stroke", null)
+                .style("stroke-width", null);
+
         });
-
-
-    /* =====================================================
-       Country Name
-       ===================================================== */
-
-    function getCountryName(feature) {
-
-        const name =
-            feature.properties?.name || "";
-
-        const reverseMap = Object.fromEntries(
-            Object.entries(countryMap)
-                .map(([k, v]) => [v, k])
-        );
-
-        return reverseMap[name] || name;
-    }
-
-
-    /* =====================================================
-       Event Count
-       ===================================================== */
-
-    function getEventCount(countryName) {
-
-        return countryCounts[countryName] || 0;
-    }
 
 
     /* =====================================================
@@ -290,16 +334,21 @@ async function renderMap(events) {
 
         const padding = 14;
 
+
         let left =
             event.pageX + padding;
+
 
         let top =
             event.pageY + padding;
 
+
         const node =
             tooltip.node();
 
+
         if (!node) return;
+
 
         const rect =
             node.getBoundingClientRect();
@@ -309,10 +358,12 @@ async function renderMap(events) {
             left + rect.width >
             window.innerWidth - 10
         ) {
+
             left =
                 event.pageX -
                 rect.width -
                 padding;
+
         }
 
 
@@ -320,10 +371,12 @@ async function renderMap(events) {
             top + rect.height >
             window.innerHeight - 10
         ) {
+
             top =
                 event.pageY -
                 rect.height -
                 padding;
+
         }
 
 
@@ -343,6 +396,7 @@ function renderTimeline(events) {
     const container =
         document.querySelector("#event-timeline");
 
+
     if (!container) return;
 
 
@@ -354,18 +408,26 @@ function renderTimeline(events) {
         const year =
             String(event.date).substring(0, 4);
 
+
         if (!years[year]) {
             years[year] = [];
         }
 
+
         years[year].push(event);
+
     });
 
 
     container.innerHTML =
 
         Object.keys(years)
-            .sort((a, b) => Number(b) - Number(a))
+
+            .sort(
+                (a, b) =>
+                    Number(b) - Number(a)
+            )
+
             .map(year => {
 
                 return `
@@ -375,9 +437,11 @@ function renderTimeline(events) {
     ${escapeHtml(year)}
     </div>
 
+
 <div class="timeline-events">
 
-    ${years[year].map(event => `
+    ${years[year]
+    .map(event => `
 
                                 <article class="timeline-event">
 
@@ -385,27 +449,35 @@ function renderTimeline(events) {
                                         ${escapeHtml(event.date)}
                                     </div>
 
+
                                     <div class="timeline-location">
+
                                         ${escapeHtml(event.country)}
+
+
+
                                     </div>
+
 
                                     <div class="timeline-title">
                                         ${escapeHtml(event.title)}
                                     </div>
 
+
                                     ${
-    event.venue
-        ? `
+        event.venue
+            ? `
                                                 <div class="timeline-venue">
                                                     ${escapeHtml(event.venue)}
                                                 </div>
                                             `
-        : ""
-}
+            : ""
+    }
 
                                 </article>
 
-                            `).join("")}
+                            `)
+    .join("")}
 
 </div>
 
@@ -413,6 +485,7 @@ function renderTimeline(events) {
 `;
 
             })
+
             .join("");
 }
 
@@ -424,14 +497,19 @@ function renderTimeline(events) {
 function escapeHtml(value) {
 
     return String(value ?? "")
-        .replace(/[&<>"']/g, m => ({
-            "&": "&amp;",
-            "<": "&lt;",
-            ">": "&gt;",
-            '"': "&quot;",
-            "'": "&#039;"
-        }[m]));
 
+        .replace(
+            /[&<>"']/g,
+            m => ({
+
+                "&": "&amp;",
+                "<": "&lt;",
+                ">": "&gt;",
+                '"': "&quot;",
+                "'": "&#039;"
+
+            }[m])
+        );
 }
 
 
@@ -443,8 +521,10 @@ loadEvents().catch(err => {
 
     console.error(err);
 
+
     const map =
         document.querySelector("#world-map");
+
 
     if (map) {
 
