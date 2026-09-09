@@ -2,22 +2,63 @@
   "updatedAt": "2026-09-08 03:55",
   "categories": [
     {
+      "id": "bd",
+      "name": "\uD83C\uDF82 생일 축하",
+      "order": 1
+    },
+    {
       "id": "debut19",
       "name": "✨ 데뷔 19주년",
-      "order": 1
+      "order": 2
     },
     {
       "id": "birthday2026",
       "name": "🎂 2026 생일",
-      "order": 2
+      "order": 3
     },
     {
       "id": "debut18",
       "name": "✨ 데뷔 18주년",
-      "order": 3
+      "order": 4
     }
   ],
   "items": [
+    {
+      "url": "https://x.com/Sooman_Power/status/2097605524204503464/video/1",
+      "tweetId": "2097605524204503464",
+      "username": "Sooman_Power",
+      "title": "2021年〜2024年までキムスヒョン俳優は誕生日にファンから贈られたプレゼントを一つ一つ綺麗に並べて写真を撮って感謝の言葉と共にインストに認証ポストをしてくれていました 特に2022年にはigの制限によって1日ではポストしきれず2日間に分けてポストしてくれた上に、なんと最後の最後に自分のセルカまでポストをしてく...",
+      "date": "2026.09.09",
+      "tags": ["🎂 생일 축하"],
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2097605446697938944/img/9OH9MsT2lv5UKf00.jpg"
+    },
+    {
+      "url": "https://x.com/Sooman_Power/status/2097605524204503464/video/2",
+      "tweetId": "2097605524204503464",
+      "username": "Sooman_Power",
+      "title": "2021年〜2024年までキムスヒョン俳優は誕生日にファンから贈られたプレゼントを一つ一つ綺麗に並べて写真を撮って感謝の言葉と共にインストに認証ポストをしてくれていました 特に2022年にはigの制限によって1日ではポストしきれず2日間に分けてポストしてくれた上に、なんと最後の最後に自分のセルカまでポストをしてく...",
+      "date": "2026.09.09",
+      "tags": ["🎂 생일 축하"],
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2097605446697877504/img/DY6tOvanQViAjSvy.jpg"
+    },
+    {
+      "url": "https://x.com/Sooman_Power/status/2097605524204503464/video/3",
+      "tweetId": "2097605524204503464",
+      "username": "Sooman_Power",
+      "title": "2021年〜2024年までキムスヒョン俳優は誕生日にファンから贈られたプレゼントを一つ一つ綺麗に並べて写真を撮って感謝の言葉と共にインストに認証ポストをしてくれていました 特に2022年にはigの制限によって1日ではポストしきれず2日間に分けてポストしてくれた上に、なんと最後の最後に自分のセルカまでポストをしてく...",
+      "date": "2026.09.09",
+      "tags": ["🎂 생일 축하"],
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2097605446668623872/img/xRdXn74PAGJBI5Ao.jpg"
+    },
+    {
+      "url": "https://x.com/Sooman_Power/status/2097605524204503464/video/4",
+      "tweetId": "2097605524204503464",
+      "username": "Sooman_Power",
+      "title": "2021年〜2024年までキムスヒョン俳優は誕生日にファンから贈られたプレゼントを一つ一つ綺麗に並べて写真を撮って感謝の言葉と共にインストに認証ポストをしてくれていました 特に2022年にはigの制限によって1日ではポストしきれず2日間に分けてポストしてくれた上に、なんと最後の最後に自分のセルカまでポストをしてく...",
+      "date": "2026.09.09",
+      "tags": ["🎂 생일 축하"],
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2097605446656008192/img/09IFJWOopKv3PNZz.jpg"
+    },
     {
       "url": "https://x.com/EchoesOfKSH_CN/status/2024822552770806038",
       "tweetId": "2024822552770806038",
