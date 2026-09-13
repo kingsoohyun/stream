@@ -3,7 +3,7 @@
   "items": [
     {
       "date": "2023.01",
-      "country": "필리핀",
+      "country": "🇵🇭 필리핀",
       "city": "마닐라",
       "venue": "Smart Araneta Coliseum",
       "title": "브랜드(던킨) 행사 팬미팅",
@@ -13,38 +13,37 @@
     },
     {
       "date": "2023.03",
-      "country": "대한민국",
+      "country": "🇰🇷 대한민국",
       "city": "서울",
       "venue": "COEX",
       "title": "납세자의 날 기념식/모범납세자 대통령 표창 수여",
       "lat": 37.5665,
-      "lng": 126.9780,
+      "lng": 126.978,
       "links": []
     },
     {
       "date": "2023.04",
-      "country": "대한민국",
+      "country": "🇰🇷 대한민국",
       "city": "서울",
       "venue": "국세청",
       "title": "국세청 홍보대사 위촉식",
       "lat": 37.5665,
-      "lng": 126.9780,
+      "lng": 126.978,
       "links": []
     },
     {
       "date": "2023.05",
-      "country": "인도네시아",
+      "country": "🇮🇩 인도네시아",
       "city": "자카르타",
       "venue": "Jakarta Convention Center",
       "title": "브랜드(유뷰티) 행사 팬미팅",
       "lat": -6.190451244305083,
       "lng": 106.76702591079666,
-      "links": [
-      ]
+      "links": []
     },
     {
       "date": "2023.06",
-      "country": "태국",
+      "country": "🇹🇭 태국",
       "city": "방콕",
       "venue": "Park Hyatt Bangkok",
       "title": "브랜드(MIDO) 제품 론칭 행사",
@@ -54,62 +53,62 @@
     },
     {
       "date": "2023.08",
-      "country": "대한민국",
+      "country": "🇰🇷 대한민국",
       "city": "서울",
       "venue": "중구 롯데백화점 본점",
       "title": "브랜드(MIDO) 행사 포토월",
       "lat": 37.5665,
-      "lng": 126.9780,
+      "lng": 126.978,
       "links": []
     },
     {
       "date": "2023.08~09",
-      "country": "독일",
+      "country": "🇩🇪 독일",
       "city": "베를린",
       "venue": "Palaces and Parks of Potsdam and Berlin 외",
       "title": "드라마 《눈물의 여왕》 촬영",
-      "lat": 52.5200,
-      "lng": 13.4050,
+      "lat": 52.52,
+      "lng": 13.405,
       "links": []
     },
     {
       "date": "2024.04",
-      "country": "대한민국",
+      "country": "🇰🇷 대한민국",
       "city": "서울",
       "venue": "라마다서울신도림호텔",
       "title": "드라마 《눈물의 여왕》제작발표회",
       "lat": 37.5665,
-      "lng": 126.9780,
+      "lng": 126.978,
       "links": [
         {
           "label": "연합뉴스",
-          "url": "https://m.entertain.naver.com/home/article/001/0014548459"
+          "url": "[https://m.entertain.naver.com/home/article/001/0014548459](https://m.entertain.naver.com/home/article/001/0014548459)"
         }
       ]
     },
     {
       "date": "2024.04",
-      "country": "대한민국",
+      "country": "🇰🇷 대한민국",
       "city": "서울",
       "venue": "성수동",
       "title": "브랜드(MIDO) 행사 포토콜",
       "lat": 37.5665,
-      "lng": 126.9780,
+      "lng": 126.978,
       "links": []
     },
     {
       "date": "2024.05",
-      "country": "대한민국",
+      "country": "🇰🇷 대한민국",
       "city": "서울",
       "venue": "COEX Hall D",
       "title": "백상예술대상",
       "lat": 37.5665,
-      "lng": 126.9780,
+      "lng": 126.978,
       "links": []
     },
     {
       "date": "2024.06",
-      "country": "태국",
+      "country": "🇹🇭 태국",
       "city": "방콕",
       "venue": "Thunder Dome",
       "title": "EYES ON YOU 팬미팅/미디어 세션",
@@ -119,7 +118,7 @@
     },
     {
       "date": "2024.06",
-      "country": "일본",
+      "country": "🇯🇵 일본",
       "city": "Yokohama",
       "venue": "Pia Arena MM",
       "title": "EYES ON YOU 팬미팅",
@@ -129,7 +128,7 @@
     },
     {
       "date": "2024.06",
-      "country": "일본",
+      "country": "🇯🇵 일본",
       "city": "도쿄",
       "venue": "Fuji Television",
       "title": "메자마시TV 프로그램 출연",
@@ -138,13 +137,13 @@
       "links": [
         {
           "label": "안내",
-          "url": "https://x.com/cx_mezamashi/status/1805535841873543462"
+          "url": "[https://x.com/cx_mezamashi/status/1805535841873543462](https://x.com/cx_mezamashi/status/1805535841873543462)"
         }
       ]
     },
     {
       "date": "2024.07",
-      "country": "일본",
+      "country": "🇯🇵 일본",
       "city": "도쿄",
       "venue": "TV Asahi",
       "title": "테츠코의 방(徹子の部屋) 프로그램 출연",
@@ -153,13 +152,13 @@
       "links": [
         {
           "label": "기사",
-          "url": "https://x.com/soohyunupdates/status/1813393762707743167"
+          "url": "[https://x.com/soohyunupdates/status/1813393762707743167](https://x.com/soohyunupdates/status/1813393762707743167)"
         }
       ]
     },
     {
       "date": "2024.06",
-      "country": "필리핀",
+      "country": "🇵🇭 필리핀",
       "city": "마닐라",
       "venue": "Smart Araneta Coliseum",
       "title": "EYES ON YOU 팬미팅",
@@ -169,7 +168,7 @@
     },
     {
       "date": "2024.07",
-      "country": "대만",
+      "country": "🇹🇼 대만",
       "city": "타이베이",
       "venue": "National Taiwan Sport University Arena",
       "title": "EYES ON YOU 팬미팅",
@@ -179,7 +178,7 @@
     },
     {
       "date": "2024.07",
-      "country": "미국",
+      "country": "🇺🇸 미국",
       "city": "로스앤젤레스",
       "venue": "Crypto.com Arena",
       "title": "KCON 2024 LA 호스트/팬미팅",
@@ -189,17 +188,17 @@
     },
     {
       "date": "2024.07",
-      "country": "대한민국",
+      "country": "🇰🇷 대한민국",
       "city": "서울",
       "venue": "삼성동 레스파스 에트나",
       "title": "브랜드(MIDO) 제품 론칭 행사",
       "lat": 37.5665,
-      "lng": 126.9780,
+      "lng": 126.978,
       "links": []
     },
     {
       "date": "2024.08",
-      "country": "홍콩",
+      "country": "🇭🇰 홍콩",
       "city": "홍콩",
       "venue": "AsiaWorld-Expo",
       "title": "EYES ON YOU 팬미팅",
@@ -209,17 +208,17 @@
     },
     {
       "date": "2024.08",
-      "country": "대한민국",
+      "country": "🇰🇷 대한민국",
       "city": "서울",
       "venue": "역삼동 조선팰리스 더그레이트홀",
       "title": "뉴시스 한류엑스포 시상식",
       "lat": 37.5665,
-      "lng": 126.9780,
+      "lng": 126.978,
       "links": []
     },
     {
       "date": "2024.09",
-      "country": "인도네시아",
+      "country": "🇮🇩 인도네시아",
       "city": "자카르타",
       "venue": "Sentul International Convention Center",
       "title": "EYES ON YOU 팬미팅",
@@ -229,17 +228,17 @@
     },
     {
       "date": "2024.10",
-      "country": "대한민국",
+      "country": "🇰🇷 대한민국",
       "city": "서울",
       "venue": "고려대학교 화정체육관",
       "title": "EYES ON YOU 팬미팅",
       "lat": 37.5665,
-      "lng": 126.9780,
+      "lng": 126.978,
       "links": []
     },
     {
       "date": "2024.11",
-      "country": "말레이시아",
+      "country": "🇲🇾 말레이시아",
       "city": "쿠알라룸푸르",
       "venue": "Sunway Lagoon",
       "title": "쿠쿠토피아 뮤직 페스티벌/미디어 세션",
@@ -249,7 +248,7 @@
     },
     {
       "date": "2024.11",
-      "country": "싱가포르",
+      "country": "🇸🇬 싱가포르",
       "city": "싱가포르",
       "venue": "Marina Bay Sands Singapore",
       "title": "디즈니 콘텐츠 쇼케이스/팬미팅/미디어 세션",
@@ -259,7 +258,7 @@
     },
     {
       "date": "2024.11~12",
-      "country": "홍콩",
+      "country": "🇭🇰 홍콩",
       "city": "홍콩",
       "venue": "Kowloon Bay 외",
       "title": "드라마 《넉오프》 촬영",
@@ -269,7 +268,7 @@
     },
     {
       "date": "2024.12",
-      "country": "태국",
+      "country": "🇹🇭 태국",
       "city": "방콕",
       "venue": "IMPACT Challenger",
       "title": "AAA 2024 시상식",
@@ -278,23 +277,23 @@
       "links": [
         {
           "label": "스타뉴스",
-          "url": "https://m.entertain.naver.com/home/article/108/0003292408"
+          "url": "[https://m.entertain.naver.com/home/article/108/0003292408](https://m.entertain.naver.com/home/article/108/0003292408)"
         }
       ]
     },
     {
       "date": "2025.01",
-      "country": "대한민국",
+      "country": "🇰🇷 대한민국",
       "city": "서울",
       "venue": "CGV 청담씨네시티",
       "title": "브랜드(뚜레주르) 행사 팬밋업",
       "lat": 37.5665,
-      "lng": 126.9780,
+      "lng": 126.978,
       "links": []
     },
     {
       "date": "2025.01",
-      "country": "이탈리아",
+      "country": "🇮🇹 이탈리아",
       "city": "밀라노",
       "venue": "Fondazione Prada",
       "title": "브랜드(프라다) 행사 2025 F/W 남성복 쇼",
@@ -304,17 +303,17 @@
     },
     {
       "date": "2025.02",
-      "country": "대한민국",
+      "country": "🇰🇷 대한민국",
       "city": "서울",
       "venue": "더현대 서울",
       "title": "브랜드(조말론 런던) 행사",
       "lat": 37.5665,
-      "lng": 126.9780,
+      "lng": 126.978,
       "links": []
     },
     {
       "date": "2026.08",
-      "country": "인도네시아",
+      "country": "🇮🇩 인도네시아",
       "city": "자카르타",
       "venue": "Studio RCTI+",
       "title": "RCTI 프로그램 출연",
@@ -323,13 +322,13 @@
       "links": [
         {
           "label": "연합뉴스",
-          "url": "https://n.news.naver.com/mnews/article/001/0016267017?sid=103"
+          "url": "[https://n.news.naver.com/mnews/article/001/0016267017?sid=103](https://n.news.naver.com/mnews/article/001/0016267017?sid=103)"
         }
       ]
     },
     {
       "date": "2026.08",
-      "country": "인도네시아",
+      "country": "🇮🇩 인도네시아",
       "city": "자카르타",
       "venue": "PARK HYATT JAKARTA",
       "title": "Highend Magazine 화보 촬영",
@@ -338,23 +337,23 @@
       "links": [
         {
           "label": "일간스포츠",
-          "url": "https://m.entertain.naver.com/home/article/241/0003527450"
+          "url": "[https://m.entertain.naver.com/home/article/241/0003527450](https://m.entertain.naver.com/home/article/241/0003527450)"
         }
       ]
     },
     {
       "date": "2026.09",
-      "country": "대한민국",
+      "country": "🇰🇷 대한민국",
       "city": "부산",
       "venue": "부산아시아드 주경기장",
       "title": "TMA 시상식",
-      "lat": 35.1900,
+      "lat": 35.19,
       "lng": 129.0582,
       "links": []
     },
     {
       "date": "2026.10",
-      "country": "필리핀",
+      "country": "🇵🇭 필리핀",
       "city": "마닐라",
       "venue": "SM Mall of Asia Arena",
       "title": "브랜드(BENCH) 행사 팬미팅",
@@ -364,8 +363,8 @@
     },
     {
       "date": "2026.12",
-      "country": "대만",
-      "city": "타이베이",
+      "country": "🇹🇼 대만",
+      "city": "가오슝",
       "venue": "Kaohsiung National Stadium",
       "title": "AAA 2026 시상식",
       "lat": 22.703304404259576,
