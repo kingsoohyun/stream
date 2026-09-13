@@ -50,6 +50,33 @@ body{
     margin-top:3px
 }
 
+.header-action{
+    margin-left:auto
+}
+
+.header-action a{
+    display:inline-flex;
+    align-items:center;
+    padding:8px 11px;
+    border:1px solid #c94c4c;
+    border-radius:7px;
+    background:#c94c4c;
+    color:#fff;
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:.03em;
+    text-decoration:none;
+    white-space:nowrap;
+    transition:
+            background .15s ease,
+            border-color .15s ease
+}
+
+.header-action a:hover{
+    background:#b94a48;
+    border-color:#b94a48;
+}
+
 
 /* =========================================================
    Main
@@ -166,6 +193,10 @@ main{
 
 .twitter .icon{
     background:#111
+}
+
+.events .icon{
+    background:#f5f3ee
 }
 
 .platform b{
@@ -425,6 +456,11 @@ footer{
         font-size:30px
     }
 
+    .header-action a{
+        padding:6px 8px;
+        font-size:9px;
+    }
+
     .platform-nav{
         grid-template-columns:1fr;
         gap:10px
@@ -502,7 +538,6 @@ footer{
     .site-header{
         padding:0 16px
     }
-
 
     /* Footer */
 
