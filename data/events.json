@@ -244,6 +244,16 @@
       ]
     },
     {
+      "date": "2014.04.23",
+      "country": "🇭🇰 홍콩",
+      "city": "홍콩",
+      "venue": "The Mira Hong Kong",
+      "title": "브랜드(비욘드) 팬사인회",
+      "lat": 22.3007,
+      "lng": 114.1722,
+      "links": []
+    },
+    {
       "date": "2014.05",
       "country": "🇯🇵 일본",
       "city": "요코하마",
@@ -277,6 +287,36 @@
       ]
     },
     {
+      "date": "2014.09",
+      "country": "🇨🇳 중국",
+      "city": "선전",
+      "venue": "선전",
+      "title": "브랜드(텐센트) 팬미팅",
+      "lat": 22.5431,
+      "lng": 114.0579,
+      "links": []
+    },
+    {
+      "date": "2014.09",
+      "country": "🇭🇰 홍콩",
+      "city": "홍콩",
+      "venue": "랑함 플레이스 호텔",
+      "title": "브랜드(삼성전자) 갤럭시 노트4 출시 기념 팬미팅",
+      "lat": 22.3189,
+      "lng": 114.1685,
+      "links": []
+    },
+    {
+      "date": "2014.09",
+      "country": "🇭🇰 홍콩",
+      "city": "홍콩",
+      "venue": "Hong Kong Convention and Exhibition Centre",
+      "title": "브랜드(쌤소나이트 레드) RED Party",
+      "lat": 22.2855,
+      "lng": 114.173,
+      "links": []
+    },
+    {
       "date": "2015.01",
       "country": "🇬🇧 영국",
       "city": "런던",
@@ -285,6 +325,31 @@
       "lat": 51.507351,
       "lng": -0.127758,
       "links": [
+      ]
+    },
+    {
+      "date": "2015.03",
+      "country": "🇹🇼 대만",
+      "city": "타이베이",
+      "venue": "ATT Show Box",
+      "title": "브랜드(카페베네) 로맨틱 화이트데이 이벤트",
+      "lat": 25.034,
+      "lng": 121.5645,
+      "links": []
+    },
+    {
+      "date": "2015.08",
+      "country": "🇺🇸 미국",
+      "city": "로스앤젤레스",
+      "venue": "Crypto.com Arena",
+      "title": "KCON 2015 LA 호스트",
+      "lat": 34.04312415431352,
+      "lng": -118.2666211026684,
+      "links": [
+        {
+          "label": "연합뉴스",
+          "url": "https://m.entertain.naver.com/home/article/001/0007770763"
+        }
       ]
     },
     {
@@ -300,13 +365,34 @@
     },
     {
       "date": "2019.10",
+      "country": "🇨🇳 중국",
+      "city": "상하이",
+      "venue": "Bellagio Shanghai Hotel",
+      "title": "브랜드(DPC) 브랜드 론칭 행사",
+      "lat": 31.2258,
+      "lng": 121.4457,
+      "links": []
+    },
+    {
+      "date": "2019.10",
       "country": "🇫🇷 프랑스",
       "city": "파리",
       "venue": "Palais Garnier",
-      "title": "브랜드(지찬시) 행사 신제품 출시 컨퍼런스",
+      "title": "브랜드(지찬시) 신제품 출시 컨퍼런스",
       "lat": 48.856613,
       "lng": 2.352222,
       "links": []
+    },
+    {
+      "date": "2022.06",
+      "country": "🇵🇭 필리핀",
+      "city": "마닐라",
+      "venue": "SM Mall of Asia Arena",
+      "title": "브랜드(BENCH) 팬미팅",
+      "lat": 14.531873,
+      "lng": 120.984018,
+      "links": [
+      ]
     },
     {
       "date": "2022.10",
@@ -324,7 +410,7 @@
       "country": "🇵🇭 필리핀",
       "city": "마닐라",
       "venue": "Smart Araneta Coliseum",
-      "title": "브랜드(던킨) 행사 팬미팅",
+      "title": "브랜드(던킨) 팬미팅",
       "lat": 14.531873441245196,
       "lng": 120.98401826664943,
       "links": []
@@ -354,7 +440,7 @@
       "country": "🇮🇩 인도네시아",
       "city": "자카르타",
       "venue": "Jakarta Convention Center",
-      "title": "브랜드(유뷰티) 행사 팬미팅",
+      "title": "브랜드(유뷰티) 팬미팅",
       "lat": -6.190451244305083,
       "lng": 106.76702591079666,
       "links": []
@@ -374,7 +460,7 @@
       "country": "🇰🇷 대한민국",
       "city": "서울",
       "venue": "중구 롯데백화점 본점",
-      "title": "브랜드(MIDO) 행사 포토월",
+      "title": "브랜드(MIDO) 포토월",
       "lat": 37.5665,
       "lng": 126.978,
       "links": []
@@ -409,7 +495,7 @@
       "country": "🇰🇷 대한민국",
       "city": "서울",
       "venue": "성수동",
-      "title": "브랜드(MIDO) 행사 포토콜",
+      "title": "브랜드(MIDO) 포토콜",
       "lat": 37.5665,
       "lng": 126.978,
       "links": []
@@ -503,21 +589,6 @@
       "lat": 34.04312415431352,
       "lng": -118.2666211026684,
       "links": []
-    },
-    {
-      "date": "2015.08",
-      "country": "🇺🇸 미국",
-      "city": "로스앤젤레스",
-      "venue": "Crypto.com Arena",
-      "title": "KCON 2015 LA 호스트",
-      "lat": 34.04312415431352,
-      "lng": -118.2666211026684,
-      "links": [
-        {
-          "label": "연합뉴스",
-          "url": "https://m.entertain.naver.com/home/article/001/0007770763"
-        }
-      ]
     },
     {
       "date": "2024.07",
@@ -619,7 +690,7 @@
       "country": "🇰🇷 대한민국",
       "city": "서울",
       "venue": "CGV 청담씨네시티",
-      "title": "브랜드(뚜레주르) 행사 팬밋업",
+      "title": "브랜드(뚜레주르) 팬밋업",
       "lat": 37.5665,
       "lng": 126.978,
       "links": []
@@ -629,7 +700,7 @@
       "country": "🇮🇹 이탈리아",
       "city": "밀라노",
       "venue": "Fondazione Prada",
-      "title": "브랜드(프라다) 행사 2025 F/W 남성복 쇼",
+      "title": "브랜드(프라다) 2025 F/W 남성복 쇼",
       "lat": 45.444172138903355,
       "lng": 9.205029594441674,
       "links": []
@@ -639,7 +710,7 @@
       "country": "🇰🇷 대한민국",
       "city": "서울",
       "venue": "더현대 서울",
-      "title": "브랜드(조말론 런던) 행사",
+      "title": "브랜드(조말론 런던) 테마 행사",
       "lat": 37.5665,
       "lng": 126.978,
       "links": []
