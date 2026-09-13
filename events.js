@@ -504,7 +504,7 @@ function renderTimeline(events) {
     <div class="timeline-main">
 
         <span class="timeline-date">
-            ${escapeHtml(event.date)}
+            ${escapeHtml(event.date.slice(0, 7))}
         </span>
 
         <span class="timeline-location">

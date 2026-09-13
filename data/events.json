@@ -9,8 +9,7 @@
       "title": "보그걸 화보 촬영",
       "lat": 40.712776,
       "lng": -74.005974,
-      "links": [
-      ]
+      "links": []
     },
     {
       "date": "2011",
@@ -98,7 +97,7 @@
       "date": "2012.07",
       "country": "🇰🇷 대한민국",
       "city": "서울",
-      "venue": "COEX 아셈광장",
+      "venue": "코엑스 아셈광장",
       "title": "영화 《도둑들》 특별 전야제",
       "lat": 37.5665,
       "lng": 126.978,
@@ -274,48 +273,44 @@
       "links": []
     },
     {
-      "date": "2014.03",
+      "date": "2014.03.16",
       "country": "🇰🇷 대한민국",
       "city": "서울",
       "venue": "세종대학교 대양홀",
       "title": "1st Memories 팬미팅",
       "lat": 37.5509,
       "lng": 127.0739,
-      "links": [
-      ]
+      "links": []
     },
     {
-      "date": "2014.03",
+      "date": "2014.03.22",
       "country": "🇹🇼 대만",
       "city": "타이베이",
       "venue": "Taipei International Convention Center (TICC)",
       "title": "1st Memories 팬미팅",
       "lat": 25.0338,
       "lng": 121.5602,
-      "links": [
-      ]
+      "links": []
     },
     {
-      "date": "2014.03",
+      "date": "2014.03.23",
       "country": "🇨🇳 중국",
       "city": "상하이",
       "venue": "상해대무대",
       "title": "1st Memories 팬미팅",
       "lat": 31.1887,
       "lng": 121.4375,
-      "links": [
-      ]
+      "links": []
     },
     {
-      "date": "2014.03",
+      "date": "2014.03.30",
       "country": "🇹🇭 태국",
       "city": "방콕",
       "venue": "Royal Paragon Hall",
       "title": "1st Memories 팬미팅",
       "lat": 13.7466,
       "lng": 100.5347,
-      "links": [
-      ]
+      "links": []
     },
     {
       "date": "2014.03",
@@ -325,30 +320,17 @@
       "title": "최강대뇌 (最强大脑) 프로그램 출연",
       "lat": 32.0603,
       "lng": 118.7969,
-      "links": [
-      ]
+      "links": []
     },
     {
-      "date": "2014.04",
-      "country": "🇨🇳 중국",
-      "city": "베이징",
-      "venue": "베이징 신광천지 플래그십 스토어",
-      "title": "구찌 자선 패션쇼",
-      "lat": 39.904211,
-      "lng": 116.407395,
-      "links": [
-      ]
-    },
-    {
-      "date": "2014.04",
+      "date": "2014.04.04",
       "country": "🇨🇳 중국",
       "city": "광저우",
       "venue": "난펑 국제컨벤션센터",
       "title": "1st Memories 팬미팅",
       "lat": 23.113592,
       "lng": 113.324520,
-      "links": [
-      ]
+      "links": []
     },
     {
       "date": "2014.04.06",
@@ -358,33 +340,30 @@
       "title": "1st Memories 팬미팅",
       "lat": 39.904211,
       "lng": 116.407395,
-      "links": [
-      ]
+      "links": []
     },
     {
-      "date": "2014.04",
-      "country": "🇮🇩 인도네시아",
-      "city": "자카르타",
-      "venue": "스케누 홀",
-      "title": "1st Memories 팬미팅",
-      "lat": -6.190451,
-      "lng": 106.767026,
-      "links": [
-      ]
+      "date": "2014.04.08",
+      "country": "🇨🇳 중국",
+      "city": "베이징",
+      "venue": "베이징 신광천지 플래그십 스토어",
+      "title": "구찌 자선 패션쇼",
+      "lat": 39.904211,
+      "lng": 116.407395,
+      "links": []
     },
     {
-      "date": "2014.04",
-      "country": "🇸🇬 싱가포르",
-      "city": "싱가포르",
-      "venue": "Singapore Expo Hall",
-      "title": "1st Memories 팬미팅",
-      "lat": 1.335,
-      "lng": 103.961,
-      "links": [
-      ]
+      "date": "2014.04.18",
+      "country": "🇨🇳 중국",
+      "city": "베이징",
+      "venue": "Diamond Arena",
+      "title": "브랜드(삼성전자) 갤럭시 S5 런칭 행사",
+      "lat": 39.904211,
+      "lng": 116.407395,
+      "links": []
     },
     {
-      "date": "2014.04",
+      "date": "2014.04.23",
       "country": "🇭🇰 홍콩",
       "city": "홍콩",
       "venue": "The Mira Hong Kong",
@@ -394,15 +373,44 @@
       "links": []
     },
     {
-      "date": "2014.05",
+      "date": "2014.04.25",
+      "country": "🇮🇩 인도네시아",
+      "city": "자카르타",
+      "venue": "스케누 홀",
+      "title": "1st Memories 팬미팅",
+      "lat": -6.190451,
+      "lng": 106.767026,
+      "links": []
+    },
+    {
+      "date": "2014.04.27",
+      "country": "🇸🇬 싱가포르",
+      "city": "싱가포르",
+      "venue": "Singapore Expo Hall",
+      "title": "1st Memories 팬미팅",
+      "lat": 1.335,
+      "lng": 103.961,
+      "links": []
+    },
+    {
+      "date": "2014.05.18",
       "country": "🇯🇵 일본",
       "city": "요코하마",
       "venue": "Pacifico Yokohama",
       "title": "1st Memories 팬미팅",
       "lat": 35.4579,
       "lng": 139.6341,
-      "links": [
-      ]
+      "links": []
+    },
+    {
+      "date": "2014.05.31",
+      "country": "🇨🇳 중국",
+      "city": "선양",
+      "venue": "롯데백화점 선양점",
+      "title": "브랜드(롯데백화점) 선양점 개장 기념 팬사인회",
+      "lat": 41.8057,
+      "lng": 123.4315,
+      "links": []
     },
     {
       "date": "2014.06",
@@ -412,27 +420,37 @@
       "title": "김수현 아시아 프로젝트 화보 촬영",
       "lat": 31.6295,
       "lng": -7.9811,
-      "links": [
-        {
-          "label": "마리끌레그",
-          "url": "https://www.marieclairekorea.com/celebrity/2014/06/marrakech-dream/"
-        }
-      ]
+      "links": []
     },
     {
-      "date": "2014.08",
+      "date": "2014.07",
+      "country": "🇨🇳 중국",
+      "city": "상하이",
+      "venue": "더페이스샵",
+      "title": "브랜드(더페이스샵) 팬사인회",
+      "lat": 31.230416,
+      "lng": 121.473701,
+      "links": []
+    },
+    {
+      "date": "2014.08.16",
       "country": "🇨🇳 중국",
       "city": "난징",
       "venue": "난징 올림픽 스포츠 센터",
       "title": "난징 하계청소년올림픽 개막식",
       "lat": 32.0036,
       "lng": 118.7254,
-      "links": [
-        {
-        "label": "공식",
-        "url": "https://www.instagram.com/p/CEbe591J1by"
-        }
-      ]
+      "links": []
+    },
+    {
+      "date": "2014.08",
+      "country": "🇨🇳 중국",
+      "city": "베이징",
+      "venue": "베이징",
+      "title": "브랜드(하겐다즈) 기자간담회",
+      "lat": 39.904211,
+      "lng": 116.407395,
+      "links": []
     },
     {
       "date": "2014.09",
@@ -465,6 +483,26 @@
       "links": []
     },
     {
+      "date": "2014.10.10",
+      "country": "🇨🇳 중국",
+      "city": "광저우",
+      "venue": "랑하오호텔",
+      "title": "브랜드(현대자동차) ix25 신차 발표회",
+      "lat": 23.1291,
+      "lng": 113.2644,
+      "links": []
+    },
+    {
+      "date": "2014.12.05",
+      "country": "🇨🇳 중국",
+      "city": "베이징",
+      "venue": "국가체육관 연예중심",
+      "title": "브랜드(카페베네) 팬미팅",
+      "lat": 39.9997,
+      "lng": 116.3917,
+      "links": []
+    },
+    {
       "date": "2014.12",
       "country": "🇬🇧 영국",
       "city": "런던",
@@ -472,12 +510,7 @@
       "title": "엘르 화보 촬영",
       "lat": 51.507351,
       "lng": -0.127758,
-      "links": [
-          {
-            "label": "엘르",
-            "url": "https://www.elle.co.kr/article/11221"
-          }
-      ]
+      "links": []
     },
     {
       "date": "2015.03",
@@ -545,7 +578,137 @@
       "links": []
     },
     {
-      "date": "2017.07",
+      "date": "2015.09",
+      "country": "🇨🇳 중국",
+      "city": "항저우",
+      "venue": "Intime City",
+      "title": "브랜드(더페이스샵) 팬사인회",
+      "lat": 30.2741,
+      "lng": 120.1551,
+      "links": []
+    },
+    {
+      "date": "2016.03.24",
+      "country": "🇨🇳 중국",
+      "city": "베이징",
+      "venue": "베이징",
+      "title": "브랜드(ZUK) 김수현 스타폰 공식 론칭 행사",
+      "lat": 39.904211,
+      "lng": 116.407395,
+      "links": []
+    },
+    {
+      "date": "2016.05.21",
+      "country": "🇨🇳 중국",
+      "city": "선양",
+      "venue": "One World 세계성",
+      "title": "브랜드(Oneworld) 세계성 개장 행사",
+      "lat": 41.8057,
+      "lng": 123.4315,
+      "links": []
+    },
+    {
+      "date": "2016.06.10",
+      "country": "🇰🇷 대한민국",
+      "city": "서울",
+      "venue": "가로수길 레모나하우스",
+      "title": "레모나 가로수길 팝업 스토어 팬사인회",
+      "lat": 37.5207,
+      "lng": 127.0228,
+      "links": []
+    },
+    {
+      "date": "2016.10.21",
+      "country": "🇰🇷 대한민국",
+      "city": "서울",
+      "venue": "잠실종합운동장 올림픽주경기장",
+      "title": "제24회 롯데면세점 패밀리 페스티벌",
+      "lat": 37.5159,
+      "lng": 127.0736,
+      "links": []
+    },
+    {
+      "date": "2016.11.04",
+      "country": "🇰🇷 대한민국",
+      "city": "서울",
+      "venue": "지오지아 홍대점",
+      "title": "지오지아 홍대점 오픈 기념 팬사인회",
+      "lat": 37.5563,
+      "lng": 126.9220,
+      "links": []
+    },
+    {
+      "date": "2016.11.14",
+      "country": "🇰🇷 대한민국",
+      "city": "서울",
+      "venue": "롯데호텔 서울",
+      "title": "쿠쿠전자 39주년 기념 헬시윈터 캠페인 행사",
+      "lat": 37.5646,
+      "lng": 126.9810,
+      "links": []
+    },
+    {
+      "date": "2016.12.08",
+      "country": "🇨🇳 중국",
+      "city": "상하이",
+      "venue": "상하이",
+      "title": "과감(果感) 팬미팅",
+      "lat": 31.2304,
+      "lng": 121.4737,
+      "links": []
+    },
+    {
+      "date": "2016.12.15",
+      "country": "🇨🇳 중국",
+      "city": "우한",
+      "venue": "우한",
+      "title": "지찬시(姬存希) 연례 축제",
+      "lat": 30.5928,
+      "lng": 114.3055,
+      "links": []
+    },
+    {
+      "date": "2016.12.17",
+      "country": "🇰🇷 대한민국",
+      "city": "대구",
+      "venue": "롯데백화점 대구점",
+      "title": "지오지아 팬사인회",
+      "lat": 35.8668,
+      "lng": 128.5957,
+      "links": []
+    },
+    {
+      "date": "2017.04.20",
+      "country": "🇰🇷 대한민국",
+      "city": "인천",
+      "venue": "파라다이스시티",
+      "title": "파라다이스시티 개장 행사",
+      "lat": 37.4371,
+      "lng": 126.4595,
+      "links": []
+    },
+    {
+      "date": "2017.06",
+      "country": "🇰🇷 대한민국",
+      "city": "서울",
+      "venue": "서울",
+      "title": "MBC 무한도전 출연",
+      "lat": 37.5283,
+      "lng": 126.8747,
+      "links": []
+    },
+    {
+      "date": "2017.06",
+      "country": "🇰🇷 대한민국",
+      "city": "서울",
+      "venue": "KBS",
+      "title": "KBS 키스 더 라디오 출연",
+      "lat": 37.5283,
+      "lng": 126.8747,
+      "links": []
+    },
+    {
+      "date": "2017.06",
       "country": "🇺🇸 미국",
       "city": "호놀룰루",
       "venue": "하와이 오아후",
@@ -560,7 +723,27 @@
       ]
     },
     {
-      "date": "2019.10",
+      "date": "2017.05",
+      "country": "🇰🇷 대한민국",
+      "city": "서울",
+      "venue": "성균관대학교 새천년홀",
+      "title": "영화 《리얼》 쇼케이스",
+      "lat": 37.5665,
+      "lng": 126.9780,
+      "links": []
+    },
+    {
+      "date": "2019.09.07",
+      "country": "🇰🇷 대한민국",
+      "city": "서울",
+      "venue": "코엑스",
+      "title": "브랜드(모두투어) 토크 콘서트",
+      "lat": 37.5116,
+      "lng": 127.0590,
+      "links": []
+    },
+    {
+      "date": "2019.10.21",
       "country": "🇨🇳 중국",
       "city": "상하이",
       "venue": "Bellagio Shanghai Hotel",
@@ -570,25 +753,140 @@
       "links": []
     },
     {
-      "date": "2019.10",
+      "date": "2019.10.30",
       "country": "🇫🇷 프랑스",
       "city": "파리",
       "venue": "Palais Garnier",
-      "title": "브랜드(지찬시) 신제품 출시 컨퍼런스",
-      "lat": 48.856613,
-      "lng": 2.352222,
+      "title": "브랜드(지찬시) 글로벌 전략 발표회 및 신제품 공개",
+      "lat": 48.8719,
+      "lng": 2.3316,
       "links": []
     },
     {
-      "date": "2022.06",
+      "date": "2020.06.05",
+      "country": "🇰🇷 대한민국",
+      "city": "고양",
+      "venue": "킨텍스",
+      "title": "제56회 백상예술대상",
+      "lat": 37.6696,
+      "lng": 126.7454,
+      "links": []
+    },
+    {
+      "date": "2020.06.10",
+      "country": "🇰🇷 대한민국",
+      "city": "서울",
+      "venue": "온라인",
+      "title": "드라마 《사이코지만 괜찮아》 제작발표회",
+      "lat": 37.5665,
+      "lng": 126.9780,
+      "links": []
+    },
+
+    {
+      "date": "2021.05.13",
+      "country": "🇰🇷 대한민국",
+      "city": "고양",
+      "venue": "킨텍스",
+      "title": "제57회 백상예술대상",
+      "lat": 37.6696,
+      "lng": 126.7454,
+      "links": []
+    },
+    {
+      "date": "2021.06.18",
+      "country": "🇰🇷 대한민국",
+      "city": "서울",
+      "venue": "온라인",
+      "title": "브랜드(뉴틴) 시크릿 랜선 팬미팅",
+      "lat": 37.5665,
+      "lng": 126.9780,
+      "links": []
+    },
+    {
+      "date": "2021.07.07",
+      "country": "🇰🇷 대한민국",
+      "city": "서울",
+      "venue": "온라인",
+      "title": "브랜드(MIDO) 유튜브 라이브 스트리밍 이벤트",
+      "lat": 37.5665,
+      "lng": 126.9780,
+      "links": [
+        {
+          "label": "하퍼스 바자",
+          "url": "https://www.harpersbazaar.co.kr/article/57183"
+        }
+      ]
+    },
+    {
+      "date": "2021.10.13",
+      "country": "🇰🇷 대한민국",
+      "city": "서울",
+      "venue": "타미 힐피거 가로수길 매장",
+      "title": "브랜드(타미 힐피거) TOMMY SHOW",
+      "lat": 37.5209,
+      "lng": 127.0228,
+      "links": []
+    },
+    {
+      "date": "2021.11.16",
+      "country": "🇰🇷 대한민국",
+      "city": "서울",
+      "venue": "롯데백화점",
+      "title": "브랜드(MIDO) 제품 런칭 행사",
+      "lat": 37.5646,
+      "lng": 126.9810,
+      "links": []
+    },
+    {
+      "date": "2021.11.26",
+      "country": "🇰🇷 대한민국",
+      "city": "서울",
+      "venue": "콘래드 서울",
+      "title": "쿠팡플레이 《어느 날》 제작발표회",
+      "lat": 37.5259,
+      "lng": 126.9259,
+      "links": []
+    },
+    {
+      "date": "2022.04.21",
+      "country": "🇰🇷 대한민국",
+      "city": "서울",
+      "venue": "더현대 서울",
+      "title": "브랜드(타미 힐피거) 뉴 프렙 팝업 스토어 오픈 행사",
+      "lat": 37.5259,
+      "lng": 126.9284,
+      "links": []
+    },
+    {
+      "date": "2022.06.10",
       "country": "🇵🇭 필리핀",
       "city": "마닐라",
       "venue": "SM Mall of Asia Arena",
-      "title": "브랜드(BENCH) 팬미팅",
+      "title": "브랜드(BENCH) ONE EXTRAORDINARY DAY 팬미팅",
       "lat": 14.531873,
       "lng": 120.984018,
-      "links": [
-      ]
+      "links": []
+    },
+    {
+      "date": "2022.09.15",
+      "country": "🇰🇷 대한민국",
+      "city": "서울",
+      "venue": "무드 서울",
+      "title": "브랜드(MIDO) 오션 스타 GMT 스페셜 에디션 런칭 행사",
+      "lat": 37.5097,
+      "lng": 126.9947,
+      "links": []
+    },
+    {
+      "date": "2022.09.21",
+      "country": "🇰🇷 대한민국",
+      "city": "서울",
+      "venue": "서울옥션 강남센터",
+      "title": "캔버스N 밀코메다N 전시 오프닝 행사",
+      "lat": 37.5236,
+      "lng": 127.0301,
+      "links": []
     },
     {
       "date": "2022.10",
@@ -598,8 +896,7 @@
       "title": "KIM SOO HYUN 15th Anniversary 팬미팅",
       "lat": 35.5308,
       "lng": 139.7019,
-      "links": [
-      ]
+      "links": []
     },
     {
       "date": "2023.01",
@@ -615,7 +912,7 @@
       "date": "2023.03",
       "country": "🇰🇷 대한민국",
       "city": "서울",
-      "venue": "COEX",
+      "venue": "코엑",
       "title": "납세자의 날 기념식/모범납세자 대통령 표창 수여",
       "lat": 37.5665,
       "lng": 126.978,
@@ -700,8 +997,8 @@
       "date": "2024.05",
       "country": "🇰🇷 대한민국",
       "city": "서울",
-      "venue": "COEX Hall D",
-      "title": "백상예술대상",
+      "venue": "코엑스 Hall D",
+      "title": "제60회 백상예술대상",
       "lat": 37.5665,
       "lng": 126.978,
       "links": []
@@ -882,7 +1179,7 @@
       "country": "🇹🇭 태국",
       "city": "방콕",
       "venue": "IMPACT Challenger",
-      "title": "AAA 2024 시상식",
+      "title": "AAA(아시아 아티스트 어워즈) 2024",
       "lat": 13.912778716198224,
       "lng": 100.54685352752952,
       "links": [
@@ -982,7 +1279,7 @@
       "country": "🇹🇼 대만",
       "city": "가오슝",
       "venue": "Kaohsiung National Stadium",
-      "title": "AAA 2026 시상식",
+      "title": "AAA(아시아 아티스트 어워즈) 2026",
       "lat": 22.703304404259576,
       "lng": 120.29473352088854,
       "links": []
