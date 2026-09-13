@@ -154,14 +154,16 @@
             white-space:nowrap;
         }
 
-        .notice-open span{
-            margin-left:3px;
-            color:#9a9fa7;
+        .notice-close-label{
+            display:none;
         }
 
-        .official-notice[open] .notice-open span{
-            display:inline-block;
-            transform:rotate(45deg);
+        .official-notice[open] .notice-open-label{
+            display:none;
+        }
+
+        .official-notice[open] .notice-close-label{
+            display:inline;
         }
 
         .notice-full{
@@ -374,8 +376,9 @@
           </span>
 
                     <span class="notice-open">
-            전문 열기 <span>＋</span>
-          </span>
+    <span class="notice-open-label">전문 열기 ＋</span>
+    <span class="notice-close-label">전문 닫기 －</span>
+</span>
                 </summary>
 
                 <div class="notice-full">안녕하세요 골드메달리스트입니다.
