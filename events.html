@@ -312,21 +312,29 @@
 
         .timeline-links{
             display:inline-flex;
-            gap:7px;
-            margin-left:8px;
+            gap:5px;
+            margin-left:7px;
             vertical-align:middle;
         }
 
         .timeline-links a{
-            color:#858b95;
-            font-size:10px;
+            display:inline-flex;
+            align-items:center;
+            padding:3px 6px;
+            border:1px solid #4a78a8;
+            border-radius:4px;
+            background:transparent;
+            color:#4a78a8;
+            font-size:9px;
+            line-height:1;
             text-decoration:none;
             white-space:nowrap;
+            transition:background-color 0.15s ease, color 0.15s ease;
         }
 
         .timeline-links a:hover{
-            color:#151922;
-            text-decoration:underline;
+            background:#f1f6fb;
+            color:#315f8d;
         }
 
 
