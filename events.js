@@ -172,6 +172,7 @@ async function renderMap(events) {
         "영국": "826",
         "뉴질랜드": "554",
         "모로코": "504",
+        "스페인": "724",
     };
 
     function getCountryCode(country) {
