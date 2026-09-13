@@ -441,6 +441,23 @@ footer{
     margin:0
 }
 
+.footer-title{
+    margin:0 0 8px !important;
+    color:#656b75;
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:.05em
+}
+
+.footer-notice strong{
+    color:#656b75;
+    font-weight:600
+}
+
+.footer-source{
+    margin-top:6px !important
+}
+
 
 /* =========================================================
    Mobile
