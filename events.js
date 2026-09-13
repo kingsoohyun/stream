@@ -170,6 +170,16 @@ async function renderMap(events) {
 
     };
 
+    function getCountryCode(country) {
+
+        const countryName =
+            String(country).replace(
+                /^[\u{1F1E6}-\u{1F1FF}]{2}\s*/u,
+                ""
+            );
+
+        return countryCodes[countryName];
+    }
 
     /* =====================================================
        Count Events
@@ -180,7 +190,7 @@ async function renderMap(events) {
     events.forEach(event => {
 
         const code =
-            countryCodes[event.country];
+            getCountryCode(event.country);
 
         if (!code) return;
 
@@ -272,7 +282,7 @@ async function renderMap(events) {
 
             const countryEvents =
                 events.filter(item =>
-                    countryCodes[item.country] === code
+                    getCountryCode(item.country) === code
                 );
 
 
