@@ -156,6 +156,7 @@ async function renderMap(events) {
     const countryCodes = {
 
         "대한민국": "410",
+        "독일": "276",
         "일본": "392",
         "태국": "764",
         "필리핀": "608",
@@ -528,7 +529,6 @@ function renderTimeline(events) {
             `
             : ""
     }
-
                                 </article>
 
                             `)
