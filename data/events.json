@@ -2,6 +2,92 @@
   "updatedAt": "2026-09-08",
   "items": [
     {
+      "date": "2023.01",
+      "country": "필리핀",
+      "city": "마닐라",
+      "venue": "Smart Araneta Coliseum",
+      "title": "브랜드(던킨) 행사 팬미팅",
+      "lat": 14.531873441245196,
+      "lng": 120.98401826664943,
+      "links": []
+    },
+    {
+      "date": "2023.03",
+      "country": "대한민국",
+      "city": "서울",
+      "venue": "COEX",
+      "title": "납세자의 날 기념식/모범납세자 대통령 표창 수여",
+      "lat": 37.5665,
+      "lng": 126.9780,
+      "links": []
+    },
+    {
+      "date": "2023.04",
+      "country": "대한민국",
+      "city": "서울",
+      "venue": "국세청",
+      "title": "국세청 홍보대사 위촉식",
+      "lat": 37.5665,
+      "lng": 126.9780,
+      "links": []
+    },
+    {
+      "date": "2023.05",
+      "country": "인도네시아",
+      "city": "자카르타",
+      "venue": "Jakarta Convention Center",
+      "title": "브랜드(유뷰티) 행사 팬미팅",
+      "lat": -6.190451244305083,
+      "lng": 106.76702591079666,
+      "links": [
+      ]
+    },
+    {
+      "date": "2023.06",
+      "country": "태국",
+      "city": "방콕",
+      "venue": "Park Hyatt Bangkok",
+      "title": "브랜드(MIDO) 제품 론칭 행사",
+      "lat": 13.7563,
+      "lng": 100.5018,
+      "links": []
+    },
+    {
+      "date": "2023.08",
+      "country": "대한민국",
+      "city": "서울",
+      "venue": "중구 롯데백화점 본점",
+      "title": "브랜드(MIDO) 행사 포토월",
+      "lat": 37.5665,
+      "lng": 126.9780,
+      "links": []
+    },
+    {
+      "date": "2023.08",
+      "country": "독일",
+      "city": "베를린",
+      "venue": "Palaces and Parks of Potsdam and Berlin 외",
+      "title": "드라마 《눈물의 여왕》 촬영",
+      "lat": 52.5200,
+      "lng": 13.4050,
+      "links": []
+    },
+    {
+      "date": "2024.04",
+      "country": "대한민국",
+      "city": "서울",
+      "venue": "라마다서울신도림호텔",
+      "title": "드라마 《눈물의 여왕》제작발표회",
+      "lat": 37.5665,
+      "lng": 126.9780,
+      "links": [
+        {
+          "label": "연합뉴스",
+          "url": "https://m.entertain.naver.com/home/article/001/0014548459"
+        }
+      ]
+    },
+    {
       "date": "2024.04",
       "country": "대한민국",
       "city": "서울",
@@ -175,7 +261,7 @@
       "date": "2024.11~12",
       "country": "홍콩",
       "city": "홍콩",
-      "venue": "",
+      "venue": "Kowloon Bay 외",
       "title": "드라마 《넉오프》 촬영",
       "lat": 22.3193,
       "lng": 114.1694,
@@ -189,7 +275,12 @@
       "title": "AAA 2024 시상식",
       "lat": 13.912778716198224,
       "lng": 100.54685352752952,
-      "links": []
+      "links": [
+        {
+          "label": "스타뉴스",
+          "url": "https://m.entertain.naver.com/home/article/108/0003292408"
+        }
+      ]
     },
     {
       "date": "2025.01",
@@ -206,7 +297,7 @@
       "country": "이탈리아",
       "city": "밀라노",
       "venue": "Fondazione Prada",
-      "title": "프라다 2025 F/W 남성복 쇼",
+      "title": "브랜드(프라다) 행사 2025 F/W 남성복 쇼",
       "lat": 45.444172138903355,
       "lng": 9.205029594441674,
       "links": []
@@ -229,7 +320,12 @@
       "title": "RCTI 프로그램 출연",
       "lat": -6.190451244305083,
       "lng": 106.76702591079666,
-      "links": []
+      "links": [
+        {
+          "label": "연합뉴스",
+          "url": "https://n.news.naver.com/mnews/article/001/0016267017?sid=103"
+        }
+      ]
     },
     {
       "date": "2026.08",
@@ -239,7 +335,12 @@
       "title": "Highend Magazine 화보 촬영",
       "lat": -6.1845857995701605,
       "lng": 106.83093702244102,
-      "links": []
+      "links": [
+        {
+          "label": "일간스포츠",
+          "url": "https://m.entertain.naver.com/home/article/241/0003527450"
+        }
+      ]
     },
     {
       "date": "2026.09",
