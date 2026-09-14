@@ -568,3 +568,11 @@ footer{
         line-height:1.7
     }
 }
+
+@media(max-width:600px){
+
+    .brand strong{
+        font-size:17px;
+    }
+
+}
