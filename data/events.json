@@ -1752,7 +1752,17 @@
       "links": []
     },
     {
-      "date": "2022.10",
+      "date": "2022.10.02",
+      "country": "🇹🇭 태국",
+      "city": "방콕",
+      "venue": "Thunder Dome",
+      "title": "브랜드(Lotus) Meet & Greet 팬미팅",
+      "lat": 13.9137,
+      "lng": 100.5481,
+      "links": []
+    },
+    {
+      "date": "2022.10.09",
       "country": "🇯🇵 일본",
       "city": "가와사키",
       "venue": "Culttz Kawasaki",
@@ -2010,6 +2020,21 @@
         {
           "label": "tv뉴시스",
           "url": "https://www.youtube.com/watch?v=MEOzzDvFWxc"
+        }
+      ]
+    },
+    {
+      "date": "2024.09.07",
+      "country": "🇮🇩 인도네시아",
+      "city": "자카르타",
+      "venue": "Lotte Mall Jakarta",
+      "title": "KOREA 360 김수현 핸드프린팅 등재식",
+      "lat": -6.2244,
+      "lng": 106.8401,
+      "links": [
+        {
+          "label": "TheSeoulStory",
+          "url": "https://theseoulstory.com/indonesia-celebrating-newly-written-history-at-kim-soo-hyun-handprinting-placement-ceremony-in-korea-360/"
         }
       ]
     },
