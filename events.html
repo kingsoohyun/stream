@@ -16,25 +16,26 @@
            World Events
            ===================================================== */
 
-        .events-page{
-            max-width:1200px;
-            margin:auto;
-            padding:42px 20px 80px;
-        }
-        .events-header{
-            margin-bottom:22px;
+        .events-page {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
         }
 
-        .events-header h1{
-            margin:0;
-            font-size:28px;
-            letter-spacing:-.03em;
+        .events-header {
+            margin-bottom: 22px;
         }
 
-        .events-header p{
-            margin:7px 0 0;
-            color:#858b95;
-            font-size:12px;
+        .events-header h1 {
+            margin: 0;
+            font-size: 28px;
+            letter-spacing: -.03em;
+        }
+
+        .events-header p {
+            margin: 7px 0 0;
+            color: #858b95;
+            font-size: 12px;
         }
 
 
@@ -42,44 +43,44 @@
            Map
            ===================================================== */
 
-        .events-map-section{
-            background:#fff;
-            border:1px solid #e5e7eb;
-            border-radius:14px;
-            overflow:hidden;
+        .events-map-section {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            overflow: hidden;
         }
 
-        .world-map-wrap{
-            width:100%;
-            height:400px;
-            overflow:hidden;
-            position:relative;
+        .world-map-wrap {
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
         }
 
-        #world-map{
-            width:100%;
-            height:100%;
+        #world-map {
+            width: 100%;
+            height: 100%;
         }
 
-        #world-map svg{
-            display:block;
-            width:100%;
-            height:100%;
+        #world-map svg {
+            display: block;
+            width: 100%;
+            height: 100%;
         }
 
-        .map-notice{
-            position:absolute;
-            right:18px;
-            top:14px;
-            z-index:10;
-            padding:5px 9px;
-            background:rgba(255,255,255,.9);
-            border:1px solid #e5e7eb;
-            border-radius:6px;
-            color:#858b95;
-            font-size:10px;
-            line-height:1.4;
-            pointer-events:none;
+        .map-notice {
+            position: absolute;
+            right: 18px;
+            top: 14px;
+            z-index: 10;
+            padding: 5px 9px;
+            background: rgba(255, 255, 255, .9);
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            color: #858b95;
+            font-size: 10px;
+            line-height: 1.4;
+            pointer-events: none;
         }
 
 
@@ -87,21 +88,21 @@
            Countries
            ===================================================== */
 
-        .country{
-            fill:#f1f2f4;
-            stroke:#d8dbe0;
-            stroke-width:.6;
-            cursor:default;
-            transition:fill .15s ease;
+        .country {
+            fill: #f1f2f4;
+            stroke: #d8dbe0;
+            stroke-width: .6;
+            cursor: default;
+            transition: fill .15s ease;
         }
 
-        .country.active{
-            cursor:pointer;
+        .country.active {
+            cursor: pointer;
         }
 
-        .country:hover{
-            stroke:#8a6500;
-            stroke-width:1;
+        .country:hover {
+            stroke: #8a6500;
+            stroke-width: 1;
         }
 
 
@@ -109,60 +110,60 @@
            Tooltip
            ===================================================== */
 
-        .map-tooltip{
-            position:absolute;
-            z-index:1000;
-            width:280px;
-            max-height:360px;
-            overflow-y:auto;
-            padding:14px 15px;
-            background:#fff;
-            border:1px solid #e2e4e8;
-            border-radius:10px;
-            box-shadow:0 8px 25px rgba(20,25,35,.12);
-            pointer-events:none;
-            font-size:11px;
+        .map-tooltip {
+            position: absolute;
+            z-index: 1000;
+            width: 280px;
+            max-height: 360px;
+            overflow-y: auto;
+            padding: 14px 15px;
+            background: #fff;
+            border: 1px solid #e2e4e8;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(20, 25, 35, .12);
+            pointer-events: none;
+            font-size: 11px;
         }
 
-        .map-tooltip strong{
-            display:block;
-            font-size:14px;
-            color:#151922;
+        .map-tooltip strong {
+            display: block;
+            font-size: 14px;
+            color: #151922;
         }
 
-        .map-tooltip .event-count{
-            margin-top:4px;
-            color:#858b95;
-            font-size:10px;
+        .map-tooltip .event-count {
+            margin-top: 4px;
+            color: #858b95;
+            font-size: 10px;
         }
 
-        .map-tooltip .event-list{
-            margin-top:11px;
-            padding-top:10px;
-            border-top:1px solid #eee;
+        .map-tooltip .event-list {
+            margin-top: 11px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
         }
 
-        .map-tooltip .event-item{
-            padding:7px 0;
-            border-bottom:1px solid #f0f1f3;
+        .map-tooltip .event-item {
+            padding: 7px 0;
+            border-bottom: 1px solid #f0f1f3;
         }
 
-        .map-tooltip .event-item:last-child{
-            border-bottom:0;
+        .map-tooltip .event-item:last-child {
+            border-bottom: 0;
         }
 
-        .map-tooltip .event-date{
-            display:block;
-            color:#9a9fa7;
-            font-size:10px;
-            margin-bottom:2px;
+        .map-tooltip .event-date {
+            display: block;
+            color: #9a9fa7;
+            font-size: 10px;
+            margin-bottom: 2px;
         }
 
-        .map-tooltip .event-title{
-            display:block;
-            color:#30343b;
-            font-size:11px;
-            line-height:1.45;
+        .map-tooltip .event-title {
+            display: block;
+            color: #30343b;
+            font-size: 11px;
+            line-height: 1.45;
         }
 
 
@@ -170,45 +171,45 @@
            Legend
            ===================================================== */
 
-        .map-legend{
-            display:flex;
-            align-items:center;
-            justify-content:flex-end;
-            gap:7px;
-            padding:12px 18px;
-            border-top:1px solid #eee;
-            color:#858b95;
-            font-size:10px;
+        .map-legend {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 7px;
+            padding: 12px 18px;
+            border-top: 1px solid #eee;
+            color: #858b95;
+            font-size: 10px;
         }
 
-        .legend-scale{
-            display:flex;
-            gap:2px;
+        .legend-scale {
+            display: flex;
+            gap: 2px;
         }
 
-        .legend-item{
-            width:18px;
-            height:10px;
+        .legend-item {
+            width: 18px;
+            height: 10px;
         }
 
-        .legend-1{
-            background:#E8D6A3;
+        .legend-1 {
+            background: #E8D6A3;
         }
 
-        .legend-2{
-            background:#D8BC72;
+        .legend-2 {
+            background: #D8BC72;
         }
 
-        .legend-3{
-            background:#C69A4B;
+        .legend-3 {
+            background: #C69A4B;
         }
 
-        .legend-4{
-            background:#A96832;
+        .legend-4 {
+            background: #A96832;
         }
 
-        .legend-5{
-            background:#74351F;
+        .legend-5 {
+            background: #74351F;
         }
 
 
@@ -216,30 +217,30 @@
            Timeline
            ===================================================== */
 
-        .events-timeline-section{
-            margin-top:28px;
-            background:#fff;
-            border:1px solid #e5e7eb;
-            border-left:3px solid #151922;
-            border-radius:14px;
-            padding:22px;
+        .events-timeline-section {
+            margin-top: 28px;
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-left: 3px solid #151922;
+            border-radius: 14px;
+            padding: 22px;
         }
 
-        .events-timeline-head{
-            display:flex;
-            align-items:center;
-            justify-content:space-between;
-            margin-bottom:22px;
+        .events-timeline-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 22px;
         }
 
-        .events-timeline-head h2{
-            margin:0;
-            font-size:16px;
+        .events-timeline-head h2 {
+            margin: 0;
+            font-size: 16px;
         }
 
-        .events-timeline-head span{
-            color:#858b95;
-            font-size:11px;
+        .events-timeline-head span {
+            color: #858b95;
+            font-size: 11px;
         }
 
 
@@ -247,23 +248,23 @@
            Year
            ===================================================== */
 
-        .timeline-year{
-            display:grid;
+        .timeline-year {
+            display: grid;
             grid-template-columns:80px 1fr;
-            gap:20px;
-            padding:20px 0;
-            border-top:1px solid #eee;
+            gap: 20px;
+            padding: 20px 0;
+            border-top: 1px solid #eee;
         }
 
-        .timeline-year:first-child{
-            border-top:0;
-            padding-top:0;
+        .timeline-year:first-child {
+            border-top: 0;
+            padding-top: 0;
         }
 
-        .timeline-year-title{
-            font-size:22px;
-            font-weight:700;
-            letter-spacing:-.03em;
+        .timeline-year-title {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -.03em;
         }
 
 
@@ -271,76 +272,76 @@
            Timeline Events
            ===================================================== */
 
-        .timeline-event{
-            padding:10px 0;
-            border-bottom:1px solid #f0f1f3;
+        .timeline-event {
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f1f3;
         }
 
-        .timeline-event:last-child{
-            border-bottom:0;
+        .timeline-event:last-child {
+            border-bottom: 0;
         }
 
-        .timeline-main{
-            display:grid;
+        .timeline-main {
+            display: grid;
             grid-template-columns:90px 90px 1fr;
-            gap:14px;
-            align-items:baseline;
+            gap: 14px;
+            align-items: baseline;
         }
 
-        .timeline-date{
-            color:#858b95;
-            font-size:11px;
-            white-space:nowrap;
+        .timeline-date {
+            color: #858b95;
+            font-size: 11px;
+            white-space: nowrap;
         }
 
-        .timeline-location{
-            font-size:11px;
-            font-weight:600;
+        .timeline-location {
+            font-size: 11px;
+            font-weight: 600;
         }
 
-        .timeline-title{
-            font-size:12px;
-            line-height:1.5;
+        .timeline-title {
+            font-size: 12px;
+            line-height: 1.5;
         }
 
-        .timeline-venue{
-            display:grid;
+        .timeline-venue {
+            display: grid;
             grid-template-columns:90px 90px 1fr;
-            gap:14px;
-            margin-top:2px;
-            color:#9a9fa7;
-            font-size:10px;
+            gap: 14px;
+            margin-top: 2px;
+            color: #9a9fa7;
+            font-size: 10px;
         }
 
-        .timeline-venue span:nth-child(3){
-            min-width:0;
+        .timeline-venue span:nth-child(3) {
+            min-width: 0;
         }
 
-        .timeline-links{
-            display:inline-flex;
-            gap:5px;
-            margin-left:7px;
-            vertical-align:middle;
+        .timeline-links {
+            display: inline-flex;
+            gap: 5px;
+            margin-left: 7px;
+            vertical-align: middle;
         }
 
-        .timeline-links a{
-            display:inline-flex;
-            align-items:center;
-            padding:3px 6px;
-            border:1px solid #4a78a8;
-            border-radius:4px;
-            background:transparent;
-            color:#4a78a8;
-            font-size:9px;
-            line-height:1;
-            text-decoration:none;
-            white-space:nowrap;
-            transition:background-color 0.15s ease, color 0.15s ease;
+        .timeline-links a {
+            display: inline-flex;
+            align-items: center;
+            padding: 3px 6px;
+            border: 1px solid #4a78a8;
+            border-radius: 4px;
+            background: transparent;
+            color: #4a78a8;
+            font-size: 9px;
+            line-height: 1;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: background-color 0.15s ease, color 0.15s ease;
         }
 
-        .timeline-links a:hover{
-            background:#f1f6fb;
-            color:#315f8d;
+        .timeline-links a:hover {
+            background: #f1f6fb;
+            color: #315f8d;
         }
 
 
@@ -348,71 +349,71 @@
            Mobile
            ===================================================== */
 
-        @media(max-width:800px){
+        @media (max-width: 800px) {
 
-            .events-page{
-                padding:20px 8px 40px;
+            .events-page {
+                padding:24px 12px 0;
             }
 
-            .events-header h1{
-                font-size:22px;
+            .events-header h1 {
+                font-size: 22px;
             }
 
-            .world-map-wrap{
-                height:300px;
+            .world-map-wrap {
+                height: 300px;
             }
 
-            .map-tooltip{
-                width:220px;
-                max-height:260px;
+            .map-tooltip {
+                width: 220px;
+                max-height: 260px;
             }
 
-            .map-legend{
-                justify-content:center;
+            .map-legend {
+                justify-content: center;
             }
 
-            .events-timeline-section{
-                padding:14px 10px;
+            .events-timeline-section {
+                padding: 14px 10px;
             }
 
-            .timeline-year{
-                display:block;
-                padding:18px 0 8px;
+            .timeline-year {
+                display: block;
+                padding: 18px 0 8px;
             }
 
-            .timeline-year-title{
-                margin-bottom:8px;
-                font-size:18px;
+            .timeline-year-title {
+                margin-bottom: 8px;
+                font-size: 18px;
             }
 
-            .timeline-event{
-                padding:8px 0;
+            .timeline-event {
+                padding: 8px 0;
             }
 
-            .timeline-main{
+            .timeline-main {
                 grid-template-columns:55px 78px 1fr;
-                gap:6px;
+                gap: 6px;
             }
 
-            .timeline-title{
-                min-width:0;
-                line-height:1.45;
+            .timeline-title {
+                min-width: 0;
+                line-height: 1.45;
             }
 
-            .timeline-venue{
+            .timeline-venue {
                 grid-template-columns:55px 78px 1fr;
-                gap:6px;
-                margin-top:2px;
-                font-size:10px;
+                gap: 6px;
+                margin-top: 2px;
+                font-size: 10px;
             }
 
-            .timeline-links{
-                gap:4px;
-                margin-left:5px;
+            .timeline-links {
+                gap: 4px;
+                margin-left: 5px;
             }
 
-            .timeline-links a{
-                font-size:9px;
+            .timeline-links a {
+                font-size: 9px;
             }
 
         }
@@ -483,11 +484,8 @@
 <footer>
     <div class="footer-notice">
         <p>
-            <strong>KIM SOO HYUN STREAM</strong> is an unofficial, non-commercial fan site.
-        </p>
-        <p class="footer-source">
-            All content remains the property of its respective copyright holders and original creators.
-            All posts are linked to their original sources.
+            <strong>KIM SOO HYUN STREAM</strong> is an unofficial, non-commercial fan site. All content belongs to its
+            respective copyright holders and original creators and is linked to its original source.
         </p>
     </div>
 </footer>
