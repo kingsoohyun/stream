@@ -645,7 +645,7 @@
       "date": "2014.03.13",
       "country": "🇰🇷 대한민국",
       "city": "서울",
-      "venue": "서울",
+      "venue": "논현동 플래툰 쿤스트할레",
       "title": "브랜드(쌤소나이트 레드) 비 마이 레드 행사",
       "lat": 37.5665,
       "lng": 126.978,
@@ -845,11 +845,16 @@
       "date": "2014.06.13",
       "country": "🇰🇷 대한민국",
       "city": "서울",
-      "venue": "서울",
+      "venue": "CGV 청담 씨네시티",
       "title": "브랜드(뚜레쥬르) 팬미팅",
       "lat": 37.5665,
       "lng": 126.978,
-      "links": []
+      "links": [
+        {
+          "label": "동아일보",
+          "url": "https://m.entertain.naver.com/home/article/020/0002592716"
+        }
+      ]
     },
     {
       "date": "2014.07.05",
@@ -1872,7 +1877,24 @@
       "title": "브랜드(MIDO) 포토콜",
       "lat": 37.5665,
       "lng": 126.978,
-      "links": []
+      "links": [
+        {
+          "label": "marie",
+          "url": "https://www.instagram.com/reel/C6K09k8hL5Y"
+        },
+        {
+          "label": "dfn",
+          "url": "https://www.instagram.com/reel/C6KvchAJ_Uc"
+        },
+        {
+          "label": "fapa",
+          "url": "https://www.instagram.com/reel/C6K3N_2pr9d"
+        },
+        {
+          "label": "esquire",
+          "url": "https://www.instagram.com/reel/C6K8foJhw-E"
+        }
+      ]
     },
     {
       "date": "2024.05.07",
@@ -1995,7 +2017,24 @@
       "title": "브랜드(MIDO) 론칭 행사",
       "lat": 37.5665,
       "lng": 126.978,
-      "links": []
+      "links": [
+        {
+          "label": "marie",
+          "url": "https://www.instagram.com/reel/C-FY7lUBY8h/"
+        },
+        {
+          "label": "dfn",
+          "url": "https://www.instagram.com/reel/C-FWh9UpMBb/"
+        },
+        {
+          "label": "dazed",
+          "url": "https://www.instagram.com/reel/C-FTBWjpwFw/"
+        },
+        {
+          "label": "elle",
+          "url": "https://www.instagram.com/reel/C-FP3hNJfqo/"
+        }
+      ]
     },
     {
       "date": "2024.07.06",
@@ -2089,7 +2128,12 @@
       "title": "디즈니 콘텐츠 쇼케이스 2024 팬미팅/블루카펫",
       "lat": 1.284047,
       "lng": 103.859385,
-      "links": []
+      "links": [
+        {
+          "label": "WaltDisney",
+          "url": "https://thewaltdisneycompany.com/news/disney-asia-pacific-showcase"
+        }
+      ]
     },
     {
       "date": "2024.11.21",
@@ -2143,7 +2187,12 @@
       "title": "브랜드(뚜레주르) 팬밋업",
       "lat": 37.5665,
       "lng": 126.978,
-      "links": []
+      "links": [
+        {
+          "label" : "뉴스1",
+          "url": "https://n.news.naver.com/mnews/article/421/0007957142?sid=101"
+        }
+      ]
     },
     {
       "date": "2025.01.19",
