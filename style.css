@@ -85,7 +85,7 @@ body{
 main{
     max-width:1200px;
     margin:auto;
-    padding:42px 20px
+    padding:42px 20px 0
 }
 
 
@@ -423,13 +423,13 @@ main{
 
 footer{
     max-width:1200px;
-    margin:80px auto 0;
-    padding:32px 20px 36px;
+    margin:40px auto 0;
+    padding:28px 20px 32px;
     border-top:1px solid #e5e7eb
 }
 
 .footer-notice{
-    max-width:760px;
+    max-width:1000px;
     margin:0 auto;
     text-align:center;
     color:#8a9099;
@@ -441,21 +441,9 @@ footer{
     margin:0
 }
 
-.footer-title{
-    margin:0 0 8px !important;
-    color:#656b75;
-    font-size:10px;
-    font-weight:600;
-    letter-spacing:.05em
-}
-
 .footer-notice strong{
     color:#656b75;
     font-weight:600
-}
-
-.footer-source{
-    margin-top:6px !important
 }
 
 
@@ -466,7 +454,7 @@ footer{
 @media(max-width:800px){
 
     main{
-        padding:28px 12px
+        padding:28px 12px 0
     }
 
     .hero h1{
@@ -549,23 +537,13 @@ footer{
         width:100%
     }
 
-
-    /* Header */
-
     .site-header{
         padding:0 16px
     }
 
-    /* Footer */
-
     footer{
-        margin-top:60px;
+        margin-top:40px;
         padding:28px 20px 32px
-    }
-
-    .footer-notice{
-        font-size:11px;
-        line-height:1.7
     }
 }
 

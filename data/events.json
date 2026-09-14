@@ -834,7 +834,12 @@
       "title": "김수현 아시아 프로젝트 화보 촬영",
       "lat": 31.6295,
       "lng": -7.9811,
-      "links": []
+      "links": [
+        {
+          "label": "마리클레르 코리아",
+          "url": "https://www.marieclairekorea.com/celebrity/2014/06/marrakech-dream/"
+        }
+      ]
     },
     {
       "date": "2014.06.13",
