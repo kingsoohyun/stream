@@ -279,7 +279,7 @@ async function renderMap(events) {
 
     svg.selectAll(".country.active")
 
-        .on("mouseenter", function(event, feature) {
+        .on("mouseenter", function (event, feature) {
 
             const code =
                 String(feature.id);
@@ -362,14 +362,14 @@ ${escapeHtml(countryName)}
         })
 
 
-        .on("mousemove", function(event) {
+        .on("mousemove", function (event) {
 
             moveTooltip(event);
 
         })
 
 
-        .on("mouseleave", function() {
+        .on("mouseleave", function () {
 
             tooltip
                 .style("display", "none");
@@ -497,13 +497,16 @@ function renderTimeline(events) {
 <div class="timeline-events">
 
     ${years[year]
-    .map(event => `
+                    .map(event => `
 
 <article class="timeline-event">
 
     <div class="timeline-main">
-
-        <span class="timeline-date">
+        
+        <span
+            class="timeline-date"
+            title="${escapeHtml(event.date)}"
+        >
             ${escapeHtml(event.date.slice(0, 7))}
         </span>
 
@@ -515,8 +518,8 @@ function renderTimeline(events) {
             ${escapeHtml(event.title)}
 
             ${
-        Array.isArray(event.links) && event.links.length
-            ? `
+                        Array.isArray(event.links) && event.links.length
+                            ? `
                         <span class="timeline-links">
                             ${event.links.map(link => `
                                 <a
@@ -529,27 +532,27 @@ function renderTimeline(events) {
                             `).join("")}
                         </span>
                     `
-            : ""
-    }
+                            : ""
+                    }
         </span>
 
     </div>
 
     ${
-        event.venue
-            ? `
+                        event.venue
+                            ? `
 <div class="timeline-venue">
     <span></span>
     <span></span>
     <span>${escapeHtml(event.venue)}</span>
 </div>
             `
-            : ""
-    }
+                            : ""
+                    }
                                 </article>
 
                             `)
-    .join("")}
+                    .join("")}
 
 </div>
 
