@@ -538,9 +538,11 @@ function renderTimeline(events) {
     ${
         event.venue
             ? `
-                <div class="timeline-venue">
-                    ${escapeHtml(event.venue)}
-                </div>
+<div class="timeline-venue">
+    <span></span>
+    <span></span>
+    <span>${escapeHtml(event.venue)}</span>
+</div>
             `
             : ""
     }

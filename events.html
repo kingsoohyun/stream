@@ -304,10 +304,16 @@
         }
 
         .timeline-venue{
-            margin-left:208px;
+            display:grid;
+            grid-template-columns:90px 90px 1fr;
+            gap:14px;
             margin-top:2px;
             color:#9a9fa7;
             font-size:10px;
+        }
+
+        .timeline-venue span:nth-child(3){
+            min-width:0;
         }
 
         .timeline-links{
@@ -394,9 +400,9 @@
             }
 
             .timeline-venue{
-                margin-left:164px;
+                grid-template-columns:55px 78px 1fr;
+                gap:6px;
                 margin-top:2px;
-                color:#9a9fa7;
                 font-size:10px;
             }
 
