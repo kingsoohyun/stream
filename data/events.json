@@ -32,6 +32,37 @@
       "links": []
     },
     {
+      "date": "2010.12.27",
+      "country": "🇰🇷 대한민국",
+      "city": "고양",
+      "venue": "킨텍스",
+      "title": "KBS 드라마 《드림하이》 제작발표회",
+      "lat": 37.6698,
+      "lng": 126.7450,
+      "links": [
+        {
+          "label": "연합뉴스",
+          "url": "https://m.entertain.naver.com/home/article/001/0004839032"
+        }
+      ]
+    },
+    {
+      "date": "2010.12.31",
+      "country": "🇰🇷 대한민국",
+      "city": "서울",
+      "venue": "SBS 공개홀",
+      "title": "2010 SBS 연기대상",
+      "lat": 37.5277,
+      "lng": 126.8544,
+      "links": [
+        {
+          "label": "연합뉴스",
+          "url": "https://m.entertain.naver.com/home/article/001/0004846749"
+        }
+      ],
+      "award": "뉴스타상"
+    },
+    {
       "date": "2011.02.24",
       "country": "🇰🇷 대한민국",
       "city": "고양",
@@ -407,6 +438,21 @@
       "links": []
     },
     {
+      "date": "2012.11.19",
+      "country": "🇰🇷 대한민국",
+      "city": "서울",
+      "venue": "올림픽공원 올림픽홀",
+      "title": "2012 대한민국 대중문화예술상 문화부장관 표창 수상",
+      "lat": 37.5159,
+      "lng": 127.1286,
+      "links": [
+        {
+          "label": "문화체육관광부",
+          "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=12444"
+        }
+      ]
+    },
+    {
       "date": "2012.11.30",
       "country": "🇰🇷 대한민국",
       "city": "서울",
@@ -664,7 +710,12 @@
       "title": "제50회 대종상영화제",
       "lat": 37.5258,
       "lng": 126.9188,
-      "links": []
+      "links": [
+        {
+          "label": "서울경제",
+          "url": "https://m.entertain.naver.com/home/article/011/0002417116"
+        }
+      ]
     },
     {
       "date": "2013.11.28",
@@ -977,6 +1028,22 @@
       "links": []
     },
     {
+      "date": "2014.09.04",
+      "country": "🇰🇷 대한민국",
+      "city": "서울",
+      "venue": "국립극장 해오름극장",
+      "title": "제9회 서울드라마어워즈",
+      "lat": 37.5512,
+      "lng": 126.9982,
+      "links": [
+        {
+          "label": "OSEN",
+          "url": "https://www.osen.co.kr/article/G1109946898"
+        }
+      ],
+      "award": "네티즌 인기상 · 한류드라마 남자배우상"
+    },
+    {
       "date": "2014.09.26",
       "country": "🇨🇳 중국",
       "city": "선전",
@@ -1116,7 +1183,7 @@
       "country": "🇰🇷 대한민국",
       "city": "서울",
       "venue": "홍익대 대학로 아트센터",
-      "title": "제5회 대한민국 대중문화예술상 국무총리 표창 수상",
+      "title": "2014 대한민국 대중문화예술상 국무총리 표창 수상",
       "lat": 37.5819,
       "lng": 127.0026,
       "links": [
@@ -1149,8 +1216,7 @@
           "label": "연합뉴스",
           "url": "https://m.entertain.naver.com/home/article/001/0007260311"
         }
-      ],
-
+      ]
     },
     {
       "date": "2014.11.21",
@@ -1214,13 +1280,18 @@
     },
     {
       "date": "2015.01.18",
-      "country": "🇰🇷 대한민국",
-      "city": "서울",
-      "venue": "고려대학교 화정체육관",
+      "country": "🇲🇴 마카오",
+      "city": "마카오",
+      "venue": "마카오",
       "title": "제15회 화정 어워즈",
-      "lat": 37.5897,
-      "lng": 127.0282,
-      "links": []
+      "lat": 22.1987,
+      "lng": 113.5439,
+      "links": [
+        {
+          "label": "매일경제",
+          "url": "https://www.mk.co.kr/news/all/6530928"
+        }
+      ]
     },
     {
       "date": "2015.03.14",
