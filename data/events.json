@@ -1949,7 +1949,12 @@
       "title": "EYES ON YOU 팬미팅/미디어 세션",
       "lat": 13.7563,
       "lng": 100.5018,
-      "links": []
+      "links": [
+        {
+          "label": "헤럴드경제",
+          "url": "https://m.entertain.naver.com/home/article/016/0002322912"
+        }
+      ]
     },
     {
       "date": "2024.06.22~23",
@@ -1959,7 +1964,12 @@
       "title": "EYES ON YOU 팬미팅",
       "lat": 35.45611473360619,
       "lng": 139.62873905376367,
-      "links": []
+      "links": [
+        {
+          "label": "스포츠경향",
+          "url": "https://m.entertain.naver.com/home/article/144/0000971559"
+        }
+      ]
     },
     {
       "date": "2024.06.29",
@@ -1969,7 +1979,12 @@
       "title": "EYES ON YOU 팬미팅",
       "lat": 14.620854151297193,
       "lng": 121.05343971082866,
-      "links": []
+      "links": [
+        {
+          "label": "JTBC",
+          "url": "https://m.entertain.naver.com/home/article/437/0000399817"
+        }
+      ]
     },
     {
       "date": "2024.07.28",
@@ -2044,7 +2059,12 @@
       "title": "EYES ON YOU 팬미팅",
       "lat": 25.034857007409638,
       "lng": 121.38352753804982,
-      "links": []
+      "links": [
+        {
+          "label": "마이데일리",
+          "url": "https://m.entertain.naver.com/home/article/117/0003854283"
+        }
+      ]
     },
     {
       "date": "2024.08.10",
@@ -2108,7 +2128,12 @@
       "title": "EYES ON YOU 팬미팅",
       "lat": 37.5665,
       "lng": 126.978,
-      "links": []
+      "links": [
+        {
+          "label": "뉴스1",
+          "url": "https://m.entertain.naver.com/home/article/421/0007867823"
+        }
+      ]
     },
     {
       "date": "2024.11.16",
@@ -2217,7 +2242,12 @@
       "title": "브랜드(조말론 런던) 테마 행사",
       "lat": 37.5665,
       "lng": 126.978,
-      "links": []
+      "links": [
+        {
+          "label": "\uD83D\uDC9C",
+          "url": "https://www.instagram.com/p/DFowOGCyluJ"
+        }
+      ]
     },
     {
       "date": "2026.08.23",
