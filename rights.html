@@ -167,14 +167,28 @@
             margin-bottom: 0;
         }
 
-        .rights-section-head {
-            margin-bottom: 14px;
-            padding-left: 10px;
-            border-left: 3px solid #d1d5db;
+        .rights-link {
+            position: relative;
+            padding-left: 22px;
         }
 
-        .rights-section.case-2025 .rights-section-head {
-            border-left-color: rgba(170, 40, 40, .65);
+        .rights-link::before {
+            content: "";
+            position: absolute;
+            left: 6px;
+            top: 10px;
+            bottom: 10px;
+            width: 2.4px;
+            border-radius: 2px;
+            background: #d1d5db;
+        }
+
+        .rights-section.case-2025 .rights-link::before {
+            background: rgba(170, 40, 40, .65);
+        }
+
+        .rights-section.report .rights-link::before {
+            background: #bd9200;
         }
 
         @media (max-width: 800px) {
@@ -322,8 +336,7 @@
 
         </section>
 
-        <section class="rights-section">
-
+        <section class="rights-section report">
             <div class="rights-section-head">
                 <h2>악성 게시물 신고</h2>
             </div>
@@ -341,7 +354,6 @@
                 </a>
 
             </div>
-
         </section>
 
         <section class="rights-section">
