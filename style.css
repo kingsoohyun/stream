@@ -85,36 +85,7 @@ body{
 main{
     max-width:1200px;
     margin:auto;
-    padding:42px 20px 0
-}
-
-
-/* =========================================================
-   Hero
-   ========================================================= */
-
-.hero{
-    text-align:center;
-    padding:15px 0 35px
-}
-
-.eyebrow{
-    font-size:11px;
-    letter-spacing:.18em;
-    color:#727784;
-    margin:0 0 8px
-}
-
-.hero h1{
-    font-size:42px;
-    margin:0;
-    letter-spacing:-.03em
-}
-
-.hero p:last-child{
-    margin:12px 0 0;
-    color:#656b75;
-    font-size:14px
+    padding:28px 20px 0
 }
 
 
@@ -454,7 +425,7 @@ footer{
 @media(max-width:800px){
 
     main{
-        padding:28px 12px 0
+        padding:18px 12px 0
     }
 
     .hero h1{
