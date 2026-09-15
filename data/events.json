@@ -1415,6 +1415,10 @@
         {
           "label": "연합뉴스",
           "url": "https://n.news.naver.com/mnews/article/001/0007482730?sid=103"
+        },
+        {
+          "label": "서울경제",
+          "url": "https://m.entertain.naver.com/home/article/011/0002921418"
         }
       ]
     },
