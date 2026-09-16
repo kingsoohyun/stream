@@ -485,7 +485,12 @@
             min-height: 120px;
             transform: translateX(-50%);
             opacity: 0;
+            z-index: 1;
             transition: opacity .55s ease, transform .55s ease;
+        }
+
+        .case-embed .event:has(.card.open) {
+            z-index: 20;
         }
 
         .case-embed .event.visible {
@@ -771,7 +776,19 @@
             }).join('');
 
             caseRoot.querySelectorAll('.card').forEach(card => {
-                card.addEventListener('click', () => card.classList.toggle('open'));
+                caseRoot.querySelectorAll('.card').forEach(card => {
+                    card.addEventListener('click', () => {
+                        const wasOpen = card.classList.contains('open');
+
+                        caseRoot.querySelectorAll('.card.open').forEach(openCard => {
+                            openCard.classList.remove('open');
+                        });
+
+                        if (!wasOpen) {
+                            card.classList.add('open');
+                        }
+                    });
+                });
             });
             reveal();
         }
