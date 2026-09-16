@@ -116,7 +116,7 @@
       "top": 620,
       "major": false,
       "current": false,
-      "title": "피고인 구속",
+      "title": "피고인 김세의 구속",
       "meta": "구속영장 발부 및 신병 확보",
       "links": [
         {
@@ -140,7 +140,7 @@
       "top": 850,
       "major": false,
       "current": false,
-      "title": "검찰 송치",
+      "title": "김세의 검찰 송치",
       "meta": "경찰 수사 후 검찰로 사건 송치",
       "links": [
         {
@@ -156,7 +156,7 @@
       "top": 1090,
       "major": true,
       "current": false,
-      "title": "구속기소",
+      "title": "김세의 구속기소",
       "meta": "서울중앙지검에서 구속 상태로 기소",
       "links": [
         {
@@ -172,7 +172,7 @@
       "top": 1300,
       "major": true,
       "current": true,
-      "title": "재판 진행 중",
+      "title": "김세의 재판 진행 중",
       "meta": "공판 절차 진행 · 현재 단계",
       "links": [
         {
