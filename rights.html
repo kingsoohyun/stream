@@ -11,6 +11,14 @@
 
 
     <style>
+        :root {
+            --case-bg: #f7f7f5;
+            --case-text: #202124;
+            --case-line: #d7d7d2;
+            --case-card: rgba(255,255,255,.94);
+            --case-current: #b65b32;
+        }
+
         .rights-page {
             max-width: 900px;
             margin: 0 auto;
@@ -192,6 +200,24 @@
             background: #FFCC00;
         }
 
+
+        .case-divider {
+            width: 48px;
+            height: 2px;
+            margin: 58px auto 42px;
+            background: #b65b32;
+            border-radius: 2px;
+            opacity: .82;
+        }
+
+        @media (max-width: 800px) {
+            .case-divider {
+                width: 42px;
+                height: 2px;
+                margin: 46px auto 34px;
+            }
+        }
+
         @media (max-width: 800px) {
             .rights-page {
                 padding: 16px 12px 0;
@@ -240,8 +266,8 @@
                 font-size: 9px;
             }
         }
-    </style>
 
+    </style>
 
 </head>
 
@@ -269,6 +295,7 @@
         <section class="rights-section case-2025">
             <div class="rights-section-head">
                 <h2>2025 사생활 악용 및 명예훼손 사건</h2>
+                <!--                <p class="rights-section-desc">사실 확인과 권리 보호를 위해 관련 자료와 공식 대응 내용을 함께 정리했습니다.</p>-->
             </div>
 
             <div class="rights-links">
@@ -399,6 +426,395 @@
             </details>
         </section>
     </div>
+
+    <style id="case-embed-style">
+        /* ============================================================
+           Criminal case timeline
+           Uses the same content width as .rights-page
+           ============================================================ */
+
+        .case-embed,
+        .case-embed * {
+            box-sizing: border-box;
+        }
+
+        .case-embed {
+            margin-top: 50px !important;
+            padding: 0 !important;
+            background: transparent !important;
+            border: 0 !important;
+            border-radius: 0 !important;
+        }
+
+        .case-embed .timeline {
+            position: relative;
+            width: 100%;
+            min-height: 1500px;
+            padding: 20px 0;
+        }
+
+        .case-embed .path {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            transform: translateX(-50%);
+            overflow: visible;
+            pointer-events: none;
+        }
+
+        .case-embed .path-base {
+            fill: none;
+            stroke: var(--case-line);
+            stroke-width: 2.2;
+        }
+
+        .case-embed .path-progress {
+            fill: none;
+            stroke: #8d8d88;
+            stroke-width: 2.2;
+            stroke-linecap: round;
+            stroke-dasharray: 8 8;
+        }
+
+        .case-embed .event {
+            position: absolute;
+            left: 50%;
+            width: 50%;
+            min-height: 120px;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity .55s ease, transform .55s ease;
+        }
+
+        .case-embed .event.visible {
+            opacity: 1;
+        }
+
+        .case-embed .event.left .card {
+            right: calc(50% + 42px);
+        }
+
+        .case-embed .event.right .card {
+            left: calc(50% + 42px);
+        }
+
+        .case-embed .card {
+            position: absolute;
+            top: -35px;
+            width: min(360px, calc(100vw - 110px));
+            padding: 18px 19px 17px;
+            border: 1px solid #dfdfda;
+            border-radius: 13px;
+            background: var(--case-card);
+            box-shadow: 0 8px 30px rgba(0,0,0,.045);
+            cursor: pointer;
+            transition: border-color .18s ease, box-shadow .18s ease;
+        }
+
+        .case-embed .card:hover {
+            border-color: #bbb;
+            box-shadow: 0 10px 32px rgba(0,0,0,.06);
+        }
+
+        .case-embed .date {
+            font-size: 11px;
+            letter-spacing: .04em;
+            color: #999;
+            margin-bottom: 7px;
+        }
+
+        .case-embed .title {
+            font-size: 16px;
+            font-weight: 620;
+            letter-spacing: -.02em;
+        }
+
+        .case-embed .meta {
+            margin-top: 8px;
+            color: #777;
+            font-size: 12px;
+            line-height: 1.55;
+        }
+
+        .case-embed .links {
+            display: none;
+            margin-top: 13px;
+            padding-top: 12px;
+            border-top: 1px solid #edede8;
+        }
+
+        .case-embed .card.open .links {
+            display: block;
+        }
+
+        .case-embed .links a {
+            display: block;
+            color: #333;
+            text-decoration: none;
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+        .case-embed .links a:hover {
+            text-decoration: underline;
+        }
+
+        .case-embed .node {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            transform: translate(-50%, -50%);
+            border: 4px solid var(--case-bg);
+            border-radius: 50%;
+            background: #777;
+            box-shadow: 0 0 0 1px #aaa;
+            z-index: 2;
+        }
+
+        .case-embed .event.major .node {
+            width: 22px;
+            height: 22px;
+            background: var(--case-text);
+            box-shadow: 0 0 0 1px #444;
+        }
+
+        .case-embed .event.current .node {
+            background: var(--case-current);
+            box-shadow:
+                    0 0 0 1px var(--case-current),
+                    0 0 0 7px rgba(182,91,50,.10);
+        }
+
+        .case-embed .current-label {
+            position: absolute;
+            left: 50%;
+            top: 29px;
+            transform: translateX(-50%);
+            font-size: 9px;
+            letter-spacing: .15em;
+            color: var(--case-current);
+            white-space: nowrap;
+            font-weight: 700;
+        }
+
+        .case-embed .legend {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #e6e6e1;
+            color: #777;
+            font-size: 11px;
+        }
+
+        .case-embed .legend span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .case-embed .legend i {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #777;
+        }
+
+        .case-embed .legend .major i {
+            width: 10px;
+            height: 10px;
+            background: #202124;
+        }
+
+        .case-embed .legend .now i {
+            background: var(--case-current);
+        }
+
+        @media (max-width: 700px) {
+            .case-embed {
+                margin-top: 50px !important;
+            }
+
+            .case-embed .timeline {
+                min-height: 1660px;
+            }
+
+            .case-embed .path {
+                left: 28px;
+                transform: none;
+            }
+
+            .case-embed .event {
+                left: 28px;
+                width: calc(100% - 28px);
+                transform: none;
+            }
+
+            .case-embed .event.left .card,
+            .case-embed .event.right .card {
+                left: 43px;
+                right: auto;
+                width: calc(100% - 43px);
+            }
+
+            .case-embed .node {
+                left: 28px;
+            }
+
+            .case-embed .current-label {
+                left: 28px;
+            }
+
+            .case-embed .card {
+                top: -38px;
+            }
+
+            .case-embed .legend {
+                gap: 10px 14px;
+                margin-top: 14px;
+                padding-top: 13px;
+            }
+        }
+    </style>
+
+    <div class="case-divider" aria-hidden="true"></div>
+
+    <section class="rights-intro">
+        <h1>2025 김수현 명예훼손 사건: 타임라인</h1>
+    </section>
+
+    <section class="rights-section case-embed">
+        <section class="timeline" id="case-timeline">
+            <svg class="path" viewBox="0 0 1000 1500" preserveAspectRatio="none" aria-hidden="true">
+                <path class="path-base"
+                      d="M500 20
+           C500 90 260 120 300 220
+           C340 320 700 300 700 410
+           C700 520 300 500 300 620
+           C300 750 720 700 690 850
+           C660 980 320 940 330 1090
+           C340 1210 650 1160 650 1300
+           C650 1390 500 1400 500 1480"/>
+                <path class="path-progress" id="case-progress"
+                      d="M500 20
+           C500 90 260 120 300 220
+           C340 320 700 300 700 410
+           C700 520 300 500 300 620
+           C300 750 720 700 690 850
+           C660 980 320 940 330 1090
+           C340 1210 650 1160 650 1300
+           C650 1390 500 1400 500 1480"/>
+            </svg>
+
+            <div id="case-events"></div>
+        </section>
+
+        <div class="legend">
+            <span class="regular"><i></i> 일반 경과</span>
+            <span class="major"><i></i> 주요 형사절차</span>
+            <span class="now"><i></i> 현재</span>
+        </div>
+
+    </section>
+
+    <script id="case-embed-script">
+        const caseRoot = document.querySelector('.case-embed');
+        const timeline = caseRoot.querySelector('.timeline');
+        const eventsRoot = caseRoot.querySelector('#case-events');
+        const progress = caseRoot.querySelector('#case-progress');
+
+        function escapeHtml(value) {
+            return String(value ?? '')
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#039;');
+        }
+
+        function renderEvents(items) {
+            eventsRoot.innerHTML = items.map(event => {
+                const classes = [
+                    'event',
+                    event.side === 'right' ? 'right' : 'left',
+                    event.major ? 'major' : '',
+                    event.current ? 'current' : ''
+                ].filter(Boolean).join(' ');
+
+                const links = (event.links || []).map(link => `
+                    <a href="${escapeHtml(link.url || '#')}"
+                       ${link.url && link.url !== '#' ? 'target="_blank" rel="noopener noreferrer"' : 'onclick="return false;"'}>
+                        ${escapeHtml(link.label)}
+                    </a>
+                `).join('');
+
+                return `
+                    <article class="${classes}" style="top: ${Number(event.top) || 0}px;">
+                        <span class="node"></span>
+                        ${event.current ? '<span class="current-label">CURRENT</span>' : ''}
+                        <div class="card">
+                            <div class="date">${escapeHtml(event.date)}</div>
+                            <div class="title">${escapeHtml(event.title)}</div>
+                            <div class="meta">${escapeHtml(event.meta)}</div>
+                            <div class="links">${links}</div>
+                        </div>
+                    </article>
+                `;
+            }).join('');
+
+            caseRoot.querySelectorAll('.card').forEach(card => {
+                card.addEventListener('click', () => card.classList.toggle('open'));
+            });
+            reveal();
+        }
+
+        function reveal() {
+            const trigger = window.innerHeight * .82;
+            caseRoot.querySelectorAll('.event').forEach(el => {
+                if (el.getBoundingClientRect().top < trigger) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+
+        const pathLength = progress.getTotalLength();
+        progress.style.strokeDasharray = pathLength;
+        progress.style.strokeDashoffset = pathLength;
+
+        function drawPath() {
+            const rect = timeline.getBoundingClientRect();
+            const viewport = window.innerHeight;
+            const start = viewport * .85;
+            const end = -rect.height * .15;
+            const pct = Math.max(0, Math.min(1,
+                (start - rect.top) / (rect.height + start - end)
+            ));
+            progress.style.strokeDashoffset = pathLength * (1 - pct);
+        }
+
+        fetch('data/case.json')
+            .then(response => {
+                if (!response.ok) throw new Error('case.json load failed: ' + response.status);
+                return response.json();
+            })
+            .then(data => {
+                renderEvents(data.items || []);
+                drawPath();
+            })
+            .catch(error => console.error(error));
+
+        window.addEventListener('scroll', reveal, { passive: true });
+        window.addEventListener('scroll', drawPath, { passive: true });
+        window.addEventListener('load', drawPath);
+    </script>
+
 </main>
 
 <footer>

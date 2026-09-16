@@ -1,0 +1,201 @@
+{
+  "updatedAt": "2026-09-16",
+  "items": [
+    {
+      "id": "event-01",
+      "date": "2025.03.10",
+      "side": "left",
+      "top": 20,
+      "major": true,
+      "current": false,
+      "title": "사건 발생: 허위 폭로 및 사생활 무단 유출",
+      "meta": "김새론 유족·유튜버, 세 차례 공개 기자회견",
+      "links": [
+        {
+          "label": "기사 ① · 故김새론 유족, 유튜버 이진호 고소…\"김수현측 법적대응 검토\"",
+          "url": "https://n.news.naver.com/mnews/article/001/0015269739?sid=102"
+        },
+        {
+          "label": "기사 ② · 故김새론 유족 측, 김수현과 메시지 공개…\"미성년 교제 증거\"",
+          "url": "https://n.news.naver.com/mnews/article/001/0015294052?sid=103"
+        },
+        {
+          "label": "기사 ③ · \"김수현 중대범죄 폭로할 것\"…故김새론 측, 오늘 기자회견 연다",
+          "url": "https://n.news.naver.com/mnews/article/025/0003439110?sid=102"
+        }
+      ]
+    },
+    {
+      "id": "event-02",
+      "date": "2025.03.10",
+      "side": "right",
+      "top": 220,
+      "major": false,
+      "current": false,
+      "title": "공식 반박 및 법적 대응",
+      "meta": "당사자 측 허위 주장 반박 공식 입장 발표",
+      "links": [
+        {
+          "label": "기사 ① · 공식 입장(묶음)",
+          "url": "https://kimsoohyun.raindrop.page/01-70905227"
+        },
+        {
+          "label": "기사 ② · 최초 고발",
+          "url": "https://m.entertain.naver.com/home/article/109/0005264794"
+        },
+        {
+          "label": "기사 ③ · 추가 고발",
+          "url": "https://m.entertain.naver.com/home/article/108/0003314008"
+        },
+        {
+          "label": "기사 ④ · 기자 회견",
+          "url": "https://m.entertain.naver.com/home/article/396/0000704641"
+        },
+        {
+          "label": "기사 ⑤ · 민/형사 강경 대응",
+          "url": "https://m.entertain.naver.com/home/article/108/0003316888"
+        },
+        {
+          "label": "기사 ⑥ · 민사 손해배상 가압류",
+          "url": "https://n.news.naver.com/mnews/article/008/0005205832?sid=102"
+        }
+      ]
+    },
+    {
+      "id": "event-03",
+      "date": "2025.03 ~",
+      "side": "left",
+      "top": 410,
+      "major": true,
+      "current": false,
+      "title": "경찰·검찰 수사",
+      "meta": "관련 고소·고발 사건 수사 진행",
+      "links": [
+        {
+          "label": "기사 ① · 뉴욕총영사관 “故김새론 제보자 피습 사건 없었다",
+          "url": "https://m.entertain.naver.com/home/article/382/0001198010"
+        },
+        {
+          "label": "기사 ② · 가세연 김세의, 경찰 소환 두 차례 불응…수사 지연",
+          "url": "https://n.news.naver.com/mnews/article/003/0013297826?sid=102"
+        },
+        {
+          "label": "기사 ③ · '스토킹 잠정조치'에도 '김수현 방송' 강행한 가세연…경찰 출동해 경고",
+          "url": "https://m.entertain.naver.com/home/article/416/0000314586"
+        },
+        {
+          "label": "기사 ④ · 경찰, 가로세로 김세의 ‘늑장수사’ 인정…“속도감 있게 진행할 것”",
+          "url": "https://n.news.naver.com/mnews/article/016/0002551776?sid=102"
+        },
+        {
+          "label": "기사 ⑤ · '가세연' 김세의 경찰 조사…집중수사팀 꾸린 지 8일 만",
+          "url": "https://n.news.naver.com/mnews/article/437/0000464151?sid=102"
+        },
+        {
+          "label": "기사 ⑥ · 'AI 조작 의혹' 김새론 녹취파일, 국과수 \"AI 조작 판정 불가\"",
+          "url": "https://n.news.naver.com/mnews/article/008/0005292217?sid=102"
+        },
+        {
+          "label": "기사 ⑦ · 경찰, 가세연 '김새론 녹취 AI 조작 의혹' 수사 마무리 수순",
+          "url": "https://n.news.naver.com/mnews/article/003/0013658111?sid=102"
+        },
+        {
+          "label": "기사 ⑧ · 경찰, “김새론 목소리 AI 조작…김수현 미성년 교제 허위”",
+          "url": "https://n.news.naver.com/mnews/article/025/0003524854?sid=102"
+        },
+        {
+          "label": "기사 ⑨ · 검찰, \"김새론 녹취, 따로 녹음해 짜깁기\"…김세의 '조작의 흔적'",
+          "url": "https://n.news.naver.com/mnews/article/437/0000498223?sid=102"
+        }
+      ]
+    },
+    {
+      "id": "event-04",
+      "date": "2026.05.26",
+      "side": "right",
+      "top": 620,
+      "major": false,
+      "current": false,
+      "title": "피고인 구속",
+      "meta": "구속영장 발부 및 신병 확보",
+      "links": [
+        {
+          "label": "기사 ① · 구속영장 청구",
+          "url": "https://n.news.naver.com/mnews/article/001/0016089740?sid=102"
+        },
+        {
+          "label": "기사 ② · 구속영장 발부",
+          "url": "https://n.news.naver.com/mnews/article/025/0003525928?sid=102"
+        },
+        {
+          "label": "기사 ③ · 구속적부심 기각",
+          "url": "https://n.news.naver.com/mnews/article/001/0016115058?sid=102"
+        }
+      ]
+    },
+    {
+      "id": "event-05",
+      "date": "2026.06.03",
+      "side": "left",
+      "top": 850,
+      "major": false,
+      "current": false,
+      "title": "검찰 송치",
+      "meta": "경찰 수사 후 검찰로 사건 송치",
+      "links": [
+        {
+          "label": "기사 · 경찰, '배우 김수현 명예훼손' 김세의 구속 송치",
+          "url": "https://n.news.naver.com/mnews/article/023/0003980140?sid=102"
+        }
+      ]
+    },
+    {
+      "id": "event-06",
+      "date": "2026.06.23",
+      "side": "right",
+      "top": 1090,
+      "major": true,
+      "current": false,
+      "title": "구속기소",
+      "meta": "서울중앙지검에서 구속 상태로 기소",
+      "links": [
+        {
+          "label": "기사 · 검찰, '김수현 명예훼손 혐의' 가세연 김세의 구속 기소",
+          "url": "https://n.news.naver.com/mnews/article/052/0002370202?sid=102"
+        }
+      ]
+    },
+    {
+      "id": "event-07",
+      "date": "2026.09",
+      "side": "left",
+      "top": 1300,
+      "major": true,
+      "current": true,
+      "title": "재판 진행 중",
+      "meta": "공판 절차 진행 · 현재 단계",
+      "links": [
+        {
+          "label": "기사 ① · 공판 연기",
+          "url": "https://m.entertain.naver.com/home/article/108/0003450001"
+        },
+        {
+          "label": "기사 ② · 공판 연기",
+          "url": "https://m.entertain.naver.com/home/article/440/0000041141"
+        },
+        {
+          "label": "기사 ③ · 합의부 재배당",
+          "url": "https://m.entertain.naver.com/home/article/108/0003466215"
+        },
+        {
+          "label": "기사 ④ · 재판부, 국민참여재판 배제",
+          "url": "https://n.news.naver.com/mnews/article/001/0016305507?sid=102"
+        },
+        {
+          "label": "기사 ⑤ · 검찰, 김세의 1억 7천만원 상당 자산 동결",
+          "url": "https://n.news.naver.com/mnews/article/001/0016312304?sid=102"
+        }
+      ]
+    }
+  ]
+}
