@@ -48,7 +48,6 @@ async function renderMap(events) {
     const width = 1160;
     const height = 520;
 
-
     const svg = d3.select(container)
         .append("svg")
         .attr("viewBox", `0 0 ${width} ${height}`)
@@ -78,19 +77,21 @@ async function renderMap(events) {
 
     const visibleCountries = {
         type: "FeatureCollection",
+
         features: countries.features
             .filter(feature => {
 
                 const code = String(feature.id);
 
                 return code !== "010" && code !== "304";
-
             })
+
             .map(feature => {
 
                 /* ---------------------------------------------
                    미국 서쪽의 작은 알류샨 열도 일부 제외
                    --------------------------------------------- */
+
                 if (String(feature.id) !== "840") {
                     return feature;
                 }
@@ -114,6 +115,7 @@ async function renderMap(events) {
                          * 알래스카 서쪽으로 길게 이어지는 작은 섬들을
                          * 지도에서 제외한다. 미국 본토/알래스카는 유지한다.
                          */
+
                         return !(
                             centroid[0] < -165 &&
                             centroid[1] > 45
@@ -122,6 +124,7 @@ async function renderMap(events) {
 
                 return {
                     ...feature,
+
                     geometry: {
                         ...feature.geometry,
                         coordinates: polygons
@@ -143,7 +146,6 @@ async function renderMap(events) {
             ],
             visibleCountries
         );
-
 
     const path = d3.geoPath()
         .projection(projection);
@@ -172,8 +174,9 @@ async function renderMap(events) {
         "영국": "826",
         "뉴질랜드": "554",
         "모로코": "504",
-        "스페인": "724",
+        "스페인": "724"
     };
+
 
     function getCountryCode(country) {
 
@@ -185,6 +188,7 @@ async function renderMap(events) {
 
         return countryCodes[countryName];
     }
+
 
     /* =====================================================
        Count Events
@@ -243,7 +247,6 @@ async function renderMap(events) {
             return countryCounts[code]
                 ? "country active"
                 : "country";
-
         })
 
         .attr("d", path)
@@ -259,7 +262,6 @@ async function renderMap(events) {
             return count
                 ? goldScale(count)
                 : "#f1f2f4";
-
         });
 
 
@@ -270,16 +272,71 @@ async function renderMap(events) {
     const tooltip = d3.select("body")
         .append("div")
         .attr("class", "map-tooltip")
-        .style("display", "none");
+        .style("display", "none")
+        .style("pointer-events", "auto");
+
+
+    let hideTimer = null;
+    let activeCountry = null;
+
+
+    function cancelHide() {
+
+        clearTimeout(hideTimer);
+    }
+
+
+    function scheduleHide() {
+
+        clearTimeout(hideTimer);
+
+        hideTimer = setTimeout(() => {
+
+            tooltip
+                .style("display", "none");
+
+            if (activeCountry) {
+
+                d3.select(activeCountry)
+                    .style("stroke", null)
+                    .style("stroke-width", null);
+
+                activeCountry = null;
+            }
+
+        }, 180);
+    }
 
 
     /* =====================================================
-       Hover
+       Tooltip Mouse Interaction
+       ===================================================== */
+
+    tooltip
+
+        .on("mouseenter", function () {
+
+            cancelHide();
+        })
+
+        .on("mouseleave", function () {
+
+            scheduleHide();
+        });
+
+
+    /* =====================================================
+       Country Hover
        ===================================================== */
 
     svg.selectAll(".country.active")
 
         .on("mouseenter", function (event, feature) {
+
+            cancelHide();
+
+            activeCountry = this;
+
 
             const code =
                 String(feature.id);
@@ -318,128 +375,134 @@ async function renderMap(events) {
 
 
                     return `
-<div class="event-item">
+                        <div class="event-item">
 
-    <span class="event-date">
-    ${escapeHtml(item.date)}${city}
-    </span>
+                            <span class="event-date">
+                                ${escapeHtml(item.date)}${city}
+                            </span>
 
-<span class="event-title">
+                            <span class="event-title">
                                 ${escapeHtml(item.title)}
                             </span>
 
-</div>
-`;
+                        </div>
+                    `;
 
                 }).join("");
 
 
             tooltip
                 .html(`
-<strong>
-${escapeHtml(countryName)}
-</strong>
+                    <strong>
+                        ${escapeHtml(countryName)}
+                    </strong>
 
-<div class="event-count">
-    총 ${count}건
-</div>
+                    <div class="event-count">
+                        총 ${count}건
+                    </div>
 
-<div class="event-list">
-    ${eventList}
-</div>
-    `)
-
+                    <div class="event-list">
+                        ${eventList}
+                    </div>
+                `)
                 .style("display", "block");
 
+
+            /* ---------------------------------------------
+               현재 국가 강조
+               --------------------------------------------- */
 
             d3.select(this)
                 .style("stroke", "#8a6500")
                 .style("stroke-width", 1.2);
 
 
-            moveTooltip(event);
+            /* ---------------------------------------------
+               국가 영역 옆에 Tooltip 고정
+               --------------------------------------------- */
 
+            const countryRect =
+                this.getBoundingClientRect();
+
+            const node =
+                tooltip.node();
+
+            if (!node) return;
+
+
+            const padding = 12;
+
+
+            let left =
+                countryRect.right +
+                padding +
+                window.scrollX;
+
+
+            let top =
+                countryRect.top +
+                window.scrollY;
+
+
+            /* ---------------------------------------------
+               오른쪽 공간이 부족하면 왼쪽으로
+               --------------------------------------------- */
+
+            if (
+                left + node.offsetWidth >
+                window.scrollX +
+                window.innerWidth -
+                10
+            ) {
+
+                left =
+                    countryRect.left -
+                    node.offsetWidth -
+                    padding +
+                    window.scrollX;
+            }
+
+
+            /* ---------------------------------------------
+               아래쪽 공간이 부족하면 위로 조정
+               --------------------------------------------- */
+
+            const maxTop =
+                window.scrollY +
+                window.innerHeight -
+                node.offsetHeight -
+                10;
+
+
+            top =
+                Math.min(top, maxTop);
+
+
+            /* ---------------------------------------------
+               화면 위쪽을 벗어나지 않도록 조정
+               --------------------------------------------- */
+
+            top =
+                Math.max(
+                    top,
+                    window.scrollY + 10
+                );
+
+
+            tooltip
+                .style("left", `${left}px`)
+                .style("top", `${top}px`);
         })
 
 
-        .on("mousemove", function (event) {
-
-            moveTooltip(event);
-
-        })
-
+        /* ---------------------------------------------
+           커서를 움직여도 Tooltip은 따라오지 않는다.
+           --------------------------------------------- */
 
         .on("mouseleave", function () {
 
-            tooltip
-                .style("display", "none");
-
-
-            d3.select(this)
-                .style("stroke", null)
-                .style("stroke-width", null);
-
+            scheduleHide();
         });
-
-
-    /* =====================================================
-       Tooltip Position
-       ===================================================== */
-
-    function moveTooltip(event) {
-
-        const padding = 14;
-
-
-        let left =
-            event.pageX + padding;
-
-
-        let top =
-            event.pageY + padding;
-
-
-        const node =
-            tooltip.node();
-
-
-        if (!node) return;
-
-
-        const rect =
-            node.getBoundingClientRect();
-
-
-        if (
-            left + rect.width >
-            window.innerWidth - 10
-        ) {
-
-            left =
-                event.pageX -
-                rect.width -
-                padding;
-
-        }
-
-
-        if (
-            top + rect.height >
-            window.innerHeight - 10
-        ) {
-
-            top =
-                event.pageY -
-                rect.height -
-                padding;
-
-        }
-
-
-        tooltip
-            .style("left", `${left}px`)
-            .style("top", `${top}px`);
-    }
 }
 
 
@@ -452,7 +515,6 @@ function renderTimeline(events) {
     const container =
         document.querySelector("#event-timeline");
 
-
     if (!container) return;
 
 
@@ -464,19 +526,15 @@ function renderTimeline(events) {
         const year =
             String(event.date).substring(0, 4);
 
-
         if (!years[year]) {
             years[year] = [];
         }
 
-
         years[year].push(event);
-
     });
 
 
     container.innerHTML =
-
         Object.keys(years)
 
             .sort(
@@ -487,77 +545,91 @@ function renderTimeline(events) {
             .map(year => {
 
                 return `
-<section class="timeline-year">
+                    <section class="timeline-year">
 
-    <div class="timeline-year-title">
-    ${escapeHtml(year)}
-    </div>
+                        <div class="timeline-year-title">
+                            ${escapeHtml(year)}
+                        </div>
 
+                        <div class="timeline-events">
 
-<div class="timeline-events">
-
-    ${years[year]
+                            ${years[year]
                     .map(event => `
 
-<article class="timeline-event">
+                                    <article class="timeline-event">
 
-    <div class="timeline-main">
-        
-        <span
-            class="timeline-date"
-            title="${escapeHtml(event.date)}"
-        >
-            ${escapeHtml(event.date.slice(0, 7))}
-        </span>
+                                        <div class="timeline-main">
 
-        <span class="timeline-location">
-            ${escapeHtml(event.country)}
-        </span>
+                                            <span
+                                                class="timeline-date"
+                                                title="${escapeHtml(event.date)}"
+                                            >
+                                                ${escapeHtml(event.date.slice(0, 7))}
+                                            </span>
 
-        <span class="timeline-title">
-            ${escapeHtml(event.title)}
+                                            <span class="timeline-location">
+                                                ${escapeHtml(event.country)}
+                                            </span>
 
-            ${
+                                            <span class="timeline-title">
+
+                                                ${escapeHtml(event.title)}
+
+                                                ${
                         Array.isArray(event.links) && event.links.length
                             ? `
-                        <span class="timeline-links">
-                            ${event.links.map(link => `
-                                <a
-                                    href="${escapeHtml(link.url)}"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    ${escapeHtml(link.label)}
-                                </a>
-                            `).join("")}
-                        </span>
-                    `
+                                                            <span class="timeline-links">
+
+                                                                ${event.links.map(link => `
+
+                                                                    <a
+                                                                        href="${escapeHtml(link.url)}"
+                                                                        target="_blank"
+                                                                        rel="noopener noreferrer"
+                                                                    >
+                                                                        ${escapeHtml(link.label)}
+                                                                    </a>
+
+                                                                `).join("")}
+
+                                                            </span>
+                                                        `
                             : ""
                     }
-        </span>
 
-    </div>
+                                            </span>
 
-    ${
+                                        </div>
+
+
+                                        ${
                         event.venue
                             ? `
-<div class="timeline-venue">
-    <span></span>
-    <span></span>
-    <span>${escapeHtml(event.venue)}</span>
-</div>
-            `
+
+                                                    <div class="timeline-venue">
+
+                                                        <span></span>
+                                                        <span></span>
+
+                                                        <span>
+                                                            ${escapeHtml(event.venue)}
+                                                        </span>
+
+                                                    </div>
+
+                                                `
                             : ""
                     }
-                                </article>
 
-                            `)
+                                    </article>
+
+                                `)
                     .join("")}
 
-</div>
+                        </div>
 
-</section>
-`;
+                    </section>
+                `;
 
             })
 
@@ -572,11 +644,10 @@ function renderTimeline(events) {
 function escapeHtml(value) {
 
     return String(value ?? "")
-
         .replace(
             /[&<>"']/g,
-            m => ({
 
+            m => ({
                 "&": "&amp;",
                 "<": "&lt;",
                 ">": "&gt;",
@@ -596,9 +667,11 @@ loadEvents().catch(err => {
 
     console.error(err);
 
-    const map = document.querySelector("#world-map");
+    const map =
+        document.querySelector("#world-map");
 
     if (map) {
+
         map.innerHTML =
             "<p>지도를 불러오지 못했습니다.</p>";
     }
