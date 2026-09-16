@@ -490,7 +490,12 @@
       "title": "드라마 《해를 품은 달》 일본 NHK 방영 기념 기자회견",
       "lat": 35.6642,
       "lng": 139.6959,
-      "links": []
+      "links": [
+        {
+          "label": "연합뉴스",
+          "url": "https://n.news.naver.com/mnews/article/001/0005979903?sid=103"
+        }
+      ]
     },
     {
       "date": "2012.12.30",
@@ -662,8 +667,8 @@
       "lng": 114.1694,
       "links": [
         {
-        "label": "스포츠월드",
-        "url": "https://m.entertain.naver.com/home/article/396/0000103013"
+          "label": "스포츠월드",
+          "url": "https://m.entertain.naver.com/home/article/396/0000103013"
         }
       ]
     },
@@ -2516,7 +2521,7 @@
       "lng": 126.978,
       "links": [
         {
-          "label" : "뉴스1",
+          "label": "뉴스1",
           "url": "https://n.news.naver.com/mnews/article/421/0007957142?sid=101"
         }
       ]
