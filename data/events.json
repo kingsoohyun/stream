@@ -1188,7 +1188,11 @@
       "links": [
         {
           "label": "OSEN",
-          "url": "https://www.osen.co.kr/article/G1109946898"
+          "url": "https://m.entertain.naver.com/home/article/109/0002870717"
+        },
+        {
+          "label": "SBS",
+          "url": "https://www.youtube.com/live/1evsTSvi900?t=7580"
         }
       ],
       "award": "네티즌 인기상 · 한류드라마 남자배우상"
@@ -1997,6 +2001,16 @@
           "url": "https://www.youtube.com/watchv=66SbmTCMeKw"
         }
       ]
+    },
+    {
+      "date": "2020.06.20~2020.06.27",
+      "country": "🇰🇷 대한민국",
+      "city": "온라인",
+      "venue": "네이버 NOW. 스튜디오",
+      "title": "드라마 《사이코지만 괜찮아》 프로모션",
+      "lat": null,
+      "lng": null,
+      "links": []
     },
     {
       "date": "2020.11.28",
