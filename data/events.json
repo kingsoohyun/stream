@@ -2255,36 +2255,6 @@
       ]
     },
     {
-      "date": "2024.06.26",
-      "country": "🇯🇵 일본",
-      "city": "도쿄",
-      "venue": "Fuji Television",
-      "title": "메자마시TV 프로그램 출연",
-      "lat": 35.62685354023596,
-      "lng": 139.77458171294154,
-      "links": [
-        {
-          "label": "めざましテレビ",
-          "url": "https://x.com/cx_mezamashi/status/1805535841873543462"
-        }
-      ]
-    },
-    {
-      "date": "2024.06",
-      "country": "🇯🇵 일본",
-      "city": "도쿄",
-      "venue": "TV Asahi",
-      "title": "테츠코의 방(徹子の部屋) 프로그램 출연",
-      "lat": 35.65997140118892,
-      "lng": 139.73178686615168,
-      "links": [
-        {
-          "label": "JTBC",
-          "url": "https://m.entertain.naver.com/home/article/437/0000401949"
-        }
-      ]
-    },
-    {
       "date": "2024.06.15",
       "country": "🇹🇭 태국",
       "city": "방콕",
@@ -2311,6 +2281,36 @@
         {
           "label": "스포츠경향",
           "url": "https://m.entertain.naver.com/home/article/144/0000971559"
+        }
+      ]
+    },
+    {
+      "date": "2024.06.26",
+      "country": "🇯🇵 일본",
+      "city": "도쿄",
+      "venue": "Fuji Television",
+      "title": "메자마시TV 프로그램 출연",
+      "lat": 35.62685354023596,
+      "lng": 139.77458171294154,
+      "links": [
+        {
+          "label": "めざましテレビ",
+          "url": "https://x.com/cx_mezamashi/status/1805535841873543462"
+        }
+      ]
+    },
+    {
+      "date": "2024.06",
+      "country": "🇯🇵 일본",
+      "city": "도쿄",
+      "venue": "TV Asahi",
+      "title": "테츠코의 방(徹子の部屋) 프로그램 출연",
+      "lat": 35.65997140118892,
+      "lng": 139.73178686615168,
+      "links": [
+        {
+          "label": "JTBC",
+          "url": "https://m.entertain.naver.com/home/article/437/0000401949"
         }
       ]
     },
