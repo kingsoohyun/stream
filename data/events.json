@@ -1397,7 +1397,16 @@
       "title": "2014 SBS 연기대상",
       "lat": 37.5797,
       "lng": 126.8895,
-      "links": []
+      "links": [
+        {
+          "label": "뉴스1",
+          "url": "https://m.entertain.naver.com/home/article/421/0001194760"
+        },
+        {
+          "label": "뉴스1",
+          "url": "https://m.entertain.naver.com/home/article/421/0001195816"
+        }
+      ]
     },
     {
       "date": "2015.01.12",
