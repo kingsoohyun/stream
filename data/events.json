@@ -979,6 +979,21 @@
       "links": []
     },
     {
+      "date": "2014.05.19",
+      "country": "🇯🇵 일본",
+      "city": "도쿄",
+      "venue": "주일한국문화원",
+      "title": "2014 아시아투어 종료 기자회견",
+      "lat": 35.6695,
+      "lng": 139.7256,
+      "links": [
+        {
+          "label": "서울신문",
+          "url": "https://m.entertain.naver.com/home/article/081/0002425042"
+        }
+      ]
+    },
+    {
       "date": "2014.05.20",
       "country": "🇨🇳 중국",
       "city": "원저우",
@@ -986,7 +1001,12 @@
       "title": "브랜드(아오캉) 패션 발표회",
       "lat": 28.0006,
       "lng": 120.6994,
-      "links": []
+      "links": [
+        {
+          "label": "연합뉴스",
+          "url": "https://m.entertain.naver.com/home/article/001/0006918210"
+        }
+      ]
     },
     {
       "date": "2014.05.27",
