@@ -83,6 +83,21 @@
       "links": []
     },
     {
+      "date": "2011.05.10~12",
+      "country": "🇯🇵 일본",
+      "city": "도쿄",
+      "venue": "도쿄",
+      "title": "일본 공식 방문 및 현지 언론 인터뷰",
+      "lat": 35.6762,
+      "lng": 139.6503,
+      "links": [
+        {
+          "label": "OSEN",
+          "url": "https://m.entertain.naver.com/home/article/109/0002208362"
+        }
+      ]
+    },
+    {
       "date": "2011.05.26",
       "country": "🇰🇷 대한민국",
       "city": "서울",
@@ -90,7 +105,12 @@
       "title": "제47회 백상예술대상",
       "lat": 37.597,
       "lng": 127.0523,
-      "links": []
+      "links": [
+        {
+          "label": "엑스포츠뉴스",
+          "url": "https://m.entertain.naver.com/home/article/311/0000071178"
+        }
+      ]
     },
     {
       "date": "2011.05.28",
@@ -150,7 +170,13 @@
       "title": "드라마 《드림하이》 프리미엄 이벤트 2011",
       "lat": 35.8949,
       "lng": 139.6308,
-      "links": []
+      "links": [
+        {
+          "label": "한국경제",
+          "url": "https://m.entertain.naver.com/home/article/015/0002517125"
+        }
+
+      ]
     },
     {
       "date": "2011.10.02",
@@ -2528,8 +2554,8 @@
       "city": "자카르타",
       "venue": "Studio RCTI+",
       "title": "RCTI 창사 37주년 특집 생방송 프로그램 출연",
-      "lat": -6.190451244305083,
-      "lng": 106.76702591079666,
+      "lat": -6.1908557,
+      "lng": 106.7669318,
       "links": [
         {
           "label": "연합뉴스",
