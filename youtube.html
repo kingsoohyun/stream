@@ -427,6 +427,7 @@
 <script>
 
     let videos = [];
+    let categories = [];
 
 
     // ---------------------------------------------------------
@@ -449,28 +450,41 @@
 
         try {
 
-            const response =
-                await fetch(
-                    'data/youtube.json'
-                );
+            const [videoResponse, categoryResponse] =
+                await Promise.all([
+                    fetch('data/youtube.json'),
+                    fetch('data/youtube_category.json')
+                ]);
 
 
-            if (!response.ok) {
-
+            if (!videoResponse.ok) {
                 throw new Error(
                     'youtube.json을 불러올 수 없습니다.'
                 );
+            }
 
+            if (!categoryResponse.ok) {
+                throw new Error(
+                    'youtube_category.json을 불러올 수 없습니다.'
+                );
             }
 
 
             const data =
-                await response.json();
+                await videoResponse.json();
+
+            const categoryData =
+                await categoryResponse.json();
 
 
             videos =
                 Array.isArray(data.items)
                     ? data.items
+                    : [];
+
+            categories =
+                Array.isArray(categoryData.categories)
+                    ? categoryData.categories
                     : [];
 
 
@@ -518,30 +532,49 @@
         const tagSet =
             new Set();
 
-
         videos.forEach(video => {
 
             if (!Array.isArray(video.tags)) {
                 return;
             }
 
-
             video.tags.forEach(tag => {
-
                 if (tag) {
                     tagSet.add(tag);
                 }
-
             });
 
         });
 
 
-        const tags =
-            [...tagSet].sort(
-                (a, b) =>
-                    a.localeCompare(b)
+        const categoryMap =
+            new Map(
+                categories.map(category => [
+                    category.id,
+                    category
+                ])
             );
+
+
+        // youtube_category.json의 배열 순서를 그대로 사용
+        // 영상에 실제로 존재하는 카테고리만 표시
+        const orderedTags =
+            categories
+                .map(category => category.id)
+                .filter(tag => tagSet.has(tag));
+
+
+        // 카테고리 JSON에 없는 태그가 있을 경우 마지막에 추가
+        const remainingTags =
+            [...tagSet].filter(
+                tag => !categoryMap.has(tag)
+            );
+
+
+        const tags = [
+            ...orderedTags,
+            ...remainingTags
+        ];
 
 
         select.innerHTML =
@@ -555,16 +588,19 @@
                     'option'
                 );
 
-
             option.value = tag;
 
             option.textContent =
-                formatTag(tag);
-
+                categoryMap.get(tag)?.name
+                || tag;
 
             select.appendChild(option);
 
         });
+
+
+        // 최초 로딩은 항상 전체
+        select.value = 'all';
 
     }
 
@@ -575,39 +611,13 @@
 
     function formatTag(tag) {
 
-        const names = {
+        const category =
+            categories.find(
+                item => item.id === tag
+            );
 
-            queenoftears:
-                'QUEEN OF TEARS',
-
-            mlfs:
-                'MLFS',
-
-            ost:
-                'OST',
-
-            drama:
-                'DRAMA',
-
-            ad:
-                'AD',
-
-            event:
-                'EVENT',
-
-            airport:
-                'AIRPORT',
-
-            'pre-clip':
-                'PRE-CLIP'
-
-        };
-
-
-        return names[tag]
-            || tag
-                .replace(/-/g, ' ')
-                .toUpperCase();
+        return category?.name
+            || tag;
 
     }
 
