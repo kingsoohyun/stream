@@ -175,7 +175,6 @@
           "label": "한국경제",
           "url": "https://m.entertain.naver.com/home/article/015/0002517125"
         }
-
       ]
     },
     {
@@ -1875,21 +1874,6 @@
       ]
     },
     {
-      "date": "2017.06.27",
-      "country": "🇰🇷 대한민국",
-      "city": "서울",
-      "venue": "KBS",
-      "title": "KBS 키스 더 라디오 출연",
-      "lat": 37.5283,
-      "lng": 126.8747,
-      "links": [
-        {
-          "label": "KBS CoolFM",
-          "url": "https://youtu.be/OBdT-pC518I"
-        }
-      ]
-    },
-    {
       "date": "2017.06",
       "country": "🇺🇸 미국",
       "city": "호놀룰루",
@@ -1901,6 +1885,51 @@
         {
           "label": "W Korea",
           "url": "https://www.wkorea.com/2017/06/16/w-korea-7%EC%9B%94%ED%98%B8-%EA%B9%80%EC%88%98%ED%98%84-%EC%BB%A4%EB%B2%84/"
+        }
+      ]
+    },
+    {
+      "date": "2017.06.26",
+      "country": "🇰🇷 대한민국",
+      "city": "서울",
+      "venue": "행당동 CGV 왕십점",
+      "title": "영화 《리얼》 언론 시사회",
+      "lat": 37.5665,
+      "lng": 126.9780,
+      "links": [
+        {
+          "label": "연합뉴스",
+          "url": "https://m.entertain.naver.com/home/article/001/0009363926"
+        }
+      ]
+    },
+    {
+      "date": "2017.06.27",
+      "country": "🇰🇷 대한민국",
+      "city": "서울",
+      "venue": "서울 삼청동",
+      "title": "영화 《리얼》 언론 인터뷰",
+      "lat": 37.5665,
+      "lng": 126.9780,
+      "links": [
+        {
+          "label": "연합뉴스",
+          "url": "https://m.entertain.naver.com/home/article/001/0009365566"
+        }
+      ]
+    },
+    {
+      "date": "2017.06.27",
+      "country": "🇰🇷 대한민국",
+      "city": "서울",
+      "venue": "KBS",
+      "title": "KBS 키스 더 라디오 출연",
+      "lat": 37.5283,
+      "lng": 126.8747,
+      "links": [
+        {
+          "label": "KBS CoolFM",
+          "url": "https://youtu.be/OBdT-pC518I"
         }
       ]
     },
