@@ -892,11 +892,31 @@
       "date": "2014.04.06",
       "country": "🇨🇳 중국",
       "city": "베이징",
+      "venue": "베이징",
+      "title": "아이치이 《별에서 온 그대》 20억뷰 돌파 기념 감사패 수상",
+      "lat": 39.9042,
+      "lng": 116.4074,
+      "links": [
+        {
+          "label": "MBN",
+          "url": "https://m.entertain.naver.com/home/article/057/0000330007"
+        }
+      ]
+    },
+    {
+      "date": "2014.04.06",
+      "country": "🇨🇳 중국",
+      "city": "베이징",
       "venue": "ThinkPad SPACE",
       "title": "1st Memories 팬미팅",
       "lat": 39.904211,
       "lng": 116.407395,
-      "links": []
+      "links": [
+        {
+          "label": "동아일보",
+          "url": "https://n.news.naver.com/mnews/article/020/0002557886?sid=102"
+        }
+      ]
     },
     {
       "date": "2014.04.08",
