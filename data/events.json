@@ -1962,7 +1962,12 @@
       "title": "제57회 백상예술대상",
       "lat": 37.6696,
       "lng": 126.7454,
-      "links": []
+      "links": [
+        {
+          "label": "백상예술대상",
+          "url": "https://www.youtube.com/watch?v=3bDQABcFOqA"
+        }
+      ]
     },
     {
       "date": "2021.06.18",
