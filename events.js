@@ -605,34 +605,19 @@ function renderTimeline(events) {
                                         ${
                         event.venue
                             ? `
-            <div class="timeline-venue">
 
-                <span></span>
-                <span></span>
+                                                    <div class="timeline-venue">
 
-                <span>
-                    ${
-                                event.lat != null && event.lng != null
-                                    ? `
-                                <a
-                                    class="event-venue"
-                                    href="https://www.google.com/maps/search/?api=1&query=${event.lat},${event.lng}"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    ${escapeHtml(event.venue)}
-                                </a>
-                            `
-                                    : `
-                                <span class="event-venue">
-                                    ${escapeHtml(event.venue)}
-                                </span>
-                            `
-                            }
-                </span>
+                                                        <span></span>
+                                                        <span></span>
 
-            </div>
-        `
+                                                        <span>
+                                                            ${escapeHtml(event.venue)}
+                                                        </span>
+
+                                                    </div>
+
+                                                `
                             : ""
                     }
 
