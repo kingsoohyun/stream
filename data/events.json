@@ -167,7 +167,7 @@
       "country": "🇯🇵 일본",
       "city": "사이타마",
       "venue": "사이타마 슈퍼 아레나",
-      "title": "드라마 《드림하이》 프리미엄 이벤트 2011",
+      "title": "드라마 《드림하이》 프리미엄 이벤트",
       "lat": 35.8949,
       "lng": 139.6308,
       "links": [
@@ -767,6 +767,26 @@
           "url": "https://m.entertain.naver.com/home/article/011/0002417116"
         }
       ]
+    },
+    {
+      "date": "2013.11.07",
+      "country": "🇨🇳 중국",
+      "city": "상하이",
+      "venue": "샹그릴라 호텔",
+      "title": "2013 코스모 뷰티 어워즈",
+      "lat": 31.2368,
+      "lng": 121.4702,
+      "links": [
+        {
+          "label": "OSEN",
+          "url": "https://m.entertain.naver.com/home/article/109/0002653634"
+        },
+        {
+          "label": "한국경제",
+          "url": "https://m.entertain.naver.com/home/article/015/0002978224"
+        }
+      ],
+      "award": "아시아 드림 스타상"
     },
     {
       "date": "2013.11.22",
