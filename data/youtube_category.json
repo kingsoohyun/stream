@@ -1,0 +1,68 @@
+{
+  "categories": [
+    {
+      "id": "knockoff",
+      "name": "\uD83C\uDFAC 넉오프"
+    },
+    {
+      "id": "queenoftears",
+      "name": "\uD83C\uDFAC 눈물의여왕"
+    },
+    {
+      "id": "onerdinaryday",
+      "name": "\uD83C\uDFAC 어느날"
+    },
+    {
+      "id": "itsokaytonotbeokay",
+      "name": "\uD83C\uDFAC 사이코지만괜찮아"
+    },
+    {
+      "id": "theproducer",
+      "name": "\uD83C\uDFAC 프로듀사"
+    },
+    {
+      "id": "mylovefromthestar",
+      "name": "\uD83C\uDFAC 별에서온그대"
+    },
+    {
+      "id": "dreamhigh",
+      "name": "\uD83C\uDFAC 드림하이"
+    },
+    {
+      "id": "ost",
+      "name": "OST"
+    },
+    {
+      "id": "show",
+      "name": "방송"
+    },
+    {
+      "id": "ad",
+      "name": "광고️"
+    },
+    {
+      "id": "awards",
+      "name": "시상식"
+    },
+    {
+      "id": "airport",
+      "name": "공항"
+    },
+    {
+      "id": "interview",
+      "name": "인터뷰"
+    },
+    {
+      "id": "showcase",
+      "name": "프로모션 행사"
+    },
+    {
+      "id": "etc",
+      "name": "기타"
+    },
+    {
+      "id": "pre-clip",
+      "name": "선공개"
+    }
+  ]
+}
