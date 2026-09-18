@@ -876,13 +876,40 @@
           "title": "영화",
           "items": [
             {
-              "title": "리얼"
+              "title": "'은밀하게 위대하게', 웹툰 원작 영화 최고 흥행 기록 695만 관객",
+              "links": [
+                {
+                  "label": "2013",
+                  "url": "https://www.yna.co.kr/view/AKR20131206001200005"
+                }
+              ]
             },
             {
-              "title": "은밀하게 위대하게"
+              "title": "'은밀하게 위대하게', 개봉 첫날 한국영화 역대 최다 관객 기록",
+              "links": [
+                {
+                  "label": "2013",
+                  "url": "https://www.yna.co.kr/view/AKR20130606026900005"
+                }
+              ]
             },
             {
-              "title": "도둑들"
+              "title": "올해 가장 흥행한 영화, 1위 '도둑들'",
+              "links": [
+                {
+                  "label": "2012",
+                  "url": "https://m.entertain.naver.com/home/article/008/0002972075"
+                }
+              ]
+            },
+            {
+              "title": "'도둑들', 개봉 22일 만에 천만 관객 돌파",
+              "links": [
+                {
+                  "label": "2012",
+                  "url": "https://m.entertain.naver.com/home/article/009/0002785142"
+                }
+              ]
             }
           ]
         },
