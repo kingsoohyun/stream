@@ -163,11 +163,71 @@ main{
 }
 
 .twitter .icon{
-    background:#111
+    background:#f5f3ee
 }
 
 .events .icon{
     background:#f5f3ee
+}
+
+.twitter .icon{
+    background:#f5f3ee;
+    color:#151922
+}
+
+.archive .icon{
+    background:#f5f3ee;
+    color:#151922;
+}
+
+.world .icon,
+.records .icon,
+.love-sh .icon,
+.privacy .icon{
+    background:#f5f3ee;
+}
+
+.world .icon svg{
+    color:#5d7885;
+}
+
+.records .icon svg{
+    color:#a08045;
+}
+
+.love-sh .icon svg{
+    color:#a46767;
+}
+
+.privacy .icon svg{
+    color:#65707c;
+}
+
+.world .icon svg {
+    color:#397a91;
+}
+
+.records .icon svg {
+    color:#c09232;
+}
+
+.love-sh .icon svg {
+    color:#c05b6b;
+}
+
+.privacy .icon svg {
+    color:#536b83;
+}
+
+.platform .icon svg{
+    width:20px;
+    height:20px;
+    display:block;
+    fill:none;
+    stroke:currentColor;
+    stroke-width:1.7;
+    stroke-linecap:round;
+    stroke-linejoin:round;
 }
 
 .platform b{

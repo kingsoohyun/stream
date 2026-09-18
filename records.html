@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <meta name="referrer" content="no-referrer">
+    <title>RECORDS | KIM SOO HYUN STREAM</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .records-page{
+            max-width:1000px;
+            margin:0 auto;
+            padding:28px 20px 0
+        }
+
+        .records-intro{
+            margin-bottom:20px
+        }
+
+        .records-intro h1{
+            font-size:20px;
+            margin:0 0 6px
+        }
+
+        .records-intro p{
+            font-size:12px;
+            color:#858b95;
+            margin:0
+        }
+
+        .records-section{
+            margin-bottom:26px
+        }
+
+        .records-section-head{
+            display:flex;
+            align-items:center;
+            gap:7px;
+            margin-bottom:9px;
+            padding-left:2px
+        }
+
+        .records-section-head .icon{
+            font-size:14px
+        }
+
+        .records-section-head h2{
+            font-size:16px;
+            margin:0;
+            font-weight:600
+        }
+
+        .records-list{
+            border:1px solid #e8e9ed;
+            border-radius:10px;
+            margin-left:10px;
+            margin-right:10px;
+            overflow:hidden;
+            background:#fff
+        }
+
+        .record-item{
+            border-bottom:1px solid #e8e9ed
+        }
+
+        .record-item:last-child{
+            border-bottom:0
+        }
+
+        .record-button{
+            width:100%;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:12px;
+            padding:12px 15px;
+            border:0;
+            background:#fff;
+            color:inherit;
+            text-align:left;
+            cursor:pointer;
+            font:inherit
+        }
+
+        .record-button:hover{
+            background:#fafafa
+        }
+
+        .record-title{
+            font-size:12px;
+            font-weight:500
+        }
+
+        .record-arrow{
+            flex:none;
+            color:#858b95;
+            font-size:17px;
+            line-height:1;
+            transition:transform .2s ease
+        }
+
+        .record-item.open .record-arrow{
+            transform:rotate(90deg)
+        }
+
+        .record-detail{
+            display:none;
+            padding:0 15px 14px;
+            border-top:1px solid #f0f1f3
+        }
+
+        .record-item.open .record-detail{
+            display:block
+        }
+
+        .record-entry{
+            padding:12px 0;
+            border-bottom:1px solid #f0f1f3
+        }
+
+        .record-entry:last-child{
+            border-bottom:0;
+            padding-bottom:0
+        }
+
+        .record-date{
+            font-size:10px;
+            color:#858b95;
+            margin-bottom:4px
+        }
+
+        .record-entry-title{
+            font-size:12px;
+            font-weight:600;
+            line-height:1.5
+        }
+
+        .record-description{
+            margin-top:4px;
+            font-size:11px;
+            line-height:1.7;
+            color:#555b65;
+            white-space:pre-line
+        }
+
+        .record-links{
+            display:flex;
+            flex-wrap:wrap;
+            gap:6px;
+            margin-top:8px
+        }
+
+        .record-links a{
+            display:inline-flex;
+            align-items:center;
+            padding:4px 8px;
+            border:1px solid #e5e7eb;
+            border-radius:5px;
+            color:#626872;
+            font-size:10px;
+            text-decoration:none
+        }
+
+        .record-links a:hover{
+            background:#f8f9fa
+        }
+
+        /* 하위 항목 */
+        .record-sublist{
+            display:none;
+            padding:2px 15px 8px;
+            border-top:1px solid #f0f1f3
+        }
+
+        .record-item.open > .record-sublist{
+            display:block
+        }
+
+        .record-subitem{
+            padding:7px 10px;
+            border-bottom:1px solid #f0f1f3;
+            font-size:11px;
+            line-height:1.5
+        }
+
+        .record-subitem:last-child{
+            border-bottom:0
+        }
+
+        .record-subitem-title{
+            display:inline
+        }
+
+        .record-subitem-links{
+            display:inline-flex;
+            align-items:center;
+            gap:4px;
+            margin-left:6px
+        }
+
+        .record-subitem-links a{
+            display:inline-flex;
+            align-items:center;
+            padding:3px 6px;
+            border:1px solid #4a78a8;
+            border-radius:4px;
+            background:transparent;
+            color:#4a78a8;
+            font-size:9px;
+            line-height:1;
+            text-decoration:none;
+            white-space:nowrap;
+            transition:background-color 0.15s ease, color 0.15s ease
+        }
+
+        .record-subitem-links a:hover{
+            background:#f1f6fb;
+            color:#315f8d
+        }
+
+        .records-empty{
+            padding:30px 20px;
+            text-align:center;
+            color:#858b95;
+            font-size:12px
+        }
+
+        @media(max-width:800px){
+
+            .records-page{
+                padding:18px 12px 0
+            }
+
+            .records-intro{
+                margin-bottom:20px
+            }
+
+            .records-intro h1{
+                font-size:18px
+            }
+
+            .records-section{
+                margin-bottom:22px
+            }
+
+            /*.records-section-head{*/
+            /*    margin-bottom:7px*/
+            /*}*/
+
+            .records-section-head h2{
+                font-size:16px
+            }
+
+            .record-button{
+                padding:10px 13px
+            }
+
+            .record-detail{
+                padding:0 13px 12px
+            }
+
+            .record-entry{
+                padding:10px 0
+            }
+
+            .record-sublist{
+                padding:2px 13px 6px
+            }
+
+            .record-subitem{
+                padding:6px 8px
+            }
+
+            .record-subitem-links{
+                margin-left:5px;
+                gap:4px
+            }
+
+            .record-subitem-links a{
+                font-size:9px
+            }
+
+            .records-list{
+                margin-left:10px;
+                margin-right:10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="brand">
+        <a href="index.html">
+            <strong>KIM SOO HYUN STREAM</strong>
+            <span>배우 김수현 콘텐츠 큐레이션 팬 페이지</span>
+        </a>
+    </div>
+
+    <nav class="header-action">
+        <a href="rights.html">
+            PRIVACY &amp; RIGHTS
+        </a>
+    </nav>
+</header>
+
+
+<main class="records-page">
+
+    <div class="records-intro">
+        <!--        <h1>RECORDS</h1>-->
+        <!--        <p>주요 기록 및 수상 · 명예직</p>-->
+    </div>
+
+
+    <div id="records"></div>
+
+</main>
+
+
+<footer>
+    <div class="footer-notice">
+        <p>
+            <strong>KIM SOO HYUN STREAM</strong> is an unofficial, non-commercial fan site. All content belongs to its
+            respective copyright holders and is linked to its original source.
+        </p>
+    </div>
+</footer>
+
+
+<script>
+    async function loadRecords(){
+
+        const container = document.getElementById('records');
+
+        try{
+
+            const response = await fetch('data/records.json');
+
+            if(!response.ok){
+                throw new Error('Failed to load records.json');
+            }
+
+            const data = await response.json();
+
+            data.categories.forEach(category => {
+
+                const section = document.createElement('section');
+                section.className = 'records-section';
+
+                section.innerHTML = `
+                <div class="records-section-head">
+                    <span class="icon">${category.icon || ''}</span>
+                    <h2></h2>
+                </div>
+                <div class="records-list"></div>
+            `;
+
+                section.querySelector('h2').textContent = category.title;
+
+                const list = section.querySelector('.records-list');
+
+                renderItems(category.items || [], list);
+
+                container.appendChild(section);
+            });
+
+        }catch(error){
+
+            console.error(error);
+
+            container.innerHTML =
+                '<div class="records-empty">기록을 불러오지 못했습니다.</div>';
+        }
+    }
+
+
+    function renderItems(items, container){
+
+        items.forEach(item => {
+
+            const itemElement = document.createElement('div');
+            itemElement.className = 'record-item';
+
+
+            /* 하위 항목이 있는 경우 */
+            if(item.items){
+
+                const button = createButton(item.title);
+
+                const subList = document.createElement('div');
+                subList.className = 'record-sublist';
+
+                item.items.forEach(subItem => {
+
+                    const subItemElement = document.createElement('div');
+                    subItemElement.className = 'record-subitem';
+
+
+                    const title = document.createElement('span');
+                    title.className = 'record-subitem-title';
+                    title.textContent = subItem.title;
+
+                    subItemElement.appendChild(title);
+
+
+                    if(subItem.links && subItem.links.length){
+
+                        const links = document.createElement('span');
+                        links.className = 'record-subitem-links';
+
+                        subItem.links.forEach(link => {
+
+                            const a = document.createElement('a');
+
+                            a.href = link.url;
+                            a.target = '_blank';
+                            a.rel = 'noopener noreferrer';
+
+                            a.textContent =
+                                link.label || '관련 링크';
+
+                            links.appendChild(a);
+                        });
+
+                        subItemElement.appendChild(links);
+                    }
+
+                    subList.appendChild(subItemElement);
+                });
+
+
+                itemElement.appendChild(button);
+                itemElement.appendChild(subList);
+                container.appendChild(itemElement);
+
+
+                button.addEventListener('click', () => {
+
+                    const isOpen =
+                        itemElement.classList.contains('open');
+
+
+                    document
+                        .querySelectorAll('.record-item.open')
+                        .forEach(openItem => {
+
+                            openItem.classList.remove('open');
+
+                            const openButton =
+                                openItem.querySelector(':scope > .record-button');
+
+                            if(openButton){
+                                openButton.setAttribute(
+                                    'aria-expanded',
+                                    'false'
+                                );
+                            }
+                        });
+
+
+                    if(!isOpen){
+
+                        itemElement.classList.add('open');
+
+                        button.setAttribute(
+                            'aria-expanded',
+                            'true'
+                        );
+                    }
+                });
+
+                return;
+            }
+
+
+            /* 일반 기록 항목 */
+            const button = createButton(item.title);
+
+            const detail = document.createElement('div');
+            detail.className = 'record-detail';
+
+            (item.records || []).forEach(record => {
+
+                const entry = document.createElement('div');
+                entry.className = 'record-entry';
+
+
+                if(record.date){
+
+                    const date = document.createElement('div');
+                    date.className = 'record-date';
+                    date.textContent = record.date;
+
+                    entry.appendChild(date);
+                }
+
+
+                if(record.title){
+
+                    const recordTitle = document.createElement('div');
+                    recordTitle.className = 'record-entry-title';
+                    recordTitle.textContent = record.title;
+
+                    entry.appendChild(recordTitle);
+                }
+
+
+                if(record.description){
+
+                    const description = document.createElement('div');
+                    description.className = 'record-description';
+                    description.textContent = record.description;
+
+                    entry.appendChild(description);
+                }
+
+
+                if(record.links && record.links.length){
+
+                    const links = document.createElement('div');
+                    links.className = 'record-links';
+
+                    record.links.forEach(link => {
+
+                        const a = document.createElement('a');
+
+                        a.href = link.url;
+                        a.target = '_blank';
+                        a.rel = 'noopener noreferrer';
+
+                        a.textContent =
+                            (link.label || '관련 링크') + ' ↗';
+
+                        links.appendChild(a);
+                    });
+
+                    entry.appendChild(links);
+                }
+
+                detail.appendChild(entry);
+            });
+
+
+            itemElement.appendChild(button);
+            itemElement.appendChild(detail);
+            container.appendChild(itemElement);
+
+
+            button.addEventListener('click', () => {
+
+                const isOpen =
+                    itemElement.classList.contains('open');
+
+
+                /* 전체 다른 항목 닫기 */
+                document
+                    .querySelectorAll('.record-item.open')
+                    .forEach(openItem => {
+
+                        if(openItem !== itemElement){
+
+                            openItem.classList.remove('open');
+
+                            const openButton =
+                                openItem.querySelector(':scope > .record-button');
+
+                            if(openButton){
+                                openButton.setAttribute(
+                                    'aria-expanded',
+                                    'false'
+                                );
+                            }
+                        }
+                    });
+
+
+                if(isOpen){
+
+                    itemElement.classList.remove('open');
+
+                    button.setAttribute(
+                        'aria-expanded',
+                        'false'
+                    );
+
+                }else{
+
+                    itemElement.classList.add('open');
+
+                    button.setAttribute(
+                        'aria-expanded',
+                        'true'
+                    );
+                }
+            });
+        });
+    }
+
+
+    /* 공통 버튼 생성 */
+    function createButton(titleText){
+
+        const button = document.createElement('button');
+
+        button.type = 'button';
+        button.className = 'record-button';
+        button.setAttribute('aria-expanded', 'false');
+
+        const title = document.createElement('span');
+        title.className = 'record-title';
+        title.textContent = titleText;
+
+        const arrow = document.createElement('span');
+        arrow.className = 'record-arrow';
+        arrow.textContent = '›';
+
+        button.appendChild(title);
+        button.appendChild(arrow);
+
+        return button;
+    }
+
+
+    loadRecords();
+</script>
+
+</body>
+</html>

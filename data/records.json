@@ -1,0 +1,900 @@
+{
+  "categories": [
+    {
+      "title": "국가 표창 · 명예직",
+      "icon": "🏅",
+      "items": [
+        {
+          "title": "대통령 표창",
+          "items": [
+            {
+              "title": "제57회 납세자의 날 모범납세자 대통령 표창",
+              "links": [
+                {
+                  "label": "2023",
+                  "url": "https://n.news.naver.com/mnews/article/468/0000940015?sid=101"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "국무총리 표창",
+          "items": [
+            {
+              "title": "제5회 대한민국 대중문화예술상 국무총리표창",
+              "links": [
+                {
+                  "label": "2014",
+                  "url": "http://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=13875"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "문화체육관광부 장관 표창",
+          "items": [
+            {
+              "title": "제3회 대한민국 대중문화예술상 문화체육관광부장관표창",
+              "links": [
+                {
+                  "label": "2012",
+                  "url": "http://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=12444"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "홍보대사",
+          "items": [
+            {
+              "title": "한국관광공사",
+              "links": [
+                {
+                  "label": "2012",
+                  "url": "https://www.xportsnews.com/article/227176"
+                }
+              ]
+            },
+            {
+              "title": "서울특별시",
+              "links": [
+                {
+                  "label": "2014-2016",
+                  "url": "https://m.entertain.naver.com/home/article/057/0000486353"
+                }
+              ]
+            },
+            {
+              "title": "인천국제공항",
+              "links": [
+                {
+                  "label": "2015-2017",
+                  "url": "https://m.entertain.naver.com/home/article/056/0010147495"
+                }
+              ]
+            },
+            {
+              "title": "국세청",
+              "links": [
+                {
+                  "label": "2023–2024",
+                  "url": "https://n.news.naver.com/mnews/article/001/0013895078?sid=102"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "리서치",
+      "icon": "📊",
+      "items": [
+        {
+          "title": "갤럽",
+          "items": [
+            {
+              "title": "한국인이 좋아하는 탤런트",
+              "links": [
+                {
+                  "label": "2014",
+                  "url": "https://www.gallup.co.kr/gallupdb/reportContent.asp?seqNo=638"
+                },
+                {
+                  "label": "2019",
+                  "url": "https://www.gallup.co.kr/gallupdb/reportContent.asp?seqNo=1057"
+                },
+                {
+                  "label": "2024",
+                  "url": "https://www.gallup.co.kr/gallupdb/reportContent.asp?seqNo=1489"
+                }
+              ]
+            },
+            {
+              "title": "올해를 빛낸 탤런트",
+              "links": [
+                {
+                  "label": "2012",
+                  "url": "https://www.gallup.co.kr/gallupdb/reportContent.asp?seqNo=376"
+                },
+                {
+                  "label": "2013",
+                  "url": "https://www.gallup.co.kr/gallupdb/reportContent.asp?seqNo=507"
+                },
+                {
+                  "label": "2014",
+                  "url": "https://www.gallup.co.kr/gallupdb/reportContent.asp?seqNo=612"
+                },
+                {
+                  "label": "2015",
+                  "url": "https://www.gallup.co.kr/gallupdb/reportContent.asp?seqNo=712"
+                },
+                {
+                  "label": "2016",
+                  "url": "https://www.gallup.co.kr/gallupdb/reportContent.asp?seqNo=798"
+                },
+                {
+                  "label": "2020",
+                  "url": "https://www.gallup.co.kr/gallupdb/reportContent.asp?seqNo=1161"
+                },
+                {
+                  "label": "2024",
+                  "url": "https://www.gallup.co.kr/gallupdb/reportContent.asp?seqNo=1528"
+                }
+              ]
+            },
+            {
+              "title": "올해를 빛낸 영화배우",
+              "links": [
+                {
+                  "label": "2013",
+                  "url": "https://www.gallup.co.kr/gallupdb/reportContent.asp?seqNo=503"
+                },
+                {
+                  "label": "2014",
+                  "url": "https://www.gallup.co.kr/gallupdb/reportContent.asp?seqNo=606"
+                },
+                {
+                  "label": "2015",
+                  "url": "https://www.gallup.co.kr/gallupdb/reportContent.asp?seqNo=711"
+                },
+                {
+                  "label": "2024",
+                  "url": "https://www.gallup.co.kr/gallupdb/reportContent.asp?seqNo=1529"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "포브스",
+          "items": [
+            {
+              "title": "Forbes Korea's Top 10 Celebrities",
+              "links": [
+                {
+                  "label": "2013",
+                  "url": "https://www.forbes.com/pictures/mim45gmkd/4-kim-soo-hyun-2/"
+                }
+              ]
+            },
+            {
+              "title": "30 Under 30 Asia - Entertainment & Sports",
+              "links": [
+                {
+                  "label": "2016",
+                  "url": "https://www.forbes.com/pictures/lmh45edfje/kim-soo-hyun/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "코바코",
+          "items": [
+            {
+              "title": "소비자가 선호하는 광고모델",
+              "links": [
+                {
+                  "label": "2014",
+                  "url": "https://n.news.naver.com/mnews/article/020/0002700967?sid=101"
+                },
+                {
+                  "label": "2015",
+                  "url": "https://n.news.naver.com/mnews/article/018/0003428884?sid=105"
+                }
+              ]
+            },
+            {
+              "title": "올해 가장 사랑받은 배우",
+              "links": [
+                {
+                  "label": "2024 남자 배우 1위",
+                  "url": "https://www.kobaco.co.kr/site/main/board/news/24124"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "해외한류실태조사",
+          "items": [
+            {
+              "title": "만나고 싶은 한류 스타",
+              "links": [
+                {
+                  "label": "2013",
+                  "url": "https://www.archivecenter.net/hallyuresearch/archive/srch/ArchiveNewSrchView.do?i_id=126723"
+                },
+                {
+                  "label": "2014",
+                  "url": "https://www.archivecenter.net/hallyuresearch/archive/srch/ArchiveNewSrchView.do?i_id=127041"
+                },
+                {
+                  "label": "2015",
+                  "url": "https://www.archivecenter.net/hallyuresearch/archive/srch/ArchiveNewSrchView.do?i_id=126725"
+                },
+                {
+                  "label": "2016-2017",
+                  "url": "https://www.archivecenter.net/hallyuresearch/archive/srch/ArchiveNewSrchView.do?i_id=126726"
+                },
+                {
+                  "label": "2018",
+                  "url": "https://www.archivecenter.net/hallyuresearch/archive/srch/ArchiveNewSrchView.do?i_id=126728"
+                }
+              ]
+            },
+            {
+              "title": "최선호 한국 배우",
+              "links": [
+                {
+                  "label": "2019",
+                  "url": "https://www.archivecenter.net/hallyuresearch/archive/srch/ArchiveNewSrchView.do?i_id=126730"
+                },
+                {
+                  "label": "2020",
+                  "url": "https://www.archivecenter.net/hallyuresearch/archive/srch/ArchiveNewSrchView.do?i_id=126732"
+                },
+                {
+                  "label": "2021",
+                  "url": "https://www.archivecenter.net/hallyuresearch/archive/srch/ArchiveNewSrchView.do?i_id=126735"
+                },
+                {
+                  "label": "2022",
+                  "url": "https://www.archivecenter.net/hallyuresearch/archive/srch/ArchiveNewSrchView.do?i_id=126739"
+                },
+                {
+                  "label": "2023",
+                  "url": "https://www.archivecenter.net/hallyuresearch/archive/srch/ArchiveNewSrchView.do?i_id=126742"
+                },
+                {
+                  "label": "2024",
+                  "url": "https://www.archivecenter.net/hallyuresearch/archive/srch/ArchiveNewSrchView.do?i_id=128450"
+                },
+                {
+                  "label": "2025",
+                  "url": "https://www.archivecenter.net/hallyuresearch/archive/srch/ArchiveNewSrchView.do?i_id=130595"
+                },
+                {
+                  "label": "2026",
+                  "url": "https://www.archivecenter.net/kaitArchive/attach/150000/152542/20260522142933117.pdf"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "수상",
+      "icon": "🏆",
+      "items": [
+        {
+          "title": "방송 3사 연기대상",
+          "items": [
+            {
+              "title": "KBS 연기대상 대상",
+              "links": [
+                {
+                  "label": "2015",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "KBS 연기대상 베스트 커플상",
+              "links": [
+                {
+                  "label": "2015",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "KBS 연기대상 네티즌상",
+              "links": [
+                {
+                  "label": "2015",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "SBS 연기대상 중편드라마부문 남자 최우수연기상",
+              "links": [
+                {
+                  "label": "2014",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "SBS 연기대상 네티즌 인기상",
+              "links": [
+                {
+                  "label": "2014",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "SBS 연기대상 10대스타상",
+              "links": [
+                {
+                  "label": "2014",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "SBS 연기대상 베스트커플상",
+              "links": [
+                {
+                  "label": "2014",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "MBC 연기대상 미니시리즈부문 남자 최우수상",
+              "links": [
+                {
+                  "label": "2012",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "MBC 연기대상 인기상",
+              "links": [
+                {
+                  "label": "2012",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "KBS 연기대상 남자 신인상",
+              "links": [
+                {
+                  "label": "2011",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "KBS 연기대상 인기상",
+              "links": [
+                {
+                  "label": "2011",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "KBS 연기대상 베스트커플상",
+              "links": [
+                {
+                  "label": "2011",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "SBS 연기대상 뉴스타상",
+              "links": [
+                {
+                  "label": "2010",
+                  "url": "xxx"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "영화 · 방송 주요 시상식",
+          "items": [
+            {
+              "title": "제60회 백상예술대상 PRIZM 인기상",
+              "links": [
+                {
+                  "label": "2024",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "제52회 대종상영화제 남자인기상",
+              "links": [
+                {
+                  "label": "2015",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "제50회 백상예술대상 영화부문 남자 신인연기상",
+              "links": [
+                {
+                  "label": "2014",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "제50회 백상예술대상 영화부문 남자 인기상",
+              "links": [
+                {
+                  "label": "2014",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "제50회 백상예술대상 TV부문 남자 인기상",
+              "links": [
+                {
+                  "label": "2014",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "제50회 대종상영화제 신인남우상",
+              "links": [
+                {
+                  "label": "2013",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "제17회 부천국제판타스틱영화제 판타지아 어워드",
+              "links": [
+                {
+                  "label": "2013",
+                  "url": "xxx"
+                }
+              ]
+            },
+            {
+              "title": "제33회 청룡영화상 인기스타상",
+              "links": [
+                {
+                  "label": "2012",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "제39회 한국방송대상 탤런트상",
+              "links": [
+                {
+                  "label": "2012",
+                  "url": "https://m.entertain.naver.com/home/article/001/0005793575"
+                }
+              ]
+            },
+            {
+              "title": "제48회 백상예술대상 TV부문 남자 최우수 연기상",
+              "links": [
+                {
+                  "label": "2012",
+                  "url": "https://..."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "드라마 · 한류 시상식",
+          "items": [
+            {
+              "title": "아시아 아티스트 어워즈 대상 올해의 배우",
+              "links": [
+                {
+                  "label": "2024",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "아시아 아티스트 어워즈 패뷸러스",
+              "links": [
+                {
+                  "label": "2024",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "아시아 아티스트 어워즈 핫 트렌드",
+              "links": [
+                {
+                  "label": "2024",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "아시아 아티스트 어워즈 베스트 아티스트",
+              "links": [
+                {
+                  "label": "2024",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "제15회 코리아 드라마 어워즈 베스트 커플상",
+              "links": [
+                {
+                  "label": "2024",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "제15회 코리아 드라마 어워즈 글로벌 스타상",
+              "links": [
+                {
+                  "label": "2024",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "제6회 뉴시스 한류엑스포 문화체육관광부장관상",
+              "links": [
+                {
+                  "label": "2024",
+                  "url": "https://m.entertain.naver.com/home/article/003/0012743068"
+                }
+              ]
+            },
+            {
+              "title": "2020 APAN 스타어워즈 아이돌챔프 인기상",
+              "links": [
+                {
+                  "label": "2021",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "아시아 아티스트 어워즈 대상 올해의 배우 드라마부문",
+              "links": [
+                {
+                  "label": "2020",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "아시아 아티스트 어워즈 핫이슈상",
+              "links": [
+                {
+                  "label": "2020",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "제4회 아시아태평양 스타어워즈 대상",
+              "links": [
+                {
+                  "label": "2015",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "제8회 코리아 드라마 어워즈 대상",
+              "links": [
+                {
+                  "label": "2015",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "제8회 코리아 드라마 어워즈 한류스타상",
+              "links": [
+                {
+                  "label": "2015",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "제15회 화정 어워즈 글로벌 최고 남자 드라마 배우상",
+              "links": [
+                {
+                  "label": "2015",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "제3회 대전드라마페스티벌 중편 드라마 부문 남자 최우수연기상",
+              "links": [
+                {
+                  "label": "2014",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "제3회 대전드라마페스티벌 한류스타상",
+              "links": [
+                {
+                  "label": "2014",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "도쿄 드라마 어워즈 아시아 최고 배우상",
+              "links": [
+                {
+                  "label": "2014",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "제2회 마리끌레르 아시아스타어워즈 아시아스타상",
+              "links": [
+                {
+                  "label": "2014",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "제7회 코리아 드라마 어워즈 한류핫스타상",
+              "links": [
+                {
+                  "label": "2014",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "제7회 코리아 드라마 어워즈 대상",
+              "links": [
+                {
+                  "label": "2014",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "제9회 서울 드라마 어워즈 네티즌 인기상",
+              "links": [
+                {
+                  "label": "2014",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "제9회 서울 드라마 어워즈 한류드라마 남자배우상",
+              "links": [
+                {
+                  "label": "2014",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "제4회 코리아드라마어워즈 인기상",
+              "links": [
+                {
+                  "label": "2014",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "제4회 코리아드라마어워즈 남자 신인상",
+              "links": [
+                {
+                  "label": "2014",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "제1회 K-드라마 스타 어워즈 우수남자연기상",
+              "links": [
+                {
+                  "label": "2012",
+                  "url": "https://..."
+                }
+              ]
+            },
+            {
+              "title": "제6회 Mnet 20's Choice 20's 폭스바겐 시로코 블루카펫 인기상",
+              "links": [
+                {
+                  "label": "2012",
+                  "url": "xxx"
+                }
+              ]
+            },
+            {
+              "title": "제6회 Mnet 20's Choice 남자 20's 드라마 스타상",
+              "links": [
+                {
+                  "label": "2012",
+                  "url": "xxx"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "문화 · 엔터테인먼트 시상식",
+          "items": [
+            {
+              "title": "올해의 브랜드 대상 베트남 부문 올해의 남자배우",
+              "links": [
+                {
+                  "label": "2024",
+                  "url": "xxx"
+                }
+              ]
+            },
+            {
+              "title": "올해의 브랜드 대상 국내 부문 올해의 드라마 남자배우",
+              "links": [
+                {
+                  "label": "2024",
+                  "url": "xxx"
+                }
+              ]
+            },
+            {
+              "title": "국가브랜드대상 문화부문",
+              "links": [
+                {
+                  "label": "2015",
+                  "url": "xxx"
+                }
+              ]
+            },
+            {
+              "title": "스타일아이콘어워즈 본상",
+              "links": [
+                {
+                  "label": "2014",
+                  "url": "xxx"
+                }
+              ]
+            },
+            {
+              "title": "제10회 서울영상광고제 올해의 모델상",
+              "links": [
+                {
+                  "label": "2013",
+                  "url": "xxx"
+                }
+              ]
+            },
+            {
+              "title": "제27회 코리아 베스트드레서 스완 어워드 탤런트부문",
+              "links": [
+                {
+                  "label": "2011",
+                  "url": "xxx"
+                }
+              ]
+            },
+            {
+              "title": "제4회 스타일 아이콘 어워즈 뉴 아이콘",
+              "links": [
+                {
+                  "label": "2011",
+                  "url": "xxx"
+                }
+              ]
+            },
+            {
+              "title": "제6회 아시아모델상시상식 CF모델상",
+              "links": [
+                {
+                  "label": "2011",
+                  "url": "xxx"
+                }
+              ]
+            },
+            {
+              "title": "코스모 뷰티 어워즈 아시아 드림 스타상",
+              "links": [
+                {
+                  "label": "2013",
+                  "url": "xxx"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "작품 관련 기록",
+      "icon": "🎬",
+      "items": [
+        {
+          "title": "드라마",
+          "items": [
+            {
+              "title": "눈물의 여왕"
+            },
+            {
+              "title": "사이코지만 괜찮아"
+            },
+            {
+              "title": "프로듀사"
+            },
+            {
+              "title": "별에서 온 그대"
+            },
+            {
+              "title": "해를 품은 달"
+            },
+            {
+              "title": "드림하이"
+            }
+          ]
+        },
+        {
+          "title": "영화",
+          "items": [
+            {
+              "title": "리얼"
+            },
+            {
+              "title": "은밀하게 위대하게"
+            },
+            {
+              "title": "도둑들"
+            }
+          ]
+        },
+        {
+          "title": "광고",
+          "items": []
+        },
+        {
+          "title": "방송",
+          "items": []
+        }
+      ]
+    }
+  ]
+}
