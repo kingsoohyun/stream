@@ -162,19 +162,6 @@ main{
     background:linear-gradient(135deg,#7b35d8,#ed3b69,#f7a51c)
 }
 
-.twitter .icon{
-    background:#f5f3ee
-}
-
-.events .icon{
-    background:#f5f3ee
-}
-
-.twitter .icon{
-    background:#f5f3ee;
-    color:#151922
-}
-
 .archive .icon{
     background:#f5f3ee;
     color:#151922;
@@ -185,22 +172,6 @@ main{
 .love-sh .icon,
 .privacy .icon{
     background:#f5f3ee;
-}
-
-.world .icon svg{
-    color:#5d7885;
-}
-
-.records .icon svg{
-    color:#a08045;
-}
-
-.love-sh .icon svg{
-    color:#a46767;
-}
-
-.privacy .icon svg{
-    color:#65707c;
 }
 
 .world .icon svg {
