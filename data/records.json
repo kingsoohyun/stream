@@ -888,11 +888,76 @@
         },
         {
           "title": "광고",
-          "items": []
+          "items": [
+            {
+              "title": "김수현, 전 세계에 인천국제공항 알린다! \"감각적인 공익 광고\"",
+              "links": [
+                {
+                  "label": "2016",
+                  "url": "https://m.entertain.naver.com/home/article/011/0002921418"
+                }
+              ]
+            },
+            {
+              "title": "한류스타 김수현, 영화 같은 서울시 해외 홍보 영상 파급력↑",
+              "links": [
+                {
+                  "label": "2015",
+                  "url": "https://m.entertain.naver.com/home/article/421/0001786909"
+                }
+              ]
+            }
+          ]
         },
         {
           "title": "방송",
-          "items": []
+          "items": [
+            {
+              "title": "김수현 스페셜 게스트 출연, RCTI 'Mahakarya RCTI 37' 동시간대 시청률 1위",
+              "links": [
+                {
+                  "label": "2026",
+                  "url": "https://www.instagram.com/p/DcaPu8Tj-1o"
+                }
+              ]
+            },
+            {
+              "title": "지드래곤X김태호 '굿데이' 첫방부터 터졌다..김수현 만남에 최고 시청률 6.2%",
+              "links": [
+                {
+                  "label": "2025",
+                  "url": "https://m.entertain.naver.com/home/article/076/0004245691"
+                }
+              ]
+            },
+            {
+              "title": "지드래곤 예능 '굿데이', 김수현 효과 통했나… 日 예능 전체 1위",
+              "links": [
+                {
+                  "label": "2025",
+                  "url": "https://m.entertain.naver.com/home/article/469/0000849278"
+                }
+              ]
+            },
+            {
+              "title": "글로벌서도 통한 '굿데이' 88나라…대만·日 2주 연속 1위",
+              "links": [
+                {
+                  "label": "2025",
+                  "url": "https://m.entertain.naver.com/home/article/009/0005449719"
+                }
+              ]
+            },
+            {
+              "title": "김수현 中 최고 시청률, 2014년 통틀어 1위…\"도민준 효과 엄청나네\"",
+              "links": [
+                {
+                  "label": "2014",
+                  "url": "https://m.entertain.naver.com/home/article/076/0002484867"
+                }
+              ]
+            }
+          ]
         }
       ]
     }
