@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
     <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
     <title>ARTIST RIGHTS | KIM SOO HYUN STREAM</title>
     <meta name="description" content="김수현 배우의 권리 보호와 팩트체크를 위한 안내 페이지.">
@@ -15,7 +16,7 @@
             --case-bg: #f7f7f5;
             --case-text: #202124;
             --case-line: #d7d7d2;
-            --case-card: rgba(255,255,255,.94);
+            --case-card: rgba(255, 255, 255, .94);
             --case-current: #b65b32;
         }
 
@@ -276,8 +277,206 @@
             }
         }
 
-    </style>
 
+        /* ---------------------------------------------------------
+           System Dark Mode
+           --------------------------------------------------------- */
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                color-scheme: dark;
+            }
+
+            html, body {
+                background: #0f1114;
+                color: #eceef1;
+            }
+
+            .site-header {
+                background: #121418;
+                border-color: #292d34;
+            }
+
+            .brand strong {
+                color: #eceef1;
+            }
+
+            .brand span, .platform small, .section-head span {
+                color: #858b95;
+            }
+
+            .header-action a {
+                color: #fff;
+            }
+
+            footer, .footer {
+                background: #0f1114;
+                border-color: #292d34;
+                color: #858b95;
+            }
+
+            a {
+                color: #9eb9d4;
+            }
+
+
+            :root {
+                --case-bg: #0f1114;
+                --case-text: #eceef1;
+                --case-line: #30343b;
+                --case-card: rgba(22, 25, 30, .96);
+                --case-current: #c87552;
+            }
+
+            .rights-section,
+            .rights-card,
+            .rights-link,
+            .case-card,
+            .case-summary,
+            .case-detail,
+            .case-item,
+            .source-card,
+            .rights-note {
+                background: #16191e;
+                border-color: #292d34;
+                color: #eceef1;
+            }
+
+            .rights-link:hover,
+            .case-card:hover {
+                background: #1b1f25;
+                border-color: #3a4049;
+            }
+
+            .rights-link small,
+            .rights-link-arrow,
+            .rights-intro p,
+            .official-notice-date,
+            .official-notice p,
+            .case-meta,
+            .case-date,
+            .case-source,
+            .case-caption,
+            .rights-muted {
+                color: #858b95;
+            }
+
+            .official-notice,
+            .case-item,
+            .case-detail,
+            .rights-link {
+                border-color: #292d34;
+            }
+
+            .case-timeline::before,
+            .timeline-line {
+                background: #30343b;
+            }
+
+            .case-dot {
+                background: #30343b;
+                box-shadow: 0 0 0 1px #555b65;
+            }
+
+            .case-dot.current {
+                background: #c87552;
+                box-shadow: 0 0 0 7px rgba(200, 117, 82, .12);
+            }
+
+            .rights-progress,
+            .rights-meter {
+                background: #252a31;
+            }
+
+            .rights-progress > span,
+            .rights-meter > span {
+                background: #777d87;
+            }
+
+
+            .official-notice {
+                border-top-color: #292d34;
+                border-bottom-color: #292d34;
+            }
+
+            .official-notice-date {
+                color: #aab0b8;
+            }
+
+            .official-notice-title {
+                color: #eceef1;
+            }
+
+            .notice-open {
+                color: #c0c7d0;
+            }
+
+            .notice-full {
+                color: #d5d9df;
+                border-top-color: #292d34;
+            }
+
+            .highlight-marker {
+                color: #11161c;
+                background: #d9f36a;
+            }
+
+            .case-embed .card {
+                background: rgba(22, 25, 30, .96);
+                border-color: #292d34;
+                color: #eceef1;
+                box-shadow: 0 10px 32px rgba(0, 0, 0, .28);
+            }
+
+            .case-embed .card:hover {
+                border-color: #3a4049;
+            }
+
+            .case-embed .date {
+                color: #aab0b8;
+            }
+
+            .case-embed .title {
+                color: #f0f2f4;
+            }
+
+            .case-embed .meta {
+                color: #b7bdc6;
+            }
+
+            .case-embed .links {
+                border-top-color: #292d34;
+            }
+
+            .case-embed .links a {
+                color: #c5d3e1;
+            }
+
+            .case-embed .links a:hover {
+                color: #e4edf5;
+            }
+
+            .case-embed .legend {
+                border-top-color: #292d34;
+                color: #aab0b8;
+            }
+
+            .case-embed .line,
+            .case-embed .timeline-line {
+                background: #30343b;
+            }
+
+            .rights-page input,
+            .rights-page textarea,
+            .rights-page select {
+                background: #12151a;
+                color: #eceef1;
+                border-color: #30343b;
+                color-scheme: dark;
+            }
+        }
+
+    </style>
 </head>
 
 <body>
@@ -421,13 +620,19 @@
                 <div class="notice-full">
                     <p>안녕하세요 골드메달리스트입니다.</p>
 
-                    <p>최근 당사 소속 아티스트 김수현 씨를 향한 악의적 게시글과 댓글, 허위 사실 등이 온라인 상에 무분별하게 게시 및 확산되고 있습니다. 특히나 근거 없는 추측성 글과 사실로 확인되지 않은 주장을 지속적이고 반복적으로 게시하여 대중에게 잘못된 인식을 갖게 하고 아티스트의 명예를 훼손하고 있습니다.</p>
+                    <p>최근 당사 소속 아티스트 김수현 씨를 향한 악의적 게시글과 댓글, 허위 사실 등이 온라인 상에 무분별하게 게시 및 확산되고 있습니다. 특히나 근거 없는 추측성 글과 사실로
+                        확인되지 않은 주장을 지속적이고 반복적으로 게시하여 대중에게 잘못된 인식을 갖게 하고 아티스트의 명예를 훼손하고 있습니다.</p>
 
-                    <p>온라인 커뮤니티와 SNS에서 만연하게 이뤄지고 있는 <span class="highlight-marker">악의적 비방, 허위 사실 유포, 인신공격, 성희롱 등은 가벼이 여겨져서는 안 될 범죄 행위</span>입니다. 당사는 이러한 악질적 행위에 대해 팬분들의 적극적인 제보와 자체 모니터링을 바탕으로 14일 정보통신망법상 명예훼손죄 및 형법상 모욕죄 혐의로 수사기관에 고소장을 제출하였습니다.</p>
+                    <p>온라인 커뮤니티와 SNS에서 만연하게 이뤄지고 있는 <span class="highlight-marker">악의적 비방, 허위 사실 유포, 인신공격, 성희롱 등은 가벼이 여겨져서는 안 될 범죄 행위</span>입니다.
+                        당사는 이러한 악질적 행위에 대해 팬분들의 적극적인 제보와 자체 모니터링을 바탕으로 14일 정보통신망법상 명예훼손죄 및 형법상 모욕죄 혐의로 수사기관에 고소장을
+                        제출하였습니다.</p>
 
-                    <p>익명이라는 점을 이용하여 가짜뉴스를 만들고 사이버불링을 초래하는 영상 및 숏츠를 제작하는 '사이버 렉카'의 행태도 심각합니다. 최근 사이버 렉카의 신원이 밝혀지고 법적 대응이 이뤄지고 있는 만큼 당사 역시 <span class="highlight-marker">유튜브, X(구 트위터)와 같은 해외 플랫폼에 대해서도 해외 법률대리인과 연계하여 강경 대응</span>할 것입니다.</p>
+                    <p>익명이라는 점을 이용하여 가짜뉴스를 만들고 사이버불링을 초래하는 영상 및 숏츠를 제작하는 '사이버 렉카'의 행태도 심각합니다. 최근 사이버 렉카의 신원이 밝혀지고 법적 대응이
+                        이뤄지고 있는 만큼 당사 역시 <span class="highlight-marker">유튜브, X(구 트위터)와 같은 해외 플랫폼에 대해서도 해외 법률대리인과 연계하여 강경 대응</span>할
+                        것입니다.</p>
 
-                    <p>당사는 이처럼 아티스트의 명예를 훼손하는 악성 게시물들에 추가 고소를 이어나갈 예정이며, 앞으로도 명백한 범죄 행위에 대해서 강력한 법적 조치로 아티스트의 권리 보호에 최선을 다하겠습니다.</p>
+                    <p>당사는 이처럼 아티스트의 명예를 훼손하는 악성 게시물들에 추가 고소를 이어나갈 예정이며, 앞으로도 명백한 범죄 행위에 대해서 강력한 법적 조치로 아티스트의 권리 보호에 최선을
+                        다하겠습니다.</p>
 
                     <p>감사합니다.</p>
                 </div>
@@ -521,14 +726,14 @@
             border: 1px solid #dfdfda;
             border-radius: 13px;
             background: var(--case-card);
-            box-shadow: 0 8px 30px rgba(0,0,0,.045);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, .045);
             cursor: pointer;
             transition: border-color .18s ease, box-shadow .18s ease;
         }
 
         .case-embed .card:hover {
             border-color: #bbb;
-            box-shadow: 0 10px 32px rgba(0,0,0,.06);
+            box-shadow: 0 10px 32px rgba(0, 0, 0, .06);
         }
 
         .case-embed .date {
@@ -597,9 +802,8 @@
 
         .case-embed .event.current .node {
             background: var(--case-current);
-            box-shadow:
-                    0 0 0 1px var(--case-current),
-                    0 0 0 7px rgba(182,91,50,.10);
+            box-shadow: 0 0 0 1px var(--case-current),
+            0 0 0 7px rgba(182, 91, 50, .10);
         }
 
         .case-embed .current-label {
@@ -732,11 +936,11 @@
             <div id="case-events"></div>
         </section>
 
-<!--        <div class="legend">-->
-<!--            <span class="regular"><i></i> 일반 경과</span>-->
-<!--            <span class="major"><i></i> 주요 형사절차</span>-->
-<!--            <span class="now"><i></i> 현재</span>-->
-<!--        </div>-->
+        <!--        <div class="legend">-->
+        <!--            <span class="regular"><i></i> 일반 경과</span>-->
+        <!--            <span class="major"><i></i> 주요 형사절차</span>-->
+        <!--            <span class="now"><i></i> 현재</span>-->
+        <!--        </div>-->
 
     </section>
 
@@ -839,8 +1043,8 @@
             })
             .catch(error => console.error(error));
 
-        window.addEventListener('scroll', reveal, { passive: true });
-        window.addEventListener('scroll', drawPath, { passive: true });
+        window.addEventListener('scroll', reveal, {passive: true});
+        window.addEventListener('scroll', drawPath, {passive: true});
         window.addEventListener('load', drawPath);
     </script>
 

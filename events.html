@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
     <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
     <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
     <title>WORLD ACTIVITIES | KIM SOO HYUN STREAM</title>
@@ -554,6 +555,101 @@
 
         }
 
+
+        /* ---------------------------------------------------------
+           System Dark Mode
+           --------------------------------------------------------- */
+
+        @media (prefers-color-scheme: dark){
+            :root{color-scheme:dark;}
+            html,body{background:#0f1114;color:#eceef1;}
+            .site-header{background:#121418;border-color:#292d34;}
+            .brand strong{color:#eceef1;}
+            .brand span,.platform small,.section-head span{color:#858b95;}
+            .header-action a{color:#fff;}
+            footer,.footer{background:#0f1114;border-color:#292d34;color:#858b95;}
+            a{color:#9eb9d4;}
+
+
+            .events-map-section,
+            .events-timeline-section,
+            .global-data-link,
+            .global-popularity-link{
+                background:#16191e;
+                border-color:#292d34;
+            }
+
+            .events-header p,
+            .events-timeline-head span,
+            .map-legend,
+            .timeline-date,
+            .timeline-venue,
+            .event-venue,
+            .global-data-text small,
+            .global-data-arrow,
+            .global-popularity-text small,
+            .global-popularity-arrow{
+                color:#858b95;
+            }
+
+            .map-notice{
+                background:rgba(22,25,30,.94);
+                border-color:#30343b;
+                color:#858b95;
+            }
+
+            .country{
+                fill:#252a31;
+                stroke:#3a4049;
+            }
+
+            .country:hover{
+                stroke:#c09232;
+            }
+
+            .map-tooltip{
+                background:#181b20;
+                border-color:#30343b;
+                box-shadow:0 8px 25px rgba(0,0,0,.35);
+            }
+
+            .map-tooltip strong,
+            .map-tooltip .event-title,
+            .timeline-location,
+            .timeline-title,
+            .timeline-year-title,
+            .global-data-text strong,
+            .global-popularity-text strong{
+                color:#eceef1;
+            }
+
+            .map-tooltip .event-list,
+            .map-tooltip .event-item,
+            .timeline-year,
+            .timeline-event{
+                border-color:#292d34;
+            }
+
+            .events-timeline-section{
+                border-left-color:#555b65;
+            }
+
+            .global-data-link:hover,
+            .global-popularity-link:hover{
+                background:#1b1f25;
+                border-color:#3a4049;
+            }
+
+            .timeline-links a{
+                border-color:#71833a;
+                color:#d8f36a;
+            }
+
+            .timeline-links a:hover{
+                background:#242b1d;
+                color:#e7ff9a;
+            }
+        }
     </style>
 </head>
 
