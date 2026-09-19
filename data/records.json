@@ -200,7 +200,7 @@
               "links": [
                 {
                   "label": "2012",
-                  "url": "https://www.donga.com/news/Entertainment/article/all/20121228/51896567"
+                  "url": "https://n.news.naver.com/mnews/article/018/0002707182?sid=101"
                 },
                 {
                   "label": "2014",
@@ -209,6 +209,10 @@
                 {
                   "label": "2015",
                   "url": "https://n.news.naver.com/mnews/article/018/0003428884?sid=105"
+                },
+                {
+                  "label": "2024",
+                  "url": "https://kobaco.co.kr/flexer/out/uploadfile/asa/board/news/article/2024/12/3238e9b360161125ca8635a48cc3ab49.hwp.files/Sections1.html"
                 }
               ]
             },
