@@ -9,282 +9,404 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        .records-page{
-            max-width:1000px;
-            margin:0 auto;
-            padding:28px 20px 0
+        .records-page {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 28px 20px 0
         }
 
-        .records-intro{
-            margin-bottom:20px
+        .records-intro {
+            margin-bottom: 20px
         }
 
-        .records-intro h1{
-            font-size:20px;
-            margin:0 0 6px
+        .records-intro h1 {
+            font-size: 20px;
+            margin: 0 0 6px
         }
 
-        .records-intro p{
-            font-size:12px;
-            color:#858b95;
-            margin:0
+        .records-intro p {
+            font-size: 12px;
+            color: #858b95;
+            margin: 0
         }
 
-        .records-section{
-            margin-bottom:26px
+        .records-section {
+            margin-bottom: 26px
         }
 
-        .records-section-head{
-            display:flex;
-            align-items:center;
-            gap:7px;
-            margin-bottom:9px;
-            padding-left:2px
+        .records-section-head {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            margin-bottom: 9px;
+            padding-left: 2px
         }
 
-        .records-section-head .icon{
-            font-size:14px
+        .records-section-head .icon {
+            font-size: 14px
         }
 
-        .records-section-head h2{
-            font-size:16px;
-            margin:0;
-            font-weight:600
+        .records-section-head h2 {
+            font-size: 16px;
+            margin: 0;
+            font-weight: 600
         }
 
-        .records-list{
-            border:1px solid #e8e9ed;
-            border-radius:10px;
-            margin-left:10px;
-            margin-right:10px;
-            overflow:hidden;
-            background:#fff
+        .records-list {
+            border: 1px solid #e8e9ed;
+            border-radius: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            overflow: hidden;
+            background: #fff
         }
 
-        .record-item{
-            border-bottom:1px solid #e8e9ed
+        .record-item {
+            border-bottom: 1px solid #e8e9ed
         }
 
-        .record-item:last-child{
-            border-bottom:0
+        .record-item:last-child {
+            border-bottom: 0
         }
 
-        .record-button{
-            width:100%;
-            display:flex;
-            align-items:center;
-            justify-content:space-between;
-            gap:12px;
-            padding:13px 15px;
-            border:0;
-            background:#fff;
-            color:inherit;
-            text-align:left;
-            cursor:pointer;
-            font:inherit
+        .record-button {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 13px 15px;
+            border: 0;
+            background: #fff;
+            color: inherit;
+            text-align: left;
+            cursor: pointer;
+            font: inherit
         }
 
-        .record-button:hover{
-            background:#fafafa
+        .record-button:hover {
+            background: #fafafa
         }
 
-        .record-title{
-            font-size:13px;
-            font-weight:500
+        .record-title {
+            font-size: 13px;
+            font-weight: 500
         }
 
-        .record-arrow{
-            flex:none;
-            color:#858b95;
-            font-size:17px;
-            line-height:1;
-            transition:transform .2s ease
+        .record-arrow {
+            flex: none;
+            color: #858b95;
+            font-size: 17px;
+            line-height: 1;
+            transition: transform .2s ease
         }
 
-        .record-item.open .record-arrow{
-            transform:rotate(90deg)
+        .record-item.open .record-arrow {
+            transform: rotate(90deg)
         }
 
-        .record-detail{
-            display:none;
-            padding:0 15px 14px;
-            border-top:1px solid #f0f1f3
+        .record-detail {
+            display: none;
+            padding: 0 15px 14px;
+            border-top: 1px solid #f0f1f3
         }
 
-        .record-item.open .record-detail{
-            display:block
+        .record-item.open .record-detail {
+            display: block
         }
 
-        .record-entry{
-            padding:12px 0;
-            border-bottom:1px solid #f0f1f3
+        .record-entry {
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f1f3
         }
 
-        .record-entry:last-child{
-            border-bottom:0;
-            padding-bottom:0
+        .record-entry:last-child {
+            border-bottom: 0;
+            padding-bottom: 0
         }
 
-        .record-date{
-            font-size:10px;
-            color:#858b95;
-            margin-bottom:4px
+        .record-date {
+            font-size: 10px;
+            color: #858b95;
+            margin-bottom: 4px
         }
 
-        .record-entry-title{
-            font-size:13px;
-            font-weight:600;
-            line-height:1.5
+        .record-entry-title {
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 1.5
         }
 
-        .record-description{
-            margin-top:4px;
-            font-size:11px;
-            line-height:1.7;
-            color:#555b65;
-            white-space:pre-line
+        .record-description {
+            margin-top: 4px;
+            font-size: 11px;
+            line-height: 1.7;
+            color: #555b65;
+            white-space: pre-line
         }
 
-        .record-links{
-            display:flex;
-            flex-wrap:wrap;
-            gap:6px;
-            margin-top:8px
+        .record-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px
         }
 
-        .record-links a{
-            display:inline-flex;
-            align-items:center;
-            padding:4px 8px;
-            border:1px solid #e5e7eb;
-            border-radius:5px;
-            color:#626872;
-            font-size:10px;
-            text-decoration:none
+        .record-links a {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 8px;
+            border: 1px solid #e5e7eb;
+            border-radius: 5px;
+            color: #626872;
+            font-size: 10px;
+            text-decoration: none
         }
 
-        .record-links a:hover{
-            background:#f8f9fa
+        .record-links a:hover {
+            background: #f8f9fa
         }
 
         /* 하위 항목 */
-        .record-sublist{
-            display:none;
-            padding:2px 15px 8px;
-            border-top:1px solid #f0f1f3
+        .record-sublist {
+            display: none;
+            padding: 2px 15px 8px;
+            border-top: 1px solid #f0f1f3
         }
 
-        .record-item.open > .record-sublist{
-            display:block
+        .record-item.open > .record-sublist {
+            display: block
         }
 
-        .record-subitem{
-            border-bottom:1px solid #f0f1f3;
-            padding:9px 10px;
-            font-size:12px;
-            line-height:1.6;
+        .record-subitem {
+            border-bottom: 1px solid #f0f1f3;
+            padding: 9px 10px;
+            font-size: 12px;
+            line-height: 1.6;
         }
 
-        .record-subitem:last-child{
-            border-bottom:0
+        .record-subitem:last-child {
+            border-bottom: 0
         }
 
-        .record-subitem-title{
-            display:inline
+        .record-subitem-title {
+            display: inline
         }
 
-        .record-subitem-links{
-            display:inline-flex;
-            align-items:center;
-            gap:4px;
-            margin-left:6px
+        .record-subitem-links {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            margin-left: 6px
         }
 
-        .record-subitem-links a{
-            display:inline-flex;
-            align-items:center;
-            padding:3px 6px;
-            border:1px solid #4a78a8;
-            border-radius:4px;
-            background:transparent;
-            color:#4a78a8;
-            font-size:9px;
-            line-height:1;
-            text-decoration:none;
-            white-space:nowrap;
-            transition:background-color 0.15s ease, color 0.15s ease
+        .record-subitem-links a {
+            display: inline-flex;
+            align-items: center;
+            padding: 3px 6px;
+            border: 1px solid #4a78a8;
+            border-radius: 4px;
+            background: transparent;
+            color: #4a78a8;
+            font-size: 9px;
+            line-height: 1;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: background-color 0.15s ease, color 0.15s ease
         }
 
-        .record-subitem-links a:hover{
-            background:#f1f6fb;
-            color:#315f8d
+        .record-subitem-links a:hover {
+            background: #f1f6fb;
+            color: #315f8d
         }
 
-        .records-empty{
-            padding:30px 20px;
-            text-align:center;
-            color:#858b95;
-            font-size:12px
+        .records-empty {
+            padding: 30px 20px;
+            text-align: center;
+            color: #858b95;
+            font-size: 12px
         }
 
-        @media(max-width:800px){
+        @media (max-width: 800px) {
 
-            .records-page{
-                padding:18px 12px 0
+            .records-page {
+                padding: 18px 12px 0
             }
 
-            .records-intro{
-                margin-bottom:20px
+            .records-intro {
+                margin-bottom: 20px
             }
 
-            .records-intro h1{
-                font-size:18px
+            .records-intro h1 {
+                font-size: 18px
             }
 
-            .records-section{
-                margin-bottom:22px
+            .records-section {
+                margin-bottom: 22px
             }
 
             /*.records-section-head{*/
             /*    margin-bottom:7px*/
             /*}*/
-
-            .records-section-head h2{
-                font-size:16px
+            .records-section-head h2 {
+                font-size: 16px
             }
 
-            .record-button{
-                padding:11px 13px
+            .record-button {
+                padding: 11px 13px
             }
 
-            .record-detail{
-                padding:0 13px 12px
+            .record-detail {
+                padding: 0 13px 12px
             }
 
-            .record-entry{
-                padding:11px 0
+            .record-entry {
+                padding: 11px 0
             }
 
-            .record-sublist{
-                padding:2px 13px 6px
+            .record-sublist {
+                padding: 2px 13px 6px
             }
 
-            .record-subitem{
-                padding:8px 8px;
+            .record-subitem {
+                padding: 8px 8px;
             }
 
-            .record-subitem-links{
-                margin-left:5px;
-                gap:4px
+            .record-subitem-links {
+                margin-left: 5px;
+                gap: 4px
             }
 
-            .record-subitem-links a{
-                font-size:9px
+            .record-subitem-links a {
+                font-size: 9px
             }
 
-            .records-list{
-                margin-left:10px;
-                margin-right:10px;
+            .records-list {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+
+        /* System dark mode: color only; keep the original records layout unchanged. */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                color-scheme: dark;
+            }
+
+            html, body {
+                background: #0f1114;
+                color: #eceef1;
+            }
+
+            .site-header {
+                background: #121418;
+                border-color: #292d34;
+            }
+
+            .brand strong {
+                color: #eceef1;
+            }
+
+            .brand span, .platform small, .section-head span {
+                color: #858b95;
+            }
+
+            .header-action a {
+                color: #fff;
+            }
+
+            footer, .footer {
+                background: #0f1114;
+                border-color: #292d34;
+                color: #858b95;
+            }
+
+            a {
+                color: #9eb9d4;
+            }
+
+            .records-page {
+                color: #eceef1;
+                background: transparent;
+            }
+
+            .records-intro p {
+                color: #858b95;
+            }
+
+            .records-section-head h2 {
+                color: #eceef1;
+            }
+
+            .records-list {
+                border-color: #292d34;
+                background: #16191e;
+            }
+
+            .record-item {
+                border-bottom-color: #292d34;
+            }
+
+            .record-button {
+                background: #16191e;
+                color: #eceef1;
+            }
+
+            .record-button:hover {
+                background: #1c2026;
+            }
+
+            .record-title, .record-entry-title, .record-subitem-title {
+                color: #eceef1;
+            }
+
+            .record-arrow, .record-date {
+                color: #aab0b8;
+            }
+
+            .record-detail {
+                border-top-color: #292d34;
+            }
+
+            .record-entry {
+                border-bottom-color: #292d34;
+            }
+
+            .record-description {
+                color: #b7bdc6;
+            }
+
+            .record-links a {
+                border-color: #71833a;
+                color: #d8f36a;
+            }
+
+            .record-links a:hover {
+                background: #242b1d;
+                color: #e7ff9a;
+            }
+
+            .record-sublist {
+                border-top-color: #292d34;
+            }
+
+            .record-subitem {
+                border-bottom-color: #292d34;
+                color: #d5d9df;
+            }
+
+            .record-subitem-links a {
+                border-color: #71833a;
+                color: #d8f36a;
+            }
+
+            .record-subitem-links a:hover {
+                background: #242b1d;
+                color: #e7ff9a;
+            }
+
+            .records-empty {
+                color: #aab0b8;
             }
         }
     </style>
@@ -332,15 +454,15 @@
 
 
 <script>
-    async function loadRecords(){
+    async function loadRecords() {
 
         const container = document.getElementById('records');
 
-        try{
+        try {
 
             const response = await fetch('data/records.json');
 
-            if(!response.ok){
+            if (!response.ok) {
                 throw new Error('Failed to load records.json');
             }
 
@@ -368,7 +490,7 @@
                 container.appendChild(section);
             });
 
-        }catch(error){
+        } catch (error) {
 
             console.error(error);
 
@@ -378,7 +500,7 @@
     }
 
 
-    function renderItems(items, container){
+    function renderItems(items, container) {
 
         items.forEach(item => {
 
@@ -387,7 +509,7 @@
 
 
             /* 하위 항목이 있는 경우 */
-            if(item.items){
+            if (item.items) {
 
                 const button = createButton(item.title);
 
@@ -407,7 +529,7 @@
                     subItemElement.appendChild(title);
 
 
-                    if(subItem.links && subItem.links.length){
+                    if (subItem.links && subItem.links.length) {
 
                         const links = document.createElement('span');
                         links.className = 'record-subitem-links';
@@ -453,7 +575,7 @@
                             const openButton =
                                 openItem.querySelector(':scope > .record-button');
 
-                            if(openButton){
+                            if (openButton) {
                                 openButton.setAttribute(
                                     'aria-expanded',
                                     'false'
@@ -462,7 +584,7 @@
                         });
 
 
-                    if(!isOpen){
+                    if (!isOpen) {
 
                         itemElement.classList.add('open');
 
@@ -489,7 +611,7 @@
                 entry.className = 'record-entry';
 
 
-                if(record.date){
+                if (record.date) {
 
                     const date = document.createElement('div');
                     date.className = 'record-date';
@@ -499,7 +621,7 @@
                 }
 
 
-                if(record.title){
+                if (record.title) {
 
                     const recordTitle = document.createElement('div');
                     recordTitle.className = 'record-entry-title';
@@ -509,7 +631,7 @@
                 }
 
 
-                if(record.description){
+                if (record.description) {
 
                     const description = document.createElement('div');
                     description.className = 'record-description';
@@ -519,7 +641,7 @@
                 }
 
 
-                if(record.links && record.links.length){
+                if (record.links && record.links.length) {
 
                     const links = document.createElement('div');
                     links.className = 'record-links';
@@ -561,14 +683,14 @@
                     .querySelectorAll('.record-item.open')
                     .forEach(openItem => {
 
-                        if(openItem !== itemElement){
+                        if (openItem !== itemElement) {
 
                             openItem.classList.remove('open');
 
                             const openButton =
                                 openItem.querySelector(':scope > .record-button');
 
-                            if(openButton){
+                            if (openButton) {
                                 openButton.setAttribute(
                                     'aria-expanded',
                                     'false'
@@ -578,7 +700,7 @@
                     });
 
 
-                if(isOpen){
+                if (isOpen) {
 
                     itemElement.classList.remove('open');
 
@@ -587,7 +709,7 @@
                         'false'
                     );
 
-                }else{
+                } else {
 
                     itemElement.classList.add('open');
 
@@ -602,7 +724,7 @@
 
 
     /* 공통 버튼 생성 */
-    function createButton(titleText){
+    function createButton(titleText) {
 
         const button = document.createElement('button');
 

@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
     <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
     <title>Instagram | KIM SOO HYUN STREAM</title>
     <meta name="description" content="Kim Soo Hyun Instagram content.">
@@ -273,6 +274,83 @@
             .sort-select {
                 flex: 1;
                 min-width: 0;
+            }
+        }
+
+
+        /* ---------------------------------------------------------
+           System Dark Mode
+           --------------------------------------------------------- */
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                color-scheme: dark;
+            }
+
+            html, body {
+                background: #0f1114;
+                color: #eceef1;
+            }
+
+            .site-header {
+                background: #121418;
+                border-color: #292d34;
+            }
+
+            .brand strong {
+                color: #eceef1;
+            }
+
+            .brand span, .platform small, .section-head span {
+                color: #858b95;
+            }
+
+            .header-action a {
+                color: #fff;
+            }
+
+            footer, .footer {
+                background: #0f1114;
+                border-color: #292d34;
+                color: #858b95;
+            }
+
+            a {
+                color: #9eb9d4;
+            }
+
+
+            .archive-page-head {
+                border-bottom-color: #292d34;
+            }
+
+            .archive-page-head p,
+            .archive-count,
+            .instagram-meta,
+            .like-increase,
+            .loading {
+                color: #858b95;
+            }
+
+            .archive-count strong,
+            .instagram-likes {
+                color: #eceef1;
+            }
+
+            .sort-select {
+                border-color: #30343b;
+                background: #16191e;
+                color: #eceef1;
+                color-scheme: dark;
+            }
+
+            .instagram-thumb {
+                background: #20242a;
+            }
+
+            .instagram-icon {
+                background: rgba(28, 31, 36, .94);
+                color: #f1f3f5;
             }
         }
 

@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
     <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
     <title>Twitter | KIM SOO HYUN STREAM</title>
     <meta name="description" content="Kim Soo Hyun Twitter content stream.">
@@ -245,7 +246,7 @@
         @media (max-width: 800px) {
 
             .twitter-page {
-                padding:16px 12px 0;
+                padding: 16px 12px 0;
             }
 
             .twitter-filters {
@@ -294,6 +295,90 @@
                 column-count: 1;
             }
 
+        }
+
+
+        /* ---------------------------------------------------------
+           System Dark Mode
+           --------------------------------------------------------- */
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                color-scheme: dark;
+            }
+
+            html, body {
+                background: #0f1114;
+                color: #eceef1;
+            }
+
+            .site-header {
+                background: #121418;
+                border-color: #292d34;
+            }
+
+            .brand strong {
+                color: #eceef1;
+            }
+
+            .brand span, .platform small, .section-head span {
+                color: #858b95;
+            }
+
+            .header-action a {
+                color: #fff;
+            }
+
+            footer, .footer {
+                background: #0f1114;
+                border-color: #292d34;
+                color: #858b95;
+            }
+
+            a {
+                color: #9eb9d4;
+            }
+
+
+            .archive-page-head .eyebrow,
+            .archive-page-head p,
+            .twitter-count,
+            .twitter-meta,
+            .twitter-date,
+            .twitter-source,
+            .twitter-stats,
+            .twitter-info {
+                color: #858b95;
+            }
+
+            .twitter-count strong,
+            .twitter-card-body,
+            .twitter-title,
+            .twitter-text {
+                color: #eceef1;
+            }
+
+            .sort-select {
+                border-color: #30343b;
+                background: #16191e;
+                color: #eceef1;
+                color-scheme: dark;
+            }
+
+            .twitter-card {
+                background: #16191e;
+                border-color: #292d34;
+                box-shadow: 0 8px 22px rgba(0, 0, 0, .18);
+            }
+
+            .twitter-thumbnail {
+                background: #20242a;
+            }
+
+            .twitter-account-icon {
+                background: #eceef1;
+                color: #111318;
+            }
         }
 
     </style>
