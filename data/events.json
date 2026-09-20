@@ -2010,7 +2010,12 @@
       "title": "제56회 백상예술대상",
       "lat": 37.6696,
       "lng": 126.7454,
-      "links": []
+      "links": [
+        {
+          "label": "백상예술대상",
+          "label": "https://www.youtube.com/watch?v=5isP4hem-n0"
+        }
+      ]
     },
     {
       "date": "2020.06.10",
