@@ -2732,7 +2732,12 @@
       "title": "2026 더팩트 뮤직 어워즈(TMA)",
       "lat": 35.19,
       "lng": 129.0582,
-      "links": []
+      "links": [
+        {
+          "label": "스타뉴스",
+          "url": "https://m.entertain.naver.com/home/article/108/0003471808"
+        }
+      ]
     },
     {
       "date": "2026.10.02",
