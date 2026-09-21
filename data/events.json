@@ -663,14 +663,23 @@
       "links": []
     },
     {
-      "date": "2013.07",
+      "date": "2013.07.05~",
       "country": "🇫🇷 프랑스",
       "city": "샤모니",
       "venue": "몽블랑",
       "title": "브랜드(빈폴아웃도어) 광고/화보 촬영",
       "lat": 45.9237,
       "lng": 6.8694,
-      "links": []
+      "links": [
+        {
+          "label": "이데일리",
+          "url": "https://m.entertain.naver.com/home/article/018/0002806744"
+        },
+        {
+          "label": "머니투데이",
+          "url": "https://n.news.naver.com/mnews/article/008/0003149826"
+        }
+      ]
     },
     {
       "date": "2013.07.19",
@@ -733,6 +742,25 @@
       "links": []
     },
     {
+      "date": "2013.09.24~",
+      "country": "🇩🇪 독일",
+      "city": "베를린",
+      "venue": "베를린",
+      "title": "데이즈드 코리아 화보 촬영",
+      "lat": 52.520008,
+      "lng": 13.404954,
+      "links": [
+        {
+          "label": "매일경제",
+          "url": "https://m.entertain.naver.com/home/article/009/0003039946"
+        },
+        {
+          "label": "연합뉴스",
+          "url": "https://n.news.naver.com/mnews/article/001/0006633393?sid=101"
+        }
+      ]
+    },
+    {
       "date": "2013.09.30",
       "country": "🇰🇷 대한민국",
       "city": "서울",
@@ -760,16 +788,6 @@
       "title": "Always Kim Soo Hyun 2013 Autumn 팬미팅",
       "lat": 34.6941,
       "lng": 135.1955,
-      "links": []
-    },
-    {
-      "date": "2013.11",
-      "country": "🇩🇪 독일",
-      "city": "베를린",
-      "venue": "베를린",
-      "title": "데이즈드 코리아 화보 촬영",
-      "lat": 52.520008,
-      "lng": 13.404954,
       "links": []
     },
     {
@@ -825,10 +843,15 @@
       "title": "브랜드(빈폴 아웃도어) 다운 출시 기념 팬사인회",
       "lat": 37.5665,
       "lng": 126.978,
-      "links": []
+      "links": [
+        {
+          "label": "서울신문",
+          "url": "https://n.news.naver.com/mnews/article/081/0002380063?sid=103"
+        }
+      ]
     },
     {
-      "date": "2013.12",
+      "date": "2013.12.16",
       "country": "🇰🇷 대한민국",
       "city": "서울",
       "venue": "SBS 목동 사옥",
