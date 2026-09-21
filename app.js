@@ -61,3 +61,17 @@ loadData().catch(err => {
         el.innerHTML = "<p>데이터를 불러오지 못했습니다.</p>";
     });
 });
+
+
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+    backToTop.classList.toggle("show", window.scrollY > 600);
+});
+
+backToTop.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
