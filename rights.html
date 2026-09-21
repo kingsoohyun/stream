@@ -1048,6 +1048,21 @@
         window.addEventListener('load', drawPath);
     </script>
 
+    <script>
+        const backToTop = document.getElementById("backToTop");
+
+        window.addEventListener("scroll", () => {
+            backToTop.classList.toggle("show", window.scrollY > 600);
+        });
+
+        backToTop.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+
 </main>
 
 <footer>
@@ -1058,6 +1073,16 @@
         </p>
     </div>
 </footer>
+
+<button
+        type="button"
+        class="back-to-top"
+        id="backToTop"
+        aria-label="맨 위로"
+        title="맨 위로"
+>
+    ↑
+</button>
 
 </body>
 </html>
