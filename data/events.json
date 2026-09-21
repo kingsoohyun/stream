@@ -1230,7 +1230,12 @@
       "title": "2014 인천 아시안게임 개막식",
       "lat": 37.5531,
       "lng": 126.6722,
-      "links": []
+      "links": [
+        {
+          "label": "뉴시스",
+          "url": "https://m.sports.naver.com/general/article/003/0006079826"
+        }
+      ]
     },
     {
       "date": "2014.09.24",
@@ -2054,6 +2059,10 @@
         {
           "label": "스타뉴스",
           "url": "https://m.entertain.naver.com/home/article/108/0002913758"
+        },
+        {
+          "label": "수상소감",
+          "url": "https://www.youtube.com/watch?v=-YKcPAqTtY0"
         }
       ]
     },
