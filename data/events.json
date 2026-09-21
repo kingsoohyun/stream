@@ -2728,6 +2728,26 @@
       ]
     },
     {
+      "date": "2026.07.14",
+      "country": "🇰🇷 대한민국",
+      "city": "",
+      "venue": "",
+      "title": "브랜드(BENCH/) 광고 촬영",
+      "lat": 37.5665,
+      "lng": 126.9780,
+      "links": [
+        {
+          "label": "연합뉴스",
+          "url": "https://n.news.naver.com/mnews/article/comment/001/0016126821?sid=103"
+        },
+        {
+          "label": "BENCH/",
+          "url":
+          "https://www.instagram.com/p/DaxZ7qMGVY1"
+        }
+      ]
+    },
+    {
       "date": "2026.08.23",
       "country": "🇮🇩 인도네시아",
       "city": "자카르타",
@@ -2779,8 +2799,13 @@
       "lng": 106.7669318,
       "links": [
         {
+          "label": "MHN스포츠",
+          "url": "https://m.entertain.naver.com/home/article/445/0000458777"
+        },
+        {
           "label": "RCTI+",
           "url": "https://tube.rctiplus.com/watch/episode/exclusive-interview-with-kim-soo-hyun-46823"
+        }
       ]
     },
     {
