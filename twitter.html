@@ -88,12 +88,20 @@
 
 
         /* ---------------------------------------------------------
-           Grid
+           masonry + 가로 순서
            --------------------------------------------------------- */
 
         .twitter-archive-cards {
-            column-count: 4;
-            column-gap: 18px;
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 18px;
+            align-items: start;
+        }
+
+        .twitter-column {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
         }
 
 
@@ -105,8 +113,6 @@
             display: inline-block;
             width: 100%;
             box-sizing: border-box;
-            break-inside: avoid;
-            -webkit-column-break-inside: avoid;
             margin: 0 0 18px;
             color: inherit;
             text-decoration: none;
@@ -237,7 +243,7 @@
         @media (max-width: 900px) {
 
             .twitter-archive-cards {
-                column-count: 3;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
             }
 
         }
@@ -258,8 +264,8 @@
             }
 
             .twitter-archive-cards {
-                column-count: 2;
-                column-gap: 12px;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 12px;
             }
 
             .twitter-card-body {
@@ -292,7 +298,7 @@
         @media (max-width: 480px) {
 
             .twitter-archive-cards {
-                column-count: 1;
+                grid-template-columns: 1fr;
             }
 
         }
@@ -763,30 +769,24 @@
     function renderTweets() {
 
         const container =
-            document.getElementById(
-                'twitter-cards'
-            );
-
+            document.getElementById('twitter-cards');
 
         const sortType =
             document
-                .getElementById(
-                    'sort-select'
-                )
+                .getElementById('sort-select')
                 .value;
-
 
         const selectedCategory =
             document
-                .getElementById(
-                    'category-select'
-                )
+                .getElementById('category-select')
                 .value;
 
 
-        let filtered =
-            tweets;
+        // -------------------------------------------------------
+        // Filter
+        // -------------------------------------------------------
 
+        let filtered = tweets;
 
         if (selectedCategory !== 'all') {
 
@@ -799,6 +799,10 @@
 
         }
 
+
+        // -------------------------------------------------------
+        // Sort
+        // -------------------------------------------------------
 
         const sorted =
             sortTweets(
@@ -813,127 +817,195 @@
             sorted.length.toLocaleString();
 
 
+        // -------------------------------------------------------
+        // Empty
+        // -------------------------------------------------------
+
         if (!sorted.length) {
 
             container.innerHTML = `
 
-                <div class="twitter-loading">
-                    등록된 콘텐츠가 없습니다.
-                </div>
+            <div class="twitter-loading">
+                등록된 콘텐츠가 없습니다.
+            </div>
 
-            `;
+        `;
 
             return;
 
         }
 
 
-        container.innerHTML =
-            sorted
-                .map(tweet => {
+        // -------------------------------------------------------
+        // Column count
+        // -------------------------------------------------------
+
+        const columnCount =
+            window.innerWidth <= 480 ? 1 :
+                window.innerWidth <= 800 ? 2 :
+                    window.innerWidth <= 900 ? 3 :
+                        4;
 
 
-                    const displayName =
-                        tweet.displayName ||
-                        tweet.username ||
-                        'Twitter';
+        // -------------------------------------------------------
+        // Create columns
+        // -------------------------------------------------------
+
+        container.innerHTML = '';
+
+        const columns =
+            Array.from(
+                { length: columnCount },
+                () => {
+
+                    const column =
+                        document.createElement('div');
+
+                    column.className =
+                        'twitter-column';
+
+                    container.appendChild(column);
+
+                    return column;
+
+                }
+            );
 
 
-                    const username =
-                        tweet.username
-                            ? '@' + tweet.username
-                            : '';
+        // -------------------------------------------------------
+        // Create cards
+        // -------------------------------------------------------
+
+        sorted.forEach((tweet, index) => {
+
+            const displayName =
+                tweet.displayName ||
+                tweet.username ||
+                'Twitter';
 
 
-                    const thumbnail =
-                        tweet.thumbnail || '';
+            const username =
+                tweet.username
+                    ? '@' + tweet.username
+                    : '';
 
 
-                    return `
-
-                        <a
-                            href="${escapeHtml(tweet.url)}"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="twitter-card"
-                        >
-
-                            ${
-                        thumbnail
-                            ? `
-
-                                        <img
-                                            class="twitter-thumbnail"
-                                            src="${escapeHtml(thumbnail)}"
-                                            alt=""
-                                            loading="lazy"
-                                        >
-
-                                    `
-                            : `
-
-                                        <div
-                                            class="twitter-thumbnail"
-                                            style="
-                                                display:grid;
-                                                place-items:center;
-                                                color:#858b95;
-                                                font-size:24px;
-                                            "
-                                        >
-                                            𝕏
-                                        </div>
-
-                                    `
-                    }
-
-                            <div class="twitter-card-body">
-
-                                <div class="twitter-account">
-
-                                    <div class="twitter-account-info">
-
-                                        <div class="twitter-display-name">
-                                            ${escapeHtml(displayName)}
-                                        </div>
-
-                                        ${
-                        username
-                            ? `
-
-                                                    <div class="twitter-username">
-                                                        ${escapeHtml(username)}
-                                                    </div>
-
-                                                `
-                            : ''
-                    }
-
-                                    </div>
+            const thumbnail =
+                tweet.thumbnail || '';
 
 
-                                    ${
-                        tweet.date
-                            ? `
+            const card =
+                document.createElement('a');
 
-                                                <div class="twitter-date">
-                                                    ${escapeHtml(tweet.date)}
-                                                </div>
+            card.href =
+                tweet.url || '#';
 
-                                            `
-                            : ''
-                    }
+            card.target =
+                '_blank';
 
+            card.rel =
+                'noopener noreferrer';
+
+            card.className =
+                'twitter-card';
+
+
+            card.innerHTML = `
+
+            ${
+                thumbnail
+
+                    ? `
+
+                    <img
+                        class="twitter-thumbnail"
+                        src="${escapeHtml(thumbnail)}"
+                        alt=""
+                        loading="lazy"
+                    >
+
+                `
+
+                    : `
+
+                    <div
+                        class="twitter-thumbnail"
+                        style="
+                            display:grid;
+                            place-items:center;
+                            color:#858b95;
+                            font-size:24px;
+                        "
+                    >
+                        𝕏
+                    </div>
+
+                `
+            }
+
+
+            <div class="twitter-card-body">
+
+                <div class="twitter-account">
+
+                    <div class="twitter-account-info">
+
+                        <div class="twitter-display-name">
+                            ${escapeHtml(displayName)}
+                        </div>
+
+
+                        ${
+                username
+
+                    ? `
+
+                                <div class="twitter-username">
+                                    ${escapeHtml(username)}
                                 </div>
 
+                            `
+
+                    : ''
+            }
+
+                    </div>
+
+
+                    ${
+                tweet.date
+
+                    ? `
+
+                            <div class="twitter-date">
+                                ${escapeHtml(tweet.date)}
                             </div>
 
-                        </a>
+                        `
 
-                    `;
+                    : ''
+            }
 
-                })
-                .join('');
+                </div>
+
+            </div>
+
+        `;
+
+
+            // ---------------------------------------------------
+            // Important:
+            // index 0 → column 1
+            // index 1 → column 2
+            // index 2 → column 3
+            // index 3 → column 4
+            // index 4 → column 1
+            // ---------------------------------------------------
+
+            columns[index % columnCount]
+                .appendChild(card);
+
+        });
 
     }
 
