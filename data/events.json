@@ -1931,6 +1931,21 @@
       "links": []
     },
     {
+      "date": "2017.05.25",
+      "country": "🇵🇭 필리핀",
+      "city": "마닐라",
+      "venue": "미공개",
+      "title": "영화 《리얼》 글로벌 프로모션",
+      "lat": 14.5995,
+      "lng": 120.9842,
+      "links": [
+        {
+          "label": "기사",
+          "url": "https://m.entertain.naver.com/home/article/277/0004001841"
+        }
+      ]
+    },
+    {
       "date": "2017.05.31",
       "country": "🇰🇷 대한민국",
       "city": "서울",
