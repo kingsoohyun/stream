@@ -566,6 +566,7 @@ function renderTimeline(events) {
                                             >
                                                 <span class="date-full">${escapeHtml(event.date.slice(0, 7))}</span>
                                                 <span class="date-short">${escapeHtml(event.date.slice(0, 7))}</span>
+                                                <span class="date-mm">${escapeHtml(event.date.slice(5, 7))}</span>
                                             </span>
 
                                             <span class="timeline-location">
