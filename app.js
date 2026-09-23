@@ -10,7 +10,7 @@ async function loadData() {
 
 function renderYoutube(data) {
     document.querySelector("#youtube-cards").innerHTML =
-        data.items.slice(0, 5).map((v, i) => `
+        data.items.slice(0, 5).map(v => `
         <a class="card" href="${v.url}" target="_blank" rel="noopener">
             <img class="thumb" src="${v.thumbnail}" alt="">
             <div class="card-body">
@@ -27,7 +27,7 @@ function renderYoutube(data) {
 function renderInstagram(data) {
     document.querySelector("#instagram-cards").innerHTML =
         data.items.slice(0, 6).map(v => `
-        <a class="card" href="${v.url}" target="_blank" rel="noopener">
+        <a class="card" href="${v.url}" target="_blank" rel="noopener" aria-label="Instagram 게시물 ${v.date}">
             <img class="thumb ig-thumb" src="${v.thumbnail}" alt="">
             <div class="card-body">
                 <div class="meta">
@@ -68,8 +68,11 @@ window.addEventListener("scroll", () => {
 });
 
 backToTop.addEventListener("click", () => {
+    const prefersReducedMotion =
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
     window.scrollTo({
         top: 0,
-        behavior: "smooth"
+        behavior: prefersReducedMotion ? "auto" : "smooth"
     });
 });

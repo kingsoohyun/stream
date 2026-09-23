@@ -161,11 +161,6 @@ main {
     background: linear-gradient(135deg, #7b35d8, #ed3b69, #f7a51c)
 }
 
-.archive .icon {
-    background: #f5f3ee;
-    color: #151922;
-}
-
 .world .icon,
 .records .icon,
 .love-sh .icon,
@@ -258,6 +253,23 @@ main {
     color: inherit
 }
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #397a91;
+    outline-offset: 3px;
+}
 
 /* =========================================================
    Section Accent
@@ -269,10 +281,6 @@ main {
 
 .instagram-section {
     border-left: 3px solid #9b45db
-}
-
-.twitter-section {
-    border-left: 3px solid #111
 }
 
 
@@ -290,10 +298,6 @@ main {
 }
 
 .instagram-cards {
-    grid-template-columns:repeat(6, 1fr)
-}
-
-.twitter-cards {
     grid-template-columns:repeat(6, 1fr)
 }
 
@@ -413,7 +417,7 @@ main {
 
 .note {
     font-size: 10px;
-    color: #a0a4ac;
+    color: #777d87;
     margin: 13px 0 0
 }
 
@@ -504,10 +508,6 @@ footer {
         padding: 18px 12px 0
     }
 
-    .hero h1 {
-        font-size: 30px
-    }
-
     .header-action a {
         padding: 6px 8px;
         font-size: 9px;
@@ -560,36 +560,6 @@ footer {
     }
 
 
-    /* Twitter */
-    .twitter-cards {
-        grid-template-columns:repeat(2, 1fr);
-        gap: 10px
-    }
-
-    .tweet .thumb {
-        height: 100%;
-        aspect-ratio: auto
-    }
-
-    .tweet .card-body {
-        padding: 10px
-    }
-
-    .tweet-head {
-        gap: 6px
-    }
-
-    .avatar {
-        width: 24px;
-        height: 24px;
-        font-size: 11px
-    }
-
-    .tweet-date {
-        font-size: 9px
-    }
-
-
     /* Section Header */
     .section-head > div {
         gap: 8px;
@@ -621,6 +591,20 @@ footer {
 @media (max-width: 600px) {
     .brand strong {
         font-size: 17px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
     }
 }
 
