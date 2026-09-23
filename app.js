@@ -1,11 +1,11 @@
 async function loadData() {
     const [youtube, instagram] = await Promise.all([
-        fetch("data/youtube.json").then(r => r.json()),
-        fetch("data/instagram.json").then(r => r.json())
+        fetch("data/youtube.json").then(r => r.json())
+        // fetch("data/instagram.json").then(r => r.json())
     ]);
 
     renderYoutube(youtube);
-    renderInstagram(instagram);
+    // renderInstagram(instagram);
 }
 
 function renderYoutube(data) {
