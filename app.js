@@ -14,7 +14,6 @@ function renderYoutube(data) {
         <a class="card" href="${v.url}" target="_blank" rel="noopener">
             <img class="thumb" src="${v.thumbnail}" alt="">
             <div class="card-body">
-                <div class="rank">${i + 1}</div>
                 <div class="title">${escapeHtml(v.title)}</div>
                 <div class="meta">
                     <span>${v.date}</span>
@@ -33,7 +32,6 @@ function renderInstagram(data) {
             <div class="card-body">
                 <div class="meta">
                     <span>${v.date}</span>
-                    <span>♥ ${formatNumber(v.likes)}</span>
                 </div>
             </div>
         </a>
