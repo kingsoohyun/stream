@@ -294,7 +294,7 @@ button:focus-visible {
 }
 
 .youtube-cards {
-    grid-template-columns:repeat(5, 1fr)
+    grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 .instagram-cards {
@@ -520,6 +520,10 @@ footer {
 
     .youtube-cards {
         grid-template-columns: 1fr;
+    }
+
+    .youtube-cards .card:nth-child(n + 6) {
+        display: none;
     }
 
     .instagram-cards {
