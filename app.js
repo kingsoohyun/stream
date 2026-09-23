@@ -1,11 +1,9 @@
 async function loadData() {
-    const [youtube, instagram] = await Promise.all([
+    const [youtube] = await Promise.all([
         fetch("data/youtube.json").then(r => r.json())
-        // fetch("data/instagram.json").then(r => r.json())
     ]);
 
     renderYoutube(youtube);
-    // renderInstagram(instagram);
 }
 
 function renderYoutube(data) {
@@ -18,20 +16,6 @@ function renderYoutube(data) {
                 <div class="meta">
                     <span>${v.date}</span>
                     <span>◉ ${formatNumber(v.views)}</span>
-                </div>
-            </div>
-        </a>
-    `).join("");
-}
-
-function renderInstagram(data) {
-    document.querySelector("#instagram-cards").innerHTML =
-        data.items.slice(0, 6).map(v => `
-        <a class="card" href="${v.url}" target="_blank" rel="noopener" aria-label="Instagram 게시물 ${v.date}">
-            <img class="thumb ig-thumb" src="${v.thumbnail}" alt="">
-            <div class="card-body">
-                <div class="meta">
-                    <span>${v.date}</span>
                 </div>
             </div>
         </a>
