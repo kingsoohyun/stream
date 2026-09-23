@@ -380,6 +380,11 @@
                 background: #20242a;
             }
 
+            .video-views {
+                color: #C0A6B0;
+                font-weight: 600;
+            }
+
             .play-button {
                 background: rgba(28, 31, 36, .94);
                 color: #f1f3f5;
@@ -879,28 +884,6 @@
                             : '';
 
 
-                    const tags =
-                        Array.isArray(
-                            video.tags
-                        )
-                            ? video.tags
-                            : [];
-
-
-                    const tagHTML =
-                        tags
-                            .map(
-                                tag => `
-                                    <span class="video-tag">
-                                        ${escapeHtml(
-                                    formatTag(tag)
-                                )}
-                                    </span>
-                                `
-                            )
-                            .join('');
-
-
                     return `
 
                         <a
@@ -963,17 +946,6 @@
                     }
 
                                 </div>
-
-
-                                ${
-                        tagHTML
-                            ? `
-                                            <div class="video-tags">
-                                                ${tagHTML}
-                                            </div>
-                                        `
-                            : ''
-                    }
 
                             </div>
 
