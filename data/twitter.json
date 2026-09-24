@@ -2,22 +2,22 @@
   "updatedAt": "2026-09-08 03:55",
   "categories": [
     {
-      "id": "bd",
+      "id": "bday",
       "name": "\uD83C\uDF82 생일 축하",
       "order": 1
     },
     {
-      "id": "debut18",
+      "id": "2025anniv",
       "name": "✨ 데뷔 18주년",
       "order": 2
     },
     {
-      "id": "birthday2026",
+      "id": "2026bday",
       "name": "🎂 2026 생일",
       "order": 3
     },
     {
-      "id": "debut19",
+      "id": "2026anniv",
       "name": "✨ 데뷔 19주년",
       "order": 4
     },

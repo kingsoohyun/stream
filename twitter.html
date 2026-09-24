@@ -634,7 +634,19 @@
 
 
         // 최초 진입 시 기본 카테고리
-        select.value = 'bd';
+        // URL category
+        const params = new URLSearchParams(window.location.search);
+        const urlCategory = params.get('c');
+
+// URL에 유효한 category가 있으면 적용
+        if (
+            urlCategory &&
+            [...select.options].some(option => option.value === urlCategory)
+        ) {
+            select.value = urlCategory;
+        } else {
+            select.value = 'bday';
+        }
 
     }
 
@@ -967,7 +979,31 @@
         .getElementById('category-select')
         .addEventListener(
             'change',
-            renderTweets
+            function () {
+
+                const value = this.value;
+
+                const url =
+                    new URL(window.location.href);
+
+                if (value === 'all') {
+                    url.searchParams.delete('c');
+                } else {
+                    url.searchParams.set(
+                        'c',
+                        value
+                    );
+                }
+
+                history.replaceState(
+                    null,
+                    '',
+                    url
+                );
+
+                renderTweets();
+
+            }
         );
 
 
