@@ -610,7 +610,6 @@
                     Number(b.order || 999)
             );
 
-
         select.innerHTML =
             '<option value="all">전체</option>';
 
@@ -640,7 +639,7 @@
 
 // URL에 유효한 category가 있으면 적용
         if (
-            urlCategory &&
+            urlCategory === 'all' ||
             [...select.options].some(option => option.value === urlCategory)
         ) {
             select.value = urlCategory;
@@ -987,12 +986,9 @@
                     new URL(window.location.href);
 
                 if (value === 'all') {
-                    url.searchParams.delete('c');
+                    url.searchParams.set('c', 'all');
                 } else {
-                    url.searchParams.set(
-                        'c',
-                        value
-                    );
+                    url.searchParams.set('c', value);
                 }
 
                 history.replaceState(
