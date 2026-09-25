@@ -1,3 +1,12 @@
+# Local / IDE
 .DS_Store
 *.iml
 .idea/
+
+# Secrets / credentials
+.env
+.env.*
+*.pem
+*.key
+credentials*.json
+secrets*.json
