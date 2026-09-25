@@ -9,8 +9,8 @@ async function loadData() {
 function renderYoutube(data) {
     document.querySelector("#youtube-cards").innerHTML =
         data.items.slice(0, 10).map(v => `
-        <a class="card" href="${v.url}" target="_blank" rel="noopener">
-            <img class="thumb" src="${v.thumbnail}" alt="">
+            <a class="card" href="${escapeHtml(v.url)}" target="_blank" rel="noopener noreferrer">
+            <img class="thumb" src="${escapeHtml(v.thumbnail)}" alt="">
             <div class="card-body">
                 <div class="title">${escapeHtml(v.title)}</div>
                 <div class="meta">
