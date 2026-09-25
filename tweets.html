@@ -633,20 +633,40 @@
 
 
         // 최초 진입 시 기본 카테고리
-        // URL category
-        const params = new URLSearchParams(window.location.search);
-        const urlCategory = params.get('c');
+        // URL parameters
+        const params =
+            new URLSearchParams(window.location.search);
 
-// URL에 유효한 category가 있으면 적용
+        const urlCategory =
+            params.get('c');
+
+        const urlSort =
+            params.get('s');
+
+        // Category
         if (
             urlCategory === 'all' ||
-            [...select.options].some(option => option.value === urlCategory)
+            [...select.options].some(
+                option => option.value === urlCategory
+            )
         ) {
             select.value = urlCategory;
         } else {
             select.value = 'bday';
         }
 
+        // Sort
+        const sortSelect =
+            document.getElementById('sort-select');
+
+        if (
+            urlSort === 'latest' ||
+            urlSort === 'oldest'
+        ) {
+            sortSelect.value = urlSort;
+        } else {
+            sortSelect.value = 'latest';
+        }
     }
 
 
@@ -815,7 +835,7 @@
 
         const columns =
             Array.from(
-                { length: columnCount },
+                {length: columnCount},
                 () => {
 
                     const column =
@@ -989,7 +1009,29 @@
         .getElementById('sort-select')
         .addEventListener(
             'change',
-            renderTweets
+            function () {
+
+                const url =
+                    new URL(window.location.href);
+
+                if (this.value === 'oldest') {
+                    url.searchParams.set(
+                        's',
+                        'oldest'
+                    );
+                } else {
+                    url.searchParams.delete('s');
+                }
+
+                history.replaceState(
+                    null,
+                    '',
+                    url
+                );
+
+                renderTweets();
+
+            }
         );
 
 
