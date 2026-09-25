@@ -165,6 +165,7 @@ async function renderMap(events) {
         "대만": "158",
         "미국": "840",
         "홍콩": "344",
+        "마카오": "446",
         "인도네시아": "360",
         "말레이시아": "458",
         "싱가포르": "702",
@@ -195,6 +196,7 @@ async function renderMap(events) {
        ===================================================== */
 
     const countryCounts = {};
+    const eventsByCountry = {};
 
     events.forEach(event => {
 
@@ -205,6 +207,12 @@ async function renderMap(events) {
 
         countryCounts[code] =
             (countryCounts[code] || 0) + 1;
+
+        if (!eventsByCountry[code]) {
+            eventsByCountry[code] = [];
+        }
+
+        eventsByCountry[code].push(event);
     });
 
 
@@ -343,9 +351,7 @@ async function renderMap(events) {
 
 
             const countryEvents =
-                events.filter(item =>
-                    getCountryCode(item.country) === code
-                );
+                eventsByCountry[code] || [];
 
 
             if (!countryEvents.length) {
