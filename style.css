@@ -230,7 +230,7 @@ main {
 .section-head > div {
     display: flex;
     align-items: center;
-    gap: 12px
+    gap: 8px;
 }
 
 .section-head h2 {
@@ -514,17 +514,6 @@ footer {
     .youtube-cards .thumb {
         height: 100%;
         aspect-ratio: auto;
-    }
-
-
-    /* Section Header */
-    .section-head > div {
-        gap: 8px;
-        flex-wrap: wrap
-    }
-
-    .section-head span {
-        width: 100%
     }
 
     .site-header {
