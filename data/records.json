@@ -182,20 +182,44 @@
           "title": "포브스",
           "items": [
             {
-              "title": "Forbes Korea's Top 10 Celebrities",
-              "links": [
-                {
-                  "label": "2013",
-                  "url": "https://www.forbes.com/pictures/mim45gmkd/4-kim-soo-hyun-2/"
-                }
-              ]
-            },
-            {
               "title": "30 Under 30 Asia - Entertainment & Sports",
               "links": [
                 {
                   "label": "2016",
                   "url": "https://www.forbes.com/pictures/lmh45edfje/kim-soo-hyun/"
+                }
+              ]
+            },
+            {
+              "title": "Korea Power Celebrity 40",
+              "links": [
+                {
+                  "label": "2012",
+                  "url": "https://www.forbeskorea.co.kr/news/articleView.html?idxno=292209"
+                },
+                {
+                  "label": "2013",
+                  "url": "https://www.forbeskorea.co.kr/news/articleView.html?idxno=296772"
+                },
+                {
+                  "label": "2014",
+                  "url": "https://www.forbeskorea.co.kr/news/articleView.html?idxno=305259"
+                },
+                {
+                  "label": "2015",
+                  "url": "https://www.forbeskorea.co.kr/news/articleView.html?idxno=305259"
+                },
+                {
+                  "label": "2016",
+                  "url": "https://www.forbeskorea.co.kr/news/articleView.html?idxno=310322"
+                },
+                {
+                  "label": "2021",
+                  "url": "https://www.forbeskorea.co.kr/news/articleView.html?idxno=333971"
+                },
+                {
+                  "label": "2022",
+                  "url": "https://www.forbeskorea.co.kr/news/articleView.html?idxno=335934"
                 }
               ]
             }
@@ -887,7 +911,15 @@
                 }
               ]
             },
-
+            {
+              "title": "파묘·눈물의 여왕·프로야구…올해 네이버 최다 검색 키워드",
+              "links": [
+                {
+                  "label": "2024",
+                  "url": "https://n.news.naver.com/mnews/article/001/0015127729?sid=105"
+                }
+              ]
+            },
             {
               "title": "'눈물의 여왕', 2024년 전 세계 넷플릭스 TV시리즈 시청시간 2위·8억 6,040만 시간",
               "links": [
@@ -915,7 +947,8 @@
               "links": [
                 {
                   "label": "2024",
-                  "url": "https://m.entertain.naver.com/home/article/421/0007949003"}
+                  "url": "https://m.entertain.naver.com/home/article/421/0007949003"
+                }
               ]
             },
             {
@@ -1086,6 +1119,24 @@
                 {
                   "label": "2014",
                   "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1002388200"
+                }
+              ]
+            },
+            {
+              "title": "[2012년 유행어]김수현 \"내 중전을 위해 옷고름 한 번 풀지\"",
+              "links": [
+                {
+                  "label": "2012",
+                  "url": "https://m.entertain.naver.com/home/article/032/0002285888"
+                }
+              ]
+            },
+            {
+              "title": "검색어로 되돌아본 '해품달 신드롬'",
+              "links": [
+                {
+                  "label": "2012",
+                  "url": "https://m.entertain.naver.com/home/article/076/0002193911"
                 }
               ]
             },
