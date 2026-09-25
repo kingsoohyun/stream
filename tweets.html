@@ -838,16 +838,10 @@
 
         sorted.forEach((tweet, index) => {
 
-            const displayName =
-                tweet.displayName ||
-                tweet.username ||
-                'Twitter';
-
-
             const username =
                 tweet.username
                     ? '@' + tweet.username
-                    : '';
+                    : '𝕏';
 
 
             const thumbnail =
@@ -907,46 +901,22 @@
             <div class="twitter-card-body">
 
                 <div class="twitter-account">
+    <div class="twitter-account-info">
+        <div class="twitter-username">
+            ${escapeHtml(username)}
+        </div>
+    </div>
 
-                    <div class="twitter-account-info">
-
-                        <div class="twitter-display-name">
-                            ${escapeHtml(displayName)}
-                        </div>
-
-
-                        ${
-                username
-
-                    ? `
-
-                                <div class="twitter-username">
-                                    ${escapeHtml(username)}
-                                </div>
-
-                            `
-
-                    : ''
-            }
-
-                    </div>
-
-
-                    ${
+    ${
                 tweet.date
-
                     ? `
-
-                            <div class="twitter-date">
-                                ${escapeHtml(tweet.date)}
-                            </div>
-
-                        `
-
+                <div class="twitter-date">
+                    ${escapeHtml(tweet.date)}
+                </div>
+            `
                     : ''
             }
-
-                </div>
+</div>
 
             </div>
 
