@@ -62,6 +62,7 @@
 
             font-size: 17px;
             line-height: 1;
+            font-weight: 600;
 
             cursor: pointer;
 
@@ -513,7 +514,7 @@
 
             .social-today-button {
                 position: absolute;
-                right: 0;
+                right: 4px;
                 top: 50%;
                 transform: translateY(-50%);
                 padding: 7px 9px;
@@ -1265,52 +1266,81 @@
 
     function changeMonth(offset) {
 
-        currentMonth += offset;
+        let year = currentYear;
+        let month = currentMonth;
 
+        const today = new Date();
+        const todayYear = today.getFullYear();
+        const todayMonth = today.getMonth();
 
-        if (currentMonth < 0) {
-
-            currentMonth = 11;
-            currentYear--;
-
-        }
-
-
-        if (currentMonth > 11) {
-
-            currentMonth = 0;
-            currentYear++;
-
-        }
-
-
-        const monthPrefix =
-            `${currentYear}.${String(
-                currentMonth + 1
-            ).padStart(2, "0")}`;
-
-
-        const monthItems =
-            socialItems.filter(item =>
-                String(item.date)
-                    .startsWith(monthPrefix)
+        const minDate =
+            parseDate(
+                socialItems[socialItems.length - 1].date
             );
 
+        const minYear = minDate.getFullYear();
+        const minMonth = minDate.getMonth();
 
-        if (monthItems.length) {
+        while (true) {
 
-            selectedDate =
-                monthItems[0].date;
+            month += offset;
 
-        } else {
+            if (month < 0) {
+                month = 11;
+                year--;
+            }
 
-            selectedDate = "";
+            if (month > 11) {
+                month = 0;
+                year++;
+            }
 
+            /* 미래의 달 */
+            if (
+                year > todayYear ||
+                (
+                    year === todayYear &&
+                    month > todayMonth
+                )
+            ) {
+                return;
+            }
+
+            /* 데이터보다 이전 */
+            if (
+                year < minYear ||
+                (
+                    year === minYear &&
+                    month < minMonth
+                )
+            ) {
+                return;
+            }
+
+            const monthPrefix =
+                `${year}.${String(
+                    month + 1
+                ).padStart(2, "0")}`;
+
+            const monthItems =
+                socialItems.filter(item =>
+                    String(item.date)
+                        .startsWith(monthPrefix)
+                );
+
+            if (monthItems.length) {
+
+                currentYear = year;
+                currentMonth = month;
+
+                selectedDate =
+                    monthItems[0].date;
+
+                renderCalendar();
+
+                return;
+            }
         }
-
-
-        renderCalendar();
-
     }
 
 
