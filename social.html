@@ -1,0 +1,1717 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+
+    <meta
+            name="robots"
+            content="noindex, nofollow, noarchive, nosnippet"
+    >
+
+    <title>KIM SOO HYUN STREAM</title>
+
+    <meta
+            name="description"
+            content="Kim Soo Hyun social media archive."
+    >
+
+    <link rel="stylesheet" href=".idea/style.css">
+
+    <style>
+
+        /* =========================================================
+           Social Calendar
+           ========================================================= */
+
+        .social-page {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 32px 24px 60px;
+        }
+
+
+        /* =========================================================
+           Calendar Header
+           ========================================================= */
+
+        .social-calendar {
+            margin-top: 12px;
+        }
+
+        .social-calendar-head {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .social-month-nav {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .social-month-button {
+            width: 28px;
+            height: 28px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 0;
+
+            border: 0;
+            border-radius: 50%;
+
+            background: transparent;
+            color: #8b9098;
+
+            font-size: 17px;
+            line-height: 1;
+
+            cursor: pointer;
+
+            transition:
+                    background .15s ease,
+                    color .15s ease;
+        }
+
+        .social-month-button:hover {
+            background: #f1f2f4;
+            color: #151922;
+        }
+
+        .social-month-title {
+            min-width: 150px;
+
+            margin: 0;
+
+            text-align: center;
+
+            font-size: 22px;
+            line-height: 1.2;
+
+            font-weight: 600;
+            letter-spacing: -.035em;
+
+            color: #151922;
+        }
+
+        .social-today-button {
+            padding: 5px 9px;
+
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+
+            background: #fff;
+            color: #858b95;
+
+            font-size: 10px;
+            font-weight: 500;
+            line-height: 1;
+
+            cursor: pointer;
+
+            transition:
+                    background .15s ease,
+                    border-color .15s ease,
+                    color .15s ease;
+        }
+
+        .social-today-button:hover {
+            background: #f5f6f8;
+            border-color: #d5d9df;
+            color: #151922;
+        }
+
+
+        /* =========================================================
+           Weekdays
+           ========================================================= */
+
+        .social-calendar-weekdays {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+
+            margin-bottom: 3px;
+        }
+
+        .social-weekday {
+            padding: 5px 0;
+
+            text-align: center;
+
+            font-size: 9px;
+            font-weight: 500;
+            letter-spacing: .03em;
+
+            color: #9a9fa7;
+        }
+
+
+        /* =========================================================
+           Calendar Grid
+           ========================================================= */
+
+        .social-calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+
+            row-gap: 2px;
+        }
+
+        .social-calendar-day {
+            position: relative;
+
+            min-height: 58px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+
+            padding: 7px 4px 5px;
+
+            border: 0;
+            background: transparent;
+
+            color: #151922;
+
+            cursor: default;
+        }
+
+        .social-calendar-day.empty {
+            background: transparent;
+        }
+
+        .social-calendar-day.has-posts {
+            cursor: pointer;
+        }
+
+        .social-calendar-day.has-posts:hover {
+            background: transparent;
+        }
+
+
+        /* =========================================================
+           Date
+           ========================================================= */
+
+        .social-calendar-month {
+            display: none;
+        }
+
+        .social-calendar-number {
+            width: 30px;
+            height: 30px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            font-size: 17px;
+            line-height: 1;
+
+            font-weight: 400;
+            letter-spacing: -.03em;
+
+            color: #252932;
+        }
+
+        .social-calendar-day.has-posts
+        .social-calendar-number {
+            font-weight: 500;
+        }
+
+
+        /* =========================================================
+           Post Indicator
+           ========================================================= */
+
+        .social-calendar-dots {
+            display: flex;
+            justify-content: center;
+            gap: 3px;
+
+            margin-top: 5px;
+        }
+
+        .social-calendar-dot {
+            width: 4px;
+            height: 4px;
+
+            border-radius: 50%;
+
+            background: #b76573;
+        }
+
+
+        /* =========================================================
+           Selected Date
+           ========================================================= */
+
+        .social-calendar-day.selected
+        .social-calendar-number {
+            background: #b76573;
+            color: #fff;
+            font-weight: 600;
+
+            box-shadow:
+                    0 1px 3px
+                    rgba(120, 50, 65, .15);
+        }
+
+
+        /* =========================================================
+           Selected Posts
+           ========================================================= */
+
+        .social-posts {
+            margin-top: 26px;
+        }
+
+        .social-posts-head {
+            display: flex;
+            align-items: baseline;
+
+            margin-bottom: 11px;
+        }
+
+        .social-posts-date {
+            margin: 0;
+
+            font-size: 17px;
+            line-height: 1;
+
+            font-weight: 600;
+            letter-spacing: -.025em;
+
+            color: #151922;
+        }
+
+        .social-post-list {
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    auto-fill,
+                    minmax(220px, 1fr)
+                );
+
+            gap: 9px;
+        }
+
+
+        /* =========================================================
+           Social Post Card
+           ========================================================= */
+
+        .social-post-card {
+            position: relative;
+
+            min-height: 82px;
+
+            display: flex;
+            align-items: center;
+
+            padding: 13px 14px;
+
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+
+            background: #fafbfc;
+            color: inherit;
+
+            text-decoration: none;
+
+            overflow: hidden;
+
+            transition:
+                    transform .18s ease,
+                    border-color .18s ease,
+                    background .18s ease,
+                    box-shadow .18s ease;
+        }
+
+        .social-post-card:hover {
+            transform: translateY(-2px);
+
+            background: #fff;
+            border-color: #d5d9df;
+
+            box-shadow:
+                    0 5px 16px
+                    rgba(20, 25, 35, .06);
+        }
+
+
+        /* =========================================================
+           Post Card Date
+           ========================================================= */
+
+        .social-post-date {
+            flex: 0 0 45px;
+
+            display: flex;
+            flex-direction: column;
+
+            line-height: 1;
+        }
+
+        .social-post-month {
+            font-size: 8px;
+
+            font-weight: 600;
+            letter-spacing: .08em;
+
+            color: #9aa0aa;
+        }
+
+        .social-post-day {
+            margin-top: 4px;
+
+            font-size: 24px;
+
+            font-weight: 600;
+            letter-spacing: -.05em;
+
+            color: #151922;
+        }
+
+
+        /* =========================================================
+           Post Card Info
+           ========================================================= */
+
+        .social-post-info {
+            min-width: 0;
+            flex: 1;
+
+            padding-left: 11px;
+
+            border-left: 1px solid #e6e8ec;
+        }
+
+        .social-post-desc {
+            display: block;
+
+            max-width: 160px;
+
+            overflow: hidden;
+
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+            font-size: 11px;
+            font-weight: 500;
+
+            color: #353a44;
+        }
+
+        .social-post-account {
+            display: block;
+
+            margin-top: 5px;
+
+            max-width: 160px;
+
+            overflow: hidden;
+
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+            font-size: 8px;
+            font-weight: 500;
+
+            color: #858b95;
+        }
+
+        .social-post-platform {
+            display: block;
+
+            margin-top: 5px;
+
+            font-size: 7px;
+            font-weight: 600;
+
+            letter-spacing: .08em;
+
+            color: #a1a6af;
+        }
+
+
+        /* =========================================================
+           External Link Arrow
+           ========================================================= */
+
+        .social-post-arrow {
+            position: absolute;
+
+            top: 9px;
+            right: 10px;
+
+            font-size: 10px;
+            line-height: 1;
+
+            color: #a3a8b1;
+
+            transition:
+                    transform .18s ease,
+                    color .18s ease;
+        }
+
+        .social-post-card:hover
+        .social-post-arrow {
+            color: #151922;
+
+            transform:
+                    translate(1px, -1px);
+        }
+
+
+        /* =========================================================
+           Empty / Loading
+           ========================================================= */
+
+        .social-empty {
+            padding: 80px 20px;
+
+            text-align: center;
+
+            color: #858b95;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================================================
+           Mobile
+           ========================================================= */
+
+        @media (max-width: 600px) {
+
+            .social-page {
+                padding: 22px 12px 50px;
+            }
+
+            .social-calendar-head {
+                margin-bottom: 17px;
+            }
+
+            .social-month-nav {
+                position: relative;
+
+                width: 100%;
+
+                justify-content: center;
+
+                gap: 8px;
+            }
+
+            .social-month-title {
+                min-width: 118px;
+
+                font-size: 20px;
+            }
+
+            .social-month-button {
+                width: 27px;
+                height: 27px;
+
+                font-size: 16px;
+            }
+
+            .social-today-button {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 7px 9px;
+                font-size: 9px;
+            }
+
+            .social-calendar-day {
+                min-height: 52px;
+
+                padding-top: 5px;
+            }
+
+            .social-calendar-number {
+                width: 28px;
+                height: 28px;
+
+                font-size: 16px;
+            }
+
+            .social-calendar-dots {
+                margin-top: 4px;
+            }
+
+            .social-posts {
+                margin-top: 22px;
+            }
+
+            .social-post-list {
+                grid-template-columns: 1fr;
+            }
+
+            .social-post-card {
+                min-height: 78px;
+            }
+
+        }
+
+
+        /* =========================================================
+           Dark Mode
+           ========================================================= */
+
+        @media (prefers-color-scheme: dark) {
+
+            .social-month-button {
+                color: #858b95;
+            }
+
+            .social-month-button:hover {
+                background: #252930;
+                color: #eceef1;
+            }
+
+            .social-month-title {
+                color: #eceef1;
+            }
+
+            .social-today-button {
+                background: #16191e;
+                border-color: #30343b;
+                color: #858b95;
+            }
+
+            .social-today-button:hover {
+                background: #252930;
+                border-color: #383d46;
+                color: #eceef1;
+            }
+
+            .social-weekday {
+                color: #777d87;
+            }
+
+            .social-calendar-day {
+                background: transparent;
+                color: #eceef1;
+            }
+
+            .social-calendar-day.empty {
+                background: transparent;
+            }
+
+            .social-calendar-number {
+                color: #e4e6ea;
+            }
+
+            .social-calendar-day.selected
+            .social-calendar-number {
+                background: #b96b7a;
+                color: #fff;
+            }
+
+            .social-calendar-dot {
+                background: #b96b7a;
+            }
+
+            .social-posts-date {
+                color: #eceef1;
+            }
+
+            .social-post-card {
+                background: #1c2026;
+                border-color: #292d34;
+            }
+
+            .social-post-card:hover {
+                background: #20242a;
+                border-color: #383d46;
+
+                box-shadow:
+                        0 5px 16px
+                        rgba(0, 0, 0, .22);
+            }
+
+            .social-post-month {
+                color: #858b95;
+            }
+
+            .social-post-day {
+                color: #eceef1;
+            }
+
+            .social-post-info {
+                border-left-color: #30343b;
+            }
+
+            .social-post-desc {
+                color: #d5d8dd;
+            }
+
+            .social-post-account {
+                color: #858b95;
+            }
+
+            .social-post-platform {
+                color: #858b95;
+            }
+
+            .social-post-arrow {
+                color: #858b95;
+            }
+
+            .social-post-card:hover
+            .social-post-arrow {
+                color: #eceef1;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<header class="site-header">
+
+    <div class="brand">
+
+        <a href=".idea/index.html">
+
+            <strong>
+                KIM SOO HYUN STREAM
+            </strong>
+
+            <span>
+                배우 김수현 콘텐츠 큐레이션 팬 페이지
+            </span>
+
+        </a>
+
+    </div>
+
+
+    <nav class="header-action">
+
+        <a href="rights.html">
+            PRIVACY &amp; RIGHTS
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="social-page">
+
+
+    <section
+            id="social-list"
+            class="social-list"
+            aria-label="Social calendar"
+    >
+
+        <div class="social-empty">
+            게시물을 불러오는 중...
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    <div class="footer-notice">
+
+        <p>
+
+            <strong>
+                KIM SOO HYUN STREAM
+            </strong>
+
+            is an unofficial, non-commercial fan site.
+
+            Third-party content belongs to its respective copyright
+            holders and is linked to its original source where available.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+<button
+        type="button"
+        class="back-to-top"
+        id="backToTop"
+        aria-label="맨 위로"
+        title="맨 위로"
+>
+    ↑
+</button>
+
+
+<script>
+
+
+    /* =========================================================
+       Helpers
+       ========================================================= */
+
+    function escapeHtml(s) {
+
+        return String(s ?? "")
+            .replace(
+                /[&<>"']/g,
+                m => ({
+                    "&": "&amp;",
+                    "<": "&lt;",
+                    ">": "&gt;",
+                    '"': "&quot;",
+                    "'": "&#039;"
+                }[m])
+            );
+
+    }
+
+
+    function parseDate(value) {
+
+        const [
+            year,
+            month,
+            day
+        ] = String(value)
+            .split(".")
+            .map(Number);
+
+
+        return new Date(
+            year,
+            month - 1,
+            day
+        );
+
+    }
+
+
+    function formatMonth(year, month) {
+
+        return new Date(
+            year,
+            month,
+            1
+        ).toLocaleString(
+            "en-US",
+            {
+                month: "long",
+                year: "numeric"
+            }
+        );
+
+    }
+
+
+    function formatLongDate(key) {
+
+        const date =
+            parseDate(key);
+
+
+        return date.toLocaleDateString(
+            "en-US",
+            {
+                month: "short",
+                day: "numeric",
+                year: "numeric"
+            }
+        );
+
+    }
+
+
+    /* =========================================================
+       State
+       ========================================================= */
+
+    let socialItems = [];
+
+    let currentYear = 0;
+    let currentMonth = 0;
+
+    let selectedDate = "";
+
+
+    /* =========================================================
+       Platform
+       ========================================================= */
+
+    const platformNames = {
+
+        instagram: "INSTAGRAM",
+
+        tiktok: "TIKTOK",
+
+        x: "X",
+
+        weibo: "WEIBO"
+
+    };
+
+
+    function getPlatformName(value) {
+
+        const key =
+            String(value || "")
+                .toLowerCase();
+
+
+        return platformNames[key] ||
+            String(value || "")
+                .toUpperCase();
+
+    }
+
+
+    /* =========================================================
+       Group Posts By Date
+       ========================================================= */
+
+    function groupByDate(items) {
+
+        const groups = {};
+
+
+        items.forEach(item => {
+
+            const key =
+                String(item.date);
+
+
+            if (!groups[key]) {
+                groups[key] = [];
+            }
+
+
+            groups[key].push(item);
+
+        });
+
+
+        return groups;
+
+    }
+
+
+    /* =========================================================
+       Render Calendar
+       ========================================================= */
+
+    function renderCalendar() {
+
+        const container =
+            document.getElementById(
+                "social-list"
+            );
+
+
+        if (!container) {
+            return;
+        }
+
+
+        const dateGroups =
+            groupByDate(socialItems);
+
+
+        const firstDay =
+            new Date(
+                currentYear,
+                currentMonth,
+                1
+            );
+
+
+        const lastDay =
+            new Date(
+                currentYear,
+                currentMonth + 1,
+                0
+            );
+
+
+        const firstWeekday =
+            firstDay.getDay();
+
+
+        const daysInMonth =
+            lastDay.getDate();
+
+
+        let calendarDays = "";
+
+
+        /* Empty cells before month */
+
+        for (
+            let i = 0;
+            i < firstWeekday;
+            i++
+        ) {
+
+            calendarDays += `
+                <div
+                    class="social-calendar-day empty"
+                    aria-hidden="true"
+                ></div>
+            `;
+
+        }
+
+
+        /* Actual days */
+
+        for (
+            let day = 1;
+            day <= daysInMonth;
+            day++
+        ) {
+
+            const key =
+                `${currentYear}.${String(
+                    currentMonth + 1
+                ).padStart(2, "0")}.${String(
+                    day
+                ).padStart(2, "0")}`;
+
+
+            const posts =
+                dateGroups[key] || [];
+
+
+            const hasPosts =
+                posts.length > 0;
+
+
+            const isSelected =
+                key === selectedDate &&
+                hasPosts;
+
+
+            const classes = [
+
+                "social-calendar-day",
+
+                hasPosts
+                    ? "has-posts"
+                    : "",
+
+                isSelected
+                    ? "selected"
+                    : ""
+
+            ]
+                .filter(Boolean)
+                .join(" ");
+
+
+            calendarDays += `
+
+                <button
+                    type="button"
+                    class="${classes}"
+                    data-date="${escapeHtml(key)}"
+                    ${hasPosts ? "" : "disabled"}
+                    aria-label="${escapeHtml(key)}"
+                >
+
+                    <span
+                        class="social-calendar-month"
+                    >
+                        ${new Date(
+                currentYear,
+                currentMonth,
+                day
+            )
+                .toLocaleString(
+                    "en-US",
+                    {
+                        month: "short"
+                    }
+                )
+                .toUpperCase()}
+                    </span>
+
+
+                    <strong
+                        class="social-calendar-number"
+                    >
+                        ${day}
+                    </strong>
+
+
+                    ${
+                hasPosts
+                    ? `
+                    <span
+                        class="social-calendar-dots"
+                        aria-hidden="true"
+                    >
+                        ${Array.from(
+                        {
+                            length: Math.min(
+                                posts.length,
+                                3
+                            )
+                        },
+                        () =>
+                            `<span class="social-calendar-dot"></span>`
+                    ).join("")}
+                    </span>
+                `
+                    : ""
+            }
+
+                </button>
+
+            `;
+
+        }
+
+
+        /* =====================================================
+           Calendar HTML
+           ===================================================== */
+
+        container.innerHTML = `
+
+            <div class="social-calendar">
+
+
+                <div class="social-calendar-head">
+
+                    <div class="social-month-nav">
+
+
+                        <button
+                            type="button"
+                            class="social-month-button"
+                            id="social-prev"
+                            aria-label="Previous month"
+                        >
+                            ←
+                        </button>
+
+
+                        <h1
+                            class="social-month-title"
+                            id="social-month-title"
+                        >
+                            ${formatMonth(
+            currentYear,
+            currentMonth
+        )}
+                        </h1>
+
+
+                        <button
+                            type="button"
+                            class="social-month-button"
+                            id="social-next"
+                            aria-label="Next month"
+                        >
+                            →
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="social-today-button"
+                            id="social-today"
+                        >
+                            Today
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+
+                <div class="social-calendar-weekdays">
+
+                    <span class="social-weekday">
+                        SUN
+                    </span>
+
+                    <span class="social-weekday">
+                        MON
+                    </span>
+
+                    <span class="social-weekday">
+                        TUE
+                    </span>
+
+                    <span class="social-weekday">
+                        WED
+                    </span>
+
+                    <span class="social-weekday">
+                        THU
+                    </span>
+
+                    <span class="social-weekday">
+                        FRI
+                    </span>
+
+                    <span class="social-weekday">
+                        SAT
+                    </span>
+
+                </div>
+
+
+                <div class="social-calendar-grid">
+
+                    ${calendarDays}
+
+                </div>
+
+
+                <div
+                    class="social-posts"
+                    id="social-posts"
+                ></div>
+
+
+            </div>
+
+        `;
+
+
+        /* =====================================================
+           Month Navigation
+           ===================================================== */
+
+        document
+            .getElementById("social-prev")
+            .addEventListener(
+                "click",
+                () => changeMonth(-1)
+            );
+
+
+        document
+            .getElementById("social-next")
+            .addEventListener(
+                "click",
+                () => changeMonth(1)
+            );
+
+
+        document
+            .getElementById("social-today")
+            .addEventListener(
+                "click",
+                goToToday
+            );
+
+
+        /* =====================================================
+           Date Selection
+           ===================================================== */
+
+        document
+            .querySelectorAll(
+                ".social-calendar-day.has-posts"
+            )
+            .forEach(button => {
+
+                button.addEventListener(
+                    "click",
+                    () => {
+
+                        selectedDate =
+                            button.dataset.date;
+
+
+                        renderCalendar();
+
+
+                        requestAnimationFrame(() => {
+
+                            const posts =
+                                document.getElementById(
+                                    "social-posts"
+                                );
+
+
+                            if (posts) {
+
+                                posts.scrollIntoView({
+                                    behavior: "smooth",
+                                    block: "start"
+                                });
+
+                            }
+
+                        });
+
+                    }
+                );
+
+            });
+
+
+        renderSelectedPosts(
+            dateGroups[selectedDate] || []
+        );
+
+    }
+
+
+    /* =========================================================
+       Change Month
+       ========================================================= */
+
+    function changeMonth(offset) {
+
+        currentMonth += offset;
+
+
+        if (currentMonth < 0) {
+
+            currentMonth = 11;
+            currentYear--;
+
+        }
+
+
+        if (currentMonth > 11) {
+
+            currentMonth = 0;
+            currentYear++;
+
+        }
+
+
+        const monthPrefix =
+            `${currentYear}.${String(
+                currentMonth + 1
+            ).padStart(2, "0")}`;
+
+
+        const monthItems =
+            socialItems.filter(item =>
+                String(item.date)
+                    .startsWith(monthPrefix)
+            );
+
+
+        if (monthItems.length) {
+
+            selectedDate =
+                monthItems[0].date;
+
+        } else {
+
+            selectedDate = "";
+
+        }
+
+
+        renderCalendar();
+
+    }
+
+
+    /* =========================================================
+       Go To Today
+       ========================================================= */
+
+    function goToToday() {
+
+        const today =
+            new Date();
+
+
+        currentYear =
+            today.getFullYear();
+
+
+        currentMonth =
+            today.getMonth();
+
+
+        const todayKey =
+            `${currentYear}.${String(
+                currentMonth + 1
+            ).padStart(2, "0")}.${String(
+                today.getDate()
+            ).padStart(2, "0")}`;
+
+
+        const todayExists =
+            socialItems.some(
+                item =>
+                    String(item.date) === todayKey
+            );
+
+
+        selectedDate =
+            todayExists
+                ? todayKey
+                : "";
+
+
+        renderCalendar();
+
+    }
+
+
+    /* =========================================================
+       Render Selected Date Posts
+       ========================================================= */
+
+    function renderSelectedPosts(items) {
+
+        const container =
+            document.getElementById(
+                "social-posts"
+            );
+
+
+        if (!container) {
+            return;
+        }
+
+
+        if (
+            !selectedDate ||
+            !items.length
+        ) {
+
+            container.innerHTML = "";
+
+            return;
+
+        }
+
+
+        const date =
+            parseDate(selectedDate);
+
+
+        const monthName =
+            date
+                .toLocaleString(
+                    "en-US",
+                    {
+                        month: "short"
+                    }
+                )
+                .toUpperCase();
+
+
+        const day =
+            String(
+                date.getDate()
+            );
+
+
+        const cards =
+            items
+                .map(item => {
+
+                    const desc =
+                        item.desc ||
+                        item.account ||
+                        "";
+
+
+                    const account =
+                        item.account ||
+                        "";
+
+
+                    const platform =
+                        getPlatformName(
+                            item.platform
+                        );
+
+
+                    return `
+
+                        <a
+                            class="social-post-card"
+                            href="${escapeHtml(item.url)}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+
+
+                            <div class="social-post-date">
+
+                                <span
+                                    class="social-post-month"
+                                >
+                                    ${monthName}
+                                </span>
+
+
+                                <strong
+                                    class="social-post-day"
+                                >
+                                    ${escapeHtml(day)}
+                                </strong>
+
+                            </div>
+
+
+                            <div class="social-post-info">
+
+                                <span
+                                    class="social-post-desc"
+                                >
+                                    ${escapeHtml(desc)}
+                                </span>
+
+
+                                <span
+                                    class="social-post-account"
+                                >
+                                    @${escapeHtml(account)}
+                                </span>
+
+
+                                <span
+                                    class="social-post-platform"
+                                >
+                                    ${escapeHtml(platform)}
+                                </span>
+
+                            </div>
+
+
+                            <span
+                                class="social-post-arrow"
+                                aria-hidden="true"
+                            >
+                                ↗
+                            </span>
+
+
+                        </a>
+
+                    `;
+
+                })
+                .join("");
+
+
+        container.innerHTML = `
+
+            <div class="social-posts-head">
+
+                <h2 class="social-posts-date">
+                    ${formatLongDate(selectedDate)}
+                </h2>
+
+            </div>
+
+
+            <div class="social-post-list">
+
+                ${cards}
+
+            </div>
+
+        `;
+
+    }
+
+
+    /* =========================================================
+       Load Social Data
+       ========================================================= */
+
+    async function loadSocial() {
+
+        const container =
+            document.getElementById(
+                "social-list"
+            );
+
+
+        try {
+
+            const response =
+                await fetch(
+                    "./data/social.json"
+                );
+
+
+            if (!response.ok) {
+
+                throw new Error(
+                    "social.json을 불러오지 못했습니다."
+                );
+
+            }
+
+
+            const data =
+                await response.json();
+
+
+            socialItems =
+                Array.isArray(data.items)
+
+                    ? data.items
+
+                        .filter(item =>
+                            item.url &&
+                            item.date &&
+                            item.platform
+                        )
+
+                        .sort((a, b) =>
+                            b.date.localeCompare(
+                                a.date
+                            )
+                        )
+
+                    : [];
+
+
+            if (!socialItems.length) {
+
+                container.innerHTML = `
+
+                    <div class="social-empty">
+                        게시물이 없습니다.
+                    </div>
+
+                `;
+
+                return;
+
+            }
+
+
+            /* Latest post */
+
+            const latestDate =
+                parseDate(
+                    socialItems[0].date
+                );
+
+
+            currentYear =
+                latestDate.getFullYear();
+
+
+            currentMonth =
+                latestDate.getMonth();
+
+
+            selectedDate =
+                socialItems[0].date;
+
+
+            renderCalendar();
+
+
+        } catch (error) {
+
+            console.error(error);
+
+
+            container.innerHTML = `
+
+                <div class="social-empty">
+                    게시물을 불러오지 못했습니다.
+                </div>
+
+            `;
+
+        }
+
+    }
+
+
+    loadSocial();
+
+
+    /* =========================================================
+       Back To Top
+       ========================================================= */
+
+    const backToTop =
+        document.getElementById(
+            "backToTop"
+        );
+
+
+    window.addEventListener(
+        "scroll",
+        () => {
+
+            backToTop.classList.toggle(
+                "show",
+                window.scrollY > 600
+            );
+
+        }
+    );
+
+
+    backToTop.addEventListener(
+        "click",
+        () => {
+
+            const prefersReducedMotion =
+                window.matchMedia(
+                    "(prefers-reduced-motion: reduce)"
+                ).matches;
+
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior:
+                    prefersReducedMotion
+                        ? "auto"
+                        : "smooth"
+
+            });
+
+        }
+    );
+
+
+</script>
+
+
+</body>
+
+</html>

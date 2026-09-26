@@ -619,3 +619,273 @@ footer {
         background: #1c2026;
     }
 }
+
+/* =========================================================
+   Social Strip
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   Year
+   --------------------------------------------------------- */
+
+.social-year {
+    margin-top: 44px;
+}
+
+.social-year:first-child {
+    margin-top: 20px;
+}
+
+.social-year-head {
+    margin-bottom: 14px;
+}
+
+.social-year-title {
+    display: block;
+
+    margin: 0;
+
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: -.03em;
+
+    color: #151922;
+}
+
+.social-year-rule {
+    display: none;
+}
+
+.social-year-title::after {
+    content: "";
+
+    display: block;
+
+    width: 44px;
+    height: 2px;
+
+    margin-top: 8px;
+
+    background: #c05b6b;
+}
+
+.social-section {
+    border-left: 3px solid #c05b6b;
+}
+
+.social-cards {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    overflow-x: auto;
+    padding: 2px 1px 5px;
+    scrollbar-width: none;
+}
+
+.social-cards::-webkit-scrollbar {
+    display: none;
+}
+
+.social-card {
+    position: relative;
+
+    flex: 0 0 160px;
+    height: 66px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 9px 11px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    background: #fafbfc;
+
+    color: #151922;
+    text-decoration: none;
+
+    overflow: hidden;
+
+    transition:
+            transform .18s ease,
+            border-color .18s ease,
+            background .18s ease,
+            box-shadow .18s ease;
+}
+
+.social-card:hover {
+    transform: translateY(-2px);
+    background: #fff;
+    border-color: #d5d9df;
+    box-shadow: 0 5px 16px rgba(20, 25, 35, .06);
+}
+
+.social-date {
+    flex: 0 0 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    line-height: 1;
+}
+
+.social-month {
+    margin-bottom: 3px;
+
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: .08em;
+
+    color: #9aa0aa;
+}
+
+.social-day {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -.04em;
+
+    color: #151922;
+}
+
+.social-info {
+    min-width: 0;
+    padding-left: 9px;
+
+    border-left: 1px solid #e6e8ec;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.social-account {
+    display: block;
+
+    max-width: 91px;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    font-size: 10px;
+    font-weight: 500;
+
+    color: #353a44;
+}
+
+.social-label {
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: .08em;
+
+    color: #a1a6af;
+    margin-top: 4px;
+}
+
+.social-arrow {
+    position: absolute;
+    top: 8px;
+    right: 9px;
+
+    font-size: 10px;
+    line-height: 1;
+
+    color: #a3a8b1;
+
+    transition:
+            transform .18s ease,
+            color .18s ease;
+}
+
+.social-card:hover .social-arrow {
+    color: #151922;
+    transform: translate(1px, -1px);
+}
+
+
+/* ---------------------------------------------------------
+   Social Mobile
+   --------------------------------------------------------- */
+
+@media (max-width: 800px) {
+
+    .social-cards {
+        margin-right: -20px;
+        padding-right: 20px;
+    }
+
+    .social-card {
+        flex-basis: 150px;
+        height: 62px;
+    }
+
+    .social-date {
+        flex-basis: 33px;
+    }
+
+    .social-day {
+        font-size: 19px;
+    }
+
+    .social-account {
+        max-width: 84px;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   Social Dark Mode
+   --------------------------------------------------------- */
+
+@media (prefers-color-scheme: dark) {
+
+    .social-section {
+        border-left-color: #b96b7a;
+    }
+
+    .social-card {
+        background: #1c2026;
+        border-color: #292d34;
+        color: #eceef1;
+    }
+
+    .social-card:hover {
+        background: #20242a;
+        border-color: #383d46;
+        box-shadow: 0 5px 16px rgba(0, 0, 0, .22);
+    }
+
+    .social-year-title {
+        color: #eceef1;
+    }
+
+    .social-month {
+        color: #858b95;
+    }
+
+    .social-day {
+        color: #eceef1;
+    }
+
+    .social-info {
+        border-left-color: #30343b;
+    }
+
+    .social-account {
+        color: #d5d8dd;
+    }
+
+    .social-label {
+        color: #858b95;
+    }
+
+    .social-arrow {
+        color: #858b95;
+    }
+
+    .social-card:hover .social-arrow {
+        color: #eceef1;
+    }
+}
