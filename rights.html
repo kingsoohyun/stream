@@ -1050,22 +1050,6 @@
         window.addEventListener('scroll', drawPath, {passive: true});
         window.addEventListener('load', drawPath);
     </script>
-
-    <script>
-        const backToTop = document.getElementById("backToTop");
-
-        window.addEventListener("scroll", () => {
-            backToTop.classList.toggle("show", window.scrollY > 600);
-        });
-
-        backToTop.addEventListener("click", () => {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        });
-    </script>
-
 </main>
 
 <footer>
@@ -1086,6 +1070,21 @@
 >
     ↑
 </button>
+
+<script>
+    const backToTop = document.getElementById("backToTop");
+
+    window.addEventListener("scroll", () => {
+        backToTop.classList.toggle("show", window.scrollY > 300);
+    });
+
+    backToTop.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
 
 </body>
 </html>
