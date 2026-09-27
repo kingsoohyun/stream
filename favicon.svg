@@ -1,17 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-    <style>
-        text {
-        fill: #222;
-        }
-
-        @media (prefers-color-scheme: dark) {
-        text {
-        fill: #fff;
-        }
-        }
-    </style>
-
-    <text x="50" y="55"
+    <text x="65" y="65"
           text-anchor="middle"
           dominant-baseline="central"
           font-size="86">☃</text>
