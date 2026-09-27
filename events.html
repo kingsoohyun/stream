@@ -52,16 +52,13 @@
             height: 100%;
         }
 
-        .map-notice {
-            position: absolute;
-            right: 14px;
-            top: 14px;
-            z-index: 10;
-            padding: 5px 9px;
+        .activity-notice {
+            padding: 5px 5px;
             background: rgba(255, 255, 255, .9);
             border: 1px solid #e5e7eb;
             border-radius: 6px;
             color: #858b95;
+            color: #1C27A1;
             font-size: 10px;
             line-height: 1.4;
             pointer-events: none;
@@ -225,7 +222,7 @@
         .events-timeline-head span {
             color: #858b95;
             font-size: 11px;
-            margin-right: 8px;
+            margin-right: 0px;
         }
 
 
@@ -485,11 +482,6 @@
                 padding: 16px 12px 0;
             }
 
-            .map-notice {
-                top: 6px;
-                right: 8px;
-            }
-
             .map-tooltip {
                 width: 220px;
                 max-height: 260px;
@@ -564,11 +556,6 @@
                 grid-template-columns: 22px 78px 1fr;
             }
 
-            .map-notice {
-                top: 6px;
-                right: 8px;
-            }
-
             .date-full {
                 display: none;
             }
@@ -618,7 +605,7 @@
                 color:#858b95;
             }
 
-            .map-notice{
+            .activity-notice {
                 background:rgba(22,25,30,.94);
                 border-color:#30343b;
                 color:#858b95;
@@ -703,9 +690,6 @@
     <section class="events-map-section">
         <div class="world-map-wrap">
             <div id="world-map"></div>
-            <div class="map-notice">
-                모든 활동을 포함하지 않을 수 있습니다.
-            </div>
         </div>
 
         <div class="map-legend">
@@ -767,12 +751,12 @@
     <section class="events-timeline-section">
         <div class="events-timeline-head">
             <h2>ACTIVITY TIMELINE</h2>
-            <span>주요 활동 기록</span>
+            <span><div class="activity-notice">모든 활동을 포함하지 않을 수 있습니다</div></span>
         </div>
         <div id="event-timeline"></div>
     </section>
 </main>
-
+ㅁ
 <footer>
     <div class="footer-notice">
         <p>
