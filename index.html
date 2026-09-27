@@ -87,6 +87,12 @@
         <a href="records.html">RECORDS</a>
         <span>|</span>
         <a href="tweets.html">LOVE SH</a>
+
+        <button id="moonBtn" class="moon-btn" aria-label="추석 이벤트">
+            🌕
+        </button>
+
+
     </nav>
 
     <nav class="header-action">
@@ -193,6 +199,62 @@
 </button>
 
 <script src="app.js"></script>
+
+<style>
+    .moon-btn {
+        border: 0;
+        background: none;
+        font-size: 28px;
+        cursor: pointer;
+        transition: transform .2s ease;
+    }
+
+    .moon-btn:active {
+        transform: scale(.85);
+    }
+
+    .moon-effect {
+        position: fixed;
+        pointer-events: none;
+        font-size: 32px;
+        z-index: 9999;
+        animation: rabbitJump 1.8s ease-out forwards;
+    }
+
+    @keyframes rabbitJump {
+        0% {
+            transform: translate(0, 0) scale(.5);
+            opacity: 0;
+        }
+
+        15% {
+            opacity: 1;
+        }
+
+        100% {
+            transform: translate(180px, -120px) scale(1);
+            opacity: 0;
+        }
+    }
+</style>
+
+<script>
+    document.getElementById('moonBtn').addEventListener('click', function () {
+        const rabbit = document.createElement('div');
+
+        rabbit.className = 'moon-effect';
+        rabbit.textContent = '🐇';
+
+        const rect = this.getBoundingClientRect();
+
+        rabbit.style.left = rect.left + 'px';
+        rabbit.style.top = rect.top + 'px';
+
+        document.body.appendChild(rabbit);
+
+        setTimeout(() => rabbit.remove(), 1800);
+    });
+</script>
 
 </body>
 </html>
