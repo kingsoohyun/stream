@@ -8,7 +8,8 @@
     <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
     <title>KIM SOO HYUN STREAM</title>
     <meta name="description" content="Kim Soo Hyun social media archive.">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/easter-egg.css">
 
     <style>
 
@@ -1555,23 +1556,17 @@
                 "social-list"
             );
 
-
         try {
-
             const response =
                 await fetch(
                     "data/social.json"
                 );
 
-
             if (!response.ok) {
-
                 throw new Error(
                     "social.json을 불러오지 못했습니다."
                 );
-
             }
-
 
             const data =
                 await response.json();
@@ -1593,22 +1588,16 @@
                                 a.date
                             )
                         )
-
                     : [];
 
-
             if (!socialItems.length) {
-
                 container.innerHTML = `
-
                     <div class="social-empty">
                         게시물이 없습니다.
                     </div>
 
                 `;
-
                 return;
-
             }
 
 
@@ -1619,26 +1608,17 @@
                     socialItems[0].date
                 );
 
-
             currentYear =
                 latestDate.getFullYear();
 
-
             currentMonth =
                 latestDate.getMonth();
-
-
             selectedDate =
                 socialItems[0].date;
-
-
             renderCalendar();
-
-
         } catch (error) {
 
             console.error(error);
-
 
             container.innerHTML = `
 
@@ -1647,66 +1627,27 @@
                 </div>
 
             `;
-
         }
-
     }
-
-
     loadSocial();
-
-
-    /* =========================================================
-       Back To Top
-       ========================================================= */
-
-    const backToTop =
-        document.getElementById(
-            "backToTop"
-        );
-
-
-    window.addEventListener(
-        "scroll",
-        () => {
-
-            backToTop.classList.toggle(
-                "show",
-                window.scrollY > 600
-            );
-
-        }
-    );
-
-
-    backToTop.addEventListener(
-        "click",
-        () => {
-
-            const prefersReducedMotion =
-                window.matchMedia(
-                    "(prefers-reduced-motion: reduce)"
-                ).matches;
-
-
-            window.scrollTo({
-
-                top: 0,
-
-                behavior:
-                    prefersReducedMotion
-                        ? "auto"
-                        : "smooth"
-
-            });
-
-        }
-    );
-
-
 </script>
 
+<script>
+    const backToTop = document.getElementById("backToTop");
+
+    window.addEventListener("scroll", () => {
+        backToTop.classList.toggle("show", window.scrollY > 600);
+    });
+
+    backToTop.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
+
+<script src="js/easter-egg.js"></script>
 
 </body>
-
 </html>
