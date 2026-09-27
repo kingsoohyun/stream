@@ -104,6 +104,12 @@ document.addEventListener('DOMContentLoaded', function () {
     // LOVE SH 클릭
     // --------------------------------------------------
 
+    // --------------------------------------------------
+    // LOVE SH 클릭
+    // --------------------------------------------------
+
+    let navigating = false;
+
     loveLink.addEventListener('click', function (event) {
         event.preventDefault();
 
@@ -120,6 +126,10 @@ document.addEventListener('DOMContentLoaded', function () {
         mainEffect.style.top = y + 'px';
 
         document.body.appendChild(mainEffect);
+
+        setTimeout(function () {
+            mainEffect.remove();
+        }, effect.duration);
 
 
         // 반짝이
@@ -149,10 +159,13 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
 
-        // 애니메이션 후 이동
-        setTimeout(function () {
-            mainEffect.remove();
-            window.location.href = loveLink.href;
-        }, effect.duration);
+        // 첫 클릭에서만 페이지 이동 예약
+        if (!navigating) {
+            navigating = true;
+
+            setTimeout(function () {
+                window.location.href = loveLink.href;
+            }, effect.duration);
+        }
     });
 });
