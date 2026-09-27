@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let effect = {
         symbol: '♥',
         className: 'love-heart-effect',
-        duration: 500
+        duration: 650
     };
 
     if (isChuseok) {

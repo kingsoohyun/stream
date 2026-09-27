@@ -30,7 +30,7 @@
 .love-heart-effect {
     font-size: 34px;
     color: #ff4f7b;
-    animation: loveHeartPop 0.6s ease-out forwards;
+    animation: loveHeartPop 0.65s ease-out forwards;
 }
 
 @keyframes loveHeartPop {
