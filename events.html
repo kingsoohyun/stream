@@ -52,16 +52,90 @@
             height: 100%;
         }
 
-        .activity-notice {
-            padding: 5px 5px;
-            background: rgba(255, 255, 255, .9);
-            border: 1px solid #e5e7eb;
-            border-radius: 6px;
+        /* =====================================================
+           Map Notice
+           ===================================================== */
+
+        .map-notice {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            z-index: 100;
+        }
+
+        .map-notice-button {
+            width: 24px;
+            height: 24px;
+            padding: 0;
+
+            display: grid;
+            place-items: center;
+
+            border: 1px solid #d9dce1;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .92);
             color: #858b95;
-            color: #1C27A1;
+
+            font-family: Georgia, serif;
+            font-size: 14px;
+            font-style: italic;
+            font-weight: 600;
+            line-height: 1;
+
+            cursor: help;
+            box-shadow: 0 2px 8px rgba(20, 25, 35, .08);
+
+            transition:
+                    background-color .15s ease,
+                    border-color .15s ease,
+                    color .15s ease;
+        }
+
+        .map-notice-button:hover,
+        .map-notice-button:focus-visible {
+            background: #fff;
+            border-color: #c9cdd3;
+            color: #397a91;
+        }
+
+        .map-notice-toast {
+            position: absolute;
+            top: 31px;
+            right: 0;
+
+            width: max-content;
+            max-width: 280px;
+
+            padding: 7px 10px;
+
+            border: 1px solid #e1e3e7;
+            border-radius: 7px;
+            background: rgba(255, 255, 255, .96);
+            color: #656b75;
+
             font-size: 10px;
             line-height: 1.4;
+            white-space: nowrap;
+
+            box-shadow: 0 4px 14px rgba(20, 25, 35, .12);
+
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-3px);
+
+            transition:
+                    opacity .15s ease,
+                    visibility .15s ease,
+                    transform .15s ease;
+
             pointer-events: none;
+        }
+
+        .map-notice:hover .map-notice-toast,
+        .map-notice-button:focus-visible + .map-notice-toast {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
         }
 
 
@@ -222,7 +296,7 @@
         .events-timeline-head span {
             color: #858b95;
             font-size: 11px;
-            margin-right: 0px;
+            margin-right: 8px;
         }
 
 
@@ -662,6 +736,27 @@
                 background:#242b1d;
                 color:#e7ff9a;
             }
+
+            .map-notice-button {
+                background: rgba(22, 25, 30, .94);
+                border-color: #353a42;
+                color: #858b95;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
+            }
+
+            .map-notice-button:hover,
+            .map-notice-button:focus-visible {
+                background: #1c2026;
+                border-color: #4a5059;
+                color: #6fa1b5;
+            }
+
+            .map-notice-toast {
+                background: rgba(28, 32, 38, .97);
+                border-color: #353a42;
+                color: #aeb4bc;
+                box-shadow: 0 4px 14px rgba(0, 0, 0, .3);
+            }
         }
     </style>
 </head>
@@ -698,6 +793,19 @@
     <section class="events-map-section">
         <div class="world-map-wrap">
             <div id="world-map"></div>
+
+            <div class="map-notice">
+                <button
+                        type="button"
+                        class="map-notice-button"
+                        aria-label="활동 안내"
+                        aria-describedby="map-notice-toast"
+                >i</button>
+
+                <div class="map-notice-toast" id="map-notice-toast" role="status">
+                    모든 활동을 포함하지 않을 수 있습니다.
+                </div>
+            </div>
         </div>
 
         <div class="map-legend">
@@ -759,7 +867,7 @@
     <section class="events-timeline-section">
         <div class="events-timeline-head">
             <h2>ACTIVITY TIMELINE</h2>
-            <span><div class="activity-notice">모든 활동을 포함하지 않을 수 있습니다</div></span>
+            <span>주요 활동 기록</span>
         </div>
         <div id="event-timeline"></div>
     </section>
