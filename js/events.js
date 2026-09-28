@@ -601,7 +601,7 @@ function renderTimeline(events) {
                                                                                                     article: "기사",
                                                                                                     instagram: "Instagram",
                                                                                                     youtube: "YouTube",
-                                                                                                    x: "X",
+                                                                                                    x: "\uD835\uDD4F",
                                                                                                     official: "공식 사이트"
                                                                                                 }[link.kind] || link.kind)}
                                                                             </span>
