@@ -29,7 +29,7 @@ body {
 
 .brand {
     display: flex;
-    flex-direction: column
+    flex-direction: column;
 }
 
 .brand img {
@@ -44,7 +44,7 @@ body {
     flex-direction: column;
     color: inherit;
     text-decoration: none;
-    align-items: center;
+    align-items: start;
 }
 
 .brand strong {
@@ -56,7 +56,8 @@ body {
 .brand span {
     font-size: 11px;
     color: #8b9099;
-    margin-top: 0px
+    margin-top: 0px;
+    margin-left: 7px;
 }
 
 .header-action {
