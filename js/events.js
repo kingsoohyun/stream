@@ -178,7 +178,6 @@ async function renderMap(events) {
         "스페인": "724"
     };
 
-
     function getCountryCode(country) {
 
         const countryName =
@@ -589,16 +588,26 @@ function renderTimeline(events) {
                                                             <span class="timeline-links">
 
                                                                 ${event.links.map(link => `
-
                                                                     <a
                                                                         href="${escapeHtml(link.url)}"
                                                                         target="_blank"
                                                                         rel="noopener noreferrer"
+                                                                        data-kind="${escapeHtml(link.kind || "")}"
                                                                     >
                                                                         ${escapeHtml(link.label)}
+                                                                        ${link.kind ? `
+                                                                            <span class="timeline-link-tooltip">
+                                                                                ${escapeHtml({
+                                                                                                    article: "기사",
+                                                                                                    instagram: "Instagram",
+                                                                                                    youtube: "YouTube",
+                                                                                                    x: "X",
+                                                                                                    official: "공식 사이트"
+                                                                                                }[link.kind] || link.kind)}
+                                                                            </span>
+                                                                        ` : ""}
                                                                     </a>
-
-                                                                `).join("")}
+                                                                    `).join("")}
 
                                                             </span>
                                                         `

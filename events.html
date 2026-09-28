@@ -516,6 +516,7 @@
         .timeline-links a {
             display: inline-flex;
             align-items: center;
+            position: relative;
             padding: 3px 6px;
             border: 1px solid #4a78a8;
             border-radius: 4px;
@@ -531,6 +532,38 @@
         .timeline-links a:hover {
             background: #f1f6fb;
             color: #315f8d;
+        }
+
+        .timeline-link-tooltip {
+            position: absolute;
+            left: 50%;
+            bottom: calc(100% + 7px);
+            z-index: 1000;
+            padding: 5px 8px;
+            border: 1px solid #e1e3e7;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, .96);
+            color: #656b75;
+            font-size: 10px;
+            font-weight: 400;
+            line-height: 1.4;
+            white-space: nowrap;
+            transform: translateX(-50%) translateY(3px);
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            box-shadow: 0 4px 14px rgba(20, 25, 35, .12);
+            transition:
+                    opacity .15s ease,
+                    visibility .15s ease,
+                    transform .15s ease;
+        }
+
+        .timeline-links a:hover .timeline-link-tooltip,
+        .timeline-links a:focus-visible .timeline-link-tooltip {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
         }
 
 
@@ -723,6 +756,13 @@
             .timeline-links a:hover{
                 background:#242b1d;
                 color:#e7ff9a;
+            }
+
+            .timeline-link-tooltip {
+                background: rgba(28, 32, 38, .97);
+                border-color: #353a42;
+                color: #aeb4bc;
+                box-shadow: 0 4px 14px rgba(0, 0, 0, .3);
             }
 
             .map-notice-button {
