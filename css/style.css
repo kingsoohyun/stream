@@ -57,7 +57,7 @@ body {
 .brand span {
     font-size: 11px;
     color: #8b9099;
-    margin-top: 3px
+    margin-top: 0px
 }
 
 .header-action {
@@ -581,6 +581,10 @@ footer {
     .site-header {
         background: #121418;
         border-bottom-color: #292d34;
+    }
+
+    .brand img {
+        filter: brightness(1.45) saturate(0.85);
     }
 
     .brand span {
