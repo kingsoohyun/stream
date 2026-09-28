@@ -1956,7 +1956,7 @@
       "links": []
     },
     {
-      "date": "2017.06",
+      "date": "2017.06~",
       "country": "🇰🇷 대한민국",
       "city": "서울",
       "venue": "서울",
@@ -2775,6 +2775,25 @@
       "lat": 37.5665,
       "lng": 126.978,
       "links": [
+      ]
+    },
+    {
+      "date": "2025.02.16~",
+      "country": "🇰🇷 대한민국",
+      "city": "서울",
+      "venue": "서울",
+      "title": "MBC 굿데이(Good Day) 출연",
+      "lat": 37.5665,
+      "lng": 126.9780,
+      "links": [
+        {
+          "label": "스포츠조선",
+          "url": "https://m.entertain.naver.com/home/article/076/0004245691"
+        },
+        {
+          "label": "MBC",
+          "url": "https://youtu.be/pn84YJAJvjY?t=285"
+        }
       ]
     },
     {
