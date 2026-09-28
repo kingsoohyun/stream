@@ -2469,6 +2469,27 @@
       ]
     },
     {
+      "date": "2024.03.13",
+      "country": "🇰🇷 대한민국",
+      "city": "서울",
+      "venue": "CJ ENM 센터",
+      "title": "tvN 유 퀴즈 온 더 블럭 235회 출연",
+      "lat": 37.5538,
+      "lng": 126.9187,
+      "links": [
+        {
+          "label": "텐아시아",
+          "kind": "article",
+          "url": "https://m.entertain.naver.com/home/article/312/0000653515"
+        },
+        {
+          "label": "유 퀴즈 온 더 튜브",
+          "kind": "youtube",
+          "url": "https://youtu.be/Sgu_C1J5U-Q"
+        }
+      ]
+    },
+    {
       "date": "2024.04.25",
       "country": "🇰🇷 대한민국",
       "city": "서울",
