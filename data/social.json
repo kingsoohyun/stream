@@ -156,7 +156,14 @@
       "date": "2026.09.01",
       "platform": "INSTAGRAM",
       "account": "yolaolaaa_.",
-      "desc": "RTCI+ IDOLYFE"
+      "desc": "RCTI+ IDOLYFE"
+    },
+    {
+      "url": "https://www.instagram.com/p/DcsgfxoRZJ7",
+      "date": "2026.08.31",
+      "platform": "INSTAGRAM",
+      "account": "rctiplusoriginals",
+      "desc": "RCTI+ IDOLYFE"
     },
     {
       "url": "https://www.instagram.com/p/DcmxQG2yI5J",
@@ -170,7 +177,7 @@
       "date": "2026.08.29",
       "platform": "INSTAGRAM",
       "account": "rctiplusoriginals",
-      "desc": "RTCI+ IDOLYFE"
+      "desc": "RCTI+ IDOLYFE"
     },
     {
       "url": "https://www.instagram.com/p/DckdUkmE6qV",
@@ -185,6 +192,14 @@
       "platform": "INSTAGRAM",
       "account": "koreadispatch",
       "desc": "DISPATCH",
+      "pick": true
+    },
+    {
+      "url": "https://www.instagram.com/p/DcbNPZXGNB7/?img_index=3",
+      "date": "2026.08.24",
+      "platform": "INSTAGRAM",
+      "account": "officialrcti",
+      "desc": "RCTI Mahakarya",
       "pick": true
     },
     {
@@ -206,7 +221,7 @@
       "date": "2026.08.23",
       "platform": "INSTAGRAM",
       "account": "officialrcti",
-      "desc": "RCTI",
+      "desc": "RCTI Mahakarya",
       "pick": true
     },
     {
@@ -214,7 +229,7 @@
       "date": "2026.08.23",
       "platform": "INSTAGRAM",
       "account": "officialrcti",
-      "desc": "RCTI",
+      "desc": "RCTI Mahakarya",
       "pick": true
     },
     {
@@ -222,7 +237,15 @@
       "date": "2026.08.23",
       "platform": "INSTAGRAM",
       "account": "officialrcti",
-      "desc": "RCTI",
+      "desc": "RCTI Mahakarya",
+      "pick": true
+    },
+    {
+      "url": "https://www.instagram.com/p/DcQKiJ8MKro",
+      "date": "2026.08.20",
+      "platform": "INSTAGRAM",
+      "account": "rctiplusoriginals",
+      "desc": "RCTI Mahakarya",
       "pick": true
     },
     {
