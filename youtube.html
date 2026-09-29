@@ -447,9 +447,20 @@
 
             </select>
 
+            </select>
+
+            <!-- Year Filter -->
+            <select
+                    id="year-select"
+                    class="sort-select"
+                    aria-label="연도 필터"
+            >
+                <option value="all">
+                    전체 연도
+                </option>
+            </select>
 
             <!-- Sort -->
-
             <select
                     id="sort-select"
                     class="sort-select"
@@ -574,7 +585,7 @@
 
 
             buildTagFilter();
-
+            buildYearFilter();
             renderVideos();
 
 
@@ -683,6 +694,49 @@
 
     }
 
+    // ---------------------------------------------------------
+    // Year Filter 생성
+    // ---------------------------------------------------------
+    function buildYearFilter() {
+        const select =
+            document.getElementById('year-select');
+
+        const yearSet = new Set();
+
+        videos.forEach(video => {
+            if (!video.date) {
+                return;
+            }
+
+            const year = String(video.date).split('.')[0];
+
+            if (/^\d{4}$/.test(year)) {
+                yearSet.add(year);
+            }
+        });
+
+        const years =
+            [...yearSet].sort((a, b) =>
+                Number(b) - Number(a)
+            );
+
+        select.innerHTML =
+            '<option value="all">전체 연도</option>';
+
+        years.forEach(year => {
+            const option =
+                document.createElement('option');
+
+            option.value = year;
+            option.textContent = year;
+
+            select.appendChild(option);
+        });
+
+        // 최초 로딩은 항상 전체
+        select.value = 'all';
+    }
+
 
     // ---------------------------------------------------------
     // 정렬
@@ -774,6 +828,13 @@
                 )
                 .value;
 
+        const selectedYear =
+            document
+                .getElementById(
+                    'year-select'
+                )
+                .value;
+
 
         // -----------------------------------------------------
         // Tag Filter
@@ -799,6 +860,23 @@
 
         }
 
+
+        // -----------------------------------------------------
+        // Year Filter
+        // -----------------------------------------------------
+        if (selectedYear !== 'all') {
+            filtered =
+                filtered.filter(video => {
+                    if (!video.date) {
+                        return false;
+                    }
+
+                    const year =
+                        String(video.date).split('.')[0];
+
+                    return year === selectedYear;
+                });
+        }
 
         // -----------------------------------------------------
         // Sort
@@ -958,6 +1036,13 @@
 
     document
         .getElementById('tag-select')
+        .addEventListener(
+            'change',
+            renderVideos
+        );
+
+    document
+        .getElementById('year-select')
         .addEventListener(
             'change',
             renderVideos
