@@ -280,6 +280,7 @@ button:focus-visible {
     outline-offset: 3px;
 }
 
+
 /* =========================================================
    Section Accent
    ========================================================= */
@@ -287,6 +288,7 @@ button:focus-visible {
 .youtube-section {
     border-left: 3px solid #f11;
 }
+
 
 /* =========================================================
    Cards
@@ -300,7 +302,6 @@ button:focus-visible {
 .youtube-cards {
     grid-template-columns: repeat(5, minmax(0, 1fr));
 }
-
 
 .card {
     border: 1px solid #e8e9ed;
@@ -442,7 +443,11 @@ footer {
     font-weight: 600
 }
 
-/* Back to Top */
+
+/* =========================================================
+   Back to Top
+   ========================================================= */
+
 .back-to-top {
     position: fixed;
     right: 24px;
@@ -451,7 +456,6 @@ footer {
 
     width: 56px;
     height: 56px;
-
 
     display: flex;
     align-items: center;
@@ -491,151 +495,22 @@ footer {
 
 
 /* =========================================================
-   Mobile
+   Privacy Rights Link
    ========================================================= */
 
-@media (max-width: 800px) {
-
-    main {
-        padding: 18px 12px 0
-    }
-
-    .header-action a {
-        padding: 6px 8px;
-        font-size: 9px;
-    }
-
-    .platform-nav {
-        grid-template-columns:1fr;
-        margin-bottom: 24px;
-        gap: 10px
-    }
-
-    .youtube-cards {
-        grid-template-columns: 1fr;
-    }
-
-    .youtube-cards .card:nth-child(n + 6) {
-        display: none;
-    }
-
-    .youtube-cards .card {
-        display: grid;
-        grid-template-columns: 120px 1fr;
-    }
-
-    .youtube-cards .thumb {
-        height: 100%;
-        aspect-ratio: auto;
-    }
-
-    .site-header {
-        padding: 0 16px
-    }
-
-    footer {
-        margin-top: 40px;
-        padding: 28px 20px 32px
-    }
-
-    .back-to-top {
-        right: 16px;
-        bottom: 16px;
-        width: 50px;
-        height: 50px;
-        font-size: 27px;
-    }
+.privacy-rights-link {
+    display: inline-block;
+    margin-top: 4px;
+    color: #aa2828;
+    font-size: 12px;
+    line-height: 1.5;
+    text-decoration: none;
 }
 
-@media (max-width: 600px) {
-    .brand strong {
-        font-size: 17px;
-    }
+.privacy-rights-link:hover {
+    text-decoration: underline;
 }
 
-@media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
-
-    *,
-    *::before,
-    *::after {
-        transition-duration: 0.01ms !important;
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-    }
-}
-
-/* =========================================================
-   System dark mode
-   ========================================================= */
-@media (prefers-color-scheme: dark) {
-    html {
-        color-scheme: dark;
-        background: #0f1114;
-    }
-
-    body {
-        background: #0f1114;
-        color: #eceef1;
-    }
-
-    .site-header {
-        background: #121418;
-        border-bottom-color: #292d34;
-    }
-
-    .brand img {
-        filter: brightness(1.45) saturate(0.85);
-    }
-
-    .brand span {
-        color: #858b95;
-    }
-
-    .section-head span {
-        color: #858b95;
-    }
-
-    footer {
-        background: #121418;
-        border-top-color: #292d34;
-        color: #858b95;
-    }
-
-    .footer-notice strong {
-        color: #aab0b8;
-    }
-
-    .card {
-        background: #1c2026;
-        border-color: #292d34;
-    }
-
-    .card .title {
-        color: #eceef1;
-    }
-
-    .card .rank {
-        color: #eceef1;
-    }
-
-    .card .meta {
-        color: #858b95;
-    }
-
-    .back-to-top {
-        background: rgba(22, 25, 30, .96);
-        border-color: #353a42;
-        color: #d8dbe0;
-        box-shadow: 0 3px 12px rgba(0, 0, 0, .35);
-    }
-
-    .back-to-top:hover {
-        background: #1c2026;
-    }
-}
 
 /* =========================================================
    Social Strip
@@ -722,7 +597,6 @@ footer {
     border: 1px solid #e5e7eb;
     border-radius: 10px;
     background: #fafbfc;
-
 
     color: #151922;
     text-decoration: none;
@@ -826,6 +700,11 @@ footer {
     transform: translate(1px, -1px);
 }
 
+
+/* ---------------------------------------------------------
+   Site Navigation
+   --------------------------------------------------------- */
+
 .site-nav {
     display: flex;
     align-items: center;
@@ -855,6 +734,11 @@ footer {
 .site-nav span {
     color: #d5d8dd;
 }
+
+
+/* ---------------------------------------------------------
+   Empty Quote
+   --------------------------------------------------------- */
 
 .empty-quote {
     grid-column: 1 / -1;
@@ -898,11 +782,61 @@ footer {
 }
 
 
-/* ---------------------------------------------------------
-   Social Mobile
-   --------------------------------------------------------- */
+/* =========================================================
+   Mobile
+   ========================================================= */
 
 @media (max-width: 800px) {
+
+    main {
+        padding: 18px 12px 0
+    }
+
+    .header-action a {
+        padding: 6px 8px;
+        font-size: 9px;
+    }
+
+    .platform-nav {
+        grid-template-columns:1fr;
+        margin-bottom: 24px;
+        gap: 10px
+    }
+
+    .youtube-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .youtube-cards .card:nth-child(n + 6) {
+        display: none;
+    }
+
+    .youtube-cards .card {
+        display: grid;
+        grid-template-columns: 120px 1fr;
+    }
+
+    .youtube-cards .thumb {
+        height: 100%;
+        aspect-ratio: auto;
+    }
+
+    .site-header {
+        padding: 0 16px
+    }
+
+    footer {
+        margin-top: 40px;
+        padding: 28px 20px 32px
+    }
+
+    .back-to-top {
+        right: 16px;
+        bottom: 16px;
+        width: 50px;
+        height: 50px;
+        font-size: 27px;
+    }
 
     .social-cards {
         margin-right: -20px;
@@ -928,6 +862,7 @@ footer {
 }
 
 @media (max-width: 700px) {
+
     .site-nav {
         display: none;
     }
@@ -943,11 +878,117 @@ footer {
     }
 }
 
-/* ---------------------------------------------------------
-   Social Dark Mode
-   --------------------------------------------------------- */
+@media (max-width: 600px) {
+
+    .brand strong {
+        font-size: 17px;
+    }
+}
+
+
+/* =========================================================
+   Accessibility
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+
+/* =========================================================
+   System Dark Mode
+   ========================================================= */
 
 @media (prefers-color-scheme: dark) {
+
+    html {
+        color-scheme: dark;
+        background: #0f1114;
+    }
+
+    body {
+        background: #0f1114;
+        color: #eceef1;
+    }
+
+    .site-header {
+        background: #121418;
+        border-bottom-color: #292d34;
+    }
+
+    .brand img {
+        filter: brightness(1.45) saturate(0.85);
+    }
+
+    .brand span {
+        color: #858b95;
+    }
+
+    .section-head span {
+        color: #858b95;
+    }
+
+    footer {
+        background: #121418;
+        border-top-color: #292d34;
+        color: #858b95;
+    }
+
+    .footer-notice strong {
+        color: #aab0b8;
+    }
+
+    .card {
+        background: #1c2026;
+        border-color: #292d34;
+    }
+
+    .card .title {
+        color: #eceef1;
+    }
+
+    .card .rank {
+        color: #eceef1;
+    }
+
+    .card .meta {
+        color: #858b95;
+    }
+
+    .back-to-top {
+        background: rgba(22, 25, 30, .96);
+        border-color: #353a42;
+        color: #d8dbe0;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, .35);
+    }
+
+    .back-to-top:hover {
+        background: #1c2026;
+    }
+
+    .privacy-rights-link {
+        color: #c87552;
+    }
+
+    .privacy-rights-link:hover {
+        color: #e0a083;
+    }
+
+
+    /* ---------------------------------------------------------
+       Social Dark Mode
+       --------------------------------------------------------- */
 
     .social-card {
         background: #1c2026;
