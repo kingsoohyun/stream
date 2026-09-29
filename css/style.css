@@ -853,6 +853,48 @@ footer {
     color: #d5d8dd;
 }
 
+.empty-quote {
+    grid-column: 1 / -1;
+    max-width: 720px;
+    margin: 40px auto 60px;
+    padding: 20px 24px;
+    text-align: center;
+}
+
+.empty-quote blockquote {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    line-height: 1.9;
+    color: #555;
+    font-weight: 400;
+}
+
+.empty-quote blockquote::before {
+    content: "“";
+    display: block;
+    margin-bottom: 4px;
+    font-family: Georgia, serif;
+    font-size: 34px;
+    line-height: 1;
+    color: #b8b8b8;
+}
+
+.empty-quote cite {
+    display: block;
+    margin-top: 16px;
+    font-size: 11px;
+    line-height: 1.6;
+    color: #999;
+    font-style: normal;
+}
+
+.empty-quote cite strong {
+    color: #777;
+    font-weight: 500;
+}
+
+
 /* ---------------------------------------------------------
    Social Mobile
    --------------------------------------------------------- */
@@ -885,6 +927,16 @@ footer {
 @media (max-width: 700px) {
     .site-nav {
         display: none;
+    }
+
+    .empty-quote {
+        margin: 30px auto 45px;
+        padding: 16px 18px;
+    }
+
+    .empty-quote blockquote {
+        font-size: 14px;
+        line-height: 1.85;
     }
 }
 
@@ -949,5 +1001,21 @@ footer {
 
     .site-nav span {
         color: #3a3f47;
+    }
+
+    .empty-quote blockquote {
+        color: #c5c8cd;
+    }
+
+    .empty-quote blockquote::before {
+        color: #666b73;
+    }
+
+    .empty-quote cite {
+        color: #777d86;
+    }
+
+    .empty-quote cite strong {
+        color: #999fa8;
     }
 }

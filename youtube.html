@@ -906,17 +906,20 @@
         // -----------------------------------------------------
 
         if (!sorted.length) {
-
             grid.innerHTML = `
-                <div class="loading">
-                    등록된 영상이 없습니다.
+                <div class="empty-quote">
+                    <blockquote>
+                        여러분이 보고 계신 지금 저의 모습이 99%일 수도, 1%일 수도
+                    </blockquote>
+                    <cite>
+                        <strong>Exclusive Interview With Kim Soo Hyun</strong>
+                        <br>
+                        RCTI+, 2026.09.01.
+                    </cite>
                 </div>
             `;
-
             return;
-
         }
-
 
         // -----------------------------------------------------
         // Cards
