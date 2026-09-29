@@ -238,6 +238,12 @@
             font-weight: 500;
         }
 
+        .social-calendar-day.today:not(.selected)
+        .social-calendar-number {
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 4px;
+        }
 
         /* =========================================================
            Post Indicator
@@ -1005,9 +1011,20 @@
                 key === selectedDate &&
                 hasPosts;
 
+            const today =
+                new Date();
+
+            const todayKey =
+                `${today.getFullYear()}.${String(
+                    today.getMonth() + 1
+                ).padStart(2, "0")}.${String(
+                    today.getDate()
+                ).padStart(2, "0")}`;
+
+            const isToday =
+                key === todayKey;
 
             const classes = [
-
                 "social-calendar-day",
 
                 hasPosts
@@ -1016,8 +1033,11 @@
 
                 isSelected
                     ? "selected"
-                    : ""
+                    : "",
 
+                isToday
+                    ? "today"
+                    : ""
             ]
                 .filter(Boolean)
                 .join(" ");
@@ -1368,17 +1388,10 @@
 
     function goToToday() {
 
-        const today =
-            new Date();
+        const today = new Date();
 
-
-        currentYear =
-            today.getFullYear();
-
-
-        currentMonth =
-            today.getMonth();
-
+        currentYear = today.getFullYear();
+        currentMonth = today.getMonth();
 
         const todayKey =
             `${currentYear}.${String(
@@ -1387,22 +1400,9 @@
                 today.getDate()
             ).padStart(2, "0")}`;
 
-
-        const todayExists =
-            socialItems.some(
-                item =>
-                    String(item.date) === todayKey
-            );
-
-
-        selectedDate =
-            todayExists
-                ? todayKey
-                : "";
-
+        selectedDate = todayKey;
 
         renderCalendar();
-
     }
 
 
