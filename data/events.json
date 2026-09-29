@@ -2755,7 +2755,22 @@
       "links": [
         {
           "label": "Today Stage",
+          "kind": "article",
           "url": "https://todaystage.com/articles/artist/after-10-years-kim-soo-hyun-finally-returned-to-hold-a-fan-meeting-in-jakarta/"
+        }
+      ]
+    },
+    {
+      "date": "2024.09(추정)",
+      "country": "🇰🇷 대한민국",
+      "city": "미공개",
+      "venue": "장소 미공개",
+      "title": "브랜드(데코르테) 광고/화보 촬영",
+      "links": [
+        {
+          "label": "VOGUE JAPAN",
+          "kind": "official",
+          "url": "https://www.vogue.co.jp/special-feature/2024-10/01/decorte"
         }
       ]
     },
