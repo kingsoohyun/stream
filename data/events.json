@@ -1981,6 +1981,22 @@
       "links": []
     },
     {
+      "date": "2017.05.24~26.",
+      "country": "🇵🇭 필리핀",
+      "city": "파라냐케",
+      "venue": "Okada Manila",
+      "title": "Samsung QLED TV 론칭 행사 참석",
+      "lat": 14.5243,
+      "lng": 120.9820,
+      "links": [
+        {
+          "label": "PEP.ph",
+          "kind": "article",
+          "url": "https://www.pep.ph/lifestyle/lifestyle/35417/in-photos-the-highlights-of-kim-soo-hyuns-second-visit-in-the-philippines"
+        }
+      ]
+    },
+    {
       "date": "2017.05.25",
       "country": "🇵🇭 필리핀",
       "city": "마닐라",
@@ -2292,6 +2308,22 @@
       "lat": 37.5259,
       "lng": 126.9284,
       "links": []
+    },
+    {
+      "date": "2022.06.09.",
+      "country": "🇵🇭 필리핀",
+      "city": "마카티",
+      "venue": "The Manila Peninsula Manila",
+      "title": "필리핀 현지 매체 기자간담회",
+      "lat": 14.531873,
+      "lng": 120.984018,
+      "links": [
+        {
+          "label": "PEP.ph",
+          "kind": "article",
+          "url": "https://awsdev.pep.ph/lifestyle/lifestyle/166221/kim-soo-hyun-in-manila-a721-20220610?utm_source=chatgpt.com"
+        }
+      ]
     },
     {
       "date": "2022.06.10",
