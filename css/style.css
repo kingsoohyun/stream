@@ -455,8 +455,8 @@ button:focus-visible {
     left: 0;
     bottom: calc(100% + 8px);
     z-index: 1000;
-    width: 260px;
-    max-width: calc(100vw - 40px);
+    width: max-content;
+    max-width: min(500px, calc(100vw - 40px));
     box-sizing: border-box;
     padding: 8px 10px;
     border: 1px solid #e1e3e7;
