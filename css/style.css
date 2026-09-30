@@ -524,7 +524,8 @@ footer {
 
 .footer-notice strong {
     color: #656b75;
-    font-weight: 600
+    font-weight: 600;
+    letter-spacing: -0.05em;
 }
 
 
