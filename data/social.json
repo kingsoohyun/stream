@@ -8,7 +8,7 @@
       "platform": "x",
       "account": "benchtm",
       "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2105245702565879808/img/ncpo1cdidrY82YU8?format=webp&name=large",
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2105245702565879808/img/ncpo1cdidrY82YU8?format=webp&name=small",
       "pick": true
     },
     {
@@ -17,7 +17,7 @@
       "platform": "x",
       "account": "starnewskorea",
       "desc": "AAA 2026",
-      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2103602854456111104/img/u-2YN7dAu7EjhtoO?format=webp&name=large",
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2103602854456111104/img/u-2YN7dAu7EjhtoO?format=webp&name=small",
       "pick": true
     },
     {
@@ -35,11 +35,13 @@
       "desc": "더팩트"
     },
     {
-      "url": "https://www.instagram.com/p/Ddn_hCPBTGA",
+      "url": "https://x.com/benchtm/status/2102700304559214720",
       "date": "2026.09.23",
-      "platform": "INSTAGRAM",
-      "account": "bcbench",
-      "desc": "BENCH/"
+      "platform": "x",
+      "account": "benchtm",
+      "desc": "BENCH/",
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2102699885464260609/img/-pgLFWeOhB0cYJik?format=webp&name=small",
+      "pick": true
     },
     {
       "url": "https://www.instagram.com/p/Ddk3IRmk8mz",
@@ -78,19 +80,21 @@
       "desc": "더팩트"
     },
     {
-      "url": "https://www.instagram.com/p/DdgX-oWDV5w",
+      "url": "https://x.com/benchtm/status/2101619881439330627",
       "date": "2026.09.20",
-      "platform": "INSTAGRAM",
+      "platform": "x",
       "account": "benchtm",
       "desc": "BENCH/",
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2100895161488384000/img/vLNNHDl6YyS6bFbk?format=webp&name=small",
       "pick": true
     },
     {
-      "url": "https://www.instagram.com/p/DdRJIJbt2-u",
+      "url": "https://x.com/benchtm/status/2099488096966328746",
       "date": "2026.09.14",
-      "platform": "INSTAGRAM",
-      "account": "bcbench",
+      "platform": "x",
+      "account": "benchtm",
       "desc": "BENCH/",
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2099487433830416384/img/LQCI2rnuucvL_U5s?format=webp&name=small",
       "pick": true
     },
     {
@@ -260,11 +264,13 @@
       "pick": true
     },
     {
-      "url": "https://www.instagram.com/p/DbpO0SgBCQo",
+      "url": "https://x.com/benchtm/status/2084859440944087506",
       "date": "2026.08.05",
-      "platform": "INSTAGRAM",
-      "account": "bcbench",
-      "desc": "BENCH/"
+      "platform": "x",
+      "account": "benchtm",
+      "desc": "BENCH/",
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2084466838201847808/img/0vYjFED2Cl2Uy6ib?format=webp&name=small",
+      "pick": true
     },
     {
       "url": "https://www.instagram.com/p/DbmR7nMj5k1",
@@ -274,11 +280,13 @@
       "desc": "BENCH/"
     },
     {
-      "url": "https://www.instagram.com/p/DbhgagPBaKr",
+      "url": "https://x.com/benchtm/status/2083775825070203049",
       "date": "2026.08.02",
-      "platform": "INSTAGRAM",
-      "account": "bcbench",
-      "desc": "BENCH/"
+      "platform": "x",
+      "account": "benchtm",
+      "desc": "BENCH/",
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2083775655242870785/img/RjdSHjDta3TTOmRO?format=webp&name=small",
+      "pick": true
     },
     {
       "url": "https://www.instagram.com/p/Day2vfNx88J",
