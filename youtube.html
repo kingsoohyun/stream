@@ -51,15 +51,6 @@
             padding: 24px 0;
         }
 
-        .archive-count {
-            color: #777;
-            font-size: 14px;
-        }
-
-        .archive-count strong {
-            color: #111;
-        }
-
         .archive-filters {
             display: flex;
             align-items: center;
@@ -351,12 +342,10 @@
             }
 
             .archive-page-head p,
-            .archive-count,
             .video-meta {
                 color: #858b95;
             }
 
-            .archive-count strong,
             .video-title {
                 color: #eceef1;
             }
@@ -441,9 +430,25 @@
     <!-- Toolbar -->
 
     <div class="archive-toolbar">
+        <div class="common-count">
+            <span class="common-info">
+                    <button
+                            type="button"
+                            class="common-info-button"
+                            aria-label="조회수 안내"
+                            aria-describedby="common-info-tooltip"
+                    >i</button>
 
-        <div class="archive-count">
-            전체 <strong id="video-count">-</strong>개
+                    <span
+                            class="common-info-tooltip"
+                            id="common-info-tooltip"
+                            role="status"
+                    >조회수는 YouTube 데이터 기준</span>
+                </span>
+
+            전체
+            <strong id="video-count">-</strong>
+            개
         </div>
 
 

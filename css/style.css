@@ -397,6 +397,96 @@ button:focus-visible {
 }
 
 
+.common-count {
+    font-size: 12px;
+    color: #858b95;
+}
+
+.common-count strong {
+    color: #151922;
+}
+
+.common-filters {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.common-info {
+    position: relative;
+    display: inline-flex;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+.common-info-button {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    border: 1px solid #d9dce1;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .92);
+    color: #858b95;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 1;
+    cursor: help;
+    box-shadow: 0 2px 8px rgba(20, 25, 35, .08);
+    transition:
+            background-color .15s ease,
+            border-color .15s ease,
+            color .15s ease;
+}
+
+.common-info-button:hover,
+.common-info-button:focus-visible {
+    background: #f8f9fa;
+    border-color: #cfd3d9;
+    color: #5f7f91;
+    outline: none;
+}
+
+.common-info-tooltip {
+    position: absolute;
+    left: 0;
+    bottom: calc(100% + 8px);
+    z-index: 1000;
+    width: 260px;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+    padding: 8px 10px;
+    border: 1px solid #e1e3e7;
+    border-radius: 7px;
+    background: rgba(255, 255, 255, .96);
+    color: #656b75;
+    font-size: 10px;
+    line-height: 1.6;
+    text-align: left;
+    white-space: normal;
+    word-break: keep-all;
+    box-shadow: 0 4px 14px rgba(20, 25, 35, .12);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(3px);
+    transition:
+            opacity .15s ease,
+            visibility .15s ease,
+            transform .15s ease;
+    pointer-events: none;
+}
+
+.common-info:hover .common-info-tooltip,
+.common-info-button:focus-visible + .common-info-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
 /* =========================================================
    Note
    ========================================================= */
@@ -1048,5 +1138,35 @@ footer {
 
     .empty-quote cite strong {
         color: #999fa8;
+    }
+
+    .common-count,
+    .common-info {
+        color: #858b95;
+    }
+
+    .common-count strong {
+        color: #eceef1;
+    }
+
+    .common-info-button {
+        background: rgba(22, 25, 30, .94);
+        border-color: #353a42;
+        color: #858b95;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
+    }
+
+    .common-info-button:hover,
+    .common-info-button:focus-visible {
+        background: #1c2026;
+        border-color: #4a5059;
+        color: #6fa1b5;
+    }
+
+    .common-info-tooltip {
+        background: rgba(28, 32, 38, .97);
+        border-color: #353a42;
+        color: #aeb4bc;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, .3);
     }
 }
