@@ -95,10 +95,9 @@
             cursor: help;
             box-shadow: 0 2px 8px rgba(20, 25, 35, .08);
 
-            transition:
-                    background-color .15s ease,
-                    border-color .15s ease,
-                    color .15s ease;
+            transition: background-color .15s ease,
+            border-color .15s ease,
+            color .15s ease;
         }
 
         .map-notice-button:hover,
@@ -133,10 +132,9 @@
             visibility: hidden;
             transform: translateY(-3px);
 
-            transition:
-                    opacity .15s ease,
-                    visibility .15s ease,
-                    transform .15s ease;
+            transition: opacity .15s ease,
+            visibility .15s ease,
+            transform .15s ease;
 
             pointer-events: none;
         }
@@ -602,10 +600,9 @@
             visibility: hidden;
             pointer-events: none;
             box-shadow: 0 4px 14px rgba(20, 25, 35, .12);
-            transition:
-                    opacity .15s ease,
-                    visibility .15s ease,
-                    transform .15s ease;
+            transition: opacity .15s ease,
+            visibility .15s ease,
+            transform .15s ease;
         }
 
         .timeline-links a:hover .timeline-link-tooltip,
@@ -713,27 +710,55 @@
             }
 
         }
+
         /* ---------------------------------------------------------
            System Dark Mode
            --------------------------------------------------------- */
 
-        @media (prefers-color-scheme: dark){
-            :root{color-scheme:dark;}
-            html,body{background:#0f1114;color:#eceef1;}
-            .site-header{background:#121418;border-color:#292d34;}
-            .brand strong{color:#eceef1;}
-            .brand span,.platform small,.section-head span{color:#858b95;}
-            .header-action a{color:#fff;}
-            footer,.footer{background:#0f1114;border-color:#292d34;color:#858b95;}
-            a{color:#9eb9d4;}
+        @media (prefers-color-scheme: dark) {
+            :root {
+                color-scheme: dark;
+            }
+
+            html, body {
+                background: #0f1114;
+                color: #eceef1;
+            }
+
+            .site-header {
+                background: #121418;
+                border-color: #292d34;
+            }
+
+            .brand strong {
+                color: #eceef1;
+            }
+
+            .brand span, .platform small, .section-head span {
+                color: #858b95;
+            }
+
+            .header-action a {
+                color: #fff;
+            }
+
+            footer, .footer {
+                background: #0f1114;
+                border-color: #292d34;
+                color: #858b95;
+            }
+
+            a {
+                color: #9eb9d4;
+            }
 
 
             .events-map-section,
             .events-timeline-section,
             .global-data-link,
-            .global-popularity-link{
-                background:#16191e;
-                border-color:#292d34;
+            .global-popularity-link {
+                background: #16191e;
+                border-color: #292d34;
 
             }
 
@@ -745,29 +770,29 @@
             .global-data-text small,
             .global-data-arrow,
             .global-popularity-text small,
-            .global-popularity-arrow{
-                color:#858b95;
+            .global-popularity-arrow {
+                color: #858b95;
             }
 
             .activity-notice {
-                background:rgba(22,25,30,.94);
-                border-color:#30343b;
-                color:#858b95;
+                background: rgba(22, 25, 30, .94);
+                border-color: #30343b;
+                color: #858b95;
             }
 
-            .country{
-                fill:#252a31;
-                stroke:#3a4049;
+            .country {
+                fill: #252a31;
+                stroke: #3a4049;
             }
 
-            .country:hover{
-                stroke:#c09232;
+            .country:hover {
+                stroke: #c09232;
             }
 
-            .map-tooltip{
-                background:#181b20;
-                border-color:#30343b;
-                box-shadow:0 8px 25px rgba(0,0,0,.35);
+            .map-tooltip {
+                background: #181b20;
+                border-color: #30343b;
+                box-shadow: 0 8px 25px rgba(0, 0, 0, .35);
             }
 
             .map-tooltip strong,
@@ -776,15 +801,15 @@
             .timeline-title,
             .timeline-year-title,
             .global-data-text strong,
-            .global-popularity-text strong{
-                color:#eceef1;
+            .global-popularity-text strong {
+                color: #eceef1;
             }
 
             .map-tooltip .event-list,
             .map-tooltip .event-item,
             .timeline-year,
-            .timeline-event{
-                border-color:#292d34;
+            .timeline-event {
+                border-color: #292d34;
             }
 
             .map-legend {
@@ -792,19 +817,19 @@
             }
 
             .global-data-link:hover,
-            .global-popularity-link:hover{
-                background:#1b1f25;
-                border-color:#3a4049;
+            .global-popularity-link:hover {
+                background: #1b1f25;
+                border-color: #3a4049;
             }
 
-            .timeline-links a{
-                border-color:#71833a;
-                color:#d8f36a;
+            .timeline-links a {
+                border-color: #71833a;
+                color: #d8f36a;
             }
 
-            .timeline-links a:hover{
-                background:#242b1d;
-                color:#e7ff9a;
+            .timeline-links a:hover {
+                background: #242b1d;
+                color: #e7ff9a;
             }
 
             .timeline-link-tooltip {
@@ -841,7 +866,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-312KR316P2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'G-312KR316P2');
@@ -878,7 +907,6 @@
 
 
 <main class="events-page">
-
     <section class="events-map-section">
         <div class="world-map-wrap">
             <div id="world-map"></div>
@@ -889,7 +917,8 @@
                         class="map-notice-button"
                         aria-label="활동 안내"
                         aria-describedby="map-notice-toast"
-                >i</button>
+                >i
+                </button>
 
                 <div class="map-notice-toast" id="map-notice-toast" role="status">
                     모든 활동을 포함하지 않을 수 있습니다.
@@ -912,7 +941,6 @@
     </section>
 
     <section class="global-data">
-
         <div class="global-data-list">
 
             <a
@@ -924,13 +952,12 @@
                 <span class="global-data-icon">🌍</span>
 
                 <span class="global-data-text">
-                <strong>Kim Soo Hyun Popularity Around the World</strong>
-                <small>Global streaming popularity data · FlixPatrol</small>
-            </span>
+                    <strong>Kim Soo Hyun Popularity Around the World</strong>
+                    <small>Global streaming popularity data · FlixPatrol</small>
+                </span>
 
                 <span class="global-data-arrow">↗</span>
             </a>
-
 
             <a
                     href="https://www.archivecenter.net/hallyuresearch/archive/srch/ArchiveNewSrchView.do?i_id=152542"
@@ -941,17 +968,13 @@
                 <span class="global-data-icon">📊</span>
 
                 <span class="global-data-text">
-                <strong>2026 해외한류실태조사</strong>
-                <small>해외 한류 인식 및 소비 조사 · 문화체육관광부 · KOFICE</small>
-            </span>
-
+                    <strong>2026 해외한류실태조사</strong>
+                    <small>해외 한류 인식 및 소비 조사 · 문화체육관광부 · KOFICE</small>
+                </span>
                 <span class="global-data-arrow">↗</span>
             </a>
-
         </div>
-
     </section>
-
 
     <section class="events-timeline-section">
         <div class="events-timeline-head">
@@ -984,7 +1007,8 @@
 <footer>
     <div class="footer-notice">
         <strong>KIM SOO HYUN STREAM</strong> is an unofficial, non-commercial fan site.
-        Third-party content belongs to its respective copyright holders and is linked to its original source where available.
+        Third-party content belongs to its respective copyright holders and is linked to its original source where
+        available.
         <a href="mailto:kimsoohyun.stream@gmail.com">오류 제보</a>
     </div>
 </footer>

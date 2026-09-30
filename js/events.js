@@ -598,12 +598,12 @@ function renderTimeline(events) {
                                                                         ${link.kind ? `
                                                                             <span class="timeline-link-tooltip">
                                                                                 ${escapeHtml({
-                                                                                                    article: "기사",
-                                                                                                    instagram: "Instagram",
-                                                                                                    youtube: "YouTube",
-                                                                                                    x: "\uD835\uDD4F",
-                                                                                                    official: "공식 사이트"
-                                                                                                }[link.kind] || link.kind)}
+                                article: "기사",
+                                instagram: "Instagram",
+                                youtube: "YouTube",
+                                x: "\uD835\uDD4F",
+                                official: "공식 사이트"
+                            }[link.kind] || link.kind)}
                                                                             </span>
                                                                         ` : ""}
                                                                     </a>
