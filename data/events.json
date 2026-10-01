@@ -3104,19 +3104,19 @@
       "lng": 120.984018,
       "links": [
         {
-          "label": "BENCH/",
-          "kind": "instagram",
-          "url": "https://www.instagram.com/p/Dd8zcabD6Pv/?img_index=4"
-        },
-        {
           "label": "ABS-CBN",
-          "kind": "x",
-          "url": "https://x.com/ABSCBNNews/status/2105593713913438696"
+          "kind": "article",
+          "url": "https://www.abs-cbn.com/entertainment/showbiz/celebrities/2026/10/1/kim-soo-hyun-grateful-for-pinoy-fans-love-support-2008"
         },
         {
           "label": "GMA News",
           "kind": "x",
           "url": "https://x.com/gmanews/status/2105626240916840826"
+        },
+        {
+          "label": "BENCH/",
+          "kind": "instagram",
+          "url": "https://www.instagram.com/p/Dd8zcabD6Pv/?img_index=4"
         }
       ]
     },
