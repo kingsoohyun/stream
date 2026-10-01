@@ -142,6 +142,15 @@ main {
     font-weight: 700
 }
 
+.new-badge {
+    margin-left: 5px;
+    color: #2563EB;
+    font-size: 0.55em;
+    font-weight: 600;
+    line-height: 0;
+    vertical-align: super;
+    letter-spacing: 0.02em;
+}
 
 /* =========================================================
    Content Notice
@@ -207,13 +216,6 @@ main {
 .platform b {
     display: block;
     font-size: 14px
-}
-
-.platform small {
-    display: block;
-    color: #8a9099;
-    font-size: 11px;
-    margin-top: 3px
 }
 
 .platform > span:nth-child(2) {
@@ -1069,7 +1071,9 @@ footer {
         color: #e0a083;
     }
 
-
+    .new-badge {
+        color: #60A5FA;
+    }
     /* ---------------------------------------------------------
        Social Dark Mode
        --------------------------------------------------------- */
