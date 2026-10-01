@@ -1,7 +1,15 @@
 {
   "updatedAt": "2026-09-26 00:00",
   "items": [
-
+    {
+      "url": "https://x.com/benchtm/status/2105527965534872036",
+      "date": "2026.10.01",
+      "platform": "x",
+      "account": "benchtm",
+      "desc": "BENCH/",
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2105527887478874113/img/NvOLGBtw2IwmZqAr?format=webp&name=small",
+      "pick": true
+    },
     {
       "url": "https://x.com/benchtm/status/2105246159623340275",
       "date": "2026.09.30",
