@@ -957,6 +957,10 @@ footer {
         font-size: 14px;
         line-height: 1.85;
     }
+
+    .site-header {
+        padding: 0 16px;
+    }
 }
 
 
