@@ -2313,8 +2313,8 @@
       "date": "2022.06.09",
       "country": "🇵🇭 필리핀",
       "city": "마카티",
-      "venue": "The Manila Peninsula Manila",
-      "title": "필리핀 현지 매체 기자간담회",
+      "venue": "The Peninsula Manila",
+      "title": "브랜드(BENCH/) 현지 매체 기자간담회",
       "lat": 14.531873,
       "lng": 120.984018,
       "links": [
@@ -3076,6 +3076,22 @@
           "label": "\uD83E\uDD47골드",
           "kind": "instagram",
           "url": "https://www.instagram.com/p/Ddk3IRmk8mz/?img_index=4"
+        }
+      ]
+    },
+    {
+      "date": "2026.10.01",
+      "country": "🇵🇭 필리핀",
+      "city": "마카티",
+      "venue": "The Peninsula Manila",
+      "title": "브랜드(BENCH/) 현지 매체 기자간담회",
+      "lat": 14.531873,
+      "lng": 120.984018,
+      "links": [
+        {
+          "label": "BENCH/",
+          "kind": "instagram",
+          "url": "https://www.instagram.com/p/Dd8zcabD6Pv/?img_index=4"
         }
       ]
     },
