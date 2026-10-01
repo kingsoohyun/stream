@@ -2,6 +2,24 @@
   "updatedAt": "2026-09-26 00:00",
   "items": [
     {
+      "url": "https://x.com/benchtm/status/2105621248361554164/photo/2",
+      "date": "2026.10.01",
+      "platform": "x",
+      "account": "benchtm",
+      "desc": "BENCH/ Press Conference",
+      "thumbnail": "https://pbs.twimg.com/media/HTirWZlbcAATYAn?format=webp&name=small",
+      "pick": true
+    },
+    {
+      "url": "https://x.com/benchtm/status/2105620509161562337",
+      "date": "2026.10.01",
+      "platform": "x",
+      "account": "benchtm",
+      "desc": "BENCH/ EDSA Guadalupe",
+      "thumbnail": "https://pbs.twimg.com/media/HTiqr2HaUAAO46d?format=webp&name=small",
+      "pick": true
+    },
+    {
       "url": "https://x.com/benchtm/status/2105527965534872036",
       "date": "2026.10.01",
       "platform": "x",
