@@ -302,38 +302,6 @@
             margin-right: 8px;
         }
 
-        .activity-notice {
-            display: inline-flex;
-            align-items: center;
-            gap: 0px;
-        }
-
-        .activity-notice .map-notice {
-            position: relative;
-            top: auto;
-            right: auto;
-            z-index: 1000;
-        }
-
-        .activity-notice .map-notice-toast {
-            top: auto;
-            bottom: calc(100% + 8px);
-            right: 0;
-            width: 280px;
-            max-width: calc(100vw - 40px);
-            box-sizing: border-box;
-            padding: 8px 10px;
-            white-space: normal;
-            word-break: keep-all;
-            line-height: 1.6;
-            transform: translateY(3px);
-        }
-
-        .activity-notice .map-notice:hover .map-notice-toast,
-        .activity-notice .map-notice-button:focus-visible + .map-notice-toast {
-            transform: translateY(0);
-        }
-
 
         /* =====================================================
            Year
@@ -775,12 +743,6 @@
                 color: #858b95;
             }
 
-            .activity-notice {
-                background: rgba(22, 25, 30, .94);
-                border-color: #30343b;
-                color: #858b95;
-            }
-
             .country {
                 fill: #252a31;
                 stroke: #3a4049;
@@ -983,18 +945,18 @@
         <div class="events-timeline-head">
             <h2>ACTIVITY TIMELINE</h2>
 
-            <span class="activity-notice">
-                <span class="map-notice">
+            <span>
+                <span class="common-info">
                     <button
                             type="button"
-                            class="map-notice-button"
+                            class="common-info-button"
                             aria-label="활동 기록 안내"
-                            aria-describedby="activity-notice-toast"
+                            aria-describedby="activity-notice-tooltip"
                     >i</button>
 
                     <span
-                            class="map-notice-toast"
-                            id="activity-notice-toast"
+                            class="common-info-tooltip left"
+                            id="activity-notice-tooltip"
                             role="status"
                     >실제 촬영일과 공개일에는 차이가 있을 수 있으며, 국가별 시차에 따라 날짜가 다르게 표시될 수 있습니다.</span>
                 </span>

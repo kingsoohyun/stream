@@ -464,7 +464,7 @@ button:focus-visible {
     bottom: calc(100% + 8px);
     z-index: 1000;
     width: max-content;
-    max-width: min(500px, calc(100vw - 40px));
+    max-width: min(280px, calc(100vw - 40px));
     box-sizing: border-box;
     padding: 8px 10px;
     border: 1px solid #e1e3e7;
@@ -485,6 +485,11 @@ button:focus-visible {
             visibility .15s ease,
             transform .15s ease;
     pointer-events: none;
+}
+
+.common-info-tooltip.left {
+    left: auto;
+    right: 0;
 }
 
 .common-info:hover .common-info-tooltip,
