@@ -40,11 +40,11 @@
         .rights-page {
             max-width: 820px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 20px 20px 0;
         }
 
         .rights-intro {
-            padding: 0 0 18px;
+            padding: 0 0 20px;
             text-align: center;
         }
 
@@ -62,7 +62,7 @@
         }
 
         .rights-section {
-            margin-top: 16px;
+            margin-top: 20px;
             padding: 22px 24px;
             background: #fff;
             border: 1px solid #e5e7eb;
@@ -74,7 +74,7 @@
         }
 
         .rights-section-head {
-            margin-bottom: 14px;
+            margin-bottom: 12px;
         }
 
         .rights-section-head h2 {
@@ -228,10 +228,6 @@
             opacity: .82;
         }
 
-        .case-embed {
-            margin-top: 28px !important;
-        }
-
         .highlight-marker {
             background: rgba(200, 240, 90, 0.55);
             padding: 2px 4px;
@@ -249,11 +245,11 @@
             }
 
             .rights-page {
-                padding: 16px 12px 0;
+                padding: 20px 12px 0;
             }
 
             .rights-intro {
-                padding: 0 8px 16px;
+                padding: 0 8px 20px;
             }
 
             .rights-intro h1 {
@@ -268,10 +264,6 @@
             .rights-section {
                 padding: 18px 16px;
                 border-radius: 12px;
-            }
-
-            .rights-section-head {
-                margin-bottom: 13px;
             }
 
             .rights-link {
@@ -1031,18 +1023,16 @@
             }).join('');
 
             caseRoot.querySelectorAll('.card').forEach(card => {
-                caseRoot.querySelectorAll('.card').forEach(card => {
-                    card.addEventListener('click', () => {
-                        const wasOpen = card.classList.contains('open');
+                card.addEventListener('click', () => {
+                    const wasOpen = card.classList.contains('open');
 
-                        caseRoot.querySelectorAll('.card.open').forEach(openCard => {
-                            openCard.classList.remove('open');
-                        });
-
-                        if (!wasOpen) {
-                            card.classList.add('open');
-                        }
+                    caseRoot.querySelectorAll('.card.open').forEach(openCard => {
+                        openCard.classList.remove('open');
                     });
+
+                    if (!wasOpen) {
+                        card.classList.add('open');
+                    }
                 });
             });
             reveal();

@@ -36,7 +36,7 @@
         .youtube-page {
             max-width: 1280px;
             margin: 0 auto;
-            padding: 28px 24px 0;
+            padding: 20px 24px 0;
         }
 
         /* ---------------------------------------------------------
@@ -48,7 +48,7 @@
             align-items: center;
             justify-content: space-between;
             gap: 20px;
-            padding: 24px 0;
+            padding: 20px 0;
         }
 
         .archive-filters {
@@ -224,29 +224,38 @@
 
         }
 
-
         @media (max-width: 700px) {
-
             .youtube-page {
-                padding: 16px 12px 60px;
-            }
-
-            .archive-page-head h1 {
-                font-size: 30px;
+                padding: 20px 12px 60px;
             }
 
             .archive-toolbar {
-                padding: 18px 0;
+                padding: 20px 0;
             }
 
             .archive-filters {
                 gap: 6px;
+                width: 100%;
+            }
+
+            .archive-filters .sort-select:nth-child(1) {
+                flex: 1.35;
+            }
+
+            .archive-filters .sort-select:nth-child(2) {
+                flex: 1;
+            }
+
+            .archive-filters .sort-select:nth-child(3) {
+                flex: .9;
+            }
+
+            .sort-select {
+                min-width: 0;
             }
 
             .youtube-grid {
-                grid-template-columns:
-                    repeat(2, minmax(0, 1fr));
-
+                grid-template-columns: repeat(2, minmax(0, 1fr));
                 gap: 25px 12px;
             }
 
@@ -269,12 +278,10 @@
                 font-size: 11px;
                 gap: 5px;
             }
-
         }
 
 
         @media (max-width: 420px) {
-
             .youtube-grid {
                 gap: 22px 10px;
             }
@@ -282,16 +289,6 @@
             .archive-toolbar {
                 align-items: flex-start;
             }
-
-            .archive-filters {
-                width: 100%;
-            }
-
-            .sort-select {
-                flex: 1;
-                min-width: 0;
-            }
-
         }
 
 
@@ -336,12 +333,6 @@
                 color: #9eb9d4;
             }
 
-
-            .archive-page-head {
-                border-bottom-color: #292d34;
-            }
-
-            .archive-page-head p,
             .video-meta {
                 color: #858b95;
             }
@@ -468,8 +459,6 @@
                 <option value="all">
                     전체
                 </option>
-
-            </select>
 
             </select>
 
