@@ -68,8 +68,8 @@
 
         .twitter-archive-cards {
             display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: 18px;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 16px;
             align-items: start;
         }
 
@@ -216,15 +216,13 @@
            --------------------------------------------------------- */
 
         @media (max-width: 900px) {
-
             .twitter-archive-cards {
-                grid-template-columns: repeat(3, minmax(0, 1fr));
+                grid-template-columns: repeat(4, minmax(0, 1fr));
             }
-
         }
 
 
-        @media (max-width: 800px) {
+        @media (max-width: 600px) {
 
             .twitter-page {
                 padding: 20px 12px 0;
@@ -239,8 +237,8 @@
             }
 
             .twitter-archive-cards {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: 12px;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 10px;
             }
 
             .twitter-card-body {
@@ -266,16 +264,13 @@
             .twitter-title {
                 font-size: 11px;
             }
-
         }
 
-
-        @media (max-width: 480px) {
-
+        @media (max-width: 420px) {
             .twitter-archive-cards {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 10px;
             }
-
         }
 
 
@@ -854,10 +849,10 @@
         // -------------------------------------------------------
 
         const columnCount =
-            window.innerWidth <= 480 ? 1 :
-                window.innerWidth <= 800 ? 2 :
-                    window.innerWidth <= 900 ? 3 :
-                        4;
+            window.innerWidth <= 420 ? 2 :
+                window.innerWidth <= 600 ? 3 :
+                    window.innerWidth <= 900 ? 4 :
+                        5;
 
 
         // -------------------------------------------------------
