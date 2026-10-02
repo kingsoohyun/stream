@@ -50,6 +50,34 @@
             margin-bottom: 16px;
         }
 
+        .twitter-grid-control {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            margin-left: auto;
+            margin-right: 8px;
+        }
+
+        .twitter-grid-control button {
+            width: 26px;
+            height: 26px;
+            padding: 0;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            background: #fff;
+            color: #151922;
+            font-size: 16px;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .twitter-grid-control span {
+            min-width: 18px;
+            text-align: center;
+            font-size: 11px;
+            color: #858b95;
+        }
+
 
         .sort-select {
             border: 1px solid #e5e7eb;
@@ -338,6 +366,16 @@
                 color-scheme: dark;
             }
 
+            .twitter-grid-control button {
+                border-color: #30343b;
+                background: #16191e;
+                color: #eceef1;
+            }
+
+            .twitter-grid-control span {
+                color: #858b95;
+            }
+
             .twitter-card {
                 background: #16191e;
                 border-color: #292d34;
@@ -359,7 +397,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-312KR316P2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'G-312KR316P2');
@@ -434,6 +476,11 @@
             개
         </div>
 
+        <div class="twitter-grid-control">
+            <button type="button" id="grid-minus" aria-label="열 줄이기">−</button>
+            <span id="grid-count">5</span>
+            <button type="button" id="grid-plus" aria-label="열 늘리기">+</button>
+        </div>
 
         <div class="twitter-filters">
 
@@ -485,7 +532,8 @@
 <footer>
     <div class="footer-notice">
         <strong>KIM SOO HYUN STREAM</strong> is an unofficial, non-commercial fan site.
-        Third-party content belongs to its respective copyright holders and is linked to its original source where available.
+        Third-party content belongs to its respective copyright holders and is linked to its original source where
+        available.
         <a href="mailto:kimsoohyun.stream@gmail.com">오류 제보</a>
     </div>
 </footer>
@@ -504,6 +552,7 @@
 
     let tweets = [];
     let categories = [];
+    let gridColumnCount = 5;
 
 
     // -------------------------------------------------------
@@ -849,10 +898,18 @@
         // -------------------------------------------------------
 
         const columnCount =
-            window.innerWidth <= 420 ? 2 :
-                window.innerWidth <= 600 ? 3 :
-                    window.innerWidth <= 900 ? 4 :
-                        5;
+            window.innerWidth <= 420
+                ? 2
+                : gridColumnCount;
+
+        document.getElementById('grid-count').textContent = columnCount;
+
+        document
+            .querySelector('.twitter-grid-control')
+            .style.display =
+            window.innerWidth <= 420
+                ? 'none'
+                : 'flex';
 
 
         // -------------------------------------------------------
@@ -860,6 +917,8 @@
         // -------------------------------------------------------
 
         container.innerHTML = '';
+
+        container.style.gridTemplateColumns = `repeat(${columnCount}, minmax(0, 1fr))`;
 
         const columns =
             Array.from(
@@ -1061,6 +1120,36 @@
 
             }
         );
+
+
+    // -------------------------------------------------------
+    // Grid Control
+    // -------------------------------------------------------
+
+    document
+        .getElementById('grid-minus')
+        .addEventListener('click', () => {
+
+            if (gridColumnCount > 2) {
+                gridColumnCount--;
+                document.getElementById('grid-count').textContent = gridColumnCount;
+                renderTweets();
+            }
+
+        });
+
+
+    document
+        .getElementById('grid-plus')
+        .addEventListener('click', () => {
+
+            if (gridColumnCount < 8) {
+                gridColumnCount++;
+                document.getElementById('grid-count').textContent = gridColumnCount;
+                renderTweets();
+            }
+
+        });
 
 
     // -------------------------------------------------------
