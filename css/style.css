@@ -108,8 +108,8 @@ main {
 .platform-nav {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
-    margin-bottom: 28px;
+    gap: 16px;
+    margin-bottom: 32px;
 }
 
 .platform {
@@ -233,6 +233,10 @@ main {
     border-radius: 14px;
     padding: 20px;
     margin-bottom: 20px;
+}
+
+main > .archive-section:last-child {
+    margin-bottom: 0;
 }
 
 .section-head {
@@ -444,10 +448,9 @@ button:focus-visible {
     line-height: 1;
     cursor: help;
     box-shadow: 0 2px 8px rgba(20, 25, 35, .08);
-    transition:
-            background-color .15s ease,
-            border-color .15s ease,
-            color .15s ease;
+    transition: background-color .15s ease,
+    border-color .15s ease,
+    color .15s ease;
 }
 
 .common-info-button:hover,
@@ -480,10 +483,9 @@ button:focus-visible {
     opacity: 0;
     visibility: hidden;
     transform: translateY(3px);
-    transition:
-            opacity .15s ease,
-            visibility .15s ease,
-            transform .15s ease;
+    transition: opacity .15s ease,
+    visibility .15s ease,
+    transform .15s ease;
     pointer-events: none;
 }
 
@@ -517,8 +519,8 @@ button:focus-visible {
 
 footer {
     max-width: 1200px;
-    margin: 40px auto 0;
-    padding: 28px 20px 32px;
+    margin: 32px auto 0;
+    padding: 24px 20px 32px;
     border-top: 1px solid #e5e7eb
 }
 
@@ -619,11 +621,11 @@ footer {
    --------------------------------------------------------- */
 
 .social-year {
-    margin-top: 44px;
+    margin-top: 48px;
 }
 
 .social-year:first-child {
-    margin-top: 20px;
+    margin-top: 24px;
 }
 
 .social-year-head {
@@ -661,7 +663,7 @@ footer {
 }
 
 .social-section {
-    border-left:3px solid #FFCC00;
+    border-left: 3px solid #FFCC00;
     /*border-left: 3px solid #c9a9d6;*/
     /*border-left: 3px solid #c66a7a;*/
     /*border-left: 3px solid #9B59B6;*/
@@ -701,11 +703,10 @@ footer {
 
     overflow: hidden;
 
-    transition:
-            transform .18s ease,
-            border-color .18s ease,
-            background .18s ease,
-            box-shadow .18s ease;
+    transition: transform .18s ease,
+    border-color .18s ease,
+    background .18s ease,
+    box-shadow .18s ease;
 }
 
 .social-card:hover {
@@ -788,9 +789,8 @@ footer {
 
     color: #a3a8b1;
 
-    transition:
-            transform .18s ease,
-            color .18s ease;
+    transition: transform .18s ease,
+    color .18s ease;
 }
 
 .social-card:hover .social-arrow {
@@ -841,7 +841,7 @@ footer {
 .empty-quote {
     grid-column: 1 / -1;
     max-width: 720px;
-    margin: 40px auto 60px;
+    margin: 48px auto 64px;
     padding: 20px 24px;
     text-align: center;
 }
@@ -887,7 +887,7 @@ footer {
 @media (max-width: 800px) {
 
     main {
-        padding: 18px 12px 0
+        padding: 20px 12px 0;
     }
 
     .header-action a {
@@ -896,9 +896,9 @@ footer {
     }
 
     .platform-nav {
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
+        gap: 12px;
         margin-bottom: 24px;
-        gap: 10px
     }
 
     .youtube-cards {
@@ -920,8 +920,8 @@ footer {
     }
 
     footer {
-        margin-top: 40px;
-        padding: 28px 20px 32px
+        margin-top: 24px;
+        padding: 24px 20px 32px;
     }
 
     .back-to-top {
@@ -956,13 +956,12 @@ footer {
 }
 
 @media (max-width: 700px) {
-
     .site-nav {
         display: none;
     }
 
     .empty-quote {
-        margin: 30px auto 45px;
+        margin: 24px auto 40px;
         padding: 16px 18px;
     }
 
@@ -1079,10 +1078,10 @@ footer {
     .new-badge {
         color: #60A5FA;
     }
+
     /* ---------------------------------------------------------
        Social Dark Mode
        --------------------------------------------------------- */
-
     .social-card {
         background: #1c2026;
         border-color: #292d34;
