@@ -552,7 +552,10 @@
 
     let tweets = [];
     let categories = [];
-    let gridColumnCount = 5;
+    let gridColumnCount =
+        window.innerWidth <= 800
+            ? 3
+            : 5;
 
 
     // -------------------------------------------------------
