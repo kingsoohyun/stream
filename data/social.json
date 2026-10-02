@@ -2,12 +2,48 @@
   "updatedAt": "2026-09-26 00:00",
   "items": [
     {
-      "url": "https://x.com/benchtm/status/2106045737419383235",
+      "url": "https://www.instagram.com/p/Dd_0RMBzj_y/",
       "date": "2026.10.03",
-      "platform": "x",
+      "platform": "instagram",
       "account": "benchtm",
       "desc": "BENCH/",
       "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2106045536616992768/img/85PENU1v_kVWjwUY?format=webp&name=small",
+      "pick": true
+    },
+    {
+      "url": "https://www.instagram.com/p/Dd_wwF3k9Jh",
+      "date": "2026.10.03",
+      "platform": "instagram",
+      "account": "benchtm",
+      "desc": "BENCH/",
+      "thumbnail": "",
+      "pick": true
+    },
+    {
+      "url": "https://www.instagram.com/p/Dd_xF2Ok1mM",
+      "date": "2026.10.03",
+      "platform": "instagram",
+      "account": "benchtm",
+      "desc": "BENCH/",
+      "thumbnail": "https://pbs.twimg.com/media/HTopzs_aQAAC_cQ?format=webp&name=small",
+      "pick": true
+    },
+    {
+      "url": "https://www.instagram.com/p/Dd_xP5OE6MB",
+      "date": "2026.10.03",
+      "platform": "instagram",
+      "account": "benchtm",
+      "desc": "BENCH/",
+      "thumbnail": "https://pbs.twimg.com/media/HTopzs8bAAAmyPu?format=webp&name=small",
+      "pick": true
+    },
+    {
+      "url": "https://www.instagram.com/p/Dd_xZ75E8Cw",
+      "date": "2026.10.03",
+      "platform": "instagram",
+      "account": "benchtm",
+      "desc": "BENCH/",
+      "thumbnail": "",
       "pick": true
     },
     {
@@ -125,33 +161,6 @@
       "account": "benchtm",
       "desc": "BENCH/",
       "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2106029826532651008/img/8bpkS9ZEmBdhh0JI?format=webp&name=small",
-      "pick": true
-    },
-    {
-      "url": "https://x.com/benchtm/status/2106041758417363359",
-      "date": "2026.10.03",
-      "platform": "x",
-      "account": "benchtm",
-      "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/media/HTopzs8bAAAmyPu?format=webp&name=small",
-      "pick": true
-    },
-    {
-      "url": "https://x.com/benchtm/status/2106041758417363359/photo/2",
-      "date": "2026.10.03",
-      "platform": "x",
-      "account": "benchtm",
-      "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/media/HTopzs_aQAAC_cQ?format=webp&name=small",
-      "pick": true
-    },
-    {
-      "url": "https://x.com/benchtm/status/2106041758417363359/photo/4",
-      "date": "2026.10.03",
-      "platform": "x",
-      "account": "benchtm",
-      "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/media/HTopzs4bIAATeOs?format=webp&name=small",
       "pick": true
     },
     {
