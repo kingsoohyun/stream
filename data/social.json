@@ -309,6 +309,7 @@
       "platform": "INSTAGRAM",
       "account": "goldmedalist_official",
       "desc": "GOLDMEDALIST",
+      "thumbnail": "https://pbs.twimg.com/media/HSyzqnkbQAADL_d?format=webp&name=small",
       "pick": true
     },
     {
@@ -388,6 +389,7 @@
       "platform": "INSTAGRAM",
       "account": "goldmedalist_official",
       "desc": "GOLDMEDALIST",
+      "thumbnail": "https://pbs.twimg.com/media/HRl5kezbMAAprHq?format=webp&name=small",
       "pick": true
     },
     {
@@ -425,7 +427,8 @@
       "date": "2026.09.01",
       "platform": "INSTAGRAM",
       "account": "munwansik",
-      "desc": "AAA 2026"
+      "desc": "AAA 2026",
+      "thumbnail": "https://pbs.twimg.com/media/HRGWHMAaMAADGA5?format=webp&name=small"
     },
     {
       "url": "https://www.instagram.com/p/Dcvn9-DmXyE",
@@ -522,6 +525,7 @@
       "platform": "INSTAGRAM",
       "account": "rctiplusoriginals",
       "desc": "RCTI Mahakarya",
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2089747876620685312/img/YVVgNJwxRSUEPuGC?format=webp&name=small",
       "pick": true
     },
     {
@@ -570,7 +574,8 @@
       "date": "2026.07.14",
       "platform": "INSTAGRAM",
       "account": "bcbench",
-      "desc": "BENCH/"
+      "desc": "BENCH/",
+      "thumbnail": "https://pbs.twimg.com/media/HNL8tvea0AAoGlD?format=webp&name=small"
     },
     {
       "url" : "https://www.youtube.com/watch?v=6zB8o5Z5TKM",
