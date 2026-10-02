@@ -47,8 +47,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 20px;
-            padding: 20px 0;
+            margin-bottom: 16px;
         }
 
         .archive-filters {
@@ -58,14 +57,14 @@
         }
 
         .sort-select {
-            border: 1px solid #ddd;
+            border: 1px solid #e5e7eb;
             border-radius: 8px;
+            padding: 7px 10px;
             background: #fff;
-            padding: 9px 12px;
-            font-size: 14px;
+            color: #151922;
+            font-size: 12px;
             cursor: pointer;
         }
-
 
         /* ---------------------------------------------------------
            Video Grid
@@ -78,6 +77,33 @@
             gap: 30px 20px;
         }
 
+        .youtube-grid-control {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            margin-left: auto;
+            margin-right: 8px;
+        }
+
+        .youtube-grid-control button {
+            width: 26px;
+            height: 26px;
+            padding: 0;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            background: #fff;
+            color: #151922;
+            font-size: 16px;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .youtube-grid-control span {
+            min-width: 18px;
+            text-align: center;
+            font-size: 11px;
+            color: #858b95;
+        }
 
         /* ---------------------------------------------------------
            Video Card
@@ -215,15 +241,6 @@
            Mobile
            --------------------------------------------------------- */
 
-        @media (max-width: 1000px) {
-
-            .youtube-grid {
-                grid-template-columns:
-                    repeat(3, minmax(0, 1fr));
-            }
-
-        }
-
         @media (max-width: 700px) {
             .youtube-page {
                 padding: 20px 12px 60px;
@@ -255,7 +272,6 @@
             }
 
             .youtube-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
                 gap: 25px 12px;
             }
 
@@ -341,6 +357,16 @@
                 color: #eceef1;
             }
 
+            .youtube-grid-control button {
+                border-color: #30343b;
+                background: #16191e;
+                color: #eceef1;
+            }
+
+            .youtube-grid-control span {
+                color: #858b95;
+            }
+
             .sort-select {
                 border-color: #30343b;
                 background: #16191e;
@@ -372,7 +398,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-312KR316P2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'G-312KR316P2');
@@ -445,6 +475,12 @@
         </div>
 
 
+        <div class="youtube-grid-control">
+            <button type="button" id="grid-minus" aria-label="열 줄이기">−</button>
+            <span id="grid-count">4</span>
+            <button type="button" id="grid-plus" aria-label="열 늘리기">+</button>
+        </div>
+
         <div class="archive-filters">
 
 
@@ -512,7 +548,8 @@
 <footer>
     <div class="footer-notice">
         <strong>KIM SOO HYUN STREAM</strong> is an unofficial, non-commercial fan site.
-        Third-party content belongs to its respective copyright holders and is linked to its original source where available.
+        Third-party content belongs to its respective copyright holders and is linked to its original source where
+        available.
         <a href="mailto:kimsoohyun.stream@gmail.com">오류 제보</a>
     </div>
 </footer>
@@ -531,6 +568,11 @@
 
     let videos = [];
     let categories = [];
+
+    let gridColumnCount =
+        window.innerWidth <= 800
+            ? 3
+            : 4;
 
 
     // ---------------------------------------------------------
@@ -934,6 +976,24 @@
             return;
         }
 
+
+        const columnCount =
+            window.innerWidth <= 420
+                ? 2
+                : gridColumnCount;
+
+        document.getElementById('grid-count').textContent = columnCount;
+
+        document
+            .querySelector('.youtube-grid-control')
+            .style.display =
+            window.innerWidth <= 420
+                ? 'none'
+                : 'flex';
+
+        grid.style.gridTemplateColumns =
+            `repeat(${columnCount}, minmax(0, 1fr))`;
+
         // -----------------------------------------------------
         // Cards
         // -----------------------------------------------------
@@ -1077,11 +1137,45 @@
         );
 
 
+    document
+        .getElementById('grid-minus')
+        .addEventListener('click', () => {
+
+            if (gridColumnCount > 2) {
+                gridColumnCount--;
+                document.getElementById('grid-count').textContent = gridColumnCount;
+                renderVideos();
+            }
+
+        });
+
+    document
+        .getElementById('grid-plus')
+        .addEventListener('click', () => {
+
+            if (gridColumnCount < 6) {
+                gridColumnCount++;
+                document.getElementById('grid-count').textContent = gridColumnCount;
+                renderVideos();
+            }
+
+        });
+
     // ---------------------------------------------------------
     // 실행
     // ---------------------------------------------------------
 
     loadVideos();
+
+    let resizeTimer;
+
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+
+        resizeTimer = setTimeout(() => {
+            renderVideos();
+        }, 100);
+    });
 
 </script>
 
