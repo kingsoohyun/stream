@@ -2,6 +2,15 @@
   "updatedAt": "2026-09-26 00:00",
   "items": [
     {
+      "url": "https://x.com/benchtm/status/2106045737419383235",
+      "date": "2026.10.03",
+      "platform": "x",
+      "account": "benchtm",
+      "desc": "BENCH/",
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2106045536616992768/img/85PENU1v_kVWjwUY?format=webp&name=small",
+      "pick": true
+    },
+    {
       "url": "https://x.com/benchtm/status/2106024755870802115",
       "date": "2026.10.02",
       "platform": "x",
@@ -107,6 +116,42 @@
       "account": "benchtm",
       "desc": "BENCH/",
       "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2105878575371218945/img/75QCpmKqaLsmQzE7?format=webp&name=small",
+      "pick": true
+    },
+    {
+      "url": "https://x.com/benchtm/status/2106030353488200026",
+      "date": "2026.10.02",
+      "platform": "x",
+      "account": "benchtm",
+      "desc": "BENCH/",
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2106029826532651008/img/8bpkS9ZEmBdhh0JI?format=webp&name=small",
+      "pick": true
+    },
+    {
+      "url": "https://x.com/benchtm/status/2106041758417363359",
+      "date": "2026.10.03",
+      "platform": "x",
+      "account": "benchtm",
+      "desc": "BENCH/",
+      "thumbnail": "https://pbs.twimg.com/media/HTopzs8bAAAmyPu?format=webp&name=small",
+      "pick": true
+    },
+    {
+      "url": "https://x.com/benchtm/status/2106041758417363359/photo/2",
+      "date": "2026.10.03",
+      "platform": "x",
+      "account": "benchtm",
+      "desc": "BENCH/",
+      "thumbnail": "https://pbs.twimg.com/media/HTopzs_aQAAC_cQ?format=webp&name=small",
+      "pick": true
+    },
+    {
+      "url": "https://x.com/benchtm/status/2106041758417363359/photo/4",
+      "date": "2026.10.03",
+      "platform": "x",
+      "account": "benchtm",
+      "desc": "BENCH/",
+      "thumbnail": "https://pbs.twimg.com/media/HTopzs4bIAATeOs?format=webp&name=small",
       "pick": true
     },
     {
