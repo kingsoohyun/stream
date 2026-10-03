@@ -149,6 +149,11 @@ async function renderMap(events) {
 
     projection.scale(projection.scale() * 1.04);
 
+    projection.translate([
+        projection.translate()[0] - 20,
+        projection.translate()[1]
+    ]);
+
     const path = d3.geoPath()
         .projection(projection);
 
