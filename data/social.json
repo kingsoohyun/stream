@@ -222,6 +222,7 @@
       "platform": "INSTAGRAM",
       "account": "migspastor",
       "desc": "BENCH/",
+      "thumbnail": "https://pbs.twimg.com/media/HToy2mfaEAAWNLD?format=webp&name=small",
       "pick": true
     },
     {
@@ -442,6 +443,24 @@
       "account": "thefact_tma",
       "desc": "TMA 2026",
       "thumbnail": "https://pbs.twimg.com/media/HRUyBZ6bYAAuVkf?format=webp&name=small"
+    },
+    {
+      "url": "https://www.instagram.com/p/DccHcqCE3EW",
+      "date": "2026.08.25",
+      "platform": "INSTAGRAM",
+      "account": "jasmine.pratiwi2803",
+      "desc": "Jasmine Pratiwi(MNC Media)",
+      "thumbnail": "https://pbs.twimg.com/media/HQa7JTQacAACRDx?format=webp&name=small",
+      "pick": true
+    },
+    {
+      "url": "https://www.instagram.com/p/Dcckt4EE0Lc",
+      "date": "2026.08.25",
+      "platform": "INSTAGRAM",
+      "account": "jasmine.pratiwi2803",
+      "desc": "Jasmine Pratiwi(MNC Media)",
+      "thumbnail": "https://pbs.twimg.com/media/HQkMbKkbMAATE89?format=webp&name=small",
+      "pick": true
     },
     {
       "url": "https://www.instagram.com/p/Dcck98lxp8h",
