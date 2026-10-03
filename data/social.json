@@ -317,7 +317,7 @@
       "platform": "x",
       "account": "benchtm",
       "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2099487433830416384/img/LQCI2rnuucvL_U5s?format=webp&name=small",
+      "thumbnail": "https://pbs.twimg.com/media/HSLX-dYbYAA_u_g?format=webp&name=small",
       "pick": true
     },
     {
@@ -326,6 +326,7 @@
       "platform": "INSTAGRAM",
       "account": "benchcoffeestation",
       "desc": "BENCH COFFEE STATION",
+      "thumbnail": "https://pbs.twimg.com/media/HSEQZgVbsAA8Qys?format=webp&name=small",
       "pick": true
     },
     {
@@ -492,7 +493,6 @@
       "account": "officialrcti",
       "desc": "RCTI Mahakarya",
       "thumbnail": "https://pbs.twimg.com/media/HQav1qYakAAQefT?format=webp&name=small",
-
       "pick": true
     },
     {
