@@ -205,7 +205,7 @@
       "platform": "x",
       "account": "benchtm",
       "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2105527887478874113/img/NvOLGBtw2IwmZqAr?format=webp&name=small",
+      "thumbnail": "https://pbs.twimg.com/media/HThLk-kasAARBZg?format=webp&name=small",
       "pick": true
     },
     {
@@ -240,6 +240,7 @@
       "platform": "INSTAGRAM",
       "account": "starnewskorea",
       "desc": "스타뉴스",
+      "thumbnail": "https://pbs.twimg.com/media/HTa7qiwaYAAmITU?format=webp&name=small",
       "pick": true
     },
     {
@@ -264,7 +265,8 @@
       "date": "2026.09.23",
       "platform": "INSTAGRAM",
       "account": "thefactnews",
-      "desc": "더팩트"
+      "desc": "더팩트",
+      "thumbnail": "https://pbs.twimg.com/media/HSsUJE7bMAEaxxz?format=webp&name=small"
     },
     {
       "url": "https://x.com/benchtm/status/2102700304559214720",
@@ -283,13 +285,6 @@
       "desc": "GOLDMEDALIST",
       "thumbnail": "https://pbs.twimg.com/media/HSyzqnkbQAADL_d?format=webp&name=small",
       "pick": true
-    },
-    {
-      "url": "https://www.instagram.com/p/Dc0sQgwAntV",
-      "date": "2026.09.22",
-      "platform": "INSTAGRAM",
-      "account": "bcbench",
-      "desc": "BENCH/"
     },
     {
       "url": "https://www.instagram.com/p/Ddi18E0mSWF",
@@ -436,7 +431,8 @@
       "date": "2026.08.28",
       "platform": "INSTAGRAM",
       "account": "thefact_tma",
-      "desc": "TMA 2026"
+      "desc": "TMA 2026",
+      "thumbnail": "https://pbs.twimg.com/media/HRUyBZ6bYAAuVkf?format=webp&name=small"
     },
     {
       "url": "https://www.instagram.com/p/Dcck98lxp8h",
@@ -455,6 +451,14 @@
       "desc": "RCTI Mahakarya",
       "thumbnail": "https://pbs.twimg.com/media/HQfxRzGbAAEyERC?format=webp&name=small",
       "pick": true
+    },
+    {
+      "url": "https://www.instagram.com/p/DcaPu8Tj-1o",
+      "date": "2026.08.24",
+      "platform": "INSTAGRAM",
+      "account": "indotvtrends",
+      "desc": "INDOTVTrends™",
+      "thumbnail": "https://pbs.twimg.com/media/HQgAuLfbcAAyleW?format=webp&name=small"
     },
     {
       "url": "https://www.instagram.com/p/DcZ6CDFyX3-",
@@ -478,6 +482,7 @@
       "platform": "INSTAGRAM",
       "account": "officialrcti",
       "desc": "RCTI Mahakarya",
+      "thumbnail": "https://pbs.twimg.com/media/HQaeyJtbgAApZI7?format=webp&name=small",
       "pick": true
     },
     {
@@ -486,6 +491,8 @@
       "platform": "INSTAGRAM",
       "account": "officialrcti",
       "desc": "RCTI Mahakarya",
+      "thumbnail": "https://pbs.twimg.com/media/HQav1qYakAAQefT?format=webp&name=small",
+
       "pick": true
     },
     {
