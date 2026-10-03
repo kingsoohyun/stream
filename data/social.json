@@ -285,7 +285,8 @@
       "date": "2026.09.25",
       "platform": "INSTAGRAM",
       "account": "highendmagazineofficial",
-      "desc": "HighEnd Magazine"
+      "desc": "HighEnd Magazine",
+      "thumbnail": "https://pbs.twimg.com/media/HTDCxwUawAAhPJk?format=webp&name=small"
     },
     {
       "url": "https://www.instagram.com/p/DdnO-gCE6gf",
@@ -405,6 +406,7 @@
       "platform": "INSTAGRAM",
       "account": "bcbench",
       "desc": "BENCH/",
+      "thumbnail": "https://pbs.twimg.com/media/HRiEl3VawAALcgj?format=webp&name=small",
       "pick": true
     },
     {
@@ -420,6 +422,7 @@
       "platform": "INSTAGRAM",
       "account": "highendmagazineofficial",
       "desc": "HighEnd Magazine",
+      "thumbnail": "https://pbs.twimg.com/media/HRNTmIna0AAsi8R?format=webp&name=small",
       "pick": true
     },
     {
@@ -442,21 +445,24 @@
       "date": "2026.08.31",
       "platform": "INSTAGRAM",
       "account": "rctiplusoriginals",
-      "desc": "RCTI+ IDOLYFE"
+      "desc": "RCTI+ IDOLYFE",
+      "thumbnail": "https://pbs.twimg.com/media/HQ_ASIma4AAuN43?format=webp&name=small"
     },
     {
       "url": "https://www.instagram.com/p/DcmxQG2yI5J",
       "date": "2026.08.29",
       "platform": "INSTAGRAM",
       "account": "highendmagazineofficial",
-      "desc": "HighEnd Magazine"
+      "desc": "HighEnd Magazine",
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2093526368537767936/img/j51F0jbXYo7UZW40?format=webp&name=small"
     },
     {
       "url": "https://www.instagram.com/p/Dcn3g-dSMy_",
       "date": "2026.08.29",
       "platform": "INSTAGRAM",
       "account": "rctiplusoriginals",
-      "desc": "RCTI+ IDOLYFE"
+      "desc": "RCTI+ IDOLYFE",
+      "thumbnail": "https://pbs.twimg.com/media/HQ482_6akAAWNdS?format=webp&name=small"
     },
     {
       "url": "https://www.instagram.com/p/DckdUkmE6qV",
@@ -471,6 +477,7 @@
       "platform": "INSTAGRAM",
       "account": "koreadispatch",
       "desc": "DISPATCH",
+      "thumbnail": "https://pbs.twimg.com/media/HQhukUUakAAKkUy?format=webp&name=small",
       "pick": true
     },
     {
