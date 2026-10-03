@@ -16,7 +16,7 @@
       "platform": "instagram",
       "account": "benchtm",
       "desc": "BENCH/",
-      "thumbnail": "",
+      "thumbnail": "https://pbs.twimg.com/media/HTozJ_lbsAAAgDE?format=webp&name=small",
       "pick": true
     },
     {
@@ -29,21 +29,12 @@
       "pick": true
     },
     {
-      "url": "https://www.instagram.com/p/Dd_xP5OE6MB",
-      "date": "2026.10.03",
-      "platform": "instagram",
-      "account": "benchtm",
-      "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/media/HTopzs8bAAAmyPu?format=webp&name=small",
-      "pick": true
-    },
-    {
       "url": "https://www.instagram.com/p/Dd_xZ75E8Cw",
       "date": "2026.10.03",
       "platform": "instagram",
       "account": "benchtm",
       "desc": "BENCH/",
-      "thumbnail": "",
+      "thumbnail": "https://pbs.twimg.com/media/HTowaqgagAA2Rra?format=webp&name=small",
       "pick": true
     },
     {
@@ -169,22 +160,7 @@
       "platform": "INSTAGRAM",
       "account": "benchtm",
       "desc": "BENCH/",
-      "pick": false
-    },
-    {
-      "url": "https://www.instagram.com/p/Dd_wwF3k9Jh",
-      "date": "2026.10.02",
-      "platform": "INSTAGRAM",
-      "account": "benchtm",
-      "desc": "BENCH/",
-      "pick": false
-    },
-    {
-      "url": "https://www.instagram.com/p/Dd_xF2Ok1mM",
-      "date": "2026.10.02",
-      "platform": "INSTAGRAM",
-      "account": "benchtm",
-      "desc": "BENCH/",
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2106045536616992768/img/85PENU1v_kVWjwUY?format=webp&name=small",
       "pick": false
     },
     {
@@ -193,14 +169,7 @@
       "platform": "INSTAGRAM",
       "account": "benchtm",
       "desc": "BENCH/",
-      "pick": false
-    },
-    {
-      "url": "https://www.instagram.com/p/Dd_xZ75E8Cw",
-      "date": "2026.10.02",
-      "platform": "INSTAGRAM",
-      "account": "benchtm",
-      "desc": "BENCH/",
+      "thumbnail": "https://pbs.twimg.com/media/HToy6zEbMAA_unM?format=webp&name=small",
       "pick": false
     },
     {
@@ -209,6 +178,7 @@
       "platform": "INSTAGRAM",
       "account": "iamsamoh",
       "desc": "Sam Oh",
+      "thumbnail": "https://pbs.twimg.com/media/HToy6zFbIAApVac?format=webp&name=small",
       "pick": false
     },
     {
@@ -252,6 +222,7 @@
       "platform": "INSTAGRAM",
       "account": "iamsamoh",
       "desc": "Sam Oh",
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2105589000203640833/img/ItuM24H4Zvxqwjsg?format=webp&name=small",
       "pick": false
     },
     {
@@ -374,6 +345,7 @@
       "platform": "INSTAGRAM",
       "account": "benchcoffeestation",
       "desc": "BENCH COFFEE STATION",
+      "thumbnail": "https://pbs.twimg.com/media/HRvwLjuaEAA9tkp?format=webp&name=small",
       "pick": true
     },
     {
@@ -488,7 +460,6 @@
       "account": "officialrcti",
       "desc": "RCTI Mahakarya",
       "thumbnail": "https://pbs.twimg.com/media/HQfxRzGbAAEyERC?format=webp&name=small",
-
       "pick": true
     },
     {
@@ -593,12 +564,12 @@
       "thumbnail": "https://pbs.twimg.com/media/HNL8tvea0AAoGlD?format=webp&name=small"
     },
     {
-      "url" : "https://www.youtube.com/watch?v=6zB8o5Z5TKM",
-      "date" : "2025.11.18",
+      "url": "https://www.youtube.com/watch?v=6zB8o5Z5TKM",
+      "date": "2025.11.18",
       "platform": "youtube",
       "account": "AsiaArtistAwards_official",
       "desc": "AAA 2024",
-      "thumbnail" : "https://i.ytimg.com/vi/6zB8o5Z5TKM/hqdefault.jpg"
+      "thumbnail": "https://i.ytimg.com/vi/6zB8o5Z5TKM/hqdefault.jpg"
     },
     {
       "url": "https://www.instagram.com/p/DP06o83j11s",
