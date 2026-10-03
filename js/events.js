@@ -141,11 +141,13 @@ async function renderMap(events) {
     const projection = d3.geoNaturalEarth1()
         .fitExtent(
             [
-                [20, 20],
-                [width - 20, height - 20]
+                [5, 5],
+                [width - 5, height - 5]
             ],
             visibleCountries
         );
+
+    projection.scale(projection.scale() * 1.04);
 
     const path = d3.geoPath()
         .projection(projection);
