@@ -243,6 +243,146 @@
             font-size: 12px
         }
 
+
+        /* =========================================================
+           Reference Tree
+           ========================================================= */
+
+        .reference-menu {
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 18px;
+        }
+
+        .reference-toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 2px;
+            border: 0;
+            background: transparent;
+            color: #626872;
+            font: inherit;
+            font-size: 10px;
+            letter-spacing: .04em;
+            cursor: pointer;
+        }
+
+        .reference-toggle:hover {
+            color: #222;
+        }
+
+        .reference-toggle-icon {
+            font-size: 13px;
+            line-height: 1;
+            transition: transform .2s ease;
+        }
+
+        .reference-menu.open .reference-toggle-icon {
+            transform: rotate(45deg);
+        }
+
+        .reference-panel {
+            display: none;
+            position: absolute;
+            top: 30px;
+            right: 0;
+            z-index: 20;
+            width: min(620px, calc(100vw - 40px));
+            padding: 16px 18px;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, .98);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
+        }
+
+        .reference-menu.open .reference-panel {
+            display: block;
+        }
+
+        .reference-tree {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 2px 24px;
+        }
+
+        .reference-group {
+            min-width: 0;
+        }
+
+        .reference-group-button {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            padding: 8px 2px;
+            border: 0;
+            background: transparent;
+            color: #30343a;
+            text-align: left;
+            cursor: pointer;
+            font: inherit;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .reference-group-button:hover {
+            color: #4a78a8;
+        }
+
+        .reference-group-arrow {
+            margin-left: auto;
+            color: #a0a5ad;
+            font-size: 13px;
+            line-height: 1;
+            transition: transform .18s ease;
+        }
+
+        .reference-group.open .reference-group-arrow {
+            transform: rotate(90deg);
+        }
+
+        .reference-links {
+            display: none;
+            position: relative;
+            margin: 0 0 6px 20px;
+            padding: 2px 0 4px 13px;
+            border-left: 1px solid #e1e4e8;
+        }
+
+        .reference-group.open .reference-links {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .reference-links a {
+            position: relative;
+            display: block;
+            padding: 5px 6px;
+            color: #626872;
+            font-size: 10px;
+            line-height: 1.4;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .reference-links a::before {
+            content: '';
+            position: absolute;
+            left: -14px;
+            top: 50%;
+            width: 8px;
+            height: 1px;
+            background: #e1e4e8;
+        }
+
+        .reference-links a:hover {
+            background: #f6f7f8;
+            color: #315f8d;
+        }
+
+
         @media (max-width: 800px) {
 
             .records-page {
@@ -291,6 +431,27 @@
                 margin-right: 10px;
             }
         }
+
+
+        @media (max-width: 600px) {
+
+            .reference-menu {
+                margin-bottom: 14px;
+            }
+
+            .reference-panel {
+                width: min(420px, calc(100vw - 24px));
+                right: -2px;
+                padding: 14px;
+            }
+
+            .reference-tree {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+        }
+
 
         /* System dark mode: color only; keep the original records layout unchanged. */
         @media (prefers-color-scheme: dark) {
@@ -413,6 +574,52 @@
             .records-empty {
                 color: #aab0b8;
             }
+
+
+            /* Reference Tree - dark mode */
+
+            .reference-toggle {
+                color: #aab0b8;
+            }
+
+            .reference-toggle:hover {
+                color: #fff;
+            }
+
+            .reference-panel {
+                border-color: #292d34;
+                background: rgba(22, 25, 30, .98);
+                box-shadow: 0 8px 24px rgba(0, 0, 0, .3);
+            }
+
+            .reference-group-button {
+                color: #eceef1;
+            }
+
+            .reference-group-button:hover {
+                color: #d8f36a;
+            }
+
+            .reference-group-arrow {
+                color: #858b95;
+            }
+
+            .reference-links {
+                border-left-color: #3a3f47;
+            }
+
+            .reference-links a {
+                color: #b7bdc6;
+            }
+
+            .reference-links a::before {
+                background: #3a3f47;
+            }
+
+            .reference-links a:hover {
+                background: #242b1d;
+                color: #e7ff9a;
+            }
         }
     </style>
 
@@ -421,6 +628,7 @@
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+
         gtag('js', new Date());
 
         gtag('config', 'G-312KR316P2');
@@ -460,15 +668,193 @@
 
 <main class="records-page">
 
-<!--    <div class="records-intro">-->
-<!--        &lt;!&ndash;        <h1>RECORDS</h1>&ndash;&gt;-->
-<!--        &lt;!&ndash;        <p>주요 기록 및 수상 · 명예직</p>&ndash;&gt;-->
-<!--    </div>-->
+    <!--    <div class="records-intro">-->
+    <!--        &lt;!&ndash;        <h1>RECORDS</h1>&ndash;&gt;-->
+    <!--        &lt;!&ndash;        <p>주요 기록 및 수상 · 명예직</p>&ndash;&gt;-->
+    <!--    </div>-->
+
+
+    <div class="reference-menu" id="referenceMenu">
+
+        <button
+                type="button"
+                class="reference-toggle"
+                id="referenceToggle"
+                aria-expanded="false"
+                aria-controls="referencePanel"
+        >
+            REFERENCE
+            <span class="reference-toggle-icon">＋</span>
+        </button>
+
+
+        <div
+                class="reference-panel"
+                id="referencePanel"
+        >
+
+            <div class="reference-tree">
+
+                <div class="reference-group">
+
+                    <button type="button" class="reference-group-button">
+                        🏆 시상식
+                        <span class="reference-group-arrow">›</span>
+                    </button>
+
+                    <div class="reference-links">
+                        <a href="https://www.baeksangawards.co.kr" target="_blank" rel="noopener noreferrer">백상예술대상</a>
+                        <a href="https://www.asiaartistawards.com" target="_blank" rel="noopener noreferrer">아시아아티스트어워즈(AAA)</a>
+                        <a href="https://www.seouldrama.org" target="_blank" rel="noopener noreferrer">서울드라마어워즈(SDA)</a>
+                        <a href="http://kdfo.org/" target="_blank" rel="noopener noreferrer">코리아드라마어워즈(KDF)</a>
+                        <a href="http://kdfo.org/" target="_blank" rel="noopener noreferrer">아시아태평양스타어워즈(APAN)</a>
+                        <a href="https://bsa.blueaward.co.kr/series" target="_blank" rel="noopener noreferrer">청룡시리즈어워즈</a>
+                        <a href="https://www.blueaward.co.kr/awards" target="_blank" rel="noopener noreferrer">청룡영화제</a>
+                        <a href="https://daejong.or.kr" target="_blank" rel="noopener noreferrer">대종상영화제</a>
+                        <a href="https://k-expo.newsis.com" target="_blank" rel="noopener noreferrer">뉴시스한류엑스포</a>
+                        <a href="https://abk.kcforum.co.kr" target="_blank" rel="noopener noreferrer">올해의브랜드대상</a>
+                        <a href="https://www.asiantelevisionawards.net" target="_blank" rel="noopener noreferrer">Asian TV Awards(ATA)</a>
+                        <a href="https://www.asianacademycreativeawards.com" target="_blank" rel="noopener noreferrer">Asian Academy Creative Awards(AACA)</a>
+                    </div>
+
+                </div>
+
+
+                <div class="reference-group">
+
+                    <button type="button" class="reference-group-button">
+                        📊 리서치
+                        <span class="reference-group-arrow">›</span>
+                    </button>
+
+                    <div class="reference-links">
+                        <a href="https://www.gallup.co.kr" target="_blank" rel="noopener noreferrer">한국갤럽</a>
+                        <a href="https://www.forbeskorea.co.kr" target="_blank" rel="noopener noreferrer">포브스코리아</a>
+                        <a href="https://www.kobaco.co.kr" target="_blank" rel="noopener noreferrer">한국방송광고진흥공사</a>
+                        <a href="https://www.archivecenter.net/hallyuresearch/archive/CollectionGroupView.do?con_group_id=671" target="_blank" rel="noopener noreferrer">해외한류실태조사</a>
+                    </div>
+
+                </div>
+
+
+                <div class="reference-group">
+
+                    <button type="button" class="reference-group-button">
+                        🔎 데이터
+                        <span class="reference-group-arrow">›</span>
+                    </button>
+
+                    <div class="reference-links">
+                        <a href="https://www.nielsenkorea.co.kr/tv_terrestrial_day.asp?menu=Tit_1&sub_menu=1_1&area=01" target="_blank" rel="noopener noreferrer">닐슨 시청률</a>
+                        <a href="https://flixpatrol.com" target="_blank" rel="noopener noreferrer">플릭스패트롤</a>
+                        <a href="https://www.fundex.co.kr" target="_blank" rel="noopener noreferrer">펀덱스 화제성</a>
+                        <a href="https://www.themoviedb.org/person/1251581" target="_blank" rel="noopener noreferrer">TMDB</a>
+                        <a href="https://www.imdb.com/name/nm4633543/" target="_blank" rel="noopener noreferrer">IMDb</a>
+                        <a href="https://en.wikipedia.org/wiki/Kim_Soo-hyun" target="_blank" rel="noopener noreferrer">Wikipedia</a>
+                        <a href="https://namu.wiki/w/%EA%B9%80%EC%88%98%ED%98%84" target="_blank" rel="noopener noreferrer">나무위키</a>
+                        <a href="https://dart.fss.or.kr" target="_blank" rel="noopener noreferrer">DART</a>
+                    </div>
+
+                </div>
+
+
+<!--                <div class="reference-group">-->
+
+<!--                    <button type="button" class="reference-group-button">-->
+<!--                        👤 김수현-->
+<!--                        <span class="reference-group-arrow">›</span>-->
+<!--                    </button>-->
+
+<!--                    <div class="reference-links">-->
+<!--                        <a href="#" target="_blank" rel="noopener noreferrer">Gold Medalist</a>-->
+<!--                        <a href="#" target="_blank" rel="noopener noreferrer">Gold Medalist Instagram</a>-->
+<!--                        <a href="#" target="_blank" rel="noopener noreferrer">Kim Soo Hyun Instagram</a>-->
+<!--                        <a href="#" target="_blank" rel="noopener noreferrer">Kim Soo Hyun Weibo</a>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+
+
+<!--                <div class="reference-group">-->
+
+<!--                    <button type="button" class="reference-group-button">-->
+<!--                        📺 OTT-->
+<!--                        <span class="reference-group-arrow">›</span>-->
+<!--                    </button>-->
+
+<!--                    <div class="reference-links">-->
+<!--                        <a href="#" target="_blank" rel="noopener noreferrer">Netflix</a>-->
+<!--                        <a href="#" target="_blank" rel="noopener noreferrer">Disney+</a>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+
+
+<!--                <div class="reference-group">-->
+
+<!--                    <button type="button" class="reference-group-button">-->
+<!--                        📱 SNS-->
+<!--                        <span class="reference-group-arrow">›</span>-->
+<!--                    </button>-->
+
+<!--                    <div class="reference-links">-->
+<!--                        <a href="#" target="_blank" rel="noopener noreferrer">Netflix Korea Instagram</a>-->
+<!--                        <a href="#" target="_blank" rel="noopener noreferrer">Netflix Korea X</a>-->
+<!--                        <a href="#" target="_blank" rel="noopener noreferrer">Netflix Korea YouTube</a>-->
+<!--                        <a href="#" target="_blank" rel="noopener noreferrer">Disney+ Korea Instagram</a>-->
+<!--                        <a href="#" target="_blank" rel="noopener noreferrer">Disney+ Japan Instagram</a>-->
+<!--                        <a href="#" target="_blank" rel="noopener noreferrer">Disney+ Singapore Instagram</a>-->
+<!--                        <a href="#" target="_blank" rel="noopener noreferrer">Disney+ Korea YouTube</a>-->
+<!--                        <a href="#" target="_blank" rel="noopener noreferrer">Disney+ Korea X</a>-->
+<!--                        <a href="#" target="_blank" rel="noopener noreferrer">tvN YouTube</a>-->
+<!--                        <a href="#" target="_blank" rel="noopener noreferrer">tvN Instagram</a>-->
+<!--                        <a href="#" target="_blank" rel="noopener noreferrer">tvN X</a>-->
+<!--                        <a href="#" target="_blank" rel="noopener noreferrer">Studio Dragon X</a>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+
+
+<!--                <div class="reference-group">-->
+
+<!--                    <button type="button" class="reference-group-button">-->
+<!--                        📝 블로그-->
+<!--                        <span class="reference-group-arrow">›</span>-->
+<!--                    </button>-->
+
+<!--                    <div class="reference-links">-->
+<!--                        <a href="#" target="_blank" rel="noopener noreferrer">강경윤 기자</a>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+
+
+<!--                <div class="reference-group">-->
+
+<!--                    <button type="button" class="reference-group-button">-->
+<!--                        ⭐ 팬사이트-->
+<!--                        <span class="reference-group-arrow">›</span>-->
+<!--                    </button>-->
+
+<!--                    <div class="reference-links">-->
+<!--                        <a href="#" target="_blank" rel="noopener noreferrer">네이버블로그 1111</a>-->
+<!--                        <a href="#" target="_blank" rel="noopener noreferrer">티스토리 shing</a>-->
+<!--                        <a href="#" target="_blank" rel="noopener noreferrer">티스토리 adam</a>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+
+            </div>
+
+        </div>
+
+    </div>
 
 
     <div id="records"></div>
 
 </main>
+
 
 <footer>
     <div class="footer-notice">
@@ -477,6 +863,7 @@
         <a href="mailto:kimsoohyun.stream@gmail.com">오류 제보</a>
     </div>
 </footer>
+
 
 <button
         type="button"
@@ -488,7 +875,9 @@
     ↑
 </button>
 
+
 <script>
+
     async function loadRecords() {
 
         const container = document.getElementById('records');
@@ -783,22 +1172,108 @@
 
 
     loadRecords();
-</script>
 
-<script>
-    const backToTop = document.getElementById("backToTop");
 
-    window.addEventListener("scroll", () => {
-        backToTop.classList.toggle("show", window.scrollY > 600);
+    /* =========================================================
+       Reference Tree
+       ========================================================= */
+
+    const referenceMenu =
+        document.getElementById('referenceMenu');
+
+    const referenceToggle =
+        document.getElementById('referenceToggle');
+
+    const referenceGroups =
+        document.querySelectorAll('.reference-group');
+
+
+    referenceToggle.addEventListener('click', () => {
+
+        const isOpen =
+            referenceMenu.classList.contains('open');
+
+        referenceMenu.classList.toggle('open');
+
+        referenceToggle.setAttribute(
+            'aria-expanded',
+            String(!isOpen)
+        );
     });
 
+
+    referenceGroups.forEach(group => {
+
+        const button =
+            group.querySelector('.reference-group-button');
+
+        button.addEventListener('click', () => {
+
+            const isOpen =
+                group.classList.contains('open');
+
+
+            referenceGroups.forEach(otherGroup => {
+
+                otherGroup.classList.remove('open');
+
+            });
+
+
+            if (!isOpen) {
+                group.classList.add('open');
+            }
+        });
+
+    });
+
+
+    document.addEventListener('click', event => {
+
+        if (!referenceMenu.contains(event.target)) {
+
+            referenceMenu.classList.remove('open');
+
+            referenceToggle.setAttribute(
+                'aria-expanded',
+                'false'
+            );
+
+            referenceGroups.forEach(group => {
+                group.classList.remove('open');
+            });
+        }
+    });
+
+</script>
+
+
+<script>
+
+    const backToTop =
+        document.getElementById("backToTop");
+
+    window.addEventListener("scroll", () => {
+
+        backToTop.classList.toggle(
+            "show",
+            window.scrollY > 600
+        );
+
+    });
+
+
     backToTop.addEventListener("click", () => {
+
         window.scrollTo({
             top: 0,
             behavior: "smooth"
         });
+
     });
+
 </script>
+
 
 <script src="js/easter-egg.js"></script>
 
