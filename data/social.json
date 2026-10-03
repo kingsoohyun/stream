@@ -300,18 +300,12 @@
       "thumbnail": "https://pbs.twimg.com/media/HSu043bbcAAmEaa?format=webp&name=small"
     },
     {
-      "url": "https://www.instagram.com/p/DdiQIcKj6RM",
-      "date": "2026.09.21",
-      "platform": "INSTAGRAM",
-      "account": "bcbench",
-      "desc": "BENCH/"
-    },
-    {
       "url": "https://www.instagram.com/p/DdiBANbk17Y",
       "date": "2026.09.21",
       "platform": "INSTAGRAM",
       "account": "thefactnews",
-      "desc": "더팩트"
+      "desc": "더팩트",
+      "thumbnail": "https://pbs.twimg.com/media/HS27NqNa8AAkrzW?format=webp&name=small"
     },
     {
       "url": "https://x.com/benchtm/status/2101619881439330627",
