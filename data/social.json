@@ -325,7 +325,8 @@
       "date": "2026.09.21",
       "platform": "INSTAGRAM",
       "account": "bcbench",
-      "desc": "BENCH/"
+      "desc": "BENCH/",
+      "thumbnail": "https://pbs.twimg.com/media/HSu043bbcAAmEaa?format=webp&name=small"
     },
     {
       "url": "https://www.instagram.com/p/DdiQIcKj6RM",
@@ -347,7 +348,7 @@
       "platform": "x",
       "account": "benchtm",
       "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2100895161488384000/img/vLNNHDl6YyS6bFbk?format=webp&name=small",
+      "thumbnail": "https://pbs.twimg.com/media/HSpp3nmaUAACG_J?format=webp&name=small",
       "pick": true
     },
     {
@@ -486,6 +487,8 @@
       "platform": "INSTAGRAM",
       "account": "officialrcti",
       "desc": "RCTI Mahakarya",
+      "thumbnail": "https://pbs.twimg.com/media/HQfxRzGbAAEyERC?format=webp&name=small",
+
       "pick": true
     },
     {
@@ -526,6 +529,7 @@
       "platform": "INSTAGRAM",
       "account": "officialrcti",
       "desc": "RCTI Mahakarya",
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2091576630062063616/img/6-ls---9Rc0Han8v?format=webp&name=small",
       "pick": true
     },
     {
