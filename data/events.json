@@ -3140,6 +3140,11 @@
       "lng": 120.98401826664943,
       "links": [
         {
+          "label": "MK스포츠",
+          "kind": "article",
+          "url": "https://m.entertain.naver.com/home/article/410/0001142239"
+        },
+        {
           "label": "BENCH/",
           "kind": "x",
           "url": "https://x.com/benchtm/status/2105246159623340275"
@@ -3158,6 +3163,11 @@
           "label": "\uD83C\uDFA5",
           "kind": "youtube",
           "url": "https://youtu.be/gqnRcpVonjg"
+        },
+        {
+          "label": "\uD83C\uDFA5",
+          "kind": "youtube",
+          "url": "https://youtu.be/Wj5sPKGjXj8"
         }
       ]
     },
