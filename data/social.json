@@ -2,13 +2,20 @@
   "updatedAt": "2026-09-26 00:00",
   "items": [
     {
+      "url": "https://www.instagram.com/p/DeERCiOkdE7",
+      "date": "2026.10.04",
+      "platform": "INSTAGRAM",
+      "account": "koreadispatch",
+      "desc": "DISPATCH",
+      "thumbnail": "https://imgnews.pstatic.net/image/433/2026/10/04/0000131142_001_20261004181616333.jpg?type=w647"
+    },
+    {
       "url": "https://www.instagram.com/p/Dd_0RMBzj_y/",
       "date": "2026.10.03",
       "platform": "instagram",
       "account": "benchtm",
       "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/media/HToy6y-acAA5mOd?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/media/HToy6y-acAA5mOd?format=webp&name=small"
     },
     {
       "url": "https://www.instagram.com/p/Dd_wwF3k9Jh",
@@ -16,8 +23,7 @@
       "platform": "instagram",
       "account": "benchtm",
       "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/media/HTozJ_lbsAAAgDE?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/media/HTozJ_lbsAAAgDE?format=webp&name=small"
     },
     {
       "url": "https://www.instagram.com/p/Dd_xF2Ok1mM",
@@ -25,8 +31,7 @@
       "platform": "instagram",
       "account": "benchtm",
       "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/media/HTopzs_aQAAC_cQ?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/media/HTopzs_aQAAC_cQ?format=webp&name=small"
     },
     {
       "url": "https://www.instagram.com/p/Dd_xZ75E8Cw",
@@ -34,8 +39,7 @@
       "platform": "instagram",
       "account": "benchtm",
       "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/media/HTowaqgagAA2Rra?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/media/HTowaqgagAA2Rra?format=webp&name=small"
     },
     {
       "url": "https://www.instagram.com/p/DeBOARwzM6u",
@@ -59,8 +63,7 @@
       "platform": "x",
       "account": "benchtm",
       "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2106024578023837696/img/8nUzC0U94_55YeUN?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2106024578023837696/img/8nUzC0U94_55YeUN?format=webp&name=small"
     },
     {
       "url": "https://x.com/benchtm/status/2106025287783972989",
@@ -68,8 +71,7 @@
       "platform": "x",
       "account": "benchtm",
       "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2106025166014926850/img/717PnEKjGBNQXxPS?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2106025166014926850/img/717PnEKjGBNQXxPS?format=webp&name=small"
     },
     {
       "url": "https://x.com/benchtm/status/2106014483978326042",
@@ -77,8 +79,7 @@
       "platform": "x",
       "account": "benchtm",
       "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2106013943215075329/img/uZ_Xt3m73Khn9rVa?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2106013943215075329/img/uZ_Xt3m73Khn9rVa?format=webp&name=small"
     },
     {
       "url": "https://x.com/benchtm/status/2105998059243233466",
@@ -86,8 +87,7 @@
       "platform": "x",
       "account": "benchtm",
       "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2105997370764992513/img/qm39Hs1K5NhSY0_C?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2105997370764992513/img/qm39Hs1K5NhSY0_C?format=webp&name=small"
     },
     {
       "url": "https://x.com/benchtm/status/2105994333690445881",
@@ -95,8 +95,7 @@
       "platform": "x",
       "account": "benchtm",
       "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2105993729782042624/img/T_8cwVBArayej3fB?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2105993729782042624/img/T_8cwVBArayej3fB?format=webp&name=small"
     },
     {
       "url": "https://x.com/benchtm/status/2105973944197222791",
@@ -104,8 +103,7 @@
       "platform": "x",
       "account": "benchtm",
       "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/media/HTnsIovboAAlPSj?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/media/HTnsIovboAAlPSj?format=webp&name=small"
     },
     {
       "url": "https://x.com/benchtm/status/2105951121999372611",
@@ -113,8 +111,7 @@
       "platform": "x",
       "account": "benchtm",
       "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2105951040285900800/img/ibQLHv-t8NIV-vE-?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2105951040285900800/img/ibQLHv-t8NIV-vE-?format=webp&name=small"
     },
     {
       "url": "https://x.com/benchtm/status/2105998064125391276",
@@ -122,8 +119,7 @@
       "platform": "x",
       "account": "benchtm",
       "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2105995700249186304/img/0ISEZjT_q4pqKfB3?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2105995700249186304/img/0ISEZjT_q4pqKfB3?format=webp&name=small"
     },
     {
       "url": "https://x.com/benchtm/status/2105952090019467463",
@@ -131,8 +127,7 @@
       "platform": "x",
       "account": "benchtm",
       "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2105951880316866561/img/tdCljF4ewBDNl7Rv?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2105951880316866561/img/tdCljF4ewBDNl7Rv?format=webp&name=small"
     },
     {
       "url": "https://x.com/benchtm/status/2105920195349082229",
@@ -140,8 +135,7 @@
       "platform": "x",
       "account": "benchtm",
       "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/media/HTm7PV9asAADEGZ?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/media/HTm7PV9asAADEGZ?format=webp&name=small"
     },
     {
       "url": "https://x.com/benchtm/status/2105938751277133844",
@@ -149,8 +143,7 @@
       "platform": "x",
       "account": "benchtm",
       "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/media/HTnMH6-bUAAVHYU?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/media/HTnMH6-bUAAVHYU?format=webp&name=small"
     },
     {
       "url": "https://x.com/benchtm/status/2105878594623070520",
@@ -158,8 +151,7 @@
       "platform": "x",
       "account": "benchtm",
       "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2105878575371218945/img/75QCpmKqaLsmQzE7?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2105878575371218945/img/75QCpmKqaLsmQzE7?format=webp&name=small"
     },
     {
       "url": "https://x.com/benchtm/status/2106030353488200026",
@@ -167,8 +159,7 @@
       "platform": "x",
       "account": "benchtm",
       "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2106029826532651008/img/8bpkS9ZEmBdhh0JI?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2106029826532651008/img/8bpkS9ZEmBdhh0JI?format=webp&name=small"
     },
     {
       "url": "https://www.instagram.com/p/Dd_JRQmvwLZ",
@@ -203,8 +194,7 @@
       "platform": "x",
       "account": "benchtm",
       "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/media/HTirWZlbcAATYAn?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/media/HTirWZlbcAATYAn?format=webp&name=small"
     },
     {
       "url": "https://x.com/benchtm/status/2105620509161562337",
@@ -212,8 +202,7 @@
       "platform": "x",
       "account": "benchtm",
       "desc": "BENCH/ EDSA Guadalupe",
-      "thumbnail": "https://pbs.twimg.com/media/HTiqr2HaUAAO46d?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/media/HTiqr2HaUAAO46d?format=webp&name=small"
     },
     {
       "url": "https://x.com/benchtm/status/2105527965534872036",
@@ -221,8 +210,7 @@
       "platform": "x",
       "account": "benchtm",
       "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/media/HThLk-kasAARBZg?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/media/HThLk-kasAARBZg?format=webp&name=small"
     },
     {
       "url": "https://www.instagram.com/p/Dd9GC8kxsKz",
@@ -230,8 +218,7 @@
       "platform": "INSTAGRAM",
       "account": "migspastor",
       "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/media/HTirWZgaUAADR2E?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/media/HTirWZgaUAADR2E?format=webp&name=small"
     },
     {
       "url": "https://www.instagram.com/p/Dd85S3mz6t9",
@@ -248,8 +235,7 @@
       "platform": "x",
       "account": "benchtm",
       "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2105245702565879808/img/ncpo1cdidrY82YU8?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2105245702565879808/img/ncpo1cdidrY82YU8?format=webp&name=small"
     },
     {
       "url": "https://www.instagram.com/p/Dd4uziSvt_R",
@@ -257,8 +243,7 @@
       "platform": "INSTAGRAM",
       "account": "starnewskorea",
       "desc": "스타뉴스",
-      "thumbnail": "https://pbs.twimg.com/media/HTa7qiwaYAAmITU?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/media/HTa7qiwaYAAmITU?format=webp&name=small"
     },
     {
       "url": "https://x.com/starnewskorea/status/2103602931291632074",
@@ -266,8 +251,7 @@
       "platform": "x",
       "account": "starnewskorea",
       "desc": "AAA 2026",
-      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2103602854456111104/img/u-2YN7dAu7EjhtoO?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2103602854456111104/img/u-2YN7dAu7EjhtoO?format=webp&name=small"
     },
     {
       "url": "https://www.instagram.com/p/Dds7guEmQzM",
@@ -291,8 +275,7 @@
       "platform": "x",
       "account": "benchtm",
       "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2102699885464260609/img/-pgLFWeOhB0cYJik?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2102699885464260609/img/-pgLFWeOhB0cYJik?format=webp&name=small"
     },
     {
       "url": "https://www.instagram.com/p/Ddk3IRmk8mz",
@@ -300,8 +283,7 @@
       "platform": "INSTAGRAM",
       "account": "goldmedalist_official",
       "desc": "GOLDMEDALIST",
-      "thumbnail": "https://pbs.twimg.com/media/HSyzqnkbQAADL_d?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/media/HSyzqnkbQAADL_d?format=webp&name=small"
     },
     {
       "url": "https://www.instagram.com/p/Ddi18E0mSWF",
@@ -325,8 +307,7 @@
       "platform": "x",
       "account": "benchtm",
       "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/media/HSpp3nmaUAACG_J?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/media/HSpp3nmaUAACG_J?format=webp&name=small"
     },
     {
       "url": "https://x.com/benchtm/status/2099488096966328746",
@@ -334,8 +315,7 @@
       "platform": "x",
       "account": "benchtm",
       "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/media/HSLX-dYbYAA_u_g?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/media/HSLX-dYbYAA_u_g?format=webp&name=small"
     },
     {
       "url": "https://www.instagram.com/p/DdNi7cLicx2",
@@ -343,8 +323,7 @@
       "platform": "INSTAGRAM",
       "account": "benchcoffeestation",
       "desc": "BENCH COFFEE STATION",
-      "thumbnail": "https://pbs.twimg.com/media/HSEQZgVbsAA8Qys?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/media/HSEQZgVbsAA8Qys?format=webp&name=small"
     },
     {
       "url": "https://www.instagram.com/p/DdDPveiiS7K",
@@ -352,8 +331,7 @@
       "platform": "INSTAGRAM",
       "account": "benchcoffeestation",
       "desc": "BENCH COFFEE STATION",
-      "thumbnail": "https://pbs.twimg.com/media/HRvwLjuaEAA9tkp?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/media/HRvwLjuaEAA9tkp?format=webp&name=small"
     },
     {
       "url": "https://x.com/benchtm/status/2097618380702531877",
@@ -361,8 +339,7 @@
       "platform": "x",
       "account": "benchtm",
       "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/media/HRw6zrmboAAkhF3?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/media/HRw6zrmboAAkhF3?format=webp&name=small"
     },
     {
       "url": "https://www.instagram.com/p/Dc-aCo_zjUy",
@@ -370,8 +347,7 @@
       "platform": "INSTAGRAM",
       "account": "goldmedalist_official",
       "desc": "GOLDMEDALIST",
-      "thumbnail": "https://pbs.twimg.com/media/HRl5kezbMAAprHq?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/media/HRl5kezbMAAprHq?format=webp&name=small"
     },
     {
       "url": "https://www.instagram.com/p/Dc9OrtJz60I",
@@ -386,8 +362,7 @@
       "platform": "INSTAGRAM",
       "account": "bcbench",
       "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/media/HRiEl3VawAALcgj?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/media/HRiEl3VawAALcgj?format=webp&name=small"
     },
     {
       "url": "https://www.instagram.com/p/Dc0F0ZMSm78",
@@ -402,8 +377,7 @@
       "platform": "INSTAGRAM",
       "account": "highendmagazineofficial",
       "desc": "HighEnd Magazine",
-      "thumbnail": "https://pbs.twimg.com/media/HRNTmIna0AAsi8R?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/media/HRNTmIna0AAsi8R?format=webp&name=small"
     },
     {
       "url": "https://www.instagram.com/p/DcuHIg-zfKb",
@@ -458,8 +432,7 @@
       "platform": "INSTAGRAM",
       "account": "jasmine.pratiwi2803",
       "desc": "Jasmine Pratiwi(MNC Media)",
-      "thumbnail": "https://pbs.twimg.com/media/HQa7JTQacAACRDx?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/media/HQa7JTQacAACRDx?format=webp&name=small"
     },
     {
       "url": "https://www.instagram.com/p/Dcckt4EE0Lc",
@@ -467,8 +440,7 @@
       "platform": "INSTAGRAM",
       "account": "jasmine.pratiwi2803",
       "desc": "Jasmine Pratiwi(MNC Media)",
-      "thumbnail": "https://pbs.twimg.com/media/HQkMbKkbMAATE89?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/media/HQkMbKkbMAATE89?format=webp&name=small"
     },
     {
       "url": "https://www.instagram.com/p/Dcck98lxp8h",
@@ -476,8 +448,7 @@
       "platform": "INSTAGRAM",
       "account": "koreadispatch",
       "desc": "DISPATCH",
-      "thumbnail": "https://pbs.twimg.com/media/HQhukUUakAAKkUy?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/media/HQhukUUakAAKkUy?format=webp&name=small"
     },
     {
       "url": "https://www.instagram.com/p/DcbNPZXGNB7/?img_index=3",
@@ -485,8 +456,7 @@
       "platform": "INSTAGRAM",
       "account": "officialrcti",
       "desc": "RCTI Mahakarya",
-      "thumbnail": "https://pbs.twimg.com/media/HQfxRzGbAAEyERC?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/media/HQfxRzGbAAEyERC?format=webp&name=small"
     },
     {
       "url": "https://www.instagram.com/p/DcaPu8Tj-1o",
@@ -518,8 +488,7 @@
       "platform": "INSTAGRAM",
       "account": "officialrcti",
       "desc": "RCTI Mahakarya",
-      "thumbnail": "https://pbs.twimg.com/media/HQaeyJtbgAApZI7?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/media/HQaeyJtbgAApZI7?format=webp&name=small"
     },
     {
       "url": "https://www.instagram.com/p/DcaSHQgpFrV",
@@ -527,8 +496,7 @@
       "platform": "INSTAGRAM",
       "account": "officialrcti",
       "desc": "RCTI Mahakarya",
-      "thumbnail": "https://pbs.twimg.com/media/HQav1qYakAAQefT?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/media/HQav1qYakAAQefT?format=webp&name=small"
     },
     {
       "url": "https://www.instagram.com/p/DcZLqw_zux6/",
@@ -536,8 +504,7 @@
       "platform": "INSTAGRAM",
       "account": "officialrcti",
       "desc": "RCTI Mahakarya",
-      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2091576630062063616/img/6-ls---9Rc0Han8v?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2091576630062063616/img/6-ls---9Rc0Han8v?format=webp&name=small"
     },
     {
       "url": "https://www.instagram.com/p/DcQKiJ8MKro",
@@ -545,8 +512,7 @@
       "platform": "INSTAGRAM",
       "account": "rctiplusoriginals",
       "desc": "RCTI Mahakarya",
-      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2089747876620685312/img/YVVgNJwxRSUEPuGC?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2089747876620685312/img/YVVgNJwxRSUEPuGC?format=webp&name=small"
     },
     {
       "url": "https://x.com/benchtm/status/2084859440944087506",
@@ -554,8 +520,7 @@
       "platform": "x",
       "account": "benchtm",
       "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2084466838201847808/img/0vYjFED2Cl2Uy6ib?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2084466838201847808/img/0vYjFED2Cl2Uy6ib?format=webp&name=small"
     },
     {
       "url": "https://x.com/benchtm/status/2084436720863662385",
@@ -563,8 +528,7 @@
       "platform": "x",
       "account": "benchtm",
       "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/media/HO1nyEcbkAA5ViP?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/media/HO1nyEcbkAA5ViP?format=webp&name=small"
     },
     {
       "url": "https://x.com/benchtm/status/2083775825070203049",
@@ -572,8 +536,7 @@
       "platform": "x",
       "account": "benchtm",
       "desc": "BENCH/",
-      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2083775655242870785/img/RjdSHjDta3TTOmRO?format=webp&name=small",
-      "pick": true
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2083775655242870785/img/RjdSHjDta3TTOmRO?format=webp&name=small"
     },
     {
       "url": "https://www.instagram.com/p/Day2vfNx88J",
