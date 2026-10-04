@@ -46,6 +46,14 @@
       "thumbnail": "https://pbs.twimg.com/media/HToxPLra0AABJpt?format=webp&name=small"
     },
     {
+      "url": "https://www.instagram.com/p/DeCQchXxQVQ",
+      "date": "2026.10.03",
+      "platform": "INSTAGRAM",
+      "account": "migspastor",
+      "desc": "BENCH/",
+      "thumbnail": "https://pbs.twimg.com/media/HTozD0ba0AArMAB?format=webp&name=small"
+    },
+    {
       "url": "https://x.com/benchtm/status/2106024755870802115",
       "date": "2026.10.02",
       "platform": "x",
@@ -194,7 +202,7 @@
       "date": "2026.10.01",
       "platform": "x",
       "account": "benchtm",
-      "desc": "BENCH/ Press Conference",
+      "desc": "BENCH/",
       "thumbnail": "https://pbs.twimg.com/media/HTirWZlbcAATYAn?format=webp&name=small",
       "pick": true
     },
