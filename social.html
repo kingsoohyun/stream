@@ -1063,12 +1063,7 @@
             const today =
                 new Date();
 
-            const todayKey =
-                `${today.getFullYear()}.${String(
-                    today.getMonth() + 1
-                ).padStart(2, "0")}.${String(
-                    today.getDate()
-                ).padStart(2, "0")}`;
+            const todayKey = getTodayKey();
 
             const isToday =
                 key === todayKey;
@@ -1480,15 +1475,7 @@
 
         currentYear = today.getFullYear();
         currentMonth = today.getMonth();
-
-        const todayKey =
-            `${currentYear}.${String(
-                currentMonth + 1
-            ).padStart(2, "0")}.${String(
-                today.getDate()
-            ).padStart(2, "0")}`;
-
-        selectedDate = todayKey;
+        selectedDate = getTodayKey();
 
         renderCalendar();
     }
@@ -1660,6 +1647,19 @@
             </div>
 
         `;
+
+    }
+
+
+    function getTodayKey() {
+
+        const today = new Date();
+
+        return `${today.getFullYear()}.${String(
+            today.getMonth() + 1
+        ).padStart(2, "0")}.${String(
+            today.getDate()
+        ).padStart(2, "0")}`;
 
     }
 
