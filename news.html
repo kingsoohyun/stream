@@ -1,0 +1,2477 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <title>KIM SOO HYUN STREAM</title>
+
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/easter-egg.css">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="KIM SOO HYUN STREAM">
+    <meta property="og:description" content="배우 김수현 콘텐츠 큐레이션 팬 페이지">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kingsoohyun.github.io/stream/news.html">
+    <meta property="og:image" content="https://kingsoohyun.github.io/stream/assets/stream.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- X / Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="KIM SOO HYUN STREAM">
+    <meta name="twitter:description" content="배우 김수현 콘텐츠 큐레이션 팬 페이지">
+    <meta name="twitter:image" content="https://kingsoohyun.github.io/stream/assets/stream.png">
+
+    <style>
+        /* =========================================================
+           NEWS
+           ========================================================= */
+
+        :root {
+            --news-cell: #e5e7eb;
+            --news-future: #f1f2f4;
+            --news-muted: #858b95;
+            --news-accent: #2563eb;
+
+            --news-1: #edf3ff;
+            --news-2: #d6e4ff;
+            --news-3: #a9c5ff;
+            --news-4: #6f96ff;
+            --news-5: #2563eb;
+
+            --news-today: #151922;
+
+            --news-size: 13px;
+            --news-gap: 3px;
+            --news-label: 30px;
+        }
+
+
+        /* ---------------------------------------------------------
+           Year Navigation
+           --------------------------------------------------------- */
+
+        .calendar-head {
+            display: flex;
+            justify-content: flex-end;
+
+            width: 100%;
+            margin: 0 auto 4px;
+        }
+
+        .year-nav {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            gap: 7px;
+            flex-wrap: wrap;
+        }
+
+        .year-button {
+            padding: 3px 5px;
+
+            border: 0;
+            background: none;
+
+            color: #858b95;
+
+            font: inherit;
+            font-size: 10px;
+            line-height: 1;
+
+            font-variant-numeric: tabular-nums;
+
+            cursor: pointer;
+        }
+
+        .year-button:hover {
+            color: #2563eb;
+        }
+
+        .year-button.active {
+            color: #151922;
+            font-weight: 600;
+        }
+
+
+        /* ---------------------------------------------------------
+           Updated Info
+           --------------------------------------------------------- */
+
+        .updated-info {
+            display: none;
+        }
+
+
+        /* ---------------------------------------------------------
+           Stats
+           --------------------------------------------------------- */
+
+        .stats {
+            display: flex;
+            align-items: baseline;
+            justify-content: flex-start;
+
+            gap: 20px;
+
+            width: 100%;
+            margin: 0 auto 20px;
+
+            color: #858b95;
+
+            font-size: 10px;
+            line-height: 1.4;
+            letter-spacing: .02em;
+        }
+
+        .stats strong {
+            color: #151922;
+            font-weight: 600;
+        }
+
+
+        /* ---------------------------------------------------------
+           Calendar
+           --------------------------------------------------------- */
+
+        .calendar-wrap {
+            width: 100%;
+            margin: 0;
+
+            overflow-x: auto;
+
+            padding: 4px 0 4px;
+
+            scrollbar-width: thin;
+        }
+
+        .calendar {
+            display: grid;
+
+            grid-template-columns:
+                var(--news-label)
+                max-content;
+
+            grid-template-rows:
+                20px
+                auto;
+
+            column-gap: 12px;
+
+            width: max-content;
+            min-width: 0;
+
+            margin: 0 auto;
+        }
+
+        .months {
+            grid-column: 2;
+            grid-row: 1;
+
+            position: relative;
+
+            height: 20px;
+        }
+
+        .month {
+            position: absolute;
+            top: 0;
+
+            color: #858b95;
+
+            font-size: 9px;
+            line-height: 1;
+            letter-spacing: .04em;
+        }
+
+        .weekdays {
+            grid-column: 1;
+            grid-row: 2;
+
+            display: grid;
+
+            grid-template-rows:
+                repeat(7, var(--news-size));
+
+            row-gap: var(--news-gap);
+
+            padding-top: 1px;
+        }
+
+        .weekdays span {
+            color: #858b95;
+
+            font-size: 8px;
+            line-height: var(--news-size);
+        }
+
+        .grid {
+            grid-column: 2;
+            grid-row: 2;
+
+            display: grid;
+
+            grid-template-rows:
+                repeat(7, var(--news-size));
+
+            grid-auto-flow: column;
+            grid-auto-columns: var(--news-size);
+
+            gap: var(--news-gap);
+        }
+
+        .day {
+            width: var(--news-size);
+            height: var(--news-size);
+
+            border-radius: 2px;
+
+            background: var(--news-cell);
+
+            cursor: default;
+
+            transition:
+                    transform .12s ease,
+                    opacity .12s ease;
+        }
+
+        .day.future {
+            background: var(--news-future);
+            opacity: .75;
+        }
+
+        .day.today {
+            outline: 1.5px solid var(--news-today);
+            outline-offset: 1px;
+        }
+
+        .day.news-1 {
+            background: var(--news-1);
+        }
+
+        .day.news-2 {
+            background: var(--news-2);
+        }
+
+        .day.news-3 {
+            background: var(--news-3);
+        }
+
+        .day.news-4 {
+            background: var(--news-4);
+        }
+
+        .day.news-5 {
+            background: var(--news-5);
+        }
+
+        .day.selected {
+            outline: 1.5px solid var(--news-accent);
+            outline-offset: 2px;
+        }
+
+        .day:hover {
+            transform: scale(1.35);
+            z-index: 2;
+        }
+
+
+        /* ---------------------------------------------------------
+           News Panel
+           --------------------------------------------------------- */
+
+        .news-panel {
+            display: none;
+
+            width: 100%;
+            margin: 28px auto 0;
+
+            border-top: 1px solid #e5e7eb;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .news-panel.show {
+            display: block;
+        }
+
+        .news-panel-head {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+
+            gap: 16px;
+
+            padding: 11px 0 10px;
+
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .news-panel-date {
+            min-width: 0;
+            overflow: hidden;
+
+            color: #151922;
+
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1.4;
+            letter-spacing: -.01em;
+
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .news-panel-actions {
+            display: flex;
+            align-items: baseline;
+
+            gap: 10px;
+
+            flex-shrink: 0;
+        }
+
+        .news-panel-count {
+            color: #858b95;
+
+            font-size: 9px;
+            letter-spacing: .08em;
+        }
+
+        .news-panel-all-years,
+        .news-panel-clear {
+            padding: 0;
+
+            border: 0;
+            background: none;
+
+            color: #858b95;
+
+            font: inherit;
+            font-size: 8px;
+
+            letter-spacing: .08em;
+
+            cursor: pointer;
+        }
+
+        .news-panel-all-years:hover,
+        .news-panel-clear:hover {
+            color: #2563eb;
+        }
+
+        .news-panel-all-years[hidden],
+        .news-panel-clear[hidden] {
+            display: none;
+        }
+
+        .news-list {
+            max-height: 620px;
+            overflow-y: auto;
+        }
+
+        .news-item {
+            display: grid;
+
+            grid-template-columns:
+                240px
+                minmax(0, 1fr);
+
+            align-items: baseline;
+
+            gap: 18px;
+
+            padding: 10px 0;
+
+            border-bottom: 1px solid #eef0f2;
+
+            color: #151922;
+
+            text-decoration: none;
+        }
+
+        .news-item:last-child {
+            border-bottom: 0;
+        }
+
+        .news-item:hover .news-item-title {
+            color: #2563eb;
+        }
+
+        .news-item-meta {
+            min-width: 0;
+            overflow: hidden;
+
+            color: #858b95;
+
+            font-size: 9px;
+            line-height: 1.3;
+
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+            font-variant-numeric: tabular-nums;
+        }
+
+        .news-filter {
+            display: inline;
+
+            padding: 0;
+
+            border: 0;
+            background: none;
+
+            color: inherit;
+
+            font: inherit;
+
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .news-filter:hover {
+            color: #2563eb;
+
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .news-filter:focus-visible {
+            outline: 1px solid #2563eb;
+            outline-offset: 2px;
+        }
+
+        .news-item-title {
+            min-width: 0;
+            overflow: hidden;
+
+            color: #151922;
+
+            font-size: 11px;
+            line-height: 1.45;
+
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+            text-decoration: none;
+
+            transition: color .12s ease;
+        }
+
+        .news-item-title:hover {
+            color: #2563eb;
+        }
+
+        .news-empty {
+            padding: 14px 0;
+
+            color: #858b95;
+
+            font-size: 10px;
+        }
+
+
+        /* ---------------------------------------------------------
+           Tooltip
+           --------------------------------------------------------- */
+
+        .tooltip {
+            position: fixed;
+            z-index: 10;
+
+            pointer-events: none;
+
+            padding: 7px 8px;
+
+            border-radius: 5px;
+
+            background: #151922;
+            color: #fff;
+
+            font-size: 10px;
+            line-height: 1.45;
+
+            white-space: nowrap;
+
+            opacity: 0;
+
+            transform: translateY(3px);
+
+            transition:
+                    opacity .1s ease,
+                    transform .1s ease;
+        }
+
+        .tooltip.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+        /* =========================================================
+           Tablet / Mobile
+           ========================================================= */
+
+        @media (max-width: 800px) {
+
+            .calendar-head {
+                margin-bottom: 4px;
+            }
+
+            .stats {
+                gap: 14px;
+                margin-bottom: 18px;
+            }
+
+            .calendar-wrap {
+                margin-right: -12px;
+                padding-right: 12px;
+            }
+
+            .news-panel {
+                margin-top: 24px;
+            }
+
+            .news-item {
+                grid-template-columns:
+                    190px
+                    minmax(0, 1fr);
+
+                gap: 12px;
+            }
+        }
+
+
+        @media (max-width: 700px) {
+
+            .stats {
+                gap: 12px;
+                flex-wrap: wrap;
+            }
+
+            .news-item {
+                grid-template-columns:
+                    175px
+                    minmax(0, 1fr);
+
+                gap: 10px;
+
+                padding: 9px 0;
+            }
+
+            .news-item-meta {
+                font-size: 8px;
+            }
+
+            .news-item-title {
+                font-size: 10px;
+            }
+        }
+
+
+        /* =========================================================
+           System Dark Mode
+           ========================================================= */
+
+        @media (prefers-color-scheme: dark) {
+
+            :root {
+                --news-cell: #34383d;
+                --news-future: #25282c;
+
+                --news-1: #252d3b;
+                --news-2: #303d54;
+                --news-3: #405477;
+                --news-4: #6f96ff;
+                --news-5: #9bb7ff;
+
+                --news-today: #eceef1;
+            }
+
+            .stats strong,
+            .news-panel-date,
+            .news-item-title {
+                color: #eceef1;
+            }
+
+            .news-panel {
+                border-top-color: #30353d;
+                border-bottom-color: #30353d;
+            }
+
+            .news-panel-head {
+                border-bottom-color: #30353d;
+            }
+
+            .news-item {
+                border-bottom-color: #30353d;
+                color: #eceef1;
+            }
+
+            .news-item:hover .news-item-title,
+            .news-item-title:hover,
+            .news-filter:hover,
+            .news-panel-all-years:hover,
+            .news-panel-clear:hover {
+                color: #6f96ff;
+            }
+
+            .tooltip {
+                background: #eceef1;
+                color: #151922;
+            }
+
+            .year-button.active {
+                color: #eceef1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="brand">
+        <a href="index.html" aria-label="KIM SOO HYUN STREAM">
+            <picture>
+                <source srcset="assets/stream-dark.svg" media="(prefers-color-scheme: dark)">
+                <img src="assets/stream.svg" alt="KIM SOO HYUN STREAM">
+            </picture>
+            <span>배우 김수현 콘텐츠 큐레이션 팬 페이지</span>
+        </a>
+    </div>
+
+    <nav class="site-nav" aria-label="사이트 내비게이션">
+        <a href="events.html">ACTIVITY</a>
+        <span>|</span>
+        <a href="records.html">RECORDS</a>
+        <span>|</span>
+        <a href="tweets.html">LOVE SH</a>
+        <span>|</span>
+        <a href="social.html">SOCIAL</a>
+        <span>|</span>
+        <a href="news.html" aria-current="page">NEWS</a>
+    </nav>
+
+    <nav class="header-action">
+        <a href="rights.html">
+            PRIVACY &amp; RIGHTS
+        </a>
+    </nav>
+</header>
+
+
+<main>
+
+    <div class="calendar-head">
+        <nav
+                class="year-nav"
+                id="yearNav"
+                aria-label="Year navigation"
+        ></nav>
+    </div>
+
+
+    <div
+            class="stats"
+            id="stats"
+    >
+        <span>
+            <span id="dayLabel">DAY</span>
+            <strong id="dayNumber">—</strong>
+        </span>
+
+        <span>
+            <strong id="daysLeft">—</strong>
+            <span id="daysLabel">DAYS LEFT</span>
+        </span>
+
+        <span id="status">—</span>
+    </div>
+
+
+    <section
+            class="calendar-wrap"
+            aria-label="News calendar"
+    >
+
+        <div class="calendar">
+
+            <div
+                    class="months"
+                    id="months"
+            ></div>
+
+            <div
+                    class="weekdays"
+                    aria-hidden="true"
+            >
+                <span>SUN</span>
+                <span>MON</span>
+                <span>TUE</span>
+                <span>WED</span>
+                <span>THU</span>
+                <span>FRI</span>
+                <span>SAT</span>
+            </div>
+
+            <div
+                    class="grid"
+                    id="grid"
+            ></div>
+
+        </div>
+
+    </section>
+
+
+    <div class="updated-info">
+
+        <span id="updated"></span>
+
+        <span class="common-info">
+            <button
+                    type="button"
+                    class="common-info-button"
+                    aria-label="뉴스 데이터 안내"
+            >i</button>
+
+            <span class="common-info-tooltip left">
+                모든 기사를 포함하지 않을 수 있습니다.
+            </span>
+        </span>
+
+    </div>
+
+
+    <section
+            class="news-panel"
+            id="newsPanel"
+            aria-live="polite"
+    >
+
+        <div class="news-panel-head">
+
+            <span
+                    class="news-panel-date"
+                    id="newsPanelDate"
+            ></span>
+
+            <div class="news-panel-actions">
+
+                <span
+                        class="news-panel-count"
+                        id="newsPanelCount"
+                ></span>
+
+                <button
+                        class="news-panel-all-years"
+                        id="newsPanelAllYears"
+                        type="button"
+                        hidden
+                >
+                    ALL YEARS
+                </button>
+
+                <button
+                        class="news-panel-clear"
+                        id="newsPanelClear"
+                        type="button"
+                        hidden
+                >
+                    × CLEAR
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div
+                class="news-list"
+                id="newsList"
+        ></div>
+
+    </section>
+
+</main>
+
+
+<footer>
+    <div class="footer-notice">
+        <strong>KIM SOO HYUN STREAM</strong> is an unofficial, non-commercial fan site.
+        Third-party content belongs to its respective copyright holders and is linked to its original source where
+        available.
+        <a href="mailto:kimsoohyun.stream@gmail.com">오류 제보</a>
+    </div>
+</footer>
+
+
+<div
+        class="tooltip"
+        id="tooltip"
+></div>
+
+
+<script>
+
+    const NEWS_URL = "data/news.json";
+
+
+    const monthNames = [
+        "JAN", "FEB", "MAR", "APR",
+        "MAY", "JUN", "JUL", "AUG",
+        "SEP", "OCT", "NOV", "DEC"
+    ];
+
+
+    const today = new Date();
+
+    today.setHours(0, 0, 0, 0);
+
+
+    const grid =
+        document.getElementById("grid");
+
+    const months =
+        document.getElementById("months");
+
+    const tooltip =
+        document.getElementById("tooltip");
+
+    const yearNav =
+        document.getElementById("yearNav");
+
+    const updatedEl =
+        document.getElementById("updated");
+
+    const calendar =
+        document.querySelector(".calendar");
+
+    const calendarHead =
+        document.querySelector(".calendar-head");
+
+    const stats =
+        document.getElementById("stats");
+
+    const newsPanel =
+        document.getElementById("newsPanel");
+
+
+    const pad =
+        n => String(n).padStart(2, "0");
+
+
+    const keyOf =
+        d =>
+            `${d.getFullYear()}-${pad(
+                d.getMonth() + 1
+            )}-${pad(
+                d.getDate()
+            )}`;
+
+
+    const fmt =
+        d =>
+            d.toLocaleDateString(
+                "en-US",
+                {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric"
+                }
+            );
+
+
+    let currentYear =
+        today.getFullYear();
+
+    let selectedDateKey =
+        null;
+
+    let selectedYear =
+        currentYear;
+
+    let allNewsItems = [];
+
+    let newsByDate = {};
+
+    let newsItemsByDate = {};
+
+    let maxNewsCount = 0;
+
+    let availableYears = [];
+
+    let newsUpdatedAt = "";
+
+    let activeFilterType = "";
+
+    let activeFilterValue = "";
+
+    let activeFilterDisplayName = "";
+
+    let filterAllYearsMode = false;
+
+
+    /* ---------------------------------------------------------
+       CALENDAR WIDTH
+       --------------------------------------------------------- */
+
+    function syncCalendarWidth() {
+
+        if (!calendar) {
+            return;
+        }
+
+        const width =
+            calendar.getBoundingClientRect().width;
+
+        const maxWidth =
+            Math.min(
+                width,
+                document.documentElement.clientWidth
+            );
+
+        const widthValue =
+            `${maxWidth}px`;
+
+        calendarHead.style.width =
+            widthValue;
+
+        stats.style.width =
+            widthValue;
+
+        newsPanel.style.width =
+            widthValue;
+    }
+
+
+    /* ---------------------------------------------------------
+       YEAR
+       --------------------------------------------------------- */
+
+    function getYearInfo(year) {
+
+        const start =
+            new Date(year, 0, 1);
+
+        const leap =
+            year % 4 === 0 &&
+            (
+                year % 100 !== 0 ||
+                year % 400 === 0
+            );
+
+        const totalDays =
+            leap ? 366 : 365;
+
+        const leading =
+            start.getDay();
+
+        const weeks =
+            Math.ceil(
+                (leading + totalDays) / 7
+            );
+
+        return {
+            start,
+            totalDays,
+            leading,
+            weeks
+        };
+    }
+
+
+    /* ---------------------------------------------------------
+       NEWS LEVEL
+       --------------------------------------------------------- */
+
+    function newsLevel(count) {
+
+        if (!count || !maxNewsCount) {
+            return 0;
+        }
+
+        return Math.min(
+            5,
+            Math.max(
+                1,
+                Math.ceil(
+                    Math.log(count + 1) /
+                    Math.log(maxNewsCount + 1) *
+                    5
+                )
+            )
+        );
+    }
+
+
+    /* ---------------------------------------------------------
+       BUILD DATA
+       --------------------------------------------------------- */
+
+    function buildYearData(year) {
+
+        newsByDate = {};
+
+        newsItemsByDate = {};
+
+        for (
+            const item of allNewsItems
+            ) {
+
+            if (!item.date) {
+                continue;
+            }
+
+            if (
+                !item.date.startsWith(
+                    `${year}-`
+                )
+            ) {
+                continue;
+            }
+
+            newsByDate[item.date] =
+                (
+                    newsByDate[item.date] ||
+                    0
+                ) + 1;
+
+            if (
+                !newsItemsByDate[item.date]
+            ) {
+
+                newsItemsByDate[item.date] =
+                    [];
+            }
+
+            newsItemsByDate[
+                item.date
+                ].push(item);
+        }
+
+        maxNewsCount =
+            Math.max(
+                0,
+                ...Object.values(
+                    newsByDate
+                )
+            );
+    }
+
+
+    /* ---------------------------------------------------------
+       YEAR NAVIGATION
+       --------------------------------------------------------- */
+
+    function renderYearNavigation() {
+
+        yearNav.innerHTML = "";
+
+        const years =
+            [...availableYears]
+                .sort(
+                    (a, b) => a - b
+                );
+
+        for (
+            const year of years
+            ) {
+
+            const button =
+                document.createElement(
+                    "button"
+                );
+
+            button.type =
+                "button";
+
+            button.className =
+                "year-button";
+
+            if (
+                year === selectedYear
+            ) {
+
+                button.classList.add(
+                    "active"
+                );
+            }
+
+            button.textContent =
+                year;
+
+            button.setAttribute(
+                "aria-label",
+                `${year}년 보기`
+            );
+
+            button.addEventListener(
+                "click",
+                () => selectYear(year)
+            );
+
+            yearNav.appendChild(
+                button
+            );
+        }
+    }
+
+
+    /* ---------------------------------------------------------
+       CALENDAR
+       --------------------------------------------------------- */
+
+    function renderCalendar() {
+
+        const {
+            start,
+            totalDays,
+            leading,
+            weeks
+        } =
+            getYearInfo(
+                selectedYear
+            );
+
+        grid.innerHTML = "";
+
+        months.innerHTML = "";
+
+
+        for (
+            let i = 0;
+            i < weeks * 7;
+            i++
+        ) {
+
+            const offset =
+                i - leading;
+
+            const cell =
+                document.createElement(
+                    "div"
+                );
+
+
+            if (
+                offset < 0 ||
+                offset >= totalDays
+            ) {
+
+                cell.style.visibility =
+                    "hidden";
+
+                grid.appendChild(
+                    cell
+                );
+
+                continue;
+            }
+
+
+            const date =
+                new Date(
+                    selectedYear,
+                    0,
+                    offset + 1
+                );
+
+            const key =
+                keyOf(date);
+
+
+            const newsCount =
+                newsByDate[key] || 0;
+
+
+            const level =
+                newsLevel(
+                    newsCount
+                );
+
+
+            cell.className =
+                "day";
+
+
+            if (
+                selectedYear ===
+                today.getFullYear() &&
+                date > today
+            ) {
+
+                cell.classList.add(
+                    "future"
+                );
+            }
+
+
+            if (
+                selectedYear ===
+                today.getFullYear() &&
+                date.getTime() ===
+                today.getTime()
+            ) {
+
+                cell.classList.add(
+                    "today"
+                );
+            }
+
+
+            if (level) {
+
+                cell.classList.add(
+                    `news-${level}`
+                );
+            }
+
+
+            cell.setAttribute(
+                "aria-label",
+                `${key}: ${newsCount} news`
+            );
+
+            cell.setAttribute(
+                "role",
+                "button"
+            );
+
+            cell.setAttribute(
+                "tabindex",
+                "0"
+            );
+
+
+            cell.addEventListener(
+                "click",
+                () => {
+
+                    if (
+                        selectedDateKey === key
+                    ) {
+
+                        closeNewsPanel();
+
+                    } else {
+
+                        openNewsPanel(
+                            key,
+                            date
+                        );
+                    }
+                }
+            );
+
+
+            cell.addEventListener(
+                "keydown",
+                e => {
+
+                    if (
+                        e.key === "Enter" ||
+                        e.key === " "
+                    ) {
+
+                        e.preventDefault();
+
+                        if (
+                            selectedDateKey === key
+                        ) {
+
+                            closeNewsPanel();
+
+                        } else {
+
+                            openNewsPanel(
+                                key,
+                                date
+                            );
+                        }
+                    }
+                }
+            );
+
+
+            cell.addEventListener(
+                "mouseenter",
+                e => {
+
+                    const newsText =
+                        newsCount === 0
+                            ? "No news"
+                            : `${newsCount} news`;
+
+
+                    tooltip.innerHTML =
+                        `<strong>${fmt(date)}</strong>` +
+                        `<br>Day ${offset + 1}` +
+                        `<br>${newsText}`;
+
+
+                    tooltip.classList.add(
+                        "show"
+                    );
+
+
+                    moveTooltip(e);
+                }
+            );
+
+
+            cell.addEventListener(
+                "mousemove",
+                moveTooltip
+            );
+
+
+            cell.addEventListener(
+                "mouseleave",
+                () => {
+
+                    tooltip.classList.remove(
+                        "show"
+                    );
+                }
+            );
+
+
+            grid.appendChild(
+                cell
+            );
+        }
+
+
+        for (
+            let month = 0;
+            month < 12;
+            month++
+        ) {
+
+            const first =
+                new Date(
+                    selectedYear,
+                    month,
+                    1
+                );
+
+
+            const dayIndex =
+                leading +
+                Math.floor(
+                    (first - start) /
+                    86400000
+                );
+
+
+            const week =
+                Math.floor(
+                    dayIndex / 7
+                );
+
+
+            const label =
+                document.createElement(
+                    "span"
+                );
+
+            label.className =
+                "month";
+
+            label.textContent =
+                monthNames[month];
+
+
+            const styles =
+                getComputedStyle(
+                    document.documentElement
+                );
+
+
+            const size =
+                parseFloat(
+                    styles.getPropertyValue(
+                        "--news-size"
+                    )
+                );
+
+            const gap =
+                parseFloat(
+                    styles.getPropertyValue(
+                        "--news-gap"
+                    )
+                );
+
+
+            label.style.left =
+                `${week * (size + gap)}px`;
+
+
+            months.appendChild(
+                label
+            );
+        }
+
+        syncCalendarWidth();
+    }
+
+
+    /* ---------------------------------------------------------
+       HEADER / STATS
+       --------------------------------------------------------- */
+
+    function updateHeader() {
+
+        const {
+            start,
+            totalDays
+        } =
+            getYearInfo(
+                selectedYear
+            );
+
+
+        const isCurrentYear =
+            selectedYear ===
+            currentYear;
+
+
+        const dayLabel =
+            document.getElementById(
+                "dayLabel"
+            );
+
+        const dayNumber =
+            document.getElementById(
+                "dayNumber"
+            );
+
+        const daysLeft =
+            document.getElementById(
+                "daysLeft"
+            );
+
+        const daysLabel =
+            document.getElementById(
+                "daysLabel"
+            );
+
+        const status =
+            document.getElementById(
+                "status"
+            );
+
+
+        if (isCurrentYear) {
+
+            const day =
+                Math.floor(
+                    (today - start) /
+                    86400000
+                ) + 1;
+
+
+            dayLabel.textContent =
+                "DAY";
+
+            dayNumber.textContent =
+                day;
+
+            daysLeft.textContent =
+                totalDays - day;
+
+            daysLabel.textContent =
+                "DAYS LEFT";
+
+            status.textContent =
+                day === totalDays
+                    ? "LAST DAY"
+                    : "IN PROGRESS";
+
+        } else {
+
+            const newsCount =
+                Object.values(
+                    newsByDate
+                ).reduce(
+                    (sum, count) =>
+                        sum + count,
+                    0
+                );
+
+
+            dayLabel.textContent =
+                "DAYS";
+
+            dayNumber.textContent =
+                totalDays;
+
+            daysLeft.textContent =
+                newsCount;
+
+            daysLabel.textContent =
+                "NEWS";
+
+            status.textContent =
+                "ARCHIVE";
+        }
+
+
+        renderYearNavigation();
+
+        syncCalendarWidth();
+    }
+
+
+    /* ---------------------------------------------------------
+       SELECTED DAY
+       --------------------------------------------------------- */
+
+    function setSelectedCell(key) {
+
+        selectedDateKey =
+            key;
+
+
+        document
+            .querySelectorAll(
+                ".day.selected"
+            )
+            .forEach(
+                el =>
+                    el.classList.remove(
+                        "selected"
+                    )
+            );
+
+
+        const selectedCell =
+            [
+                ...document.querySelectorAll(
+                    ".day"
+                )
+            ].find(
+                el =>
+                    el.getAttribute(
+                        "aria-label"
+                    )?.startsWith(
+                        `${key}:`
+                    )
+            );
+
+
+        if (selectedCell) {
+
+            selectedCell.classList.add(
+                "selected"
+            );
+        }
+    }
+
+
+    /* ---------------------------------------------------------
+       FILTER
+       --------------------------------------------------------- */
+
+    function reporterFilterKey(item) {
+
+        return item.reporterName || "";
+    }
+
+
+    function reporterDisplayName(item) {
+
+        return item.reporter || "";
+    }
+
+
+    function mediaFilterKey(item) {
+
+        return item.media || "";
+    }
+
+
+    /* ---------------------------------------------------------
+       OPEN DAY
+       --------------------------------------------------------- */
+
+    function openNewsPanel(
+        key,
+        date
+    ) {
+
+        activeFilterType = "";
+        activeFilterValue = "";
+        activeFilterDisplayName = "";
+        filterAllYearsMode = false;
+
+
+        setSelectedCell(key);
+
+
+        renderNewsList(
+            newsItemsByDate[key] || [],
+            fmt(date),
+            false
+        );
+    }
+
+
+    /* ---------------------------------------------------------
+       FILTER
+       --------------------------------------------------------- */
+
+    function openFilter(
+        filterType,
+        filterValue,
+        displayName
+    ) {
+
+        if (!filterValue) {
+            return;
+        }
+
+
+        document
+            .querySelectorAll(
+                ".day.selected"
+            )
+            .forEach(
+                el =>
+                    el.classList.remove(
+                        "selected"
+                    )
+            );
+
+
+        selectedDateKey =
+            null;
+
+
+        activeFilterType =
+            filterType;
+
+        activeFilterValue =
+            filterValue;
+
+        activeFilterDisplayName =
+            displayName ||
+            filterValue;
+
+        filterAllYearsMode =
+            false;
+
+
+        const items =
+            allNewsItems.filter(
+                item => {
+
+                    const value =
+                        filterType ===
+                        "reporter"
+
+                            ? reporterFilterKey(
+                                item
+                            )
+
+                            : mediaFilterKey(
+                                item
+                            );
+
+
+                    return (
+                        value ===
+                        filterValue &&
+
+                        item.date?.startsWith(
+                            `${selectedYear}-`
+                        )
+                    );
+                }
+            );
+
+
+        renderNewsList(
+            items,
+            activeFilterDisplayName,
+            true
+        );
+    }
+
+
+    /* ---------------------------------------------------------
+       ALL YEARS
+       --------------------------------------------------------- */
+
+    function openFilterAllYears() {
+
+        if (!activeFilterValue) {
+            return;
+        }
+
+
+        filterAllYearsMode =
+            true;
+
+
+        const items =
+            allNewsItems.filter(
+                item => {
+
+                    const value =
+                        activeFilterType ===
+                        "reporter"
+
+                            ? reporterFilterKey(
+                                item
+                            )
+
+                            : mediaFilterKey(
+                                item
+                            );
+
+
+                    return (
+                        value ===
+                        activeFilterValue
+                    );
+                }
+            );
+
+
+        renderNewsList(
+            items,
+            activeFilterDisplayName,
+            true
+        );
+    }
+
+
+    /* ---------------------------------------------------------
+       NEWS LIST
+       --------------------------------------------------------- */
+
+    function renderNewsList(
+        items,
+        heading,
+        isFilter
+    ) {
+
+        const panel =
+            document.getElementById(
+                "newsPanel"
+            );
+
+        const dateEl =
+            document.getElementById(
+                "newsPanelDate"
+            );
+
+        const countEl =
+            document.getElementById(
+                "newsPanelCount"
+            );
+
+        const allYearsEl =
+            document.getElementById(
+                "newsPanelAllYears"
+            );
+
+        const clearEl =
+            document.getElementById(
+                "newsPanelClear"
+            );
+
+        const list =
+            document.getElementById(
+                "newsList"
+            );
+
+
+        if (isFilter) {
+
+            const typeLabel =
+                activeFilterType ===
+                "media"
+                    ? "MEDIA"
+                    : "REPORTER";
+
+
+            dateEl.textContent =
+                filterAllYearsMode
+                    ? `${heading} · ${typeLabel} · ALL YEARS`
+                    : `${heading} · ${typeLabel} · ${selectedYear}`;
+
+        } else {
+
+            dateEl.textContent =
+                heading;
+        }
+
+
+        countEl.textContent =
+            items.length
+                ? `${items.length} NEWS`
+                : "NO NEWS";
+
+
+        allYearsEl.hidden =
+            !isFilter ||
+            filterAllYearsMode;
+
+
+        clearEl.hidden =
+            !isFilter;
+
+
+        list.innerHTML = "";
+
+
+        if (!items.length) {
+
+            const empty =
+                document.createElement(
+                    "div"
+                );
+
+            empty.className =
+                "news-empty";
+
+
+            empty.textContent =
+                isFilter
+
+                    ? activeFilterType ===
+                    "media"
+
+                        ? "해당 매체의 등록된 뉴스가 없습니다."
+
+                        : "해당 기자의 등록된 뉴스가 없습니다."
+
+                    : "등록된 뉴스가 없습니다.";
+
+
+            list.appendChild(
+                empty
+            );
+
+        } else {
+
+            const sorted =
+                [...items].sort(
+                    (a, b) =>
+                        (
+                            b.publishedAt || ""
+                        ).localeCompare(
+                            a.publishedAt || ""
+                        )
+                );
+
+
+            for (
+                const item of sorted
+                ) {
+
+                const row =
+                    document.createElement(
+                        "div"
+                    );
+
+                row.className =
+                    "news-item";
+
+
+                const meta =
+                    document.createElement(
+                        "div"
+                    );
+
+                meta.className =
+                    "news-item-meta";
+
+
+                const itemDate =
+                    item.date ||
+                    (
+                        item.publishedAt
+                            ? item.publishedAt.slice(
+                                0,
+                                10
+                            )
+                            : ""
+                    );
+
+
+                const dateText =
+                    itemDate.replace(
+                        /-/g,
+                        "."
+                    );
+
+
+                const time =
+                    item.publishedAt
+                        ? item.publishedAt.slice(
+                            11,
+                            16
+                        )
+                        : "";
+
+
+                const appendSeparator =
+                    () => {
+
+                        if (
+                            meta.childNodes.length
+                        ) {
+
+                            meta.appendChild(
+                                document.createTextNode(
+                                    " · "
+                                )
+                            );
+                        }
+                    };
+
+
+                if (
+                    isFilter &&
+                    dateText
+                ) {
+
+                    const dateEl =
+                        document.createElement(
+                            "span"
+                        );
+
+                    dateEl.className =
+                        "news-date";
+
+                    dateEl.textContent =
+                        dateText;
+
+                    meta.appendChild(
+                        dateEl
+                    );
+                }
+
+
+                if (time) {
+
+                    appendSeparator();
+
+
+                    const timeEl =
+                        document.createElement(
+                            "span"
+                        );
+
+                    timeEl.className =
+                        "news-time";
+
+                    timeEl.textContent =
+                        time;
+
+                    meta.appendChild(
+                        timeEl
+                    );
+                }
+
+
+                if (item.media) {
+
+                    appendSeparator();
+
+
+                    const media =
+                        document.createElement(
+                            "button"
+                        );
+
+                    media.className =
+                        "news-filter";
+
+                    media.type =
+                        "button";
+
+                    media.textContent =
+                        item.media;
+
+                    media.title =
+                        "이 매체의 기사 보기";
+
+                    media.setAttribute(
+                        "aria-label",
+                        `${item.media} 매체의 기사 보기`
+                    );
+
+
+                    media.addEventListener(
+                        "click",
+                        event => {
+
+                            event.stopPropagation();
+
+
+                            openFilter(
+                                "media",
+                                item.media,
+                                item.media
+                            );
+                        }
+                    );
+
+
+                    meta.appendChild(
+                        media
+                    );
+                }
+
+
+                const reporterName =
+                    reporterFilterKey(
+                        item
+                    );
+
+
+                const displayName =
+                    reporterDisplayName(
+                        item
+                    );
+
+
+                if (displayName) {
+
+                    appendSeparator();
+
+
+                    const reporter =
+                        document.createElement(
+                            "button"
+                        );
+
+                    reporter.className =
+                        "news-filter";
+
+                    reporter.type =
+                        "button";
+
+                    reporter.textContent =
+                        displayName;
+
+                    reporter.title =
+                        "이 기자의 기사 보기";
+
+                    reporter.setAttribute(
+                        "aria-label",
+                        `${displayName} 기자의 기사 보기`
+                    );
+
+
+                    reporter.addEventListener(
+                        "click",
+                        event => {
+
+                            event.stopPropagation();
+
+
+                            openFilter(
+                                "reporter",
+                                reporterName,
+                                displayName
+                            );
+                        }
+                    );
+
+
+                    meta.appendChild(
+                        reporter
+                    );
+                }
+
+
+                const titleLink =
+                    document.createElement(
+                        "a"
+                    );
+
+                titleLink.className =
+                    "news-item-title";
+
+
+                titleLink.href =
+                    item.originalUrl ||
+                    item.url ||
+                    "#";
+
+
+                titleLink.target =
+                    "_blank";
+
+                titleLink.rel =
+                    "noopener noreferrer";
+
+
+                titleLink.textContent =
+                    item.title ||
+                    "제목 없음";
+
+
+                titleLink.title =
+                    item.title ||
+                    "제목 없음";
+
+
+                row.append(
+                    meta,
+                    titleLink
+                );
+
+
+                list.appendChild(
+                    row
+                );
+            }
+        }
+
+
+        panel.classList.add(
+            "show"
+        );
+
+        syncCalendarWidth();
+    }
+
+
+    /* ---------------------------------------------------------
+       CLOSE
+       --------------------------------------------------------- */
+
+    function closeNewsPanel() {
+
+        selectedDateKey =
+            null;
+
+        activeFilterType =
+            "";
+
+        activeFilterValue =
+            "";
+
+        activeFilterDisplayName =
+            "";
+
+        filterAllYearsMode =
+            false;
+
+
+        document
+            .querySelectorAll(
+                ".day.selected"
+            )
+            .forEach(
+                el =>
+                    el.classList.remove(
+                        "selected"
+                    )
+            );
+
+
+        document
+            .getElementById(
+                "newsPanel"
+            )
+            .classList.remove(
+            "show"
+        );
+    }
+
+
+    /* ---------------------------------------------------------
+       YEAR
+       --------------------------------------------------------- */
+
+    function selectYear(year) {
+
+        selectedYear =
+            year;
+
+
+        closeNewsPanel();
+
+
+        buildYearData(
+            selectedYear
+        );
+
+
+        updateHeader();
+
+
+        renderCalendar();
+
+
+        if (newsUpdatedAt) {
+
+            updatedEl.textContent =
+                `NEWS UPDATED ${newsUpdatedAt}`;
+        }
+    }
+
+
+    /* ---------------------------------------------------------
+       EVENTS
+       --------------------------------------------------------- */
+
+    document
+        .getElementById(
+            "newsPanelAllYears"
+        )
+        .addEventListener(
+            "click",
+            openFilterAllYears
+        );
+
+
+    document
+        .getElementById(
+            "newsPanelClear"
+        )
+        .addEventListener(
+            "click",
+            closeNewsPanel
+        );
+
+
+    window.addEventListener(
+        "resize",
+        syncCalendarWidth
+    );
+
+
+    /* ---------------------------------------------------------
+       TOOLTIP
+       --------------------------------------------------------- */
+
+    function moveTooltip(e) {
+
+        const gap =
+            11;
+
+
+        let x =
+            e.clientX + gap;
+
+        let y =
+            e.clientY + gap;
+
+
+        const r =
+            tooltip.getBoundingClientRect();
+
+
+        if (
+            x + r.width >
+            innerWidth - 8
+        ) {
+
+            x =
+                e.clientX -
+                r.width -
+                gap;
+        }
+
+
+        if (
+            y + r.height >
+            innerHeight - 8
+        ) {
+
+            y =
+                e.clientY -
+                r.height -
+                gap;
+        }
+
+
+        tooltip.style.left =
+            `${x}px`;
+
+        tooltip.style.top =
+            `${y}px`;
+    }
+
+
+    /* ---------------------------------------------------------
+       LOAD NEWS
+       --------------------------------------------------------- */
+
+    async function loadNews() {
+
+        try {
+
+            const response =
+                await fetch(
+                    NEWS_URL
+                );
+
+
+            if (!response.ok) {
+
+                throw new Error(
+                    `HTTP ${response.status}`
+                );
+            }
+
+
+            const data =
+                await response.json();
+
+
+            console.log(
+                "news.json loaded:",
+                {
+                    count:
+                    data.count,
+
+                    items:
+                    data.items?.length,
+
+                    updatedAt:
+                    data.updatedAt
+                }
+            );
+
+
+            allNewsItems =
+                data.items || [];
+
+
+            newsUpdatedAt =
+                data.updatedAt || "";
+
+
+            updatedEl.textContent =
+                newsUpdatedAt
+                    ? `NEWS UPDATED ${newsUpdatedAt}`
+                    : "";
+
+
+            const years =
+                new Set();
+
+
+            for (
+                const item of allNewsItems
+                ) {
+
+                if (!item.date) {
+                    continue;
+                }
+
+
+                const year =
+                    Number(
+                        item.date.slice(
+                            0,
+                            4
+                        )
+                    );
+
+
+                if (
+                    Number.isInteger(year)
+                ) {
+
+                    years.add(
+                        year
+                    );
+                }
+            }
+
+
+            availableYears =
+                [...years].sort(
+                    (a, b) =>
+                        a - b
+                );
+
+
+            if (
+                !availableYears.includes(
+                    currentYear
+                )
+            ) {
+
+                availableYears.push(
+                    currentYear
+                );
+
+
+                availableYears.sort(
+                    (a, b) =>
+                        a - b
+                );
+            }
+
+
+            if (
+                !availableYears.includes(
+                    selectedYear
+                )
+            ) {
+
+                selectedYear =
+                    currentYear;
+            }
+
+
+            buildYearData(
+                selectedYear
+            );
+
+
+            updateHeader();
+
+        } catch (error) {
+
+            console.error(
+                "Failed to load news.json:",
+                error
+            );
+
+
+            document.getElementById(
+                "status"
+            ).textContent =
+                `NEWS ERROR: ${
+                    error.message
+                }`;
+
+
+            updatedEl.textContent = "";
+        }
+
+
+        renderCalendar();
+    }
+
+
+    /* ---------------------------------------------------------
+       INIT
+       --------------------------------------------------------- */
+
+    updateHeader();
+
+    loadNews();
+
+</script>
+
+</body>
+</html>
