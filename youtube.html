@@ -444,7 +444,7 @@
                             class="common-info-tooltip"
                             id="common-info-tooltip"
                             role="status"
-                    >조회수는 YouTube 데이터 기준</span>
+                    >조회수·좋아요 수는 YouTube 데이터 기준</span>
                 </span>
 
             전체
@@ -500,6 +500,10 @@
 
                 <option value="views">
                     조회수순
+                </option>
+
+                <option value="likes">
+                    좋아요순
                 </option>
 
             </select>
@@ -790,6 +794,16 @@
 
                 }
 
+                if (type === 'likes') {
+
+                    return (
+                        Number(b.likes || 0)
+                        -
+                        Number(a.likes || 0)
+                    );
+
+                }
+
 
                 // 최신순
 
@@ -991,17 +1005,10 @@
             sorted
                 .map(video => {
 
-
-                    const increase =
+                    const likes =
                         Number(
-                            video.viewIncrease || 0
+                            video.likes || 0
                         );
-
-
-                    const increaseText =
-                        increase > 0
-                            ? `↑ ${formatNumber(increase)}`
-                            : '';
 
 
                     return `
@@ -1055,15 +1062,9 @@
                                         views
                                     </span>
 
-                                    ${
-                        increaseText
-                            ? `
-                                                <span>
-                                                    ${increaseText}
-                                                </span>
-                                            `
-                            : ''
-                    }
+                                    <span>
+                                        ♥ ${formatNumber(likes)}
+                                    </span>
 
                                 </div>
 
