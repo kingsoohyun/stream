@@ -9,7 +9,7 @@ async function loadEvents() {
         return r.json();
     });
 
-    await renderMap(data.items);
+    renderMap(data.items);
     renderTimeline(data.items);
 }
 
