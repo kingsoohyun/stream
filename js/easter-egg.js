@@ -143,8 +143,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 [24, 12]
             ];
 
-            spark.style.setProperty('--x', positions[i][0] + 'px');
-            spark.style.setProperty('--y', positions[i][1] + 'px');
+            spark.style.setProperty('--love-spark-x', positions[i][0] + 'px');
+            spark.style.setProperty('--love-spark-y', positions[i][1] + 'px');
 
             document.body.appendChild(spark);
 
