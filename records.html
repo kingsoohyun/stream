@@ -236,6 +236,59 @@
             color: #315f8d
         }
 
+        .record-work {
+            border-bottom: 1px solid #f0f1f3;
+        }
+
+        .record-work:last-child {
+            border-bottom: 0;
+        }
+
+        .record-work-button {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 9px 10px;
+            border: 0;
+            background: transparent;
+            color: inherit;
+            text-align: left;
+            cursor: pointer;
+            font: inherit
+        }
+
+        .record-work-button:hover {
+            background: #fafafa;
+        }
+
+        .record-work-title {
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .record-work-arrow {
+            flex: none;
+            color: #858b95;
+            font-size: 15px;
+            line-height: 1;
+            transition: transform .2s ease
+        }
+
+        .record-work.open > .record-work-button .record-work-arrow {
+            transform: rotate(90deg);
+        }
+
+        .record-work-list {
+            display: none;
+            padding: 0 10px;
+        }
+
+        .record-work.open > .record-work-list {
+            display: block;
+        }
+
         .records-empty {
             padding: 30px 20px;
             text-align: center;
@@ -571,13 +624,45 @@
                 color: #e7ff9a;
             }
 
+            .record-sublist {
+                border-top-color: #292d34;
+            }
+
+            .record-subitem {
+                border-bottom-color: #292d34;
+                color: #d5d9df;
+            }
+
+            .record-subitem-links a {
+                border-color: #71833a;
+                color: #d8f36a;
+            }
+
+            .record-subitem-links a:hover {
+                background: #242b1d;
+                color: #e7ff9a;
+            }
+
+
+            /* 작품별 2차 항목 */
+            .record-work {
+                border-bottom-color: #292d34;
+            }
+
+            .record-work-button:hover {
+                background: #24272c;
+            }
+
+            .record-work-arrow {
+                color: #858b95;
+            }
+
             .records-empty {
                 color: #aab0b8;
             }
 
 
             /* Reference Tree - dark mode */
-
             .reference-toggle {
                 color: #aab0b8;
             }
@@ -627,7 +712,10 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-312KR316P2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
 
         gtag('js', new Date());
 
@@ -702,7 +790,8 @@
                         <!-- 국내 주요 -->
                         <a href="https://www.baeksangawards.co.kr" target="_blank" rel="noopener noreferrer">백상예술대상</a>
                         <a href="https://www.blueaward.co.kr/awards" target="_blank" rel="noopener noreferrer">청룡영화제</a>
-                        <a href="https://bsa.blueaward.co.kr/series" target="_blank" rel="noopener noreferrer">청룡시리즈어워즈</a>
+                        <a href="https://bsa.blueaward.co.kr/series" target="_blank"
+                           rel="noopener noreferrer">청룡시리즈어워즈</a>
                         <a href="https://daejong.or.kr" target="_blank" rel="noopener noreferrer">대종상영화제</a>
                         <a href="https://www.seouldrama.org" target="_blank" rel="noopener noreferrer">서울드라마어워즈(SDA)</a>
                         <a href="http://kdfo.org/" target="_blank" rel="noopener noreferrer">코리아드라마어워즈(KDF)</a>
@@ -714,11 +803,14 @@
                         <a href="https://abk.kcforum.co.kr" target="_blank" rel="noopener noreferrer">올해의브랜드대상</a>
 
                         <!-- 아시아 -->
-                        <a href="https://www.asiantelevisionawards.net" target="_blank" rel="noopener noreferrer">Asian TV Awards(ATA)</a>
-                        <a href="https://www.asianacademycreativeawards.com" target="_blank" rel="noopener noreferrer">Asian Academy Creative Awards(AACA)</a>
+                        <a href="https://www.asiantelevisionawards.net" target="_blank" rel="noopener noreferrer">Asian
+                            TV Awards(ATA)</a>
+                        <a href="https://www.asianacademycreativeawards.com" target="_blank" rel="noopener noreferrer">Asian
+                            Academy Creative Awards(AACA)</a>
 
                         <!-- 국제 -->
-                        <a href="https://www.iemmys.tv" target="_blank" rel="noopener noreferrer">International Emmy Awards</a>
+                        <a href="https://www.iemmys.tv" target="_blank" rel="noopener noreferrer">International Emmy
+                            Awards</a>
                     </div>
                 </div>
 
@@ -733,7 +825,8 @@
                         <a href="https://www.gallup.co.kr" target="_blank" rel="noopener noreferrer">한국갤럽</a>
                         <a href="https://www.kobaco.co.kr" target="_blank" rel="noopener noreferrer">한국방송광고진흥공사</a>
                         <a href="https://www.forbeskorea.co.kr" target="_blank" rel="noopener noreferrer">포브스코리아</a>
-                        <a href="https://www.archivecenter.net/hallyuresearch/archive/CollectionGroupView.do?con_group_id=671" target="_blank" rel="noopener noreferrer">해외한류실태조사</a>
+                        <a href="https://www.archivecenter.net/hallyuresearch/archive/CollectionGroupView.do?con_group_id=671"
+                           target="_blank" rel="noopener noreferrer">해외한류실태조사</a>
                     </div>
                 </div>
 
@@ -745,10 +838,12 @@
                     </button>
 
                     <div class="reference-links">
-                        <a href="https://www.nielsenkorea.co.kr/tv_terrestrial_day.asp?menu=Tit_1&sub_menu=1_1&area=01" target="_blank" rel="noopener noreferrer">닐슨 시청률</a>
+                        <a href="https://www.nielsenkorea.co.kr/tv_terrestrial_day.asp?menu=Tit_1&sub_menu=1_1&area=01"
+                           target="_blank" rel="noopener noreferrer">닐슨 시청률</a>
                         <a href="https://www.fundex.co.kr" target="_blank" rel="noopener noreferrer">펀덱스 화제성</a>
                         <a href="https://flixpatrol.com" target="_blank" rel="noopener noreferrer">플릭스패트롤</a>
-                        <a href="https://www.imdb.com/name/nm4633543/" target="_blank" rel="noopener noreferrer">IMDb</a>
+                        <a href="https://www.imdb.com/name/nm4633543/" target="_blank"
+                           rel="noopener noreferrer">IMDb</a>
                         <a href="https://www.themoviedb.org/person/1251581" target="_blank" rel="noopener noreferrer">TMDB</a>
                         <a href="https://dart.fss.or.kr" target="_blank" rel="noopener noreferrer">DART</a>
                     </div>
@@ -762,7 +857,8 @@
                     </button>
 
                     <div class="reference-links">
-                        <a href="https://www.mcst.go.kr/site/s_notice/press/pressList.jsp" target="_blank" rel="noopener noreferrer">문화체육관광부</a>
+                        <a href="https://www.mcst.go.kr/site/s_notice/press/pressList.jsp" target="_blank"
+                           rel="noopener noreferrer">문화체육관광부</a>
                         <a href="https://www.nts.go.kr" target="_blank" rel="noopener noreferrer">국세청</a>
                         <a href="https://korean.visitkorea.or.kr" target="_blank" rel="noopener noreferrer">한국관광공사</a>
                     </div>
@@ -777,7 +873,8 @@
 
                     <div class="reference-links">
                         <a href="https://cjnews.cj.net/category/press-center" target="_blank" rel="noopener noreferrer">CJ</a>
-                        <a href="https://www.studiodragon.net/pr/news" target="_blank" rel="noopener noreferrer">스튜디오드래곤</a>
+                        <a href="https://www.studiodragon.net/pr/news" target="_blank"
+                           rel="noopener noreferrer">스튜디오드래곤</a>
                         <a href="https://about.netflix.com/en/newsroom" target="_blank" rel="noopener noreferrer">Netflix</a>
                         <a href="https://press.disneyplus.com" target="_blank" rel="noopener noreferrer">Disney+</a>
                         <a href="https://www.tving.com" target="_blank" rel="noopener noreferrer">TVING</a>
@@ -794,96 +891,97 @@
 
                     <div class="reference-links">
                         <a href="https://en.wikipedia.org/wiki/Kim_Soo-hyun" target="_blank" rel="noopener noreferrer">Wikipedia</a>
-                        <a href="https://namu.wiki/w/%EA%B9%80%EC%88%98%ED%98%84" target="_blank" rel="noopener noreferrer">나무위키</a>
+                        <a href="https://namu.wiki/w/%EA%B9%80%EC%88%98%ED%98%84" target="_blank"
+                           rel="noopener noreferrer">나무위키</a>
                     </div>
                 </div>
 
 
-<!--                <div class="reference-group">-->
+                <!--                <div class="reference-group">-->
 
-<!--                    <button type="button" class="reference-group-button">-->
-<!--                        👤 김수현-->
-<!--                        <span class="reference-group-arrow">›</span>-->
-<!--                    </button>-->
+                <!--                    <button type="button" class="reference-group-button">-->
+                <!--                        👤 김수현-->
+                <!--                        <span class="reference-group-arrow">›</span>-->
+                <!--                    </button>-->
 
-<!--                    <div class="reference-links">-->
-<!--                        <a href="#" target="_blank" rel="noopener noreferrer">Gold Medalist</a>-->
-<!--                        <a href="#" target="_blank" rel="noopener noreferrer">Gold Medalist Instagram</a>-->
-<!--                        <a href="#" target="_blank" rel="noopener noreferrer">Kim Soo Hyun Instagram</a>-->
-<!--                        <a href="#" target="_blank" rel="noopener noreferrer">Kim Soo Hyun Weibo</a>-->
-<!--                    </div>-->
+                <!--                    <div class="reference-links">-->
+                <!--                        <a href="#" target="_blank" rel="noopener noreferrer">Gold Medalist</a>-->
+                <!--                        <a href="#" target="_blank" rel="noopener noreferrer">Gold Medalist Instagram</a>-->
+                <!--                        <a href="#" target="_blank" rel="noopener noreferrer">Kim Soo Hyun Instagram</a>-->
+                <!--                        <a href="#" target="_blank" rel="noopener noreferrer">Kim Soo Hyun Weibo</a>-->
+                <!--                    </div>-->
 
-<!--                </div>-->
-
-
-<!--                <div class="reference-group">-->
-
-<!--                    <button type="button" class="reference-group-button">-->
-<!--                        📺 OTT-->
-<!--                        <span class="reference-group-arrow">›</span>-->
-<!--                    </button>-->
-
-<!--                    <div class="reference-links">-->
-<!--                        <a href="#" target="_blank" rel="noopener noreferrer">Netflix</a>-->
-<!--                        <a href="#" target="_blank" rel="noopener noreferrer">Disney+</a>-->
-<!--                    </div>-->
-
-<!--                </div>-->
+                <!--                </div>-->
 
 
-<!--                <div class="reference-group">-->
+                <!--                <div class="reference-group">-->
 
-<!--                    <button type="button" class="reference-group-button">-->
-<!--                        📱 SNS-->
-<!--                        <span class="reference-group-arrow">›</span>-->
-<!--                    </button>-->
+                <!--                    <button type="button" class="reference-group-button">-->
+                <!--                        📺 OTT-->
+                <!--                        <span class="reference-group-arrow">›</span>-->
+                <!--                    </button>-->
 
-<!--                    <div class="reference-links">-->
-<!--                        <a href="#" target="_blank" rel="noopener noreferrer">Netflix Korea Instagram</a>-->
-<!--                        <a href="#" target="_blank" rel="noopener noreferrer">Netflix Korea X</a>-->
-<!--                        <a href="#" target="_blank" rel="noopener noreferrer">Netflix Korea YouTube</a>-->
-<!--                        <a href="#" target="_blank" rel="noopener noreferrer">Disney+ Korea Instagram</a>-->
-<!--                        <a href="#" target="_blank" rel="noopener noreferrer">Disney+ Japan Instagram</a>-->
-<!--                        <a href="#" target="_blank" rel="noopener noreferrer">Disney+ Singapore Instagram</a>-->
-<!--                        <a href="#" target="_blank" rel="noopener noreferrer">Disney+ Korea YouTube</a>-->
-<!--                        <a href="#" target="_blank" rel="noopener noreferrer">Disney+ Korea X</a>-->
-<!--                        <a href="#" target="_blank" rel="noopener noreferrer">tvN YouTube</a>-->
-<!--                        <a href="#" target="_blank" rel="noopener noreferrer">tvN Instagram</a>-->
-<!--                        <a href="#" target="_blank" rel="noopener noreferrer">tvN X</a>-->
-<!--                        <a href="#" target="_blank" rel="noopener noreferrer">Studio Dragon X</a>-->
-<!--                    </div>-->
+                <!--                    <div class="reference-links">-->
+                <!--                        <a href="#" target="_blank" rel="noopener noreferrer">Netflix</a>-->
+                <!--                        <a href="#" target="_blank" rel="noopener noreferrer">Disney+</a>-->
+                <!--                    </div>-->
 
-<!--                </div>-->
+                <!--                </div>-->
 
 
-<!--                <div class="reference-group">-->
+                <!--                <div class="reference-group">-->
 
-<!--                    <button type="button" class="reference-group-button">-->
-<!--                        📝 블로그-->
-<!--                        <span class="reference-group-arrow">›</span>-->
-<!--                    </button>-->
+                <!--                    <button type="button" class="reference-group-button">-->
+                <!--                        📱 SNS-->
+                <!--                        <span class="reference-group-arrow">›</span>-->
+                <!--                    </button>-->
 
-<!--                    <div class="reference-links">-->
-<!--                        <a href="#" target="_blank" rel="noopener noreferrer">강경윤 기자</a>-->
-<!--                    </div>-->
+                <!--                    <div class="reference-links">-->
+                <!--                        <a href="#" target="_blank" rel="noopener noreferrer">Netflix Korea Instagram</a>-->
+                <!--                        <a href="#" target="_blank" rel="noopener noreferrer">Netflix Korea X</a>-->
+                <!--                        <a href="#" target="_blank" rel="noopener noreferrer">Netflix Korea YouTube</a>-->
+                <!--                        <a href="#" target="_blank" rel="noopener noreferrer">Disney+ Korea Instagram</a>-->
+                <!--                        <a href="#" target="_blank" rel="noopener noreferrer">Disney+ Japan Instagram</a>-->
+                <!--                        <a href="#" target="_blank" rel="noopener noreferrer">Disney+ Singapore Instagram</a>-->
+                <!--                        <a href="#" target="_blank" rel="noopener noreferrer">Disney+ Korea YouTube</a>-->
+                <!--                        <a href="#" target="_blank" rel="noopener noreferrer">Disney+ Korea X</a>-->
+                <!--                        <a href="#" target="_blank" rel="noopener noreferrer">tvN YouTube</a>-->
+                <!--                        <a href="#" target="_blank" rel="noopener noreferrer">tvN Instagram</a>-->
+                <!--                        <a href="#" target="_blank" rel="noopener noreferrer">tvN X</a>-->
+                <!--                        <a href="#" target="_blank" rel="noopener noreferrer">Studio Dragon X</a>-->
+                <!--                    </div>-->
 
-<!--                </div>-->
+                <!--                </div>-->
 
 
-<!--                <div class="reference-group">-->
+                <!--                <div class="reference-group">-->
 
-<!--                    <button type="button" class="reference-group-button">-->
-<!--                        ⭐ 팬사이트-->
-<!--                        <span class="reference-group-arrow">›</span>-->
-<!--                    </button>-->
+                <!--                    <button type="button" class="reference-group-button">-->
+                <!--                        📝 블로그-->
+                <!--                        <span class="reference-group-arrow">›</span>-->
+                <!--                    </button>-->
 
-<!--                    <div class="reference-links">-->
-<!--                        <a href="#" target="_blank" rel="noopener noreferrer">네이버블로그 1111</a>-->
-<!--                        <a href="#" target="_blank" rel="noopener noreferrer">티스토리 shing</a>-->
-<!--                        <a href="#" target="_blank" rel="noopener noreferrer">티스토리 adam</a>-->
-<!--                    </div>-->
+                <!--                    <div class="reference-links">-->
+                <!--                        <a href="#" target="_blank" rel="noopener noreferrer">강경윤 기자</a>-->
+                <!--                    </div>-->
 
-<!--                </div>-->
+                <!--                </div>-->
+
+
+                <!--                <div class="reference-group">-->
+
+                <!--                    <button type="button" class="reference-group-button">-->
+                <!--                        ⭐ 팬사이트-->
+                <!--                        <span class="reference-group-arrow">›</span>-->
+                <!--                    </button>-->
+
+                <!--                    <div class="reference-links">-->
+                <!--                        <a href="#" target="_blank" rel="noopener noreferrer">네이버블로그 1111</a>-->
+                <!--                        <a href="#" target="_blank" rel="noopener noreferrer">티스토리 shing</a>-->
+                <!--                        <a href="#" target="_blank" rel="noopener noreferrer">티스토리 adam</a>-->
+                <!--                    </div>-->
+
+                <!--                </div>-->
 
             </div>
 
@@ -900,7 +998,8 @@
 <footer>
     <div class="footer-notice">
         <strong>KIM SOO HYUN STREAM</strong> is an unofficial, non-commercial fan site.
-        Third-party content belongs to its respective copyright holders and is linked to its original source where available.
+        Third-party content belongs to its respective copyright holders and is linked to its original source where
+        available.
         <a href="mailto:kimsoohyun.stream@gmail.com">오류 제보</a>
     </div>
 </footer>
@@ -973,7 +1072,10 @@
             itemElement.className = 'record-item';
 
 
-            /* 하위 항목이 있는 경우 */
+            /* =====================================================
+               하위 항목이 있는 경우
+               ===================================================== */
+
             if (item.items) {
 
                 const button = createButton(item.title);
@@ -981,49 +1083,361 @@
                 const subList = document.createElement('div');
                 subList.className = 'record-sublist';
 
-                item.items.forEach(subItem => {
 
-                    const subItemElement = document.createElement('div');
-                    subItemElement.className = 'record-subitem';
+                /*
+                 * work가 있는 항목인지 확인
+                 * work가 없으면 기존 방식 그대로 출력
+                 */
 
-
-                    const title = document.createElement('span');
-                    title.className = 'record-subitem-title';
-                    title.textContent = subItem.title;
-
-                    subItemElement.appendChild(title);
+                const hasWork =
+                    item.items.some(subItem => subItem.work);
 
 
-                    if (subItem.links && subItem.links.length) {
+                if (hasWork) {
 
-                        const links = document.createElement('span');
-                        links.className = 'record-subitem-links';
+                    const workGroups = new Map();
 
-                        subItem.links.forEach(link => {
 
-                            const a = document.createElement('a');
+                    /*
+                     * work가 있는 항목은 작품별로 그룹화
+                     * work가 없는 항목은 기존 subitem으로 유지
+                     */
 
-                            a.href = link.url;
-                            a.target = '_blank';
-                            a.rel = 'noopener noreferrer';
+                    item.items.forEach(subItem => {
 
-                            a.textContent =
-                                link.label || '관련 링크';
+                        if (subItem.work) {
 
-                            links.appendChild(a);
+                            if (!workGroups.has(subItem.work)) {
+                                workGroups.set(subItem.work, []);
+                            }
+
+                            workGroups
+                                .get(subItem.work)
+                                .push(subItem);
+
+                        } else {
+
+                            const subItemElement =
+                                document.createElement('div');
+
+                            subItemElement.className =
+                                'record-subitem';
+
+
+                            const title =
+                                document.createElement('span');
+
+                            title.className =
+                                'record-subitem-title';
+
+                            title.textContent =
+                                subItem.title;
+
+                            subItemElement.appendChild(title);
+
+
+                            if (subItem.links &&
+                                subItem.links.length) {
+
+                                const links =
+                                    document.createElement('span');
+
+                                links.className =
+                                    'record-subitem-links';
+
+
+                                subItem.links.forEach(link => {
+
+                                    const a =
+                                        document.createElement('a');
+
+                                    a.href = link.url;
+                                    a.target = '_blank';
+                                    a.rel =
+                                        'noopener noreferrer';
+
+                                    a.textContent =
+                                        link.label || '관련 링크';
+
+                                    links.appendChild(a);
+                                });
+
+
+                                subItemElement.appendChild(links);
+                            }
+
+
+                            subList.appendChild(subItemElement);
+                        }
+
+                    });
+
+
+                    /* =================================================
+                       작품별 2차 하위 항목
+                       ================================================= */
+
+                    workGroups.forEach((records, work) => {
+
+                        const workElement =
+                            document.createElement('div');
+
+                        workElement.className =
+                            'record-work';
+
+
+                        /* 작품명 버튼 */
+
+                        const workButton =
+                            document.createElement('button');
+
+                        workButton.type = 'button';
+
+                        workButton.className =
+                            'record-work-button';
+
+                        workButton.setAttribute(
+                            'aria-expanded',
+                            'false'
+                        );
+
+
+                        const workTitle =
+                            document.createElement('span');
+
+                        workTitle.className =
+                            'record-work-title';
+
+                        workTitle.textContent =
+                            work;
+
+
+                        const workArrow =
+                            document.createElement('span');
+
+                        workArrow.className =
+                            'record-work-arrow';
+
+                        workArrow.textContent =
+                            '›';
+
+
+                        workButton.appendChild(workTitle);
+                        workButton.appendChild(workArrow);
+
+
+                        /* 작품 안의 실제 기록 */
+
+                        const workList =
+                            document.createElement('div');
+
+                        workList.className =
+                            'record-work-list';
+
+
+                        records.forEach(record => {
+
+                            /*
+                             * 실제 기록은 기존 record-subitem 스타일 그대로 사용
+                             */
+
+                            const subItemElement =
+                                document.createElement('div');
+
+                            subItemElement.className =
+                                'record-subitem';
+
+
+                            const title =
+                                document.createElement('span');
+
+                            title.className =
+                                'record-subitem-title';
+
+                            title.textContent =
+                                record.title;
+
+                            subItemElement.appendChild(title);
+
+
+                            if (record.links &&
+                                record.links.length) {
+
+                                const links =
+                                    document.createElement('span');
+
+                                links.className =
+                                    'record-subitem-links';
+
+
+                                record.links.forEach(link => {
+
+                                    const a =
+                                        document.createElement('a');
+
+                                    a.href = link.url;
+                                    a.target = '_blank';
+                                    a.rel =
+                                        'noopener noreferrer';
+
+                                    a.textContent =
+                                        link.label || '관련 링크';
+
+                                    links.appendChild(a);
+                                });
+
+
+                                subItemElement.appendChild(links);
+                            }
+
+
+                            workList.appendChild(subItemElement);
+
                         });
 
-                        subItemElement.appendChild(links);
-                    }
 
-                    subList.appendChild(subItemElement);
-                });
+                        workElement.appendChild(workButton);
+                        workElement.appendChild(workList);
+
+                        subList.appendChild(workElement);
+
+
+                        /* 작품 열기 / 닫기 */
+
+                        workButton.addEventListener('click', () => {
+
+                            const isOpen =
+                                workElement.classList.contains('open');
+
+
+                            /*
+                             * 같은 작품 분류 안에서는 하나만 열림
+                             */
+
+                            subList
+                                .querySelectorAll(
+                                    ':scope > .record-work.open'
+                                )
+                                .forEach(openWork => {
+
+                                    if (openWork !== workElement) {
+
+                                        openWork.classList.remove('open');
+
+                                        const openButton =
+                                            openWork.querySelector(
+                                                ':scope > .record-work-button'
+                                            );
+
+                                        if (openButton) {
+
+                                            openButton.setAttribute(
+                                                'aria-expanded',
+                                                'false'
+                                            );
+                                        }
+                                    }
+                                });
+
+
+                            if (isOpen) {
+
+                                workElement.classList.remove('open');
+
+                                workButton.setAttribute(
+                                    'aria-expanded',
+                                    'false'
+                                );
+
+                            } else {
+
+                                workElement.classList.add('open');
+
+                                workButton.setAttribute(
+                                    'aria-expanded',
+                                    'true'
+                                );
+                            }
+
+                        });
+
+                    });
+
+
+                } else {
+
+                    /*
+                     * work가 전혀 없는 기존 하위 항목
+                     * 기존 코드와 동일하게 출력
+                     */
+
+                    item.items.forEach(subItem => {
+
+                        const subItemElement =
+                            document.createElement('div');
+
+                        subItemElement.className =
+                            'record-subitem';
+
+
+                        const title =
+                            document.createElement('span');
+
+                        title.className =
+                            'record-subitem-title';
+
+                        title.textContent =
+                            subItem.title;
+
+                        subItemElement.appendChild(title);
+
+
+                        if (subItem.links &&
+                            subItem.links.length) {
+
+                            const links =
+                                document.createElement('span');
+
+                            links.className =
+                                'record-subitem-links';
+
+
+                            subItem.links.forEach(link => {
+
+                                const a =
+                                    document.createElement('a');
+
+                                a.href = link.url;
+                                a.target = '_blank';
+                                a.rel =
+                                    'noopener noreferrer';
+
+                                a.textContent =
+                                    link.label || '관련 링크';
+
+                                links.appendChild(a);
+                            });
+
+
+                            subItemElement.appendChild(links);
+                        }
+
+
+                        subList.appendChild(subItemElement);
+
+                    });
+
+                }
 
 
                 itemElement.appendChild(button);
                 itemElement.appendChild(subList);
                 container.appendChild(itemElement);
 
+
+                /* =================================================
+                   상위 분류 열기 / 닫기
+                   ================================================= */
 
                 button.addEventListener('click', () => {
 
@@ -1035,21 +1449,36 @@
                         .querySelectorAll('.record-item.open')
                         .forEach(openItem => {
 
-                            openItem.classList.remove('open');
+                            if (openItem !== itemElement) {
 
-                            const openButton =
-                                openItem.querySelector(':scope > .record-button');
+                                openItem.classList.remove('open');
 
-                            if (openButton) {
-                                openButton.setAttribute(
-                                    'aria-expanded',
-                                    'false'
-                                );
+                                const openButton =
+                                    openItem.querySelector(
+                                        ':scope > .record-button'
+                                    );
+
+                                if (openButton) {
+
+                                    openButton.setAttribute(
+                                        'aria-expanded',
+                                        'false'
+                                    );
+                                }
                             }
                         });
 
 
-                    if (!isOpen) {
+                    if (isOpen) {
+
+                        itemElement.classList.remove('open');
+
+                        button.setAttribute(
+                            'aria-expanded',
+                            'false'
+                        );
+
+                    } else {
 
                         itemElement.classList.add('open');
 
@@ -1058,29 +1487,42 @@
                             'true'
                         );
                     }
+
                 });
 
                 return;
             }
 
 
-            /* 일반 기록 항목 */
+            /* =====================================================
+               일반 기록 항목
+               ===================================================== */
+
             const button = createButton(item.title);
 
             const detail = document.createElement('div');
             detail.className = 'record-detail';
 
+
             (item.records || []).forEach(record => {
 
-                const entry = document.createElement('div');
-                entry.className = 'record-entry';
+                const entry =
+                    document.createElement('div');
+
+                entry.className =
+                    'record-entry';
 
 
                 if (record.date) {
 
-                    const date = document.createElement('div');
-                    date.className = 'record-date';
-                    date.textContent = record.date;
+                    const date =
+                        document.createElement('div');
+
+                    date.className =
+                        'record-date';
+
+                    date.textContent =
+                        record.date;
 
                     entry.appendChild(date);
                 }
@@ -1088,9 +1530,14 @@
 
                 if (record.title) {
 
-                    const recordTitle = document.createElement('div');
-                    recordTitle.className = 'record-entry-title';
-                    recordTitle.textContent = record.title;
+                    const recordTitle =
+                        document.createElement('div');
+
+                    recordTitle.className =
+                        'record-entry-title';
+
+                    recordTitle.textContent =
+                        record.title;
 
                     entry.appendChild(recordTitle);
                 }
@@ -1098,26 +1545,38 @@
 
                 if (record.description) {
 
-                    const description = document.createElement('div');
-                    description.className = 'record-description';
-                    description.textContent = record.description;
+                    const description =
+                        document.createElement('div');
+
+                    description.className =
+                        'record-description';
+
+                    description.textContent =
+                        record.description;
 
                     entry.appendChild(description);
                 }
 
 
-                if (record.links && record.links.length) {
+                if (record.links &&
+                    record.links.length) {
 
-                    const links = document.createElement('div');
-                    links.className = 'record-links';
+                    const links =
+                        document.createElement('div');
+
+                    links.className =
+                        'record-links';
+
 
                     record.links.forEach(link => {
 
-                        const a = document.createElement('a');
+                        const a =
+                            document.createElement('a');
 
                         a.href = link.url;
                         a.target = '_blank';
-                        a.rel = 'noopener noreferrer';
+                        a.rel =
+                            'noopener noreferrer';
 
                         a.textContent =
                             (link.label || '관련 링크') + ' ↗';
@@ -1125,10 +1584,13 @@
                         links.appendChild(a);
                     });
 
+
                     entry.appendChild(links);
                 }
 
+
                 detail.appendChild(entry);
+
             });
 
 
@@ -1143,7 +1605,6 @@
                     itemElement.classList.contains('open');
 
 
-                /* 전체 다른 항목 닫기 */
                 document
                     .querySelectorAll('.record-item.open')
                     .forEach(openItem => {
@@ -1153,9 +1614,12 @@
                             openItem.classList.remove('open');
 
                             const openButton =
-                                openItem.querySelector(':scope > .record-button');
+                                openItem.querySelector(
+                                    ':scope > .record-button'
+                                );
 
                             if (openButton) {
+
                                 openButton.setAttribute(
                                     'aria-expanded',
                                     'false'
@@ -1183,7 +1647,9 @@
                         'true'
                     );
                 }
+
             });
+
         });
     }
 
