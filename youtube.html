@@ -200,30 +200,6 @@
 
 
         /* ---------------------------------------------------------
-           Tags
-           --------------------------------------------------------- */
-
-        .video-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5px;
-
-            margin-top: 9px;
-        }
-
-        .video-tag {
-            padding: 4px 7px;
-
-            border-radius: 4px;
-            background: #f3f3f3;
-
-            color: #777;
-            font-size: 10px;
-            line-height: 1;
-        }
-
-
-        /* ---------------------------------------------------------
            Loading / Error
            --------------------------------------------------------- */
 
@@ -897,8 +873,19 @@
         // Tag Filter
         // -----------------------------------------------------
 
+        let excludedTags = [
+            'disneyplus',
+            'song'
+        ];
+
         let filtered =
-            videos;
+            videos.filter(video =>
+                !Array.isArray(video.tags)
+                ||
+                !video.tags.some(tag =>
+                    excludedTags.includes(tag)
+                )
+            );
 
 
         if (selectedTag !== 'all') {
