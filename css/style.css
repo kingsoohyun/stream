@@ -297,6 +297,58 @@ button:focus-visible {
     border-left: 3px solid #f11;
 }
 
+/* =========================================================
+   Social Home
+   ========================================================= */
+
+.social-home-section {
+    border-left: 3px solid #FFCC00;
+}
+
+.social-home-cards {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.social-home-card {
+    display: block;
+    overflow: hidden;
+    min-width: 0;
+    border: 1px solid #e8e9ed;
+    border-radius: 9px;
+    background: #fff;
+    color: inherit;
+    text-decoration: none;
+}
+
+.social-home-thumb {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background: #dfe2e7;
+}
+
+.social-home-card-body {
+    padding: 7px 8px 8px;
+}
+
+.social-home-platform {
+    display: block;
+    overflow: hidden;
+    color: #858b95;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: .02em;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.social-home-card:nth-child(n + 9) {
+    display: none;
+}
 
 /* =========================================================
    Cards
@@ -620,171 +672,7 @@ footer {
 }
 
 
-/* =========================================================
-   Social Strip
-   ========================================================= */
 
-/* ---------------------------------------------------------
-   Year
-   --------------------------------------------------------- */
-
-.social-year {
-    margin-top: 48px;
-}
-
-.social-year:first-child {
-    margin-top: 24px;
-}
-
-.social-year-head {
-    margin-bottom: 14px;
-}
-
-.social-year-title {
-    display: block;
-    margin: 0;
-    color: #151922;
-    font-size: 18px;
-    line-height: 1;
-    font-weight: 600;
-    letter-spacing: -.03em;
-}
-
-.social-year-rule {
-    display: none;
-}
-
-.social-year-title::after {
-    content: "";
-    display: block;
-    width: 44px;
-    height: 2px;
-    margin-top: 8px;
-    background: #c05b6b;
-}
-
-.social-section {
-    border-left: 3px solid #FFCC00;
-    /* border-left: 3px solid #c9a9d6; */
-    /* border-left: 3px solid #c66a7a; */
-    /* border-left: 3px solid #9B59B6; */
-    /* border-left: 3px solid #8c5aa8; */
-}
-
-.social-cards {
-    display: flex;
-    gap: 8px;
-    width: 100%;
-    overflow-x: auto;
-    padding: 2px 1px 5px;
-    scrollbar-width: none;
-}
-
-.social-cards::-webkit-scrollbar {
-    display: none;
-}
-
-.social-card {
-    position: relative;
-
-    display: flex;
-    flex: 0 0 160px;
-    align-items: center;
-    height: 66px;
-
-    padding: 9px 11px;
-
-    overflow: hidden;
-
-    border: 1px solid #e5e7eb;
-    border-radius: 10px;
-    background: #fafbfc;
-    color: #151922;
-    text-decoration: none;
-
-    transition:
-            transform .18s ease,
-            border-color .18s ease,
-            background .18s ease,
-            box-shadow .18s ease;
-}
-
-.social-card:hover {
-    transform: translateY(-2px);
-    background: #fff;
-    border-color: #d5d9df;
-    box-shadow: 0 5px 16px rgba(20, 25, 35, .06);
-}
-
-.social-date {
-    display: flex;
-    flex: 0 0 35px;
-    flex-direction: column;
-    justify-content: center;
-    line-height: 1;
-}
-
-.social-month {
-    margin-bottom: 3px;
-    color: #9aa0aa;
-    font-size: 8px;
-    font-weight: 600;
-    letter-spacing: .08em;
-}
-
-.social-day {
-    color: #151922;
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: -.04em;
-}
-
-.social-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-width: 0;
-    padding-left: 9px;
-    border-left: 1px solid #e6e8ec;
-}
-
-.social-account {
-    display: block;
-    max-width: 91px;
-    overflow: hidden;
-    color: #353a44;
-    font-size: 10px;
-    font-weight: 500;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-.social-label {
-    margin-top: 4px;
-    color: #a1a6af;
-    font-size: 8px;
-    font-weight: 600;
-    letter-spacing: .08em;
-}
-
-.social-arrow {
-    position: absolute;
-    top: 8px;
-    right: 9px;
-
-    color: #a3a8b1;
-    font-size: 10px;
-    line-height: 1;
-
-    transition:
-            transform .18s ease,
-            color .18s ease;
-}
-
-.social-card:hover .social-arrow {
-    color: #151922;
-    transform: translate(1px, -1px);
-}
 
 
 /* ---------------------------------------------------------
@@ -872,6 +760,16 @@ footer {
    Mobile
    ========================================================= */
 
+@media (max-width: 900px) {
+    .social-home-cards {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
+    .social-home-card:nth-child(n + 7) {
+        display: none;
+    }
+}
+
 @media (max-width: 800px) {
 
     main {
@@ -919,28 +817,6 @@ footer {
         height: 50px;
         font-size: 27px;
     }
-
-    .social-cards {
-        margin-right: -20px;
-        padding-right: 20px;
-    }
-
-    .social-card {
-        flex-basis: 150px;
-        height: 62px;
-    }
-
-    .social-date {
-        flex-basis: 33px;
-    }
-
-    .social-day {
-        font-size: 19px;
-    }
-
-    .social-account {
-        max-width: 84px;
-    }
 }
 
 @media (max-width: 700px) {
@@ -962,8 +838,35 @@ footer {
     .site-header {
         padding: 0 16px;
     }
+
+    .social-home-cards {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .social-home-card:nth-child(n + 5) {
+        display: none;
+    }
 }
 
+@media (max-width: 500px) {
+    .social-home-cards {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .social-home-card:nth-child(n + 4) {
+        display: none;
+    }
+}
+
+@media (max-width: 360px) {
+    .social-home-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .social-home-card:nth-child(n + 3) {
+        display: none;
+    }
+}
 
 /* =========================================================
    Accessibility
@@ -1014,9 +917,18 @@ footer {
         filter: brightness(1.45) saturate(0.85);
     }
 
+    .brand strong {
+        color: #eceef1;
+    }
+
     .brand span,
+    .platform small,
     .section-head span {
         color: #858b95;
+    }
+
+    .header-action a {
+        color: #fff;
     }
 
     footer {
@@ -1133,6 +1045,20 @@ footer {
     }
 
     /* ---------------------------------------------------------
+       Social Home
+       --------------------------------------------------------- */
+
+    .social-home-card {
+        background: #16191e;
+        border-color: #30353d;
+        color: #eceef1;
+    }
+
+    .social-home-platform {
+        color: #858b95;
+    }
+
+    /* ---------------------------------------------------------
        Site Navigation
        --------------------------------------------------------- */
 
@@ -1201,5 +1127,17 @@ footer {
         border-color: #353a42;
         color: #aeb4bc;
         box-shadow: 0 4px 14px rgba(0, 0, 0, .3);
+    }
+
+    /* ---------------------------------------------------------
+       Legacy icon backgrounds
+       --------------------------------------------------------- */
+
+    .archive .icon,
+    .world .icon,
+    .records .icon,
+    .love-sh .icon,
+    .privacy .icon {
+        background: #20242a;
     }
 }

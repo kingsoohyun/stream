@@ -13,14 +13,13 @@ async function loadData() {
 
     renderYoutube(youtube);
 
-
     try {
         const socialResponse =
-            await fetch("data/social.json");
+            await fetch("data/social_pick.json");
 
         if (!socialResponse.ok) {
             throw new Error(
-                "social.json을 불러오지 못했습니다."
+                "social_pick.json을 불러오지 못했습니다."
             );
         }
 
@@ -34,109 +33,95 @@ async function loadData() {
     }
 }
 
+
 function renderYoutube(data) {
     document.querySelector("#youtube-cards").innerHTML =
         data.items.slice(0, 10).map(v => `
-            <a class="card" href="${escapeHtml(v.url)}" target="_blank" rel="noopener noreferrer">
-            <img class="thumb" src="${escapeHtml(v.thumbnail)}" alt="">
-            <div class="card-body">
-                <div class="title">${escapeHtml(v.title)}</div>
-                <div class="meta">
-                    <span>${v.date}</span>
-                    <span>◉ ${formatNumber(v.views)}</span>
+            <a
+                class="card"
+                href="${escapeHtml(v.url)}"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img
+                    class="thumb"
+                    src="${escapeHtml(v.thumbnail)}"
+                    alt=""
+                    loading="lazy"
+                >
+                <div class="card-body">
+                    <div class="title">
+                        ${escapeHtml(v.title)}
+                    </div>
+                    <div class="meta">
+                        <span>${v.date}</span>
+                        <span>◉ ${formatNumber(v.views)}</span>
+                    </div>
                 </div>
-            </div>
-        </a>
-    `).join("");
+            </a>
+        `).join("");
 }
+
 
 function renderSocial(data) {
     const container =
-        document.querySelector("#social-cards");
+        document.querySelector("#social-home-cards");
 
     if (!container) return;
 
-    const items =
-        Array.isArray(data.items)
-            ? data.items
-                .filter(item =>
-                    item.pick === true &&
-                    item.url &&
-                    item.date &&
-                    item.platform
-                )
-                .slice(0, 8)
-            : [];
-
     const platformNames = {
-        instagram: "INSTAGRAM",
-        tiktok: "TIKTOK",
-        x: "X",
-        weibo: "WEIBO"
+        instagram: "◎ INSTAGRAM",
+        x: "𝕏 X",
+        tiktok: "♪ TIKTOK",
+        weibo: "◉ WEIBO"
     };
 
+    const items =
+        Array.isArray(data.items)
+            ? data.items.filter(item =>
+                item &&
+                item.url &&
+                item.thumbnail &&
+                item.platform
+            )
+            : [];
+
     container.innerHTML = items.map(item => {
-        const [year, month, day] =
-            String(item.date).split(".");
-
-        const date = new Date(
-            Number(year),
-            Number(month) - 1,
-            Number(day)
-        );
-
-        const monthName =
-            date
-                .toLocaleString("en-US", {
-                    month: "short"
-                })
-                .toUpperCase();
-
         const platform =
-            platformNames[item.platform] ||
-            item.platform.toUpperCase();
+            platformNames[
+                String(item.platform).toLowerCase()
+                ] ||
+            String(item.platform).toUpperCase();
 
         return `
             <a
-                class="social-card"
+                class="social-home-card"
                 href="${escapeHtml(item.url)}"
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                <div class="social-date">
-                    <span class="social-month">
-                        ${monthName}
-                    </span>
+                <img
+                    class="social-home-thumb"
+                    src="${escapeHtml(item.thumbnail)}"
+                    alt=""
+                    loading="lazy"
+                >
 
-                    <strong class="social-day">
-                        ${escapeHtml(day)}
-                    </strong>
-                </div>
-
-       
-                
-                <div class="social-info">
-                    <span class="social-account">
-                        ${escapeHtml(item.desc || item.account || "")}
-                    </span>
-                
-                    <span class="social-label">
+                <div class="social-home-card-body">
+                    <span class="social-home-platform">
                         ${escapeHtml(platform)}
                     </span>
                 </div>
-
-                <span
-                    class="social-arrow"
-                    aria-hidden="true"
-                >↗</span>
             </a>
         `;
     }).join("");
 }
 
+
 function formatNumber(n) {
     return Number(n || 0).toLocaleString("ko-KR");
 }
+
 
 function escapeHtml(s) {
     return String(s ?? "").replace(/[&<>"']/g, m => ({
@@ -148,27 +133,39 @@ function escapeHtml(s) {
     }[m]));
 }
 
+
 loadData().catch(err => {
     console.error(err);
 
     document.querySelectorAll(".cards").forEach(el => {
-        el.innerHTML = "<p>데이터를 불러오지 못했습니다.</p>";
+        el.innerHTML =
+            "<p>데이터를 불러오지 못했습니다.</p>";
     });
 });
 
 
-const backToTop = document.getElementById("backToTop");
+const backToTop =
+    document.getElementById("backToTop");
 
 window.addEventListener("scroll", () => {
-    backToTop.classList.toggle("show", window.scrollY > 600);
+    backToTop.classList.toggle(
+        "show",
+        window.scrollY > 600
+    );
 });
+
 
 backToTop.addEventListener("click", () => {
     const prefersReducedMotion =
-        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+        ).matches;
 
     window.scrollTo({
         top: 0,
-        behavior: prefersReducedMotion ? "auto" : "smooth"
+        behavior:
+            prefersReducedMotion
+                ? "auto"
+                : "smooth"
     });
 });
