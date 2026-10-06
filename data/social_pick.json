@@ -1,13 +1,31 @@
 {
   "items": [
     {
-      "url": "https://www.instagram.com/p/DeIizoqmDUX",
-      "thumbnail": "https://pbs.twimg.com/media/HT67n4mbYAAN-tB?format=webp&name=small",
-      "platform": "instagram"
+      "url": "https://www.instagram.com/p/Day2vfNx88J",
+      "thumbnail": "https://pbs.twimg.com/media/HNL9SQfaoAEvIHE?format=webp&name=small",
+      "platform": "INSTAGRAM"
+    },
+    {
+      "url": "https://x.com/benchtm/status/2105527965534872036",
+      "thumbnail": "https://pbs.twimg.com/media/HThLk-kasAARBZg?format=webp&name=small",
+      "platform": "x"
     },
     {
       "url": "https://www.instagram.com/p/DeERCiOkdE7",
       "thumbnail": "https://pbs.twimg.com/media/HTx9LkXa8AAl4cV?format=webp&name=small",
+      "platform": "instagram"
+    },
+    {
+      "url": "https://www.instagram.com/p/Dc-aCo_zjUy",
+      "date": "2026.09.07",
+      "platform": "INSTAGRAM",
+      "account": "goldmedalist_official",
+      "desc": "GOLDMEDALIST",
+      "thumbnail": "https://pbs.twimg.com/media/HRl5kezbMAAprHq?format=webp&name=small"
+    },
+    {
+      "url": "https://www.instagram.com/p/DeIizoqmDUX",
+      "thumbnail": "https://pbs.twimg.com/media/HT67n4mbYAAN-tB?format=webp&name=small",
       "platform": "instagram"
     },
     {
@@ -22,33 +40,35 @@
     },
     {
       "url": "https://www.instagram.com/p/DeCQchXxQVQ",
-      "thumbnail": "https://pbs.twimg.com/media/HTozD0ba0AArMAB?format=webp&name=small",
-      "platform": "instagram"
+      "date": "2026.10.03",
+      "platform": "INSTAGRAM",
+      "account": "migspastor",
+      "desc": "BENCH/",
+      "thumbnail": "https://pbs.twimg.com/media/HTozD0ba0AArMAB?format=webp&name=small"
     },
     {
       "url": "https://x.com/benchtm/status/2106024755870802115",
-      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2106024578023837696/img/8nUzC0U94_55YeUN?format=webp&name=small",
-      "platform": "x"
+      "date": "2026.10.02",
+      "platform": "x",
+      "account": "benchtm",
+      "desc": "BENCH/",
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2106024578023837696/img/8nUzC0U94_55YeUN?format=webp&name=small"
     },
     {
-      "url": "https://x.com/benchtm/status/2106025287783972989",
-      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2106025166014926850/img/717PnEKjGBNQXxPS?format=webp&name=small",
-      "platform": "x"
+      "url": "https://x.com/benchtm/status/2105246159623340275",
+      "date": "2026.09.30",
+      "platform": "x",
+      "account": "benchtm",
+      "desc": "BENCH/",
+      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2105245702565879808/img/ncpo1cdidrY82YU8?format=webp&name=small"
     },
     {
-      "url": "https://x.com/benchtm/status/2106014483978326042",
-      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2106013943215075329/img/uZ_Xt3m73Khn9rVa?format=webp&name=small",
-      "platform": "x"
-    },
-    {
-      "url": "https://www.instagram.com/p/Dd_JRQmvwLZ",
-      "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2106045536616992768/img/85PENU1v_kVWjwUY?format=webp&name=small",
-      "platform": "instagram"
-    },
-    {
-      "url": "https://www.instagram.com/p/Dd_xP5OE6MB",
-      "thumbnail": "https://pbs.twimg.com/media/HToy6zEbMAA_unM?format=webp&name=small",
-      "platform": "instagram"
+      "url": "https://www.instagram.com/p/DcbNPZXGNB7/?img_index=3",
+      "date": "2026.08.24",
+      "platform": "INSTAGRAM",
+      "account": "officialrcti",
+      "desc": "RCTI Mahakarya",
+      "thumbnail": "https://pbs.twimg.com/media/HQfxRzGbAAEyERC?format=webp&name=small"
     }
   ]
 }
