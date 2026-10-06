@@ -823,7 +823,7 @@
 <script>
 
     const NEWS_URL = "data/news.json";
-
+    const NEWS_RECOMMENDED_URL = "data/news-recommended.json";
 
     const monthNames = [
         "JAN", "FEB", "MAR", "APR",
@@ -918,6 +918,10 @@
     let activeFilterDisplayName = "";
 
     let filterAllYearsMode = false;
+
+    let recommendedNews = [];
+
+    let recommendedVisible = false;
 
 
     /* ---------------------------------------------------------
@@ -1614,6 +1618,8 @@
         activeFilterDisplayName = "";
         filterAllYearsMode = false;
 
+        recommendedVisible = false;
+
 
         setSelectedCell(key);
 
@@ -1640,6 +1646,7 @@
             return;
         }
 
+        recommendedVisible = false;
 
         document
             .querySelectorAll(
@@ -1755,6 +1762,286 @@
         );
     }
 
+    /* ---------------------------------------------------------
+       RECOMMENDED NEWS
+       --------------------------------------------------------- */
+
+    function renderRecommendedNews() {
+
+        const panel =
+            document.getElementById(
+                "newsPanel"
+            );
+
+        const dateEl =
+            document.getElementById(
+                "newsPanelDate"
+            );
+
+        const countEl =
+            document.getElementById(
+                "newsPanelCount"
+            );
+
+        const allYearsEl =
+            document.getElementById(
+                "newsPanelAllYears"
+            );
+
+        const clearEl =
+            document.getElementById(
+                "newsPanelClear"
+            );
+
+        const list =
+            document.getElementById(
+                "newsList"
+            );
+
+
+        recommendedVisible = true;
+
+
+        dateEl.textContent =
+            "RECOMMENDED";
+
+
+        countEl.textContent =
+            recommendedNews.length
+                ? `${recommendedNews.length} NEWS`
+                : "NO NEWS";
+
+
+        allYearsEl.hidden = true;
+
+        clearEl.hidden =
+            !recommendedNews.length;
+
+
+        list.innerHTML = "";
+
+
+        if (!recommendedNews.length) {
+
+            const empty =
+                document.createElement(
+                    "div"
+                );
+
+            empty.className =
+                "news-empty";
+
+            empty.textContent =
+                "추천된 뉴스가 없습니다.";
+
+            list.appendChild(
+                empty
+            );
+
+        } else {
+
+            for (
+                const item of recommendedNews
+                ) {
+
+                const row =
+                    document.createElement(
+                        "div"
+                    );
+
+                row.className =
+                    "news-item";
+
+
+                const meta =
+                    document.createElement(
+                        "div"
+                    );
+
+                meta.className =
+                    "news-item-meta";
+
+
+                const itemDate =
+                    item.date ||
+                    (
+                        item.publishedAt
+                            ? item.publishedAt.slice(
+                                0,
+                                10
+                            )
+                            : ""
+                    );
+
+
+                const dateText =
+                    itemDate.replace(
+                        /-/g,
+                        "."
+                    );
+
+
+                const time =
+                    item.publishedAt
+                        ? item.publishedAt.slice(
+                            11,
+                            16
+                        )
+                        : "";
+
+
+                const appendSeparator =
+                    () => {
+
+                        if (
+                            meta.childNodes.length
+                        ) {
+
+                            meta.appendChild(
+                                document.createTextNode(
+                                    " · "
+                                )
+                            );
+                        }
+                    };
+
+
+                if (dateText) {
+
+                    const dateEl =
+                        document.createElement(
+                            "span"
+                        );
+
+                    dateEl.className =
+                        "news-date";
+
+                    dateEl.textContent =
+                        dateText;
+
+                    meta.appendChild(
+                        dateEl
+                    );
+                }
+
+
+                if (time) {
+
+                    appendSeparator();
+
+
+                    const timeEl =
+                        document.createElement(
+                            "span"
+                        );
+
+                    timeEl.className =
+                        "news-time";
+
+                    timeEl.textContent =
+                        time;
+
+                    meta.appendChild(
+                        timeEl
+                    );
+                }
+
+
+                if (item.media) {
+
+                    appendSeparator();
+
+
+                    const media =
+                        document.createElement(
+                            "span"
+                        );
+
+                    media.textContent =
+                        item.media;
+
+                    meta.appendChild(
+                        media
+                    );
+                }
+
+
+                const reporter =
+                    item.reporter ||
+                    "";
+
+
+                if (reporter) {
+
+                    appendSeparator();
+
+
+                    const reporterEl =
+                        document.createElement(
+                            "span"
+                        );
+
+                    reporterEl.textContent =
+                        reporter;
+
+                    meta.appendChild(
+                        reporterEl
+                    );
+                }
+
+
+                const titleLink =
+                    document.createElement(
+                        "a"
+                    );
+
+                titleLink.className =
+                    "news-item-title";
+
+
+                titleLink.href =
+                    item.originalUrl ||
+                    item.url ||
+                    "#";
+
+
+                titleLink.target =
+                    "_blank";
+
+                titleLink.rel =
+                    "noopener noreferrer";
+
+
+                titleLink.textContent =
+                    item.title ||
+                    "제목 없음";
+
+
+                titleLink.title =
+                    item.title ||
+                    "제목 없음";
+
+
+                row.append(
+                    meta,
+                    titleLink
+                );
+
+
+                list.appendChild(
+                    row
+                );
+            }
+        }
+
+
+        panel.classList.add(
+            "show"
+        );
+
+        syncCalendarWidth();
+    }
+
 
     /* ---------------------------------------------------------
        NEWS LIST
@@ -1868,12 +2155,18 @@
 
             const sorted =
                 [...items].sort(
-                    (a, b) =>
-                        (
-                            a.publishedAt || ""
-                        ).localeCompare(
-                            b.publishedAt || ""
-                        )
+                    (a, b) => {
+
+                        const aTime =
+                            a.publishedAt || "";
+
+                        const bTime =
+                            b.publishedAt || "";
+
+                        return isFilter
+                            ? bTime.localeCompare(aTime)  // 필터: 최신순
+                            : aTime.localeCompare(bTime); // 날짜 클릭: 시간순
+                    }
                 );
 
 
@@ -2158,20 +2451,17 @@
 
     function closeNewsPanel() {
 
-        selectedDateKey =
-            null;
+        selectedDateKey = null;
 
-        activeFilterType =
-            "";
+        activeFilterType = "";
 
-        activeFilterValue =
-            "";
+        activeFilterValue = "";
 
-        activeFilterDisplayName =
-            "";
+        activeFilterDisplayName = "";
 
-        filterAllYearsMode =
-            false;
+        filterAllYearsMode = false;
+
+        recommendedVisible = false;
 
 
         document
@@ -2205,26 +2495,23 @@
         selectedYear =
             year;
 
-
         closeNewsPanel();
-
 
         buildYearData(
             selectedYear
         );
 
-
         updateHeader();
 
-
         renderCalendar();
-
 
         if (newsUpdatedAt) {
 
             updatedEl.textContent =
                 `NEWS UPDATED ${newsUpdatedAt}`;
         }
+
+        renderRecommendedNews();
     }
 
 
@@ -2337,19 +2624,42 @@
                 await response.json();
 
 
-            console.log(
-                "news.json loaded:",
-                {
-                    count:
-                    data.count,
+            try {
 
-                    items:
-                    data.items?.length,
+                const recommendedResponse =
+                    await fetch(
+                        NEWS_RECOMMENDED_URL
+                    );
 
-                    updatedAt:
-                    data.updatedAt
+
+                if (
+                    recommendedResponse.ok
+                ) {
+
+                    const recommendedData =
+                        await recommendedResponse.json();
+
+                    recommendedNews =
+                        recommendedData.items || [];
+
+                } else {
+
+                    console.warn(
+                        `Failed to load recommended news: HTTP ${recommendedResponse.status}`
+                    );
+
+                    recommendedNews = [];
                 }
-            );
+
+            } catch (error) {
+
+                console.warn(
+                    "Failed to load recommended news:",
+                    error
+                );
+
+                recommendedNews = [];
+            }
 
 
             allNewsItems =
@@ -2441,6 +2751,8 @@
 
 
             updateHeader();
+
+            renderRecommendedNews();
 
         } catch (error) {
 
