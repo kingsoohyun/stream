@@ -2603,14 +2603,14 @@
 
         try {
 
-            const response =
-                await fetch(
-                    NEWS_URL
-                );
+            const [response, recommendedResponse] =
+                await Promise.all([
+                    fetch(NEWS_URL),
+                    fetch(NEWS_RECOMMENDED_URL)
+                ]);
 
 
             if (!response.ok) {
-
                 throw new Error(
                     `HTTP ${response.status}`
                 );
@@ -2621,38 +2621,18 @@
                 await response.json();
 
 
-            try {
+            if (recommendedResponse.ok) {
 
-                const recommendedResponse =
-                    await fetch(
-                        NEWS_RECOMMENDED_URL
-                    );
+                const recommendedData =
+                    await recommendedResponse.json();
 
+                recommendedNews =
+                    recommendedData.items || [];
 
-                if (
-                    recommendedResponse.ok
-                ) {
-
-                    const recommendedData =
-                        await recommendedResponse.json();
-
-                    recommendedNews =
-                        recommendedData.items || [];
-
-                } else {
-
-                    console.warn(
-                        `Failed to load recommended news: HTTP ${recommendedResponse.status}`
-                    );
-
-                    recommendedNews = [];
-                }
-
-            } catch (error) {
+            } else {
 
                 console.warn(
-                    "Failed to load recommended news:",
-                    error
+                    `Failed to load recommended news: HTTP ${recommendedResponse.status}`
                 );
 
                 recommendedNews = [];
