@@ -35,20 +35,17 @@ body {
 }
 
 .brand {
-    display: flex;
-    flex-direction: column;
+    display: block;
 }
 
 .brand img {
     display: block;
-    width: 174px;
-    height: 28px;
+    width: 180px;
+    height: auto;
 }
 
 .brand a {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
+    display: block;
     color: inherit;
     text-decoration: none;
 }
