@@ -1,6 +1,9 @@
 async function loadData() {
-    const youtubeResponse =
-        await fetch("data/youtube.json");
+    const [youtubeResponse, socialResponse] =
+        await Promise.all([
+            fetch("data/youtube.json"),
+            fetch("data/social_pick.json")
+        ]);
 
     if (!youtubeResponse.ok) {
         throw new Error(
@@ -8,29 +11,20 @@ async function loadData() {
         );
     }
 
-    const youtube =
-        await youtubeResponse.json();
+    if (!socialResponse.ok) {
+        throw new Error(
+            "social_pick.json을 불러오지 못했습니다."
+        );
+    }
+
+    const [youtube, social] =
+        await Promise.all([
+            youtubeResponse.json(),
+            socialResponse.json()
+        ]);
 
     renderYoutube(youtube);
-
-    try {
-        const socialResponse =
-            await fetch("data/social_pick.json");
-
-        if (!socialResponse.ok) {
-            throw new Error(
-                "social_pick.json을 불러오지 못했습니다."
-            );
-        }
-
-        const social =
-            await socialResponse.json();
-
-        renderSocial(social);
-
-    } catch (error) {
-        console.error("Social:", error);
-    }
+    renderSocial(social);
 }
 
 
