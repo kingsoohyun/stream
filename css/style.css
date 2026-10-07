@@ -56,7 +56,7 @@ body {
 .brand span {
     margin-top: 4px;
     margin-left: 2px;
-    color: #6f747d;
+    color: #5f646d;
     font-size: 11px;
     letter-spacing: -0.04em;
 }
@@ -684,7 +684,7 @@ footer {
     align-items: center;
     gap: 10px;
     margin-left: 20px;
-    color: #858b95;
+    color: #666c75;
     font-size: 11px;
     font-weight: 500;
     letter-spacing: .04em;
