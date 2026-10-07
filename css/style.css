@@ -75,9 +75,8 @@ body {
     letter-spacing: .03em;
     text-decoration: none;
     white-space: nowrap;
-    transition:
-            background .15s ease,
-            border-color .15s ease;
+    transition: background .15s ease,
+    border-color .15s ease;
 }
 
 .header-action a:hover {
@@ -503,10 +502,9 @@ button:focus-visible {
     line-height: 1;
     box-shadow: 0 2px 8px rgba(20, 25, 35, .08);
     cursor: help;
-    transition:
-            background-color .15s ease,
-            border-color .15s ease,
-            color .15s ease;
+    transition: background-color .15s ease,
+    border-color .15s ease,
+    color .15s ease;
 }
 
 .common-info-button:hover,
@@ -539,10 +537,9 @@ button:focus-visible {
     opacity: 0;
     visibility: hidden;
     transform: translateY(3px);
-    transition:
-            opacity .15s ease,
-            visibility .15s ease,
-            transform .15s ease;
+    transition: opacity .15s ease,
+    visibility .15s ease,
+    transform .15s ease;
     pointer-events: none;
 }
 
@@ -633,11 +630,10 @@ footer {
     visibility: hidden;
     transform: translateY(8px);
 
-    transition:
-            opacity .2s ease,
-            visibility .2s ease,
-            transform .2s ease,
-            background-color .15s ease;
+    transition: opacity .2s ease,
+    visibility .2s ease,
+    transform .2s ease,
+    background-color .15s ease;
 }
 
 .back-to-top.show {
@@ -667,9 +663,6 @@ footer {
 .privacy-rights-link:hover {
     text-decoration: underline;
 }
-
-
-
 
 
 /* ---------------------------------------------------------
@@ -904,7 +897,6 @@ footer {
     /* ---------------------------------------------------------
        Header / Footer
        --------------------------------------------------------- */
-
     .site-header {
         background: #121418;
         border-bottom-color: #30353d;
@@ -941,7 +933,6 @@ footer {
     /* ---------------------------------------------------------
        Platform / Sections
        --------------------------------------------------------- */
-
     .platform,
     .archive-section {
         background: #16191e;
@@ -956,7 +947,6 @@ footer {
     /* ---------------------------------------------------------
        Cards
        --------------------------------------------------------- */
-
     .card {
         background: #1c2026;
         border-color: #383d46;
@@ -974,7 +964,6 @@ footer {
     /* ---------------------------------------------------------
        Back to Top
        --------------------------------------------------------- */
-
     .back-to-top {
         background: rgba(22, 25, 30, .96);
         border-color: #353a42;
@@ -989,7 +978,6 @@ footer {
     /* ---------------------------------------------------------
        Privacy
        --------------------------------------------------------- */
-
     .privacy-rights-link {
         color: #c87552;
     }
@@ -1005,7 +993,6 @@ footer {
     /* ---------------------------------------------------------
        Social
        --------------------------------------------------------- */
-
     .social-card {
         background: #1c2026;
         border-color: #383d46;
@@ -1044,7 +1031,6 @@ footer {
     /* ---------------------------------------------------------
        Social Home
        --------------------------------------------------------- */
-
     .social-home-card {
         background: #16191e;
         border-color: #30353d;
@@ -1058,7 +1044,6 @@ footer {
     /* ---------------------------------------------------------
        Site Navigation
        --------------------------------------------------------- */
-
     .site-nav {
         color: #858b95;
     }
@@ -1075,7 +1060,6 @@ footer {
     /* ---------------------------------------------------------
        Empty Quote
        --------------------------------------------------------- */
-
     .empty-quote blockquote {
         color: #c5c8cd;
     }
@@ -1095,7 +1079,6 @@ footer {
     /* ---------------------------------------------------------
        Common
        --------------------------------------------------------- */
-
     .common-count,
     .common-info {
         color: #858b95;
@@ -1129,7 +1112,6 @@ footer {
     /* ---------------------------------------------------------
        Legacy icon backgrounds
        --------------------------------------------------------- */
-
     .archive .icon,
     .world .icon,
     .records .icon,
