@@ -1037,35 +1037,27 @@
             const item of allNewsItems
             ) {
 
-            if (!item.date) {
+            const date =
+                item.publishedAt
+                    ? item.publishedAt.slice(0, 10)
+                    : "";
+
+            if (!date) {
                 continue;
             }
 
-            if (
-                !item.date.startsWith(
-                    `${year}-`
-                )
-            ) {
+            if (!date.startsWith(`${year}-`)) {
                 continue;
             }
 
-            newsByDate[item.date] =
-                (
-                    newsByDate[item.date] ||
-                    0
-                ) + 1;
+            newsByDate[date] =
+                (newsByDate[date] || 0) + 1;
 
-            if (
-                !newsItemsByDate[item.date]
-            ) {
-
-                newsItemsByDate[item.date] =
-                    [];
+            if (!newsItemsByDate[date]) {
+                newsItemsByDate[date] = [];
             }
 
-            newsItemsByDate[
-                item.date
-                ].push(item);
+            newsItemsByDate[date].push(item);
         }
 
         maxNewsCount =
@@ -1705,14 +1697,14 @@
                                 item
                             );
 
+                    const itemDate =
+                        item.publishedAt
+                            ? item.publishedAt.slice(0, 10)
+                            : "";
 
                     return (
-                        value ===
-                        filterValue &&
-
-                        item.date?.startsWith(
-                            `${selectedYear}-`
-                        )
+                        value === filterValue &&
+                        itemDate.startsWith(`${selectedYear}-`)
                     );
                 }
             );
@@ -1874,15 +1866,9 @@
 
 
                 const itemDate =
-                    item.date ||
-                    (
-                        item.publishedAt
-                            ? item.publishedAt.slice(
-                                0,
-                                10
-                            )
-                            : ""
-                    );
+                    item.publishedAt
+                        ? item.publishedAt.slice(0, 10)
+                        : "";
 
 
                 const dateText =
@@ -2012,7 +1998,6 @@
 
                 titleLink.href =
                     item.url ||
-                    item.originalUrl ||
                     "#";
 
 
@@ -2204,15 +2189,9 @@
 
 
                 const itemDate =
-                    item.date ||
-                    (
-                        item.publishedAt
-                            ? item.publishedAt.slice(
-                                0,
-                                10
-                            )
-                            : ""
-                    );
+                    item.publishedAt
+                        ? item.publishedAt.slice(0, 10)
+                        : "";
 
 
                 const dateText =
@@ -2414,7 +2393,6 @@
 
                 titleLink.href =
                     item.url ||
-                    item.originalUrl ||
                     "#";
 
 
@@ -2700,31 +2678,19 @@
                 new Set();
 
 
-            for (
-                const item of allNewsItems
-                ) {
+            for (const item of allNewsItems) {
 
-                if (!item.date) {
+                if (!item.publishedAt) {
                     continue;
                 }
 
-
                 const year =
                     Number(
-                        item.date.slice(
-                            0,
-                            4
-                        )
+                        item.publishedAt.slice(0, 4)
                     );
 
-
-                if (
-                    Number.isInteger(year)
-                ) {
-
-                    years.add(
-                        year
-                    );
+                if (Number.isInteger(year)) {
+                    years.add(year);
                 }
             }
 
