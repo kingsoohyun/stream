@@ -443,7 +443,7 @@ button:focus-visible {
 
 .tweet-date {
     margin-left: auto;
-    color: #90959e;
+    color: #666c75;
     font-size: 10px;
     white-space: nowrap;
 }
@@ -468,7 +468,7 @@ button:focus-visible {
    ========================================================= */
 
 .common-count {
-    color: #858b95;
+    color: #666c75;
     font-size: 12px;
 }
 
