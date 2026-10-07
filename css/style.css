@@ -260,7 +260,7 @@ main > .archive-section:last-child {
 }
 
 .section-head span {
-    color: #858b95;
+    color: #666c75;
     font-size: 12px;
 }
 
@@ -337,7 +337,7 @@ button:focus-visible {
 .social-home-platform {
     display: block;
     overflow: hidden;
-    color: #858b95;
+    color: #666c75;
     font-size: 9px;
     font-weight: 600;
     letter-spacing: .02em;
