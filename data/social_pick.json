@@ -8,7 +8,9 @@
     {
       "url": "https://x.com/benchtm/status/2105527965534872036",
       "thumbnail": "https://pbs.twimg.com/media/HThLk-kasAARBZg?format=webp&name=small",
-      "platform": "x"
+      "platform": "x",
+      "account": "benchtm",
+      "desc": "BENCH/"
     },
     {
       "url": "https://www.instagram.com/p/Dcck98lxp8h",
@@ -26,7 +28,6 @@
       "desc": "GOLDMEDALIST",
       "thumbnail": "https://pbs.twimg.com/media/HRl5kezbMAAprHq?format=webp&name=small"
     },
-
     {
       "url": "https://www.instagram.com/p/Ddk3IRmk8mz",
       "date": "2026.09.22",
@@ -41,7 +42,7 @@
       "platform": "instagram"
     },
     {
-      "url": "https://www.instagram.com/p/Dd_0RMBzj_y/",
+      "url": "https://www.instagram.com/p/Dd_0RMBzj_y",
       "thumbnail": "https://pbs.twimg.com/media/HToy6y-acAA5mOd?format=webp&name=small",
       "platform": "instagram"
     },
@@ -75,7 +76,7 @@
       "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2105245702565879808/img/ncpo1cdidrY82YU8?format=webp&name=small"
     },
     {
-      "url": "https://www.instagram.com/p/DcbNPZXGNB7/?img_index=3",
+      "url": "https://www.instagram.com/p/DcbNPZXGNB7",
       "date": "2026.08.24",
       "platform": "INSTAGRAM",
       "account": "officialrcti",
