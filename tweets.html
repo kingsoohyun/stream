@@ -972,7 +972,7 @@
                         class="twitter-thumbnail"
                         src="${escapeHtml(thumbnail)}"
                         alt=""
-                        loading="lazy"
+                        ${index === 0 ? 'fetchpriority="high"' : 'loading="lazy"'}
                     >
 
                 `
