@@ -1080,7 +1080,17 @@
 
                 const button = createButton(item.title);
 
+                if (item.new) {
+                    const badge = document.createElement('span');
+                    badge.className = 'new-badge';
+                    badge.textContent = 'NEW';
+
+                    const title = button.querySelector('.record-title');
+                    title.appendChild(badge);
+                }
+
                 const subList = document.createElement('div');
+
                 subList.className = 'record-sublist';
 
 
@@ -1134,6 +1144,13 @@
                                 subItem.title;
 
                             subItemElement.appendChild(title);
+
+                            if (subItem.new) {
+                                const badge = document.createElement('span');
+                                badge.className = 'new-badge';
+                                badge.textContent = 'NEW';
+                                subItemElement.appendChild(badge);
+                            }
 
 
                             if (subItem.links &&
@@ -1258,6 +1275,13 @@
                                 record.title;
 
                             subItemElement.appendChild(title);
+
+                            if (record.new) {
+                                const badge = document.createElement('span');
+                                badge.className = 'new-badge';
+                                badge.textContent = 'NEW';
+                                subItemElement.appendChild(badge);
+                            }
 
 
                             if (record.links &&
@@ -1390,6 +1414,13 @@
                             subItem.title;
 
                         subItemElement.appendChild(title);
+
+                        if (subItem.new) {
+                            const badge = document.createElement('span');
+                            badge.className = 'new-badge';
+                            badge.textContent = 'NEW';
+                            subItemElement.appendChild(badge);
+                        }
 
 
                         if (subItem.links &&
