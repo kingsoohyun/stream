@@ -137,6 +137,13 @@
             font-weight: 600;
         }
 
+        #daysLeft {
+            display: inline-block;
+            width: 5ch;
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+
 
         /* ---------------------------------------------------------
            Calendar
@@ -2784,12 +2791,12 @@
         }
     }
 
-
     /* ---------------------------------------------------------
        INIT
        --------------------------------------------------------- */
 
     updateHeader();
+    renderCalendar();
 
     loadNews();
 
