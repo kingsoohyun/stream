@@ -2603,39 +2603,68 @@
 
         try {
 
-            const [response, recommendedResponse] =
-                await Promise.all([
+            const [newsResult, recommendedResult] =
+                await Promise.allSettled([
                     fetch(NEWS_URL),
                     fetch(NEWS_RECOMMENDED_URL)
                 ]);
 
 
-            if (!response.ok) {
+            if (
+                newsResult.status !== "fulfilled" ||
+                !newsResult.value.ok
+            ) {
+
+                const status =
+                    newsResult.status === "fulfilled"
+                        ? newsResult.value.status
+                        : "";
+
                 throw new Error(
-                    `HTTP ${response.status}`
+                    status
+                        ? `HTTP ${status}`
+                        : "news.json 요청 실패"
                 );
             }
+
+
+            const response =
+                newsResult.value;
 
 
             const data =
                 await response.json();
 
 
-            if (recommendedResponse.ok) {
+            recommendedNews = [];
 
-                const recommendedData =
-                    await recommendedResponse.json();
 
-                recommendedNews =
-                    recommendedData.items || [];
+            if (
+                recommendedResult.status === "fulfilled" &&
+                recommendedResult.value.ok
+            ) {
+
+                try {
+
+                    const recommendedData =
+                        await recommendedResult.value.json();
+
+                    recommendedNews =
+                        recommendedData.items || [];
+
+                } catch (error) {
+
+                    console.warn(
+                        "Failed to parse recommended news:",
+                        error
+                    );
+                }
 
             } else {
 
                 console.warn(
-                    `Failed to load recommended news: HTTP ${recommendedResponse.status}`
+                    "Failed to load recommended news."
                 );
-
-                recommendedNews = [];
             }
 
 
