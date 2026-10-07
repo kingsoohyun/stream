@@ -579,8 +579,6 @@ footer {
 }
 
 .footer-notice {
-    max-width: 1000px;
-    margin: 0 auto;
     color: #666c75;
     font-size: 11px;
     line-height: 1.7;
@@ -921,9 +919,7 @@ footer {
     }
 
     footer {
-        background: #121418;
         border-top-color: #30353d;
-        color: #858b95;
     }
 
     .footer-notice strong {
