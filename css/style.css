@@ -325,7 +325,7 @@ button:focus-visible {
 .social-home-thumb {
     display: block;
     width: 100%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1 / 1.25;
     object-fit: cover;
     background: #dfe2e7;
 }
