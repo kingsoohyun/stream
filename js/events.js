@@ -232,14 +232,30 @@ async function renderMap(events) {
        Muted Teal Color Scale
        ===================================================== */
 
-    const tealScale = d3.scaleLinear()
+    // const tealScale = d3.scaleLinear()
+    //     .domain([
+    //         1,
+    //         maxCount
+    //     ])
+    //     .range([
+    //         "#BFD9DA",
+    //         "#24585D"
+    //     ])
+    //     .interpolate(d3.interpolateRgb);
+
+
+    /* =====================================================
+       Gold → Brown Color Scale
+       ===================================================== */
+
+    const goldScale = d3.scaleLinear()
         .domain([
             1,
             maxCount
         ])
         .range([
-            "#BFD9DA",
-            "#24585D"
+            "#E4D7B5",
+            "#74351F"
         ])
         .interpolate(d3.interpolateRgb);
 
@@ -274,7 +290,7 @@ async function renderMap(events) {
                 countryCounts[code] || 0;
 
             return count
-                ? tealScale(count)
+                ? goldScale(count)
                 : "#f1f2f4";
         });
 
