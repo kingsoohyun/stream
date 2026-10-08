@@ -229,17 +229,17 @@ async function renderMap(events) {
 
 
     /* =====================================================
-       Gold → Brown Color Scale
+       Muted Teal Color Scale
        ===================================================== */
 
-    const goldScale = d3.scaleLinear()
+    const tealScale = d3.scaleLinear()
         .domain([
             1,
             maxCount
         ])
         .range([
-            "#E8D6A3",
-            "#74351F"
+            "#BFD9DA",
+            "#24585D"
         ])
         .interpolate(d3.interpolateRgb);
 
@@ -274,7 +274,7 @@ async function renderMap(events) {
                 countryCounts[code] || 0;
 
             return count
-                ? goldScale(count)
+                ? tealScale(count)
                 : "#f1f2f4";
         });
 
@@ -425,9 +425,7 @@ async function renderMap(events) {
                --------------------------------------------- */
 
             d3.select(this)
-                .style("stroke", "#8a6500")
                 .style("stroke-width", 1.2);
-
 
             /* ---------------------------------------------
                국가 영역 옆에 Tooltip 고정
