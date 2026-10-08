@@ -46,7 +46,6 @@
         .archive-toolbar {
             display: flex;
             align-items: center;
-            justify-content: space-between;
             margin-bottom: 16px;
         }
 
@@ -54,12 +53,7 @@
             display: flex;
             align-items: center;
             gap: 8px;
-        }
-
-        .archive-filters {
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            flex-shrink: 0;
         }
 
         #tag-select {
@@ -101,6 +95,7 @@
             gap: 4px;
             margin-left: auto;
             margin-right: 8px;
+            flex-shrink: 0;
         }
 
         .youtube-grid-control button {
@@ -296,8 +291,12 @@
                 gap: 22px 10px;
             }
 
-            .archive-toolbar {
-                align-items: flex-start;
+            .youtube-grid-control {
+                display: none;
+            }
+
+            .archive-filters {
+                margin-left: auto;
             }
         }
 
@@ -1015,12 +1014,6 @@
 
         document.getElementById('grid-count').textContent = columnCount;
 
-        document
-            .querySelector('.youtube-grid-control')
-            .style.display =
-            window.innerWidth <= 420
-                ? 'none'
-                : 'flex';
 
         grid.style.gridTemplateColumns =
             `repeat(${columnCount}, minmax(0, 1fr))`;

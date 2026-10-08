@@ -45,22 +45,8 @@
 
         .twitter-toolbar {
             display: flex;
-            justify-content: space-between;
             align-items: center;
             margin-bottom: 16px;
-        }
-
-        .twitter-filters {
-            display: flex;
-            gap: 6px;
-        }
-
-        #category-select {
-            min-width: 90px;
-        }
-
-        #sort-select {
-            min-width: 60px;
         }
 
         .twitter-grid-control {
@@ -69,6 +55,21 @@
             gap: 4px;
             margin-left: auto;
             margin-right: 8px;
+            flex-shrink: 0;
+        }
+
+        .twitter-filters {
+            display: flex;
+            gap: 6px;
+            flex-shrink: 0;
+        }
+
+        #category-select {
+            min-width: 90px;
+        }
+
+        #sort-select {
+            min-width: 60px;
         }
 
         .twitter-grid-control button {
@@ -296,6 +297,16 @@
 
             .twitter-title {
                 font-size: 11px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .twitter-grid-control {
+                display: none;
+            }
+
+            .twitter-filters {
+                margin-left: auto;
             }
         }
 
@@ -903,13 +914,6 @@
                 : gridColumnCount;
 
         document.getElementById('grid-count').textContent = columnCount;
-
-        document
-            .querySelector('.twitter-grid-control')
-            .style.display =
-            window.innerWidth <= 420
-                ? 'none'
-                : 'flex';
 
 
         // -------------------------------------------------------
