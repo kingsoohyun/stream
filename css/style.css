@@ -486,7 +486,7 @@ button:focus-visible {
 .common-info {
     position: relative;
     display: inline-flex;
-    margin-right: 1px;
+    margin-right: 2px;
     vertical-align: middle;
 }
 
