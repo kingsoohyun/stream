@@ -15,7 +15,7 @@
     <meta property="og:title" content="KIM SOO HYUN STREAM">
     <meta property="og:description" content="배우 김수현 콘텐츠 큐레이션 팬 페이지">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kingsoohyun.github.io/stream/news.html">
+    <meta property="og:url" content="https://kingsoohyun.github.io/stream/newsb.html">
     <meta property="og:image" content="https://kingsoohyun.github.io/stream/assets/stream.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -482,37 +482,6 @@
             font-size: 10px;
         }
 
-        .news-behind {
-            display: block;
-            width: fit-content;
-            margin: 14px 0 10px auto;
-
-            color: #666c75;
-
-            font-size: 9px;
-            line-height: 1.4;
-
-            text-decoration: none;
-        }
-
-        .news-behind span {
-            margin-left: 6px;
-
-            color: #151922;
-            font-weight: 600;
-        }
-
-        .news-behind:hover span {
-            color: #aa2828;
-        }
-
-        .news-behind[hidden] {
-            display: none;
-        }
-
-        .news-panel:has(.news-behind:not([hidden])) {
-            border-bottom: none;
-        }
 
         /* ---------------------------------------------------------
            Tooltip
@@ -548,6 +517,10 @@
         .tooltip.show {
             opacity: 1;
             transform: translateY(0);
+        }
+
+        .site-nav a[href="news.html"] {
+            color: #aa2828;
         }
 
 
@@ -655,15 +628,7 @@
                 color: #eceef1;
             }
 
-            .news-behind {
-                color: #8995aa;
-            }
-
-            .news-behind span {
-                color: #eceef1;
-            }
-
-            .news-behind:hover span {
+            .site-nav a[href="news.html"] {
                 color: #c87552;
             }
         }
@@ -691,7 +656,7 @@
 <!--        <span>|</span>-->
 <!--        <a href="social.html">SOCIAL</a>-->
         <span>|</span>
-        <a href="news.html" aria-current="page">NEWS</a>
+        <a href="news.html">NEWS</a>
     </nav>
 
     <nav class="header-action">
@@ -833,10 +798,6 @@
                 id="newsList"
         ></div>
 
-        <a href="newsb.html" class="news-behind" id="newsBehind" hidden>
-            배경 기사 <span>더 보기 →</span>
-        </a>
-
     </section>
 
 </main>
@@ -860,8 +821,7 @@
 
 <script>
 
-    const NEWS_URL = "data/news.json";
-    const NEWS_RECOMMENDED_URL = "data/news-recommended.json";
+    const NEWS_URL = "data/newsb.json";
 
     const monthNames = [
         "JAN", "FEB", "MAR", "APR",
@@ -959,10 +919,6 @@
     let activeFilterDisplayName = "";
 
     let filterAllYearsMode = false;
-
-    let recommendedNews = [];
-
-    let recommendedVisible = false;
 
 
     /* ---------------------------------------------------------
@@ -1662,9 +1618,6 @@
         activeFilterDisplayName = "";
         filterAllYearsMode = false;
 
-        recommendedVisible = false;
-
-
         setSelectedCell(key);
 
 
@@ -1689,8 +1642,6 @@
         if (!filterValue) {
             return;
         }
-
-        recommendedVisible = false;
 
         document
             .querySelectorAll(
@@ -1806,278 +1757,6 @@
         );
     }
 
-    /* ---------------------------------------------------------
-       RECOMMENDED NEWS
-       --------------------------------------------------------- */
-
-    function renderRecommendedNews() {
-
-        const panel =
-            document.getElementById(
-                "newsPanel"
-            );
-
-        const dateEl =
-            document.getElementById(
-                "newsPanelDate"
-            );
-
-        const countEl =
-            document.getElementById(
-                "newsPanelCount"
-            );
-
-        const allYearsEl =
-            document.getElementById(
-                "newsPanelAllYears"
-            );
-
-        const clearEl =
-            document.getElementById(
-                "newsPanelClear"
-            );
-
-        const list =
-            document.getElementById(
-                "newsList"
-            );
-
-
-        recommendedVisible = true;
-
-        document.getElementById("newsBehind").hidden = false;
-
-        dateEl.textContent =
-            "RECOMMENDED";
-
-        countEl.textContent =
-            recommendedNews.length
-                ? `${recommendedNews.length} NEWS`
-                : "NO NEWS";
-
-
-        allYearsEl.hidden = true;
-
-        clearEl.hidden =
-            !recommendedNews.length;
-
-        list.innerHTML = "";
-
-
-        if (!recommendedNews.length) {
-
-            const empty =
-                document.createElement(
-                    "div"
-                );
-
-            empty.className =
-                "news-empty";
-
-            empty.textContent =
-                "추천된 뉴스가 없습니다.";
-
-            list.appendChild(
-                empty
-            );
-
-        } else {
-
-            for (
-                const item of recommendedNews
-                ) {
-
-                const row =
-                    document.createElement(
-                        "div"
-                    );
-
-                row.className =
-                    "news-item";
-
-
-                const meta =
-                    document.createElement(
-                        "div"
-                    );
-
-                meta.className =
-                    "news-item-meta";
-
-
-                const itemDate =
-                    item.publishedAt
-                        ? item.publishedAt.slice(0, 10)
-                        : "";
-
-
-                const dateText =
-                    itemDate.replace(
-                        /-/g,
-                        "."
-                    );
-
-
-                const time =
-                    item.publishedAt
-                        ? item.publishedAt.slice(
-                            11,
-                            16
-                        )
-                        : "";
-
-
-                const appendSeparator =
-                    () => {
-
-                        if (
-                            meta.childNodes.length
-                        ) {
-
-                            meta.appendChild(
-                                document.createTextNode(
-                                    " · "
-                                )
-                            );
-                        }
-                    };
-
-
-                if (dateText) {
-
-                    const dateEl =
-                        document.createElement(
-                            "span"
-                        );
-
-                    dateEl.className =
-                        "news-date";
-
-                    dateEl.textContent =
-                        dateText;
-
-                    meta.appendChild(
-                        dateEl
-                    );
-                }
-
-
-                if (time) {
-
-                    appendSeparator();
-
-
-                    const timeEl =
-                        document.createElement(
-                            "span"
-                        );
-
-                    timeEl.className =
-                        "news-time";
-
-                    timeEl.textContent =
-                        time;
-
-                    meta.appendChild(
-                        timeEl
-                    );
-                }
-
-
-                if (item.media) {
-
-                    appendSeparator();
-
-
-                    const media =
-                        document.createElement(
-                            "span"
-                        );
-
-                    media.textContent =
-                        item.media;
-
-                    meta.appendChild(
-                        media
-                    );
-                }
-
-
-                const reporter =
-                    item.reporter ||
-                    "";
-
-
-                if (reporter) {
-
-                    appendSeparator();
-
-
-                    const reporterEl =
-                        document.createElement(
-                            "span"
-                        );
-
-                    reporterEl.textContent =
-                        reporter;
-
-                    meta.appendChild(
-                        reporterEl
-                    );
-                }
-
-
-                const titleLink =
-                    document.createElement(
-                        "a"
-                    );
-
-                titleLink.className =
-                    "news-item-title";
-
-
-                titleLink.href =
-                    item.url ||
-                    "#";
-
-
-                titleLink.target =
-                    "_blank";
-
-                titleLink.rel =
-                    "noopener noreferrer";
-
-
-                titleLink.textContent =
-                    item.title ||
-                    "제목 없음";
-
-
-                titleLink.title =
-                    item.title ||
-                    "제목 없음";
-
-
-                row.append(
-                    meta,
-                    titleLink
-                );
-
-
-                list.appendChild(
-                    row
-                );
-            }
-        }
-
-
-        panel.classList.add(
-            "show"
-        );
-
-        syncCalendarWidth();
-    }
-
 
     /* ---------------------------------------------------------
        NEWS LIST
@@ -2155,7 +1834,6 @@
         clearEl.hidden =
             !isFilter;
 
-        document.getElementById("newsBehind").hidden = true;
 
         list.innerHTML = "";
 
@@ -2491,9 +2169,6 @@
 
         filterAllYearsMode = false;
 
-        recommendedVisible = false;
-
-        document.getElementById("newsBehind").hidden = true;
 
         document
             .querySelectorAll(
@@ -2541,8 +2216,6 @@
             updatedEl.textContent =
                 `NEWS UPDATED ${newsUpdatedAt}`;
         }
-
-        renderRecommendedNews();
     }
 
 
@@ -2633,73 +2306,30 @@
        LOAD NEWS
        --------------------------------------------------------- */
 
+    /* ---------------------------------------------------------
+       LOAD NEWS
+       --------------------------------------------------------- */
+
     async function loadNews() {
 
         try {
 
-            const [newsResult, recommendedResult] =
-                await Promise.allSettled([
-                    fetch(NEWS_URL),
-                    fetch(NEWS_RECOMMENDED_URL)
-                ]);
+            const response =
+                await fetch(NEWS_URL);
 
 
-            if (
-                newsResult.status !== "fulfilled" ||
-                !newsResult.value.ok
-            ) {
-
-                const status =
-                    newsResult.status === "fulfilled"
-                        ? newsResult.value.status
-                        : "";
+            if (!response.ok) {
 
                 throw new Error(
-                    status
-                        ? `HTTP ${status}`
-                        : "news.json 요청 실패"
+                    response.status
+                        ? `HTTP ${response.status}`
+                        : "newsb.json 요청 실패"
                 );
             }
-
-
-            const response =
-                newsResult.value;
 
 
             const data =
                 await response.json();
-
-
-            recommendedNews = [];
-
-
-            if (
-                recommendedResult.status === "fulfilled" &&
-                recommendedResult.value.ok
-            ) {
-
-                try {
-
-                    const recommendedData =
-                        await recommendedResult.value.json();
-
-                    recommendedNews =
-                        recommendedData.items || [];
-
-                } catch (error) {
-
-                    console.warn(
-                        "Failed to parse recommended news:",
-                        error
-                    );
-                }
-
-            } else {
-
-                console.warn(
-                    "Failed to load recommended news."
-                );
-            }
 
 
             allNewsItems =
@@ -2782,12 +2412,11 @@
 
             renderCalendar();
 
-            renderRecommendedNews();
 
         } catch (error) {
 
             console.error(
-                "Failed to load news.json:",
+                "Failed to load newsb.json:",
                 error
             );
 
