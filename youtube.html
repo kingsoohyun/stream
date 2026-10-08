@@ -506,24 +506,11 @@
             </select>
 
             <!-- Sort -->
-            <select
-                    id="sort-select"
-                    class="sort-select"
-                    aria-label="정렬"
-            >
-
-                <option value="latest">
-                    최신순
-                </option>
-
-                <option value="views">
-                    조회수순
-                </option>
-
-                <option value="likes">
-                    좋아요순
-                </option>
-
+            <select id="sort-select" class="sort-select" aria-label="정렬">
+                <option value="latest">최신순</option>
+                <option value="oldest">오래된순</option>
+                <option value="views">조회수순</option>
+                <option value="likes">좋아요순</option>
             </select>
 
         </div>
@@ -653,9 +640,8 @@
 
             buildTagFilter();
             buildYearFilter();
+            initializeFiltersFromUrl();
             renderVideos();
-
-
         } catch (error) {
 
             console.error(error);
@@ -752,14 +738,12 @@
                 || tag;
 
             select.appendChild(option);
-
         });
-
 
         // 최초 로딩은 항상 전체
         select.value = 'all';
-
     }
+
 
     // ---------------------------------------------------------
     // Year Filter 생성
@@ -810,45 +794,82 @@
     // ---------------------------------------------------------
 
     function sortVideos(list, type) {
-
-        return [...list].sort(
-            (a, b) => {
-
-                if (type === 'views') {
-
-                    return (
-                        Number(b.views || 0)
-                        -
-                        Number(a.views || 0)
-                    );
-
-                }
-
-                if (type === 'likes') {
-
-                    return (
-                        Number(b.likes || 0)
-                        -
-                        Number(a.likes || 0)
-                    );
-
-                }
-
-
-                // 최신순
-
-                return (
-                    parseDate(b.date)
-                    -
-                    parseDate(a.date)
-                );
-
+        return [...list].sort((a, b) => {
+            if (type === 'views') {
+                return (Number(b.views) || 0) - (Number(a.views) || 0);
             }
-        );
 
+            if (type === 'likes') {
+                return (Number(b.likes) || 0) - (Number(a.likes) || 0);
+            }
+
+            if (type === 'oldest') {
+                return parseDate(a.date) - parseDate(b.date);
+            }
+
+            return parseDate(b.date) - parseDate(a.date);
+        });
     }
 
 
+    function initializeFiltersFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+
+        const category = params.get('c');
+        const year = params.get('y');
+        const sort = params.get('s');
+
+        const tagSelect = document.getElementById('tag-select');
+        const yearSelect = document.getElementById('year-select');
+        const sortSelect = document.getElementById('sort-select');
+
+        if ([...tagSelect.options].some(option => option.value === category)) {
+            tagSelect.value = category;
+        } else {
+            tagSelect.value = 'all';
+        }
+
+        if ([...yearSelect.options].some(option => option.value === year)) {
+            yearSelect.value = year;
+        } else {
+            yearSelect.value = 'all';
+        }
+
+        if (['latest', 'oldest', 'views', 'likes'].includes(sort)) {
+            sortSelect.value = sort;
+        } else {
+            sortSelect.value = 'latest';
+        }
+    }
+
+
+    function updateUrl() {
+        const url = new URL(window.location.href);
+
+        const category = document.getElementById('tag-select').value;
+        const year = document.getElementById('year-select').value;
+        const sort = document.getElementById('sort-select').value;
+
+        if (category === 'all') {
+            url.searchParams.delete('c');
+        } else {
+            url.searchParams.set('c', category);
+        }
+
+        if (year === 'all') {
+            url.searchParams.delete('y');
+        } else {
+            url.searchParams.set('y', year);
+        }
+
+        if (sort === 'latest') {
+            url.searchParams.delete('s');
+        } else {
+            url.searchParams.set('s', sort);
+        }
+
+        history.replaceState(null, '', url);
+    }
     // ---------------------------------------------------------
     // 날짜 변환
     // ---------------------------------------------------------
@@ -922,30 +943,16 @@
             'song'
         ];
 
-        let filtered =
-            videos.filter(video =>
-                !Array.isArray(video.tags)
-                ||
-                !video.tags.some(tag =>
-                    excludedTags.includes(tag)
-                )
-            );
-
+        let filtered = videos.filter(video =>
+            !excludedTags.some(tag =>
+                Array.isArray(video.tags) && video.tags.includes(tag)
+            )
+        );
 
         if (selectedTag !== 'all') {
-
-            filtered =
-                videos.filter(
-                    video =>
-                        Array.isArray(
-                            video.tags
-                        )
-                        &&
-                        video.tags.includes(
-                            selectedTag
-                        )
-                );
-
+            filtered = filtered.filter(video =>
+                Array.isArray(video.tags) && video.tags.includes(selectedTag)
+            );
         }
 
 
@@ -1124,31 +1131,20 @@
     // 필터 변경
     // ---------------------------------------------------------
 
-    document
-        .getElementById('tag-select')
-        .addEventListener(
-            'change',
-            renderVideos
-        );
+    document.getElementById('tag-select').addEventListener('change', () => {
+        updateUrl();
+        renderVideos();
+    });
 
-    document
-        .getElementById('year-select')
-        .addEventListener(
-            'change',
-            renderVideos
-        );
+    document.getElementById('year-select').addEventListener('change', () => {
+        updateUrl();
+        renderVideos();
+    });
 
-
-    // ---------------------------------------------------------
-    // 정렬 변경
-    // ---------------------------------------------------------
-
-    document
-        .getElementById('sort-select')
-        .addEventListener(
-            'change',
-            renderVideos
-        );
+    document.getElementById('sort-select').addEventListener('change', () => {
+        updateUrl();
+        renderVideos();
+    });
 
 
     document
