@@ -473,7 +473,7 @@ button:focus-visible {
     color: #151922;
     display: inline-block;
     min-width: 5ch;
-    text-align: right;
+    text-align: left;
     font-variant-numeric: tabular-nums;
 }
 
