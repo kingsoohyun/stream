@@ -525,30 +525,15 @@
            ========================================================= */
 
         @media (max-width: 800px) {
-
-            .calendar-head {
-                margin-bottom: 4px;
-            }
-
-            .stats {
-                gap: 14px;
-                margin-bottom: 18px;
-            }
-
+            .calendar-head { margin-bottom: 4px; }
+            .stats { gap: 14px; margin-bottom: 18px; }
             .calendar-wrap {
                 margin-right: -12px;
                 padding-right: 12px;
             }
-
-            .news-panel {
-                margin-top: 24px;
-            }
-
+            .news-panel { margin-top: 24px; }
             .news-item {
-                grid-template-columns:
-                    190px
-                    minmax(0, 1fr);
-
+                grid-template-columns: 190px minmax(0, 1fr);
                 gap: 12px;
             }
         }
@@ -864,6 +849,9 @@
     const calendarHead =
         document.querySelector(".calendar-head");
 
+    const main =
+        document.querySelector(".news-page");
+
     const stats =
         document.getElementById("stats");
 
@@ -936,17 +924,31 @@
 
     function syncCalendarWidth() {
 
-        if (!calendar) {
+        if (!calendar || !main) {
             return;
         }
 
         const width =
             calendar.getBoundingClientRect().width;
 
+        const mainStyle =
+            getComputedStyle(main);
+
+        const paddingLeft =
+            parseFloat(mainStyle.paddingLeft) || 0;
+
+        const paddingRight =
+            parseFloat(mainStyle.paddingRight) || 0;
+
+        const contentWidth =
+            main.clientWidth -
+            paddingLeft -
+            paddingRight;
+
         const maxWidth =
             Math.min(
                 width,
-                document.documentElement.clientWidth
+                contentWidth
             );
 
         const widthValue =
@@ -1423,15 +1425,7 @@
             );
         }
 
-        // syncCalendarWidth();
-        // TODO: syncCalendarWidth() 관련 코드 정리
-        // - syncCalendarWidth() 함수 제거
-        // - renderCalendar()의 syncCalendarWidth() 호출 제거
-        // - 함수 내부의 calendar.getBoundingClientRect() 및 width 계산 제거
-        // - calendarHead.style.width / stats.style.width / newsPanel.style.width 제거
-        // - calendarHead, calendar 등 관련 변수는 다른 곳에서 사용되지 않는 경우에만 제거
-        // - CSS의 기존 width: 100% 및 .calendar의 width: max-content는 유지
-        // - GitHub Pages에서 syncCalendarWidth() 호출 제거 시 CLS 0으로 확인됨
+        syncCalendarWidth();
     }
 
 
