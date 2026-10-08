@@ -471,6 +471,10 @@ button:focus-visible {
 
 .common-count strong {
     color: #151922;
+    display: inline-block;
+    min-width: 5ch;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
 }
 
 .common-filters {
