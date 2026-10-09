@@ -23,5 +23,5 @@
         font-weight="400"
         letter-spacing="6.8"
         fill="#172033">STREAM</text>
-  <path d="M160 44 L160 61 L175 52.5 Z" fill="url(#play)"/>
+  <path d="M156 44 L156 61 L171 52.5 Z" fill="url(#play)"/>
 </svg>
