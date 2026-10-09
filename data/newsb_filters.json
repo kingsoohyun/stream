@@ -21,8 +21,28 @@
   },
   {
     "type": "reporter",
+    "label": "스포츠경향 · 이현경",
+    "value": "스포츠경향 · 이현경"
+  },
+  {
+    "type": "reporter",
     "label": "뉴시스 · 최지윤",
     "value": "뉴시스 · 최지윤"
+  },
+  {
+    "type": "reporter",
+    "label": "텐아시아 · 류예지",
+    "value": "텐아시아 · 류예지"
+  },
+  {
+    "type": "reporter",
+    "label": "텐아시아 · 이소정",
+    "value": "텐아시아 · 이소정"
+  },
+  {
+    "type": "reporter",
+    "label": "텐아시아 · 태유나",
+    "value": "텐아시아 · 태유나"
   },
   {
     "type": "reporter",
@@ -38,6 +58,21 @@
     "type": "reporter",
     "label": "OSEN · 김수형",
     "value": "OSEN · 김수형"
+  },
+  {
+    "type": "reporter",
+    "label": "뉴스엔 · 박아름",
+    "value": "뉴스엔 · 박아름"
+  },
+  {
+    "type": "reporter",
+    "label": "뉴스엔 · 배효주",
+    "value": "뉴스엔 · 배효주"
+  },
+  {
+    "type": "reporter",
+    "label": "마이데일리 · 김지우",
+    "value": "마이데일리 · 김지우"
   },
   {
     "type": "reporter",
@@ -73,5 +108,25 @@
     "type": "media",
     "label": "bnt뉴스",
     "value": "bnt뉴스"
+  },
+  {
+    "type": "media",
+    "label": "일요신문",
+    "value": "일요신문"
+  },
+  {
+    "type": "media",
+    "label": "우먼센스",
+    "value": "우먼센스"
+  },
+  {
+    "type": "media",
+    "label": "헤럴드뮤즈",
+    "value": "헤럴드뮤즈"
+  },
+  {
+    "type": "media",
+    "label": "동행미디어 시대",
+    "value": "동행미디어 시대"
   }
 ]
