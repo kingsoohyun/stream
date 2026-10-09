@@ -32,9 +32,9 @@
            ========================================================= */
 
         :root {
-            --news-cell: #e5e7eb;
+            --news-cell: #cbd1d9;
             --news-future: #f1f2f4;
-            --news-muted: #858b95;
+            --news-muted: #626b78;
             --news-accent: #2563eb;
 
             --news-1: #edf3ff;
@@ -81,7 +81,7 @@
             border: 0;
             background: none;
 
-            color: #858b95;
+            color: #626b78;
 
             font: inherit;
             font-size: 11px;
@@ -125,7 +125,7 @@
             width: 100%;
             margin: 0 auto 20px;
 
-            color: #858b95;
+            color: #626b78;
 
             font-size: 10px;
             line-height: 1.4;
@@ -192,7 +192,7 @@
             position: absolute;
             top: 0;
 
-            color: #858b95;
+            color: #626b78;
 
             font-size: 9px;
             line-height: 1;
@@ -214,7 +214,7 @@
         }
 
         .weekdays span {
-            color: #858b95;
+            color: #626b78;
 
             font-size: 8px;
             line-height: var(--news-size);
@@ -292,6 +292,86 @@
 
 
         /* ---------------------------------------------------------
+           Search
+           --------------------------------------------------------- */
+
+        .news-search {
+            display: flex;
+            align-items: stretch;
+            width: 100%;
+            max-width: 360px;
+            margin: 18px 0 0 auto;
+            justify-content: flex-end;
+        }
+
+        .news-search-input {
+            flex: 1;
+            min-width: 0;
+            padding: 9px 11px;
+            border: 1px solid #aeb7c4;
+            border-right: 0;
+            border-radius: 0;
+            outline: none;
+            background: #fff;
+            color: #151922;
+            font: inherit;
+            font-size: 11px;
+            line-height: 1.4;
+        }
+
+        .news-search-input::placeholder { color: #626b78; opacity: 1; }
+        .news-search-input:focus { border-color: #2563eb; }
+        .news-search:focus-within .news-search-button { border-color: #2563eb; }
+
+        .news-search-button {
+            display: grid;
+            place-items: center;
+            flex: 0 0 38px;
+            padding: 0;
+            border: 1px solid #aeb7c4;
+            background: #fff;
+            color: #4b5563;
+            cursor: pointer;
+        }
+
+        .news-search-button:hover,
+        .news-search-button:focus-visible {
+            color: #2563eb;
+            border-color: #2563eb;
+        }
+
+        .news-search-button svg { width: 15px; height: 15px; }
+
+        .search-panel {
+            display: none;
+            width: 100%;
+            margin: 18px auto 24px;
+            border-bottom: 1px solid #cbd1d9;
+        }
+
+        .search-panel.show { display: block; }
+
+        @media (prefers-color-scheme: dark) {
+            .news-search-input { color: #eceef1; border-color: #30353d; background: transparent; }
+            .news-search-button { border-color: #30353d; background: transparent; color: #b7bec8; }
+            .news-search-input::placeholder { color: #a0a7b1; }
+            .search-panel { border-bottom-color: #30353d; }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .year-button,
+            .stats,
+            .news-panel-count,
+            .search-sort-button,
+            .news-panel-all-years,
+            .news-panel-clear,
+            .news-item-meta,
+            .news-empty {
+                color: #a0a7b1;
+            }
+        }
+
+        /* ---------------------------------------------------------
            News Panel
            --------------------------------------------------------- */
 
@@ -301,8 +381,8 @@
             width: 100%;
             margin: 28px auto 0;
 
-            border-top: 1px solid #e5e7eb;
-            border-bottom: 1px solid #e5e7eb;
+            border-top: 1px solid #cbd1d9;
+            border-bottom: 1px solid #cbd1d9;
         }
 
         .news-panel.show {
@@ -318,7 +398,7 @@
 
             padding: 11px 0 10px;
 
-            border-bottom: 1px solid #e5e7eb;
+            border-bottom: 1px solid #cbd1d9;
         }
 
         .news-panel-date {
@@ -345,8 +425,24 @@
             flex-shrink: 0;
         }
 
+        .search-sort-button {
+            padding: 0;
+            border: 0;
+            background: none;
+            color: #626b78;
+            font: inherit;
+            font-size: 8px;
+            letter-spacing: .08em;
+            cursor: pointer;
+        }
+
+        .search-sort-button:hover,
+        .search-sort-button.active {
+            color: #2563eb;
+        }
+
         .news-panel-count {
-            color: #858b95;
+            color: #626b78;
 
             font-size: 9px;
             letter-spacing: .08em;
@@ -359,7 +455,7 @@
             border: 0;
             background: none;
 
-            color: #858b95;
+            color: #626b78;
 
             font: inherit;
             font-size: 8px;
@@ -397,7 +493,7 @@
 
             padding: 10px 0;
 
-            border-bottom: 1px solid #eef0f2;
+            border-bottom: 1px solid #e0e4e9;
 
             color: #151922;
 
@@ -416,7 +512,7 @@
             min-width: 0;
             overflow: hidden;
 
-            color: #858b95;
+            color: #626b78;
 
             font-size: 9px;
             line-height: 1.3;
@@ -478,10 +574,37 @@
 
         .news-empty {
             padding: 14px 0;
-            color: #858b95;
+            color: #626b78;
             font-size: 10px;
         }
 
+
+        /* Stronger contrast for secondary text in light mode. */
+        @media (prefers-color-scheme: light) {
+            .year-button,
+            .stats,
+            .news-panel-count,
+            .search-sort-button,
+            .news-panel-all-years,
+            .news-panel-clear,
+            .news-item-meta,
+            .news-empty {
+                color: #626b78;
+            }
+
+            .year-button.active,
+            .stats strong,
+            .news-panel-date,
+            .news-item-title {
+                color: #111827;
+            }
+
+            .news-panel,
+            .news-panel-head,
+            .news-item {
+                border-color: #cbd1d9;
+            }
+        }
 
         /* ---------------------------------------------------------
            Tooltip
@@ -580,7 +703,7 @@
                 --news-cell: #34383d;
                 --news-future: #25282c;
 
-                --news-muted: #858b95;
+                --news-muted: #a0a7b1;
 
                 --news-1: #252d3b;
                 --news-2: #303d54;
@@ -653,8 +776,6 @@
         <a href="records.html">RECORDS</a>
         <span>|</span>
         <a href="tweets.html">LOVE SH</a>
-<!--        <span>|</span>-->
-<!--        <a href="social.html">SOCIAL</a>-->
         <span>|</span>
         <a href="news.html">NEWS</a>
     </nav>
@@ -728,6 +849,36 @@
 
         </div>
 
+    </section>
+
+
+    <form class="news-search" id="newsSearchForm" role="search">
+        <input
+                class="news-search-input"
+                id="newsSearchInput"
+                type="search"
+                placeholder="Search title, media, reporter"
+                aria-label="Search news by title, media, or reporter"
+                autocomplete="off"
+        >
+        <button class="news-search-button" type="submit" aria-label="Search">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M16 16l4.2 4.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+        </button>
+    </form>
+
+    <section class="news-panel search-panel" id="searchPanel" aria-live="polite">
+        <div class="news-panel-head">
+            <span class="news-panel-date"></span>
+            <div class="news-panel-actions">
+                <span class="news-panel-count"></span>
+                <button type="button" class="search-sort-button active" id="searchSortLatest">LATEST</button>
+                <button type="button" class="search-sort-button" id="searchSortOldest">OLDEST</button>
+            </div>
+        </div>
+        <div class="news-list"></div>
     </section>
 
 
@@ -865,6 +1016,9 @@
     const newsPanel =
         document.getElementById("newsPanel");
 
+    const searchForm =
+        document.getElementById("newsSearchForm");
+
 
     const pad =
         n => String(n).padStart(2, "0");
@@ -965,7 +1119,89 @@
 
         newsPanel.style.width =
             widthValue;
+
+        const searchPanelEl = document.getElementById("searchPanel");
+        if (searchPanelEl) searchPanelEl.style.width = widthValue;
+
+        // Align the search form's right edge with the calendar's right edge.
+        if (searchForm) {
+            const searchWidth = Math.min(360, maxWidth);
+            const calendarRect = calendar.getBoundingClientRect();
+            const mainRect = main.getBoundingClientRect();
+            const calendarStyle = getComputedStyle(main);
+            const contentLeft = mainRect.left +
+                (parseFloat(calendarStyle.paddingLeft) || 0);
+            const calendarLeft = Math.max(0, calendarRect.left - contentLeft);
+            const leftOffset = Math.max(0, calendarLeft + maxWidth - searchWidth);
+
+            searchForm.style.width = `${searchWidth}px`;
+            searchForm.style.maxWidth = "100%";
+            searchForm.style.marginLeft = `${leftOffset}px`;
+            searchForm.style.marginRight = "0";
+        }
     }
+
+
+    /* ---------------------------------------------------------
+       SEARCH
+       --------------------------------------------------------- */
+
+    const newsSearchForm = document.getElementById("newsSearchForm");
+    const newsSearchInput = document.getElementById("newsSearchInput");
+    const searchPanel = document.getElementById("searchPanel");
+    let currentSearchItems = [];
+    let currentSearchHeading = "";
+    let searchSortOrder = "latest";
+
+    function renderSearchResults(items, heading) {
+        currentSearchItems = [...items];
+        currentSearchHeading = heading;
+        renderNewsList(currentSearchItems, currentSearchHeading, true, searchPanel, true);
+        document.getElementById("searchSortLatest").classList.toggle("active", searchSortOrder === "latest");
+        document.getElementById("searchSortOldest").classList.toggle("active", searchSortOrder === "oldest");
+    }
+
+    document.getElementById("searchSortLatest").addEventListener("click", () => {
+        searchSortOrder = "latest";
+        renderSearchResults(currentSearchItems, currentSearchHeading);
+    });
+    document.getElementById("searchSortOldest").addEventListener("click", () => {
+        searchSortOrder = "oldest";
+        renderSearchResults(currentSearchItems, currentSearchHeading);
+    });
+
+    function normalizeSearchText(value) {
+        return String(value || "").normalize("NFKC").toLocaleLowerCase().trim();
+    }
+
+    function searchNews(query) {
+        const normalizedQuery = normalizeSearchText(query);
+        if (!normalizedQuery) {
+            searchPanel.classList.remove("show");
+            searchPanel.querySelector(".news-list").innerHTML = "";
+            return;
+        }
+
+        const terms = normalizedQuery.split(/\s+/).filter(Boolean);
+        const results = allNewsItems.filter(item => {
+            const searchableText = normalizeSearchText([
+                item.title,
+                item.media,
+                item.reporter,
+                item.reporterName,
+                reporterDisplayName(item)
+            ].filter(Boolean).join(" "));
+            return terms.every(term => searchableText.includes(term));
+        });
+
+        searchSortOrder = "latest";
+        renderSearchResults(results, `SEARCH · ${query.trim()}`);
+    }
+
+    newsSearchForm.addEventListener("submit", event => {
+        event.preventDefault();
+        searchNews(newsSearchInput.value);
+    });
 
 
     /* ---------------------------------------------------------
@@ -1758,6 +1994,24 @@
     }
 
 
+    function openSearchFilter(filterType, filterValue, displayName) {
+        if (!filterValue) return;
+
+        const items = allNewsItems.filter(item => {
+            const value = filterType === "reporter"
+                ? reporterFilterKey(item)
+                : mediaFilterKey(item);
+            return value === filterValue;
+        });
+
+        const typeLabel = filterType === "media" ? "MEDIA" : "REPORTER";
+        renderSearchResults(
+            items,
+            `${displayName} · ${typeLabel} · ALL YEARS`
+        );
+    }
+
+
     /* ---------------------------------------------------------
        NEWS LIST
        --------------------------------------------------------- */
@@ -1765,390 +2019,136 @@
     function renderNewsList(
         items,
         heading,
-        isFilter
+        isFilter,
+        targetPanel = newsPanel,
+        searchMode = false
     ) {
+        const panel = targetPanel;
+        const dateEl = panel.querySelector(".news-panel-date");
+        const countEl = panel.querySelector(".news-panel-count");
+        const allYearsEl = panel.querySelector(".news-panel-all-years");
+        const clearEl = panel.querySelector(".news-panel-clear");
+        const list = panel.querySelector(".news-list");
 
-        const panel =
-            document.getElementById(
-                "newsPanel"
-            );
-
-        const dateEl =
-            document.getElementById(
-                "newsPanelDate"
-            );
-
-        const countEl =
-            document.getElementById(
-                "newsPanelCount"
-            );
-
-        const allYearsEl =
-            document.getElementById(
-                "newsPanelAllYears"
-            );
-
-        const clearEl =
-            document.getElementById(
-                "newsPanelClear"
-            );
-
-        const list =
-            document.getElementById(
-                "newsList"
-            );
-
-
-        if (isFilter) {
-
-            const typeLabel =
-                activeFilterType ===
-                "media"
-                    ? "MEDIA"
-                    : "REPORTER";
-
-
-            dateEl.textContent =
-                filterAllYearsMode
-                    ? `${heading} · ${typeLabel} · ALL YEARS`
-                    : `${heading} · ${typeLabel} · ${selectedYear}`;
-
+        if (searchMode) {
+            dateEl.textContent = heading;
+        } else if (isFilter) {
+            const typeLabel = activeFilterType === "media" ? "MEDIA" : "REPORTER";
+            dateEl.textContent = filterAllYearsMode
+                ? `${heading} · ${typeLabel} · ALL YEARS`
+                : `${heading} · ${typeLabel} · ${selectedYear}`;
         } else {
-
-            dateEl.textContent =
-                heading;
+            dateEl.textContent = heading;
         }
 
-
-        countEl.textContent =
-            items.length
-                ? `${items.length} NEWS`
-                : "NO NEWS";
-
-
-        allYearsEl.hidden =
-            !isFilter ||
-            filterAllYearsMode;
-
-
-        clearEl.hidden =
-            !isFilter;
-
-
+        countEl.textContent = items.length ? `${items.length} NEWS` : "NO NEWS";
+        if (allYearsEl) allYearsEl.hidden = !isFilter || searchMode || filterAllYearsMode;
+        if (clearEl) clearEl.hidden = !isFilter || searchMode;
         list.innerHTML = "";
 
-
         if (!items.length) {
-
-            const empty =
-                document.createElement(
-                    "div"
-                );
-
-            empty.className =
-                "news-empty";
-
-
-            empty.textContent =
-                isFilter
-
-                    ? activeFilterType ===
-                    "media"
-
+            const empty = document.createElement("div");
+            empty.className = "news-empty";
+            empty.textContent = searchMode
+                ? "검색 결과가 없습니다. 모든 기사가 수집되지 않았을 수 있습니다. 전체 기사 검색은 포털을 이용해 주세요."
+                : isFilter
+                    ? (activeFilterType === "media"
                         ? "해당 매체의 등록된 뉴스가 없습니다."
-
-                        : "해당 기자의 등록된 뉴스가 없습니다."
-
+                        : "해당 기자의 등록된 뉴스가 없습니다.")
                     : "등록된 뉴스가 없습니다.";
 
-
-            list.appendChild(
-                empty
-            );
-
+            list.appendChild(empty);
         } else {
-
-            const sorted =
-                [...items].sort(
-                    (a, b) => {
-
-                        const aTime =
-                            a.publishedAt || "";
-
-                        const bTime =
-                            b.publishedAt || "";
-
-                        return isFilter
-                            ? bTime.localeCompare(aTime)  // 필터: 최신순
-                            : aTime.localeCompare(bTime); // 날짜 클릭: 시간순
-                    }
-                );
-
-
-            for (
-                const item of sorted
-                ) {
-
-                const row =
-                    document.createElement(
-                        "div"
-                    );
-
-                row.className =
-                    "news-item";
-
-
-                const meta =
-                    document.createElement(
-                        "div"
-                    );
-
-                meta.className =
-                    "news-item-meta";
-
-
-                const itemDate =
-                    item.publishedAt
-                        ? item.publishedAt.slice(0, 10)
-                        : "";
-
-
-                const dateText =
-                    itemDate.replace(
-                        /-/g,
-                        "."
-                    );
-
-
-                const time =
-                    item.publishedAt
-                        ? item.publishedAt.slice(
-                            11,
-                            16
-                        )
-                        : "";
-
-
-                const appendSeparator =
-                    () => {
-
-                        if (
-                            meta.childNodes.length
-                        ) {
-
-                            meta.appendChild(
-                                document.createTextNode(
-                                    " · "
-                                )
-                            );
-                        }
-                    };
-
-
-                if (
-                    isFilter &&
-                    dateText
-                ) {
-
-                    const dateEl =
-                        document.createElement(
-                            "span"
-                        );
-
-                    dateEl.className =
-                        "news-date";
-
-                    dateEl.textContent =
-                        dateText;
-
-                    meta.appendChild(
-                        dateEl
-                    );
+            const sorted = [...items].sort((a, b) => {
+                const aTime = a.publishedAt || "";
+                const bTime = b.publishedAt || "";
+                if (searchMode) {
+                    return searchSortOrder === "latest"
+                        ? bTime.localeCompare(aTime)
+                        : aTime.localeCompare(bTime);
                 }
+                return isFilter
+                    ? bTime.localeCompare(aTime)
+                    : aTime.localeCompare(bTime);
+            });
 
+            for (const item of sorted) {
+                const row = document.createElement("div");
+                row.className = "news-item";
+                const meta = document.createElement("div");
+                meta.className = "news-item-meta";
+                const itemDate = item.publishedAt ? item.publishedAt.slice(0, 10) : "";
+                const dateText = itemDate.replace(/-/g, ".");
+                const time = item.publishedAt ? item.publishedAt.slice(11, 16) : "";
+                const appendSeparator = () => {
+                    if (meta.childNodes.length) meta.appendChild(document.createTextNode(" · "));
+                };
 
+                if (isFilter && dateText) {
+                    const dateSpan = document.createElement("span");
+                    dateSpan.className = "news-date";
+                    dateSpan.textContent = dateText;
+                    meta.appendChild(dateSpan);
+                }
                 if (time) {
-
                     appendSeparator();
-
-
-                    const timeEl =
-                        document.createElement(
-                            "span"
-                        );
-
-                    timeEl.className =
-                        "news-time";
-
-                    timeEl.textContent =
-                        time;
-
-                    meta.appendChild(
-                        timeEl
-                    );
+                    const timeSpan = document.createElement("span");
+                    timeSpan.className = "news-time";
+                    timeSpan.textContent = time;
+                    meta.appendChild(timeSpan);
                 }
-
-
                 if (item.media) {
-
                     appendSeparator();
-
-
-                    const media =
-                        document.createElement(
-                            "button"
-                        );
-
-                    media.className =
-                        "news-filter";
-
-                    media.type =
-                        "button";
-
-                    media.textContent =
-                        item.media;
-
-                    media.title =
-                        "이 매체의 기사 보기";
-
-                    media.setAttribute(
-                        "aria-label",
-                        `${item.media} 매체의 기사 보기`
-                    );
-
-
-                    media.addEventListener(
-                        "click",
-                        event => {
-
-                            event.stopPropagation();
-
-
-                            openFilter(
-                                "media",
-                                item.media,
-                                item.media
-                            );
+                    const media = document.createElement("button");
+                    media.className = "news-filter";
+                    media.type = "button";
+                    media.textContent = item.media;
+                    media.title = "이 매체의 기사 보기";
+                    media.setAttribute("aria-label", `${item.media} 매체의 기사 보기`);
+                    media.addEventListener("click", event => {
+                        event.stopPropagation();
+                        if (searchMode) {
+                            openSearchFilter("media", item.media, item.media);
+                        } else {
+                            openFilter("media", item.media, item.media);
                         }
-                    );
-
-
-                    meta.appendChild(
-                        media
-                    );
+                    });
+                    meta.appendChild(media);
                 }
-
-
-                const reporterName =
-                    reporterFilterKey(
-                        item
-                    );
-
-
-                const displayName =
-                    reporterDisplayName(
-                        item
-                    );
-
-
+                const reporterName = reporterFilterKey(item);
+                const displayName = reporterDisplayName(item);
                 if (displayName) {
-
                     appendSeparator();
-
-
-                    const reporter =
-                        document.createElement(
-                            "button"
-                        );
-
-                    reporter.className =
-                        "news-filter";
-
-                    reporter.type =
-                        "button";
-
-                    reporter.textContent =
-                        displayName;
-
-                    reporter.title =
-                        "이 기자의 기사 보기";
-
-                    reporter.setAttribute(
-                        "aria-label",
-                        `${displayName} 기자의 기사 보기`
-                    );
-
-
-                    reporter.addEventListener(
-                        "click",
-                        event => {
-
-                            event.stopPropagation();
-
-
-                            openFilter(
-                                "reporter",
-                                reporterName,
-                                displayName
-                            );
+                    const reporter = document.createElement("button");
+                    reporter.className = "news-filter";
+                    reporter.type = "button";
+                    reporter.textContent = displayName;
+                    reporter.title = "이 기자의 기사 보기";
+                    reporter.setAttribute("aria-label", `${displayName} 기자의 기사 보기`);
+                    reporter.addEventListener("click", event => {
+                        event.stopPropagation();
+                        if (searchMode) {
+                            openSearchFilter("reporter", reporterName, displayName);
+                        } else {
+                            openFilter("reporter", reporterName, displayName);
                         }
-                    );
-
-
-                    meta.appendChild(
-                        reporter
-                    );
+                    });
+                    meta.appendChild(reporter);
                 }
 
-
-                const titleLink =
-                    document.createElement(
-                        "a"
-                    );
-
-                titleLink.className =
-                    "news-item-title";
-
-
-                titleLink.href =
-                    item.url ||
-                    "#";
-
-
-                titleLink.target =
-                    "_blank";
-
-                titleLink.rel =
-                    "noopener noreferrer";
-
-
-                titleLink.textContent =
-                    item.title ||
-                    "제목 없음";
-
-
-                titleLink.title =
-                    item.title ||
-                    "제목 없음";
-
-
-                row.append(
-                    meta,
-                    titleLink
-                );
-
-
-                list.appendChild(
-                    row
-                );
+                const titleLink = document.createElement("a");
+                titleLink.className = "news-item-title";
+                titleLink.href = item.url || "#";
+                titleLink.target = "_blank";
+                titleLink.rel = "noopener noreferrer";
+                titleLink.textContent = item.title || "제목 없음";
+                titleLink.title = item.title || "제목 없음";
+                row.append(meta, titleLink);
+                list.appendChild(row);
             }
         }
 
-
-        panel.classList.add(
-            "show"
-        );
-
+        panel.classList.add("show");
         syncCalendarWidth();
     }
 
