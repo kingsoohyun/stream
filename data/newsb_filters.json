@@ -100,6 +100,11 @@
     "value": "디스패치 · 김소정"
   },
   {
+    "type": "reporter",
+    "label": "연합뉴스TV · 신새롬",
+    "value": "연합뉴스TV · 신새롬"
+  },
+  {
     "type": "media",
     "label": "티브이데일리",
     "value": "티브이데일리"
