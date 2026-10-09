@@ -61,6 +61,16 @@
   },
   {
     "type": "reporter",
+    "label": "스타뉴스 · 김나라",
+    "value": "스타뉴스 · 김나라"
+  },
+  {
+    "type": "reporter",
+    "label": "매일경제 · 한현정",
+    "value": "매일경제 · 한현정"
+  },
+  {
+    "type": "reporter",
     "label": "뉴스엔 · 박아름",
     "value": "뉴스엔 · 박아름"
   },
