@@ -1,0 +1,77 @@
+[
+  {
+    "type": "reporter",
+    "label": "한국경제 · 김소연",
+    "value": "한국경제 · 김소연"
+  },
+  {
+    "type": "reporter",
+    "label": "한국경제 · 김예랑",
+    "value": "한국경제 · 김예랑"
+  },
+  {
+    "type": "reporter",
+    "label": "스포츠경향 · 이선명",
+    "value": "스포츠경향 · 이선명"
+  },
+  {
+    "type": "reporter",
+    "label": "스포츠경향 · 강주일",
+    "value": "스포츠경향 · 강주일"
+  },
+  {
+    "type": "reporter",
+    "label": "뉴시스 · 최지윤",
+    "value": "뉴시스 · 최지윤"
+  },
+  {
+    "type": "reporter",
+    "label": "노컷뉴스 · 유원정",
+    "value": "노컷뉴스 · 유원정"
+  },
+  {
+    "type": "reporter",
+    "label": "OSEN · 장우영",
+    "value": "OSEN · 장우영"
+  },
+  {
+    "type": "reporter",
+    "label": "OSEN · 김수형",
+    "value": "OSEN · 김수형"
+  },
+  {
+    "type": "reporter",
+    "label": "뉴데일리 · 조광형",
+    "value": "뉴데일리 · 조광형"
+  },
+  {
+    "type": "reporter",
+    "label": "헤럴드경제 · 박영훈",
+    "value": "헤럴드경제 · 박영훈"
+  },
+  {
+    "type": "reporter",
+    "label": "디스패치 · 김소정",
+    "value": "디스패치 · 김소정"
+  },
+  {
+    "type": "media",
+    "label": "티브이데일리",
+    "value": "티브이데일리"
+  },
+  {
+    "type": "media",
+    "label": "TV리포트",
+    "value": "TV리포트"
+  },
+  {
+    "type": "media",
+    "label": "스포츠투데이",
+    "value": "스포츠투데이"
+  },
+  {
+    "type": "media",
+    "label": "bnt뉴스",
+    "value": "bnt뉴스"
+  }
+]
