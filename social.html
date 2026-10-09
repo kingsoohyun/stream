@@ -245,6 +245,19 @@
             text-underline-offset: 4px;
         }
 
+
+        /* =========================================================
+           Weekend
+           ========================================================= */
+
+        .social-calendar-day.sunday .social-calendar-number {
+            color: #B8757C;
+        }
+
+        .social-calendar-day.saturday .social-calendar-number {
+            color: #718BAA;
+        }
+
         /* =========================================================
            Post Indicator
            ========================================================= */
@@ -668,6 +681,14 @@
                 color: #e4e6ea;
             }
 
+            .social-calendar-day.sunday .social-calendar-number {
+                color: #D49AA0;
+            }
+
+            .social-calendar-day.saturday .social-calendar-number {
+                color: #96AEC9;
+            }
+
             .social-calendar-day.selected
             .social-calendar-number {
                 background: #b96b7a;
@@ -1064,8 +1085,25 @@
             const isToday =
                 key === todayKey;
 
+
+            const weekday = new Date(
+                currentYear,
+                currentMonth,
+                day
+            ).getDay();
+
+
+
             const classes = [
                 "social-calendar-day",
+
+                weekday === 0
+                    ? "sunday"
+                    : "",
+
+                weekday === 6
+                    ? "saturday"
+                    : "",
 
                 hasPosts
                     ? "has-posts"
@@ -1081,6 +1119,7 @@
             ]
                 .filter(Boolean)
                 .join(" ");
+
 
 
             calendarDays += `
@@ -1127,10 +1166,7 @@
                     >
                         ${Array.from(
                         {
-                            length: Math.min(
-                                posts.length,
-                                3
-                            )
+                            length: 1
                         },
                         () =>
                             `<span class="social-calendar-dot"></span>`
