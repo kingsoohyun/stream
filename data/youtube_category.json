@@ -41,28 +41,24 @@
       "name": "광고️"
     },
     {
-      "id": "awards",
-      "name": "시상식"
+      "id": "promotion",
+      "name": "프로모션"
     },
     {
       "id": "airport",
       "name": "공항"
     },
     {
+      "id": "awards",
+      "name": "시상식"
+    },
+    {
       "id": "interview",
       "name": "인터뷰"
     },
     {
-      "id": "showcase",
-      "name": "프로모션 행사"
-    },
-    {
       "id": "etc",
       "name": "기타"
-    },
-    {
-      "id": "pre-clip",
-      "name": "선공개"
     },
     {
       "id": "song",
