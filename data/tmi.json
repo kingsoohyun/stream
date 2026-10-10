@@ -54,6 +54,12 @@
     "pick": true
   },
   {
+    "year": 2020,
+    "text": "김수현은 코로나19 확산으로 피해가 컸던 대구 지역을 위해 1억 원을 기부하였다.",
+    "url": "https://m.entertain.naver.com/home/article/018/0004586285",
+    "pick": true
+  },
+  {
     "year": 2017,
     "text": "김수현은 본인의 가장 자신 있는 신체 부위로 왼손을 꼽았다.",
     "url": "https://youtu.be/OBdT-pC518I?t=2934",
@@ -70,5 +76,17 @@
     "text": "김수현은 2014 인천 아시안게임 개막식에 참여하고, 난징 하계 청소년 올림픽 개막식에서 주제가를 불렀다.",
     "url": "https://www.instagram.com/p/CEbe591J1by",
     "pick": true
+  },
+  {
+    "year": 2014,
+    "text": "김수현은 세월호 침몰 사고 당시 단원고에 3억 원을 기부했다.",
+    "url": "https://m.entertain.naver.com/home/article/382/0000203762",
+    "pick": false
+  },
+  {
+    "year": 2014,
+    "text": "김수현은 구찌와 함께 중국 아동·청소년을 위한 치료 센터 건립에 2억여 원을 기부했다.",
+    "url": "https://m.entertain.naver.com/home/article/421/0000772048",
+    "pick": false
   }
 ]
