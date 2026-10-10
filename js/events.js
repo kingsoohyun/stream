@@ -367,26 +367,15 @@ async function renderMap(events) {
 
             activeCountry = this;
 
-
-            const code =
-                String(feature.id);
-
-
-            const countryEvents =
-                eventsByCountry[code] || [];
-
+            const code = String(feature.id);
+            const countryEvents = eventsByCountry[code] || [];
 
             if (!countryEvents.length) {
                 return;
             }
 
-
-            const countryName =
-                countryEvents[0].country;
-
-
-            const count =
-                countryEvents.length;
+            const countryName = countryEvents[0].country;
+            const count = countryEvents.length;
 
 
             /* ---------------------------------------------
@@ -538,19 +527,15 @@ async function renderMap(events) {
 
 function renderTimeline(events) {
 
-    const container =
-        document.querySelector("#event-timeline");
+    const container = document.querySelector("#event-timeline");
 
     if (!container) return;
 
-
     const years = {};
-
 
     events.forEach(event => {
 
-        const year =
-            String(event.date).substring(0, 4);
+        const year = String(event.date).substring(0, 4);
 
         if (!years[year]) {
             years[year] = [];
@@ -619,11 +604,11 @@ function renderTimeline(events) {
                                                                         ${link.kind ? `
                                                                             <span class="timeline-link-tooltip">
                                                                                 ${escapeHtml({
-                                article: "기사",
+                                article: "News",
                                 instagram: "Instagram",
                                 youtube: "YouTube",
                                 x: "\uD835\uDD4F",
-                                official: "공식 사이트"
+                                official: "Official Site",
                             }[link.kind] || link.kind)}
                                                                             </span>
                                                                         ` : ""}
@@ -691,7 +676,6 @@ function escapeHtml(value) {
                 ">": "&gt;",
                 '"': "&quot;",
                 "'": "&#039;"
-
             }[m])
         );
 }
@@ -705,13 +689,10 @@ loadEvents().catch(err => {
 
     console.error(err);
 
-    const map =
-        document.querySelector("#world-map");
+    const map = document.querySelector("#world-map");
 
     if (map) {
-
-        map.innerHTML =
-            "<p>지도를 불러오지 못했습니다.</p>";
+        map.innerHTML = "<p>지도를 불러오지 못했습니다.</p>";
     }
 });
 
