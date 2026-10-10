@@ -1540,23 +1540,15 @@
                 ) + 1;
 
 
-            dayLabel.textContent =
-                "DAY";
-
-            dayNumber.textContent =
-                day;
-
-            daysLeft.textContent =
-                totalDays - day;
-
-            daysLabel.textContent =
-                "DAYS LEFT";
+            dayLabel.textContent = "DAY";
+            dayNumber.textContent = day;
+            daysLeft.textContent = totalDays - day;
+            daysLabel.textContent = "DAYS LEFT";
 
             status.textContent =
                 day === totalDays
                     ? "LAST DAY"
                     : "IN PROGRESS";
-
         } else {
 
             const newsCount =
@@ -1569,20 +1561,11 @@
                 );
 
 
-            dayLabel.textContent =
-                "DAYS";
-
-            dayNumber.textContent =
-                totalDays;
-
-            daysLeft.textContent =
-                newsCount;
-
-            daysLabel.textContent =
-                "NEWS";
-
-            status.textContent =
-                "ARCHIVE";
+            dayLabel.textContent = "DAYS";
+            dayNumber.textContent = totalDays;
+            daysLeft.textContent = newsCount;
+            daysLabel.textContent = "NEWS";
+            status.textContent = "ARCHIVE";
         }
 
         renderYearNavigation();
@@ -1595,9 +1578,7 @@
 
     function setSelectedCell(key) {
 
-        selectedDateKey =
-            key;
-
+        selectedDateKey = key;
 
         document
             .querySelectorAll(
@@ -1609,7 +1590,6 @@
                         "selected"
                     )
             );
-
 
         const selectedCell =
             [
@@ -1640,19 +1620,16 @@
        --------------------------------------------------------- */
 
     function reporterFilterKey(item) {
-
         return item.reporterName || "";
     }
 
 
     function reporterDisplayName(item) {
-
         return item.reporter || "";
     }
 
 
     function mediaFilterKey(item) {
-
         return item.media || "";
     }
 
@@ -1713,23 +1690,12 @@
             );
 
 
-        selectedDateKey =
-            null;
+        selectedDateKey = null;
+        activeFilterType = filterType;
+        activeFilterValue = filterValue;
+        activeFilterDisplayName = displayName || filterValue;
 
-
-        activeFilterType =
-            filterType;
-
-        activeFilterValue =
-            filterValue;
-
-        activeFilterDisplayName =
-            displayName ||
-            filterValue;
-
-        filterAllYearsMode =
-            false;
-
+        filterAllYearsMode = false;
 
         const items =
             allNewsItems.filter(
@@ -1759,11 +1725,7 @@
                 }
             );
 
-
-        renderNewsList(
-            items,
-            activeFilterDisplayName,
-            true
+        renderNewsList(items, activeFilterDisplayName, true
         );
     }
 
@@ -1778,10 +1740,7 @@
             return;
         }
 
-
-        filterAllYearsMode =
-            true;
-
+        filterAllYearsMode = true;
 
         const items =
             allNewsItems.filter(
@@ -1807,11 +1766,7 @@
                 }
             );
 
-
-        renderNewsList(
-            items,
-            activeFilterDisplayName,
-            true
+        renderNewsList(items, activeFilterDisplayName, true
         );
     }
 
@@ -1856,19 +1811,11 @@
 
         document.getElementById("newsBehind").hidden = false;
 
-        dateEl.textContent =
-            "RECOMMENDED";
-
+        dateEl.textContent = "RECOMMENDED";
         countEl.textContent = "";
-
-
         allYearsEl.hidden = true;
-
-        clearEl.hidden =
-            !recommendedNews.length;
-
+        clearEl.hidden = !recommendedNews.length;
         list.innerHTML = "";
-
 
         if (!recommendedNews.length) {
 
@@ -1877,11 +1824,8 @@
                     "div"
                 );
 
-            empty.className =
-                "news-empty";
-
-            empty.textContent =
-                "추천된 뉴스가 없습니다.";
+            empty.className = "news-empty";
+            empty.textContent = "No recommended news available.";
 
             list.appendChild(
                 empty

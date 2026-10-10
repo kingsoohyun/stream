@@ -1714,7 +1714,7 @@
 
             if (!response.ok) {
                 throw new Error(
-                    "social.json을 불러오지 못했습니다."
+                    "Failed to load social content."
                 );
             }
 
@@ -1743,7 +1743,7 @@
             if (!socialItems.length) {
                 container.innerHTML = `
                     <div class="social-empty">
-                        게시물이 없습니다.
+                        No posts available.
                     </div>
 
                 `;

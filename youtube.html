@@ -579,13 +579,13 @@
 
             if (!videoResponse.ok) {
                 throw new Error(
-                    'youtube.json을 불러올 수 없습니다.'
+                    'Failed to load YouTube content.'
                 );
             }
 
             if (!categoryResponse.ok) {
                 throw new Error(
-                    'youtube_category.json을 불러올 수 없습니다.'
+                    'Failed to load YouTube category.'
                 );
             }
 
@@ -695,7 +695,7 @@
                 .filter(tag => tagSet.has(tag));
 
 
-        // 카테고리 JSON에 없는 태그가 있을 경우 마지막에 추가
+        // Append tags not found in the category JSON to the end
         const remainingTags =
             [...tagSet].filter(
                 tag => !categoryMap.has(tag)

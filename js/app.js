@@ -7,13 +7,13 @@ async function loadData() {
 
     if (!youtubeResponse.ok) {
         throw new Error(
-            "youtube.json을 불러오지 못했습니다."
+            "Failed to load YouTube content."
         );
     }
 
     if (!socialResponse.ok) {
         throw new Error(
-            "social_pick.json을 불러오지 못했습니다."
+            "Failed to load Social Pick content."
         );
     }
 

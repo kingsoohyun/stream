@@ -3,7 +3,7 @@ async function loadEvents() {
     const data = await fetch("data/events.json").then(r => {
 
         if (!r.ok) {
-            throw new Error("events.json을 불러오지 못했습니다.");
+            throw new Error("Failed to load event content.");
         }
 
         return r.json();
@@ -248,16 +248,16 @@ async function renderMap(events) {
        Gold → Brown Color Scale
        ===================================================== */
 
-    const goldScale = d3.scaleLinear()
-        .domain([
-            1,
-            maxCount
-        ])
-        .range([
-            "#E4D7B5",
-            "#74351F"
-        ])
-        .interpolate(d3.interpolateRgb);
+    // const goldScale = d3.scaleLinear()
+    //     .domain([
+    //         1,
+    //         maxCount
+    //     ])
+    //     .range([
+    //         "#E4D7B5",
+    //         "#74351F"
+    //     ])
+    //     .interpolate(d3.interpolateRgb);
 
 
     /* =====================================================
@@ -511,7 +511,7 @@ async function renderMap(events) {
 
 
         /* ---------------------------------------------
-           커서를 움직여도 Tooltip은 따라오지 않는다.
+           The tooltip does not follow the cursor.
            --------------------------------------------- */
 
         .on("mouseleave", function () {
