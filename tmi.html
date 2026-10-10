@@ -246,16 +246,16 @@
         const container = document.getElementById('tmi-list');
 
         try {
-            const response = await fetch('data/random_messages.json');
+            const response = await fetch('data/tmi.json');
 
             if (!response.ok) {
-                throw new Error('Failed to load random_messages.json');
+                throw new Error('Failed to load tmi.json');
             }
 
             const data = await response.json();
 
             if (!Array.isArray(data)) {
-                throw new Error('Invalid random_messages.json format');
+                throw new Error('Invalid tmi.json format');
             }
 
             const items = data

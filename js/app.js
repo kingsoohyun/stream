@@ -138,7 +138,7 @@ async function loadRandomMessage() {
     }
 
     try {
-        const response = await fetch("data/random_messages.json");
+        const response = await fetch("data/tmi.json");
 
         if (!response.ok) {
             throw new Error("Failed to load random messages.");
