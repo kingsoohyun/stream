@@ -131,10 +131,9 @@ async function loadRandomMessage() {
     const container = document.querySelector(".random-message-inner");
     const yearEl = document.getElementById("random-message-year");
     const textEl = document.getElementById("random-message-text");
-    const sourceEl = document.getElementById("random-message-source");
     const refreshBtn = document.getElementById("random-message-refresh");
 
-    if (!container || !yearEl || !textEl || !sourceEl || !refreshBtn) {
+    if (!container || !yearEl || !textEl || !refreshBtn) {
         return;
     }
 
@@ -150,6 +149,7 @@ async function loadRandomMessage() {
         const messages = Array.isArray(data)
             ? data.filter(item =>
                 item &&
+                item.pick === true &&
                 typeof item.text === "string" &&
                 item.text.trim()
             )
@@ -192,14 +192,6 @@ async function loadRandomMessage() {
                     : "";
 
                 textEl.textContent = item.text;
-
-                if (item.url) {
-                    sourceEl.href = item.url;
-                    sourceEl.hidden = false;
-                } else {
-                    sourceEl.removeAttribute("href");
-                    sourceEl.hidden = true;
-                }
             };
 
             if (!animate || reducedMotion) {
