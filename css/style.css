@@ -95,7 +95,7 @@ main {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 32px 20px 0;
+    padding: 20px 20px 0;
 }
 
 
@@ -107,7 +107,7 @@ main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
-    margin-bottom: 32px;
+    margin-bottom: 20px;
 }
 
 .platform {
@@ -227,7 +227,7 @@ main {
    ========================================================= */
 
 .archive-section {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     padding: 20px;
     border: 1px solid #e5e7eb;
     border-radius: 14px;
@@ -748,6 +748,116 @@ footer {
     font-weight: 500;
 }
 
+/* =========================================================
+   Random Message — Home
+   ========================================================= */
+
+.random-message {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 20px 0;
+}
+
+.random-message-inner {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    padding: 9px 12px;
+    background: #edf4f5;
+    color: #405c66;
+    /*color: #345d66;*/
+
+    font-size: 11px;
+    line-height: 1.5;
+    border-left: none;
+    border-radius: 5px;
+}
+
+.random-message-year {
+    flex-shrink: 0;
+    color: #858b95;
+    font-size: 10px;
+    font-variant-numeric: tabular-nums;
+}
+
+.random-message-text {
+    min-width: 0;
+    flex: 0 1 auto;
+}
+
+.random-message-source {
+    flex-shrink: 0;
+    color: #858b95;
+    font-size: 10px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.random-message-source[hidden] {
+    display: none;
+}
+
+.random-message-refresh {
+    display: grid;
+    flex-shrink: 0;
+    place-items: center;
+    width: 26px;
+    height: 26px;
+    margin-left: auto;
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background: transparent;
+    color: #858b95;
+    cursor: pointer;
+    transition:
+            color .15s ease,
+            background-color .15s ease,
+            transform .2s ease;
+}
+
+.random-message-refresh svg {
+    display: block;
+    width: 15px;
+    height: 15px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.random-message-refresh:hover {
+    background: rgba(128, 135, 145, .09);
+    color: #397a91;
+}
+
+.random-message-refresh:active {
+    transform: rotate(-30deg);
+}
+
+.random-message-year,
+.random-message-text,
+.random-message-source {
+    transition: transform .24s ease, opacity .24s ease;
+}
+
+.random-message-inner.is-changing .random-message-year,
+.random-message-inner.is-changing .random-message-text,
+.random-message-inner.is-changing .random-message-source {
+    opacity: 0;
+    transform: translateY(-7px);
+}
+
+.random-message-inner.is-entering .random-message-year,
+.random-message-inner.is-entering .random-message-text,
+.random-message-inner.is-entering .random-message-source {
+    opacity: 0;
+    transform: translateY(7px);
+}
+
 
 /* =========================================================
    Mobile
@@ -774,10 +884,24 @@ footer {
         font-size: 9px;
     }
 
+
     .platform-nav {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 12px;
-        margin-bottom: 24px;
+    }
+
+    .platform {
+        gap: 12px;
+        padding: 16px 14px;
+    }
+
+    .platform .icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .platform b {
+        font-size: 13px;
     }
 
     .youtube-cards {
@@ -809,6 +933,20 @@ footer {
         width: 50px;
         height: 50px;
         font-size: 27px;
+    }
+
+    .random-message {
+        padding: 10px 12px 0;
+    }
+
+    .random-message-inner {
+        gap: 7px;
+        font-size: 10px;
+    }
+
+    .random-message-refresh {
+        width: 24px;
+        height: 24px;
     }
 }
 
@@ -848,6 +986,24 @@ footer {
 
     .social-home-card:nth-child(n + 4) {
         display: none;
+    }
+
+    .platform-nav {
+        gap: 10px;
+    }
+
+    .platform {
+        gap: 8px;
+        padding: 14px 10px;
+    }
+
+    .platform .icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .platform b {
+        font-size: 12px;
     }
 }
 
@@ -1119,5 +1275,21 @@ footer {
     .love-sh .icon,
     .privacy .icon {
         background: #20242a;
+    }
+
+    .random-message-inner {
+        background: #1b292e;
+        color: #a9cbd5;
+    }
+
+    .random-message-year,
+    .random-message-source,
+    .random-message-refresh {
+        color: #8caab5;
+    }
+
+    .random-message-source:hover,
+    .random-message-refresh:hover {
+        color: #7eb2c4;
     }
 }
