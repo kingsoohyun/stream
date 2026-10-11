@@ -65,6 +65,7 @@ function renderSocial(data) {
 
     const platformNames = {
         instagram: "◎ INSTAGRAM",
+        threads: "@ THREADS",
         x: "𝕏 X",
         tiktok: "♪ TIKTOK",
         weibo: "◉ WEIBO"
