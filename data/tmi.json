@@ -274,6 +274,22 @@
         }
       ],
       "pick": true
+    },
+    {
+      "id": "quote-noh-jong-eon-01",
+      "year": 2026,
+      "focus": "",
+      "people": ["noh-jong-eon"],
+      "text": "어떤 범죄든 그 책임과 원인은 오직 가해자의 잘못된 의도와 폭력성에 있을 뿐이다.",
+      "tags": ["QUOTE", "VICTIM_BLAMING", "RESPONSIBILITY"],
+      "links": [
+        {
+          "label": "일간스포츠",
+          "kind": "article",
+          "url": "https://m.entertain.naver.com/home/article/241/0003500242"
+        }
+      ],
+      "pick": false
     }
   ]
 }
