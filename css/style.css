@@ -832,7 +832,7 @@ footer {
 
 .random-message-tmi {
     flex: 0 0 auto;
-    margin: 0;
+    margin: 0 0 0 2px;
     color: #858b95;
     font-size: 10px;
     text-decoration: none;
