@@ -261,12 +261,18 @@
     },
     {
       "id": "quote-primo-levi-01",
-      "year": null,
+      "year": 1947,
       "focus": "",
       "people": ["primo-levi"],
       "text": "\"What has happened can happen again, consciences can again be seduced and obscured: even our own.\" — Primo Levi",
       "tags": ["QUOTE", "HUMANITY", "RESPONSIBILITY"],
-      "links": [],
+      "links": [
+        {
+          "label": "If This Is a Man",
+          "kind": "book",
+          "url": "https://en.wikipedia.org/wiki/If_This_Is_a_Man"
+        }
+      ],
       "pick": true
     }
   ]
