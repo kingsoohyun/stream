@@ -146,8 +146,8 @@ async function loadRandomMessage() {
 
         const data = await response.json();
 
-        const messages = Array.isArray(data)
-            ? data.filter(item =>
+        const messages = Array.isArray(data.items)
+            ? data.items.filter(item =>
                 item &&
                 item.pick === true &&
                 typeof item.text === "string" &&

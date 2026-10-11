@@ -1,92 +1,247 @@
-[
-  {
-    "year": 2026,
-    "text": "김수현은 요즘 자주 듣는 노래로 임재범의 '이 밤이 지나면'을 소개했다.",
-    "url": "https://x.com/benchtm/status/2105527965534872036",
-    "pick": true
-  },
-  {
-    "year": 2025,
-    "text": "김수현은 새해에 들을 노래로 빅뱅의 '꽃길'을 소개했다.",
-    "url": "https://www.youtube.com/shorts/EzWdCAw6DHk",
-    "pick": true
-  },
-  {
-    "year": 2025,
-    "text": "김수현은 취미를 묻는 질문에 '등산 화이팅'을 외쳤다.",
-    "url": "https://www.youtube.com/shorts/EzWdCAw6DHk",
-    "pick": true
-  },
-  {
-    "year": 2024,
-    "text": "김수현은 KCON LA에서 오늘의 추천 K-Pop으로 인피니트의 '파라다이스'를 소개했다.",
-    "url": "https://youtu.be/l3h8Z5gV5KE?t=923",
-    "pick": true
-  },
-  {
-    "year": 2023,
-    "text": "김수현은 모범납세자로 두 차례 선정되었다.",
-    "url": "https://m.entertain.naver.com/home/article/213/0000642733",
-    "pick": true
-  },
-  {
-    "year": 2021,
-    "text": "김수현은 본인은 길치가 아니라고 말했다.",
-    "url": "https://youtu.be/pRlHzLZ6h4E?t=167",
-    "pick": true
-  },
-  {
-    "year": 2021,
-    "text": "김수현은 사이클링 애니메이션 '겁쟁이 페달'을 재미있게 봤다고 말했다.",
-    "url": "https://youtu.be/pRlHzLZ6h4E?t=140",
-    "pick": true
-  },
-  {
-    "year": 2021,
-    "text": "김수현은 애니메이션 '귀멸의 칼날' 극장판을 보고 눈물을 흘렸다고 말했다.",
-    "url": "https://youtu.be/pRlHzLZ6h4E?t=130",
-    "pick": true
-  },
-  {
-    "year": 2021,
-    "text": "김수현은 드라마 '사이코지만 괜찮아'의 문강태를 떠올리며 패닉의 '달팽이'를 추천했다.",
-    "url": "",
-    "pick": true
-  },
-  {
-    "year": 2020,
-    "text": "김수현은 코로나19 확산으로 피해가 컸던 대구 지역을 위해 1억 원을 기부하였다.",
-    "url": "https://m.entertain.naver.com/home/article/018/0004586285",
-    "pick": true
-  },
-  {
-    "year": 2017,
-    "text": "김수현은 본인의 가장 자신 있는 신체 부위로 왼손을 꼽았다.",
-    "url": "https://youtu.be/OBdT-pC518I?t=2934",
-    "pick": true
-  },
-  {
-    "year": 2017,
-    "text": "김수현은 대학교 1학년 때 뮤지컬 '지킬 앤 하이드'의 모든 대사를 외웠다고 말했다.",
-    "url": "https://youtu.be/OBdT-pC518I?t=3354",
-    "pick": true
-  },
-  {
-    "year": 2014,
-    "text": "김수현은 2014 인천 아시안게임 개막식에 참여하고, 난징 하계 청소년 올림픽 개막식에서 주제가를 불렀다.",
-    "url": "https://www.instagram.com/p/CEbe591J1by",
-    "pick": true
-  },
-  {
-    "year": 2014,
-    "text": "김수현은 세월호 침몰 사고 당시 단원고에 3억 원을 기부했다.",
-    "url": "https://m.entertain.naver.com/home/article/382/0000203762",
-    "pick": false
-  },
-  {
-    "year": 2014,
-    "text": "김수현은 구찌와 함께 중국 아동·청소년을 위한 치료 센터 건립에 2억여 원을 기부했다.",
-    "url": "https://m.entertain.naver.com/home/article/421/0000772048",
-    "pick": false
-  }
-]
+{
+  "updatedAt": "2026-10-11",
+  "items": [
+    {
+      "id": "tmi-2026-01",
+      "year": 2026,
+      "focus": "",
+      "people": [],
+      "text": "김수현은 요즘 자주 듣는 노래로 임재범의 '이 밤이 지나면'을 소개했다.",
+      "tags": ["MUSIC"],
+      "links": [
+        {
+          "label": "BENCH/",
+          "kind": "x",
+          "url": "https://x.com/benchtm/status/2105527965534872036"
+        }
+      ],
+      "pick": true
+    },
+    {
+      "id": "tmi-2025-01",
+      "groupId": "2025-new-year-interview",
+      "year": 2025,
+      "focus": "",
+      "people": ["", "bigbang"],
+      "text": "김수현은 새해에 들을 노래로 빅뱅의 '꽃길'을 소개했다.",
+      "tags": ["MUSIC"],
+      "links": [
+        {
+          "label": "ESQUIRE",
+          "kind": "youtube",
+          "url": "https://www.youtube.com/shorts/EzWdCAw6DHk"
+        }
+      ],
+      "pick": true
+    },
+    {
+      "id": "tmi-2025-02",
+      "groupId": "2025-new-year-interview",
+      "year": 2025,
+      "focus": "",
+      "people": [],
+      "text": "김수현은 취미를 묻는 질문에 '등산 화이팅'을 외쳤다.",
+      "tags": ["HOBBY"],
+      "links": [
+        {
+          "label": "ESQUIRE",
+          "kind": "youtube",
+          "url": "https://www.youtube.com/shorts/EzWdCAw6DHk"
+        }
+      ],
+      "pick": true
+    },
+    {
+      "id": "tmi-2024-01",
+      "year": 2024,
+      "focus": "",
+      "people": ["infinite"],
+      "text": "김수현은 KCON LA에서 오늘의 추천 K-Pop으로 인피니트의 '파라다이스'를 소개했다.",
+      "tags": ["MUSIC", "KCON"],
+      "links": [
+        {
+          "label": "KCON",
+          "kind": "youtube",
+          "url": "https://youtu.be/l3h8Z5gV5KE?t=923"
+        }
+      ],
+      "pick": true
+    },
+    {
+      "id": "tmi-2023-01",
+      "year": 2023,
+      "focus": "",
+      "people": [],
+      "text": "김수현은 모범납세자로 두 차례 선정되었다.",
+      "tags": ["AWARD", "모범납세자"],
+      "links": [
+        {
+          "label": "기사",
+          "kind": "article",
+          "url": "https://m.entertain.naver.com/home/article/213/0000642733"
+        }
+      ],
+      "pick": true
+    },
+    {
+      "id": "tmi-2021-01",
+      "groupId": "2021-interview",
+      "year": 2021,
+      "focus": "",
+      "people": [],
+      "text": "김수현은 본인은 길치가 아니라고 말했다.",
+      "tags": ["매력"],
+      "links": [
+        {
+          "label": "씨네플레이",
+          "kind": "youtube",
+          "url": "https://youtu.be/pRlHzLZ6h4E?t=167"
+        }
+      ],
+      "pick": true
+    },
+    {
+      "id": "tmi-2021-02",
+      "groupId": "2021-interview",
+      "year": 2021,
+      "focus": "",
+      "people": [],
+      "text": "김수현은 사이클링 애니메이션 '겁쟁이 페달'을 재미있게 봤다고 말했다.",
+      "tags": ["ANIMATION"],
+      "links": [
+        {
+          "label": "씨네플레이",
+          "kind": "youtube",
+          "url": "https://youtu.be/pRlHzLZ6h4E?t=140"
+        }
+      ],
+      "pick": true
+    },
+    {
+      "id": "tmi-2021-03",
+      "groupId": "2021-interview",
+      "year": 2021,
+      "focus": "",
+      "people": [],
+      "text": "김수현은 애니메이션 '귀멸의 칼날' 극장판을 보고 눈물을 흘렸다고 말했다.",
+      "tags": ["ANIMATION"],
+      "links": [
+        {
+          "label": "씨네플레이",
+          "kind": "youtube",
+          "url": "https://youtu.be/pRlHzLZ6h4E?t=130"
+        }
+      ],
+      "pick": true
+    },
+    {
+      "id": "tmi-2021-04",
+      "groupId": "2021-interview",
+      "year": 2021,
+      "focus": "",
+      "people": [],
+      "text": "김수현은 드라마 '사이코지만 괜찮아'의 문강태를 떠올리며 패닉의 '달팽이'를 추천했다.",
+      "tags": ["MUSIC", "사이코지만괜찮아"],
+      "links": [],
+      "pick": true
+    },
+    {
+      "id": "tmi-2020-01",
+      "year": 2020,
+      "focus": "",
+      "people": [],
+      "text": "김수현은 코로나19 확산으로 피해가 컸던 대구 지역을 위해 1억 원을 기부하였다.",
+      "tags": ["DONATION"],
+      "links": [
+        {
+          "label": "기사",
+          "kind": "article",
+          "url": "https://m.entertain.naver.com/home/article/018/0004586285"
+        }
+      ],
+      "pick": true
+    },
+    {
+      "id": "tmi-2017-01",
+      "groupId": "2017-interview",
+      "year": 2017,
+      "focus": "",
+      "people": [],
+      "text": "김수현은 본인의 가장 자신 있는 신체 부위로 왼손을 꼽았다.",
+      "tags": ["매력"],
+      "links": [
+        {
+          "label": "KBS CoolFM",
+          "kind": "video",
+          "url": "https://youtu.be/OBdT-pC518I?t=2934"
+        }
+      ],
+      "pick": true
+    },
+    {
+      "id": "tmi-2017-02",
+      "groupId": "2017-interview",
+      "year": 2017,
+      "focus": "",
+      "people": [],
+      "text": "김수현은 대학교 1학년 때 뮤지컬 '지킬 앤 하이드'의 모든 대사를 외웠다고 말했다.",
+      "tags": ["MUSICAL"],
+      "links": [
+        {
+          "label": "KBS CoolFM",
+          "kind": "video",
+          "url": "https://youtu.be/OBdT-pC518I?t=3354"
+        }
+      ],
+      "pick": true
+    },
+    {
+      "id": "tmi-2014-01",
+      "year": 2014,
+      "focus": "",
+      "people": [],
+      "text": "김수현은 2014 인천 아시안게임 개막식에 참여하고, 난징 하계 청소년 올림픽 개막식에서 주제가를 불렀다.",
+      "tags": ["EVENT", "OLYMPICS"],
+      "links": [
+        {
+          "label": "올림픽",
+          "kind": "instagram",
+          "url": "https://www.instagram.com/p/CEbe591J1by"
+        }
+      ],
+      "pick": true
+    },
+    {
+      "id": "tmi-2014-02",
+      "year": 2014,
+      "focus": "",
+      "people": [],
+      "text": "김수현은 세월호 침몰 사고 당시 단원고에 3억 원을 기부했다.",
+      "tags": ["DONATION"],
+      "links": [
+        {
+          "label": "기사",
+          "kind": "article",
+          "url": "https://m.entertain.naver.com/home/article/382/0000203762"
+        }
+      ],
+      "pick": false
+    },
+    {
+      "id": "tmi-2014-03",
+      "year": 2014,
+      "focus": "",
+      "people": ["", "gucci"],
+      "text": "김수현은 구찌와 함께 중국 아동·청소년을 위한 치료 센터 건립에 2억여 원을 기부했다.",
+      "tags": ["DONATION", "GUCCI"],
+      "links": [
+        {
+          "label": "기사",
+          "kind": "article",
+          "url": "https://m.entertain.naver.com/home/article/421/0000772048"
+        }
+      ],
+      "pick": false
+    }
+  ]
+}

@@ -37,18 +37,22 @@
 
         .tmi-list {
             margin: 0 10px;
+            border: 1px solid #e8e9ed;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #fff;
         }
 
         .tmi-item {
             display: flex;
             align-items: flex-start;
             gap: 16px;
-            padding: 13px 10px;
+            padding: 13px 15px;
             border-bottom: 1px solid #e8e9ed;
         }
 
-        .tmi-item:first-child {
-            border-top: 1px solid #e8e9ed;
+        .tmi-item:last-child {
+            border-bottom: 0;
         }
 
         .tmi-year {
@@ -70,16 +74,103 @@
             overflow-wrap: anywhere;
         }
 
-        .tmi-source {
-            display: inline-block;
-            margin-top: 3px;
-            color: #858b95;
-            font-size: 10px;
-            text-decoration: none;
+        /* 출처 링크 */
+
+        .tmi-links {
+            display: inline-flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 4px;
+            margin-left: 6px;
+            vertical-align: middle;
+            max-width: 100%;
         }
 
-        .tmi-source:hover {
+        .tmi-links a {
+            display: inline-flex;
+            align-items: center;
+            padding: 1px 6px;
+            border: 1px solid #4a78a8;
+            border-radius: 4px;
+            background: transparent;
             color: #4a78a8;
+            font-size: 9px;
+            line-height: 1.4;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: background-color 0.15s ease, color 0.15s ease;
+        }
+
+        .tmi-links a:hover {
+            background: #f1f6fb;
+            color: #315f8d;
+        }
+
+
+        /* 태그 */
+        .tmi-tags {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 4px 10px;
+            margin-top: 7px;
+        }
+
+        .tmi-tag {
+            display: inline;
+            padding: 0;
+            border: 0;
+            border-radius: 0;
+            background: transparent;
+            color: #858b95;
+            font: inherit;
+            font-size: 10px;
+            line-height: 1.6;
+            cursor: pointer;
+            transition: color 0.15s ease;
+        }
+
+        .tmi-tag:hover,
+        .tmi-tag[aria-pressed="true"] {
+            background: transparent;
+            color: #4a78a8;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        /* 활성 필터 */
+        .tmi-filter-bar {
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin: 0 10px 12px;
+            font-size: 10px;
+            color: #626872;
+        }
+
+        .tmi-filter-bar.visible {
+            display: flex;
+        }
+
+        .tmi-filter-label {
+            min-width: 0;
+            overflow-wrap: anywhere;
+        }
+
+        .tmi-clear-filter {
+            flex: none;
+            padding: 4px 0 4px 8px;
+            border: 0;
+            background: transparent;
+            color: #4a78a8;
+            font: inherit;
+            font-size: 10px;
+            cursor: pointer;
+        }
+
+        .tmi-clear-filter:hover {
+            text-decoration: underline;
         }
 
         .tmi-empty {
@@ -94,13 +185,9 @@
                 padding: 20px 12px 0;
             }
 
-            .tmi-list {
-                margin: 0 10px;
-            }
-
             .tmi-item {
                 gap: 10px;
-                padding: 11px 8px;
+                padding: 11px 13px;
             }
 
             .tmi-year {
@@ -154,18 +241,47 @@
                 background: transparent;
             }
 
-            .tmi-item,
-            .tmi-item:first-child {
+            .tmi-list {
                 border-color: #292d34;
+                background: #16191e;
             }
 
-            .tmi-year,
-            .tmi-source {
+            .tmi-item {
+                border-bottom-color: #292d34;
+            }
+
+            .tmi-year {
                 color: #aab0b8;
             }
 
-            .tmi-source:hover {
-                color: #9eb9d4;
+            .tmi-links a {
+                border-color: #71833a;
+                color: #d8f36a;
+            }
+
+            .tmi-links a:hover {
+                background: #242b1d;
+                color: #e7ff9a;
+            }
+
+            .tmi-tag {
+                color: #aab0b8;
+            }
+
+            .tmi-tag:hover,
+            .tmi-tag[aria-pressed="true"] {
+                background: transparent;
+                color: #d8f36a;
+                text-decoration: underline;
+                text-underline-offset: 2px;
+            }
+
+            .tmi-filter-bar {
+                color: #aab0b8;
+            }
+
+            .tmi-clear-filter {
+                color: #d8f36a;
             }
 
             .tmi-empty {
@@ -217,7 +333,14 @@
 </header>
 
 <main class="tmi-page">
-    <div class="tmi-list" id="tmi-list">
+    <div class="tmi-filter-bar" id="tmi-filter-bar" aria-live="polite">
+        <span class="tmi-filter-label" id="tmi-filter-label"></span>
+        <button type="button" class="tmi-clear-filter" id="tmi-clear-filter">
+            전체 보기
+        </button>
+    </div>
+
+    <div class="tmi-list" id="tmi-list" aria-live="polite">
         <div class="tmi-empty">불러오는 중...</div>
     </div>
 </main>
@@ -242,6 +365,11 @@
 </button>
 
 <script>
+    const tmiState = {
+        items: [],
+        activeTag: null
+    };
+
     async function loadTmi() {
         const container = document.getElementById('tmi-list');
 
@@ -254,11 +382,11 @@
 
             const data = await response.json();
 
-            if (!Array.isArray(data)) {
+            if (!data || !Array.isArray(data.items)) {
                 throw new Error('Invalid tmi.json format');
             }
 
-            const items = data
+            tmiState.items = data.items
                 .map((item, index) => ({ item, index }))
                 .filter(({ item }) =>
                     item &&
@@ -268,62 +396,159 @@
                 .sort((a, b) => {
                     const yearA = Number(a.item.year) || 0;
                     const yearB = Number(b.item.year) || 0;
-
                     return yearB - yearA || a.index - b.index;
-                });
+                })
+                .map(({ item }) => item);
 
-            container.replaceChildren();
-
-            if (!items.length) {
-                showTmiMessage(container, '표시할 항목이 없습니다.');
-                return;
-            }
-
-            items.forEach(({ item }) => {
-                const row = document.createElement('article');
-                row.className = 'tmi-item';
-
-                const year = document.createElement('span');
-                year.className = 'tmi-year';
-                year.textContent = item.year ? item.year : '';
-
-                const content = document.createElement('div');
-                content.className = 'tmi-content';
-
-                const text = document.createElement('div');
-                text.className = 'tmi-text';
-                text.textContent = item.text;
-
-                content.appendChild(text);
-
-                if (item.url) {
-                    try {
-                        const url = new URL(item.url);
-
-                        if (url.protocol === 'https:' || url.protocol === 'http:') {
-                            const link = document.createElement('a');
-                            link.className = 'tmi-source';
-                            link.href = url.href;
-                            link.target = '_blank';
-                            link.rel = 'noopener noreferrer';
-                            link.textContent = 'View ↗';
-
-                            content.appendChild(link);
-                        }
-                    } catch {
-                        // 유효하지 않은 URL은 링크로 표시하지 않음
-                    }
-                }
-
-                row.appendChild(year);
-                row.appendChild(content);
-                container.appendChild(row);
-            });
+            renderTmi();
 
         } catch (error) {
             console.error('TMI:', error);
             showTmiMessage(container, 'TMI를 불러오지 못했습니다.');
         }
+    }
+
+    function renderTmi() {
+        const container = document.getElementById('tmi-list');
+
+        const items = tmiState.activeTag
+            ? tmiState.items.filter(item =>
+                Array.isArray(item.tags) &&
+                item.tags.includes(tmiState.activeTag)
+            )
+            : tmiState.items;
+
+        updateFilterBar(items.length);
+
+        container.replaceChildren();
+
+        if (!items.length) {
+            showTmiMessage(container, '해당 태그의 기록이 없습니다.');
+            return;
+        }
+
+        items.forEach(item => {
+            const row = document.createElement('article');
+            row.className = 'tmi-item';
+
+            const year = document.createElement('span');
+            year.className = 'tmi-year';
+            year.textContent = item.year ? item.year : '';
+
+            const content = document.createElement('div');
+            content.className = 'tmi-content';
+
+            const text = document.createElement('span');
+            text.className = 'tmi-text';
+            text.textContent = item.text;
+            content.appendChild(text);
+
+            renderLinks(item.links, content);
+            renderTags(item.tags, content);
+
+            row.appendChild(year);
+            row.appendChild(content);
+            container.appendChild(row);
+        });
+    }
+
+    function renderLinks(links, container) {
+        if (!Array.isArray(links) || !links.length) {
+            return;
+        }
+
+        const linkList = document.createElement('span');
+        linkList.className = 'tmi-links';
+
+        links.forEach(link => {
+            if (!link || typeof link.url !== 'string') {
+                return;
+            }
+
+            try {
+                const url = new URL(link.url);
+
+                if (url.protocol !== 'https:' && url.protocol !== 'http:') {
+                    return;
+                }
+
+                const anchor = document.createElement('a');
+                anchor.href = url.href;
+                anchor.target = '_blank';
+                anchor.rel = 'noopener noreferrer';
+
+                const label = link.label || link.kind || '관련 링크';
+                anchor.textContent = label + ' ↗';
+
+                linkList.appendChild(anchor);
+            } catch {
+                // 유효하지 않은 URL은 표시하지 않음
+            }
+        });
+
+        if (linkList.childElementCount) {
+            container.appendChild(linkList);
+        }
+    }
+
+    function renderTags(tags, container) {
+        if (!Array.isArray(tags) || !tags.length) {
+            return;
+        }
+
+        const tagList = document.createElement('div');
+        tagList.className = 'tmi-tags';
+        tagList.setAttribute('aria-label', '태그');
+
+        tags.forEach(tag => {
+            if (typeof tag !== 'string' || !tag.trim()) {
+                return;
+            }
+
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.className = 'tmi-tag';
+            button.textContent = `#${tag}`;
+            button.setAttribute(
+                'aria-pressed',
+                String(tmiState.activeTag === tag)
+            );
+            button.setAttribute('aria-label', `태그 ${tag}로 필터링`);
+
+            button.addEventListener('click', () => {
+                tmiState.activeTag =
+                    tmiState.activeTag === tag ? null : tag;
+
+                renderTmi();
+            });
+
+            tagList.appendChild(button);
+        });
+
+        if (tagList.childElementCount) {
+            container.appendChild(tagList);
+        }
+    }
+
+    function updateFilterBar(resultCount) {
+        const bar = document.getElementById('tmi-filter-bar');
+        const label = document.getElementById('tmi-filter-label');
+        const clearButton = document.getElementById('tmi-clear-filter');
+
+        if (!tmiState.activeTag) {
+            bar.classList.remove('visible');
+            label.textContent = '';
+            return;
+        }
+
+        bar.classList.add('visible');
+        label.textContent =
+            `태그: ${tmiState.activeTag} · ${resultCount}개 기록`;
+
+        clearButton.onclick = () => {
+            tmiState.activeTag = null;
+            renderTmi();
+        };
     }
 
     function showTmiMessage(container, message) {
