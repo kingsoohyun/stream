@@ -847,19 +847,20 @@ footer {
 
 .random-message-year,
 .random-message-text {
-    transition: transform .24s ease, opacity .24s ease;
+   transition: opacity 0.35s ease;
 }
+
 
 .random-message-inner.is-changing .random-message-year,
 .random-message-inner.is-changing .random-message-text {
     opacity: 0;
-    transform: translateY(-7px);
+    transform: none;
 }
 
 .random-message-inner.is-entering .random-message-year,
 .random-message-inner.is-entering .random-message-text {
     opacity: 0;
-    transform: translateY(7px);
+    transform: none;
 }
 
 

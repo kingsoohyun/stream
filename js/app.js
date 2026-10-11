@@ -128,6 +128,7 @@ function escapeHtml(s) {
     }[m]));
 }
 
+
 async function loadRandomMessage() {
     const container = document.querySelector(".random-message-inner");
     const yearEl = document.getElementById("random-message-year");
@@ -162,7 +163,8 @@ async function loadRandomMessage() {
         }
 
         let currentIndex = -1;
-        let changeTimer;
+        let changeTimer = null;
+        let autoChangeInterval = null;
 
         function pickRandomIndex() {
             if (messages.length <= 1) return 0;
@@ -218,14 +220,43 @@ async function loadRandomMessage() {
                         container.classList.remove("is-entering");
                     });
                 });
-            }, 240);
+            }, 350);
+        }
+
+        function stopAutoChange() {
+            if (autoChangeInterval !== null) {
+                clearInterval(autoChangeInterval);
+                autoChangeInterval = null;
+            }
+        }
+
+        function startAutoChange() {
+            if (autoChangeInterval !== null || document.hidden) {
+                return;
+            }
+
+            autoChangeInterval = setInterval(() => {
+                renderMessage(pickRandomIndex(), true);
+            }, 5000);
         }
 
         refreshBtn.addEventListener("click", () => {
             renderMessage(pickRandomIndex(), true);
+
+            stopAutoChange();
+            startAutoChange();
+        });
+
+        document.addEventListener("visibilitychange", () => {
+            if (document.hidden) {
+                stopAutoChange();
+            } else {
+                startAutoChange();
+            }
         });
 
         renderMessage(pickRandomIndex());
+        startAutoChange();
 
     } catch (error) {
         console.error("Random message:", error);
