@@ -76,7 +76,7 @@
       "tags": ["AWARD", "모범납세자"],
       "links": [
         {
-          "label": "기사",
+          "label": "NEWS",
           "kind": "article",
           "url": "https://m.entertain.naver.com/home/article/213/0000642733"
         }
@@ -93,7 +93,7 @@
       "tags": ["매력"],
       "links": [
         {
-          "label": "씨네플레이",
+          "label": "CINEPLAY",
           "kind": "youtube",
           "url": "https://youtu.be/pRlHzLZ6h4E?t=167"
         }
@@ -110,7 +110,7 @@
       "tags": ["ANIMATION"],
       "links": [
         {
-          "label": "씨네플레이",
+          "label": "CINEPLAY",
           "kind": "youtube",
           "url": "https://youtu.be/pRlHzLZ6h4E?t=140"
         }
@@ -127,7 +127,7 @@
       "tags": ["ANIMATION"],
       "links": [
         {
-          "label": "씨네플레이",
+          "label": "CINEPLAY",
           "kind": "youtube",
           "url": "https://youtu.be/pRlHzLZ6h4E?t=130"
         }
@@ -154,7 +154,7 @@
       "tags": ["DONATION"],
       "links": [
         {
-          "label": "기사",
+          "label": "NEWS",
           "kind": "article",
           "url": "https://m.entertain.naver.com/home/article/018/0004586285"
         }
@@ -201,10 +201,10 @@
       "focus": "",
       "people": [],
       "text": "김수현은 2014 인천 아시안게임 개막식에 참여하고, 난징 하계 청소년 올림픽 개막식에서 주제가를 불렀다.",
-      "tags": ["EVENT", "OLYMPICS"],
+      "tags": ["EVENT", "아시안게임", "OLYMPIC"],
       "links": [
         {
-          "label": "올림픽",
+          "label": "OLYMPIC",
           "kind": "instagram",
           "url": "https://www.instagram.com/p/CEbe591J1by"
         }
@@ -220,7 +220,7 @@
       "tags": ["DONATION"],
       "links": [
         {
-          "label": "기사",
+          "label": "NEWS",
           "kind": "article",
           "url": "https://m.entertain.naver.com/home/article/382/0000203762"
         }
@@ -236,7 +236,7 @@
       "tags": ["DONATION", "GUCCI"],
       "links": [
         {
-          "label": "기사",
+          "label": "NEWS",
           "kind": "article",
           "url": "https://m.entertain.naver.com/home/article/421/0000772048"
         }
