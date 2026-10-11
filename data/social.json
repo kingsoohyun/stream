@@ -646,14 +646,24 @@
       "date": "2025.10.15",
       "platform": "INSTAGRAM",
       "account": "soyoungart",
-      "desc": ""
+      "desc": "",
+      "thumbnail": "https://pbs.twimg.com/media/HUUyOBTaQAA5X-o?format=webp&name=small"
     },
     {
       "url": "https://www.instagram.com/p/DINgAwkJUgZ",
       "date": "2025.04.09",
       "platform": "INSTAGRAM",
       "account": "soyoungart",
-      "desc": ""
+      "desc": "",
+      "thumbnail": "https://pbs.twimg.com/media/HUUyQPXboAADs_L?format=webp&name=small"
+    },
+    {
+      "url": "https://www.instagram.com/p/DE1qlqwPshc",
+      "date": "2025.01.15",
+      "platform": "INSTAGRAM",
+      "account": "esquire.korea",
+      "desc": "에스콰이어 코리아",
+      "thumbnail": "https://pbs.twimg.com/media/HUUxiE4b0AAzLif?format=webp&name=small"
     }
   ]
 }
