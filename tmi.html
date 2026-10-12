@@ -78,6 +78,10 @@
             color: #A05CC8;
         }
 
+        .tmi-text-fact-check {
+            color: #54856B;
+        }
+
         /* 출처 링크 */
 
         .tmi-links {
@@ -260,6 +264,10 @@
 
             .tmi-text-other {
                 color: #C99BE8;
+            }
+
+            .tmi-text-fact-check {
+                color: #8FBE9F;
             }
 
             .tmi-links a {
@@ -451,6 +459,11 @@
 
             if (item.focus && item.focus !== '김수현') {
                 text.classList.add('tmi-text-other');
+            }
+
+            if (Array.isArray(item.tags) &&
+                item.tags.some(tag => tag.trim().toLowerCase() === 'fact check')) {
+                text.classList.add('tmi-text-fact-check');
             }
 
             text.textContent = item.text;

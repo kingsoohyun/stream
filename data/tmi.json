@@ -7,7 +7,9 @@
       "focus": "",
       "people": [],
       "text": "김수현은 요즘 자주 듣는 노래로 임재범의 '이 밤이 지나면'을 소개했다.",
-      "tags": ["MUSIC"],
+      "tags": [
+        "MUSIC"
+      ],
       "links": [
         {
           "label": "BENCH/",
@@ -18,13 +20,39 @@
       "pick": true
     },
     {
+      "id": "02-1",
+      "year": 2025,
+      "focus": "",
+      "people": [],
+      "text": "온라인상의 태국 배드민턴 갑질 주장에 대해 주최 공연장 측은 \"배드민턴을 친 곳은 빈 공간이며, 해당 주장은 사실이 아니다\"라고 밝혔다.",
+      "tags": [
+        "FACT CHECK",
+        "FAKE NEWS",
+        "THAILAND",
+        "BADMINTON"
+      ],
+      "links": [
+        {
+          "label": "FACT CHECK",
+          "kind": "article",
+          "url": "https://kshine216.tistory.com/76"
+        }
+      ],
+      "pick": true
+    },
+    {
       "id": "tmi-2025-01",
       "groupId": "2025-new-year-interview",
       "year": 2025,
       "focus": "",
-      "people": ["", "bigbang"],
+      "people": [
+        "",
+        "bigbang"
+      ],
       "text": "김수현은 새해에 들을 노래로 빅뱅의 '꽃길'을 소개했다.",
-      "tags": ["MUSIC"],
+      "tags": [
+        "MUSIC"
+      ],
       "links": [
         {
           "label": "ESQUIRE",
@@ -41,7 +69,9 @@
       "focus": "",
       "people": [],
       "text": "김수현은 요즘 취미를 묻는 질문에 '등산 화이팅'을 외쳤다.",
-      "tags": ["HOBBY"],
+      "tags": [
+        "HOBBY"
+      ],
       "links": [
         {
           "label": "ESQUIRE",
@@ -55,9 +85,14 @@
       "id": "tmi-2024-01",
       "year": 2024,
       "focus": "",
-      "people": ["infinite"],
+      "people": [
+        "infinite"
+      ],
       "text": "김수현은 KCON LA에서 오늘의 추천 K-Pop으로 인피니트의 '파라다이스'를 소개했다.",
-      "tags": ["MUSIC", "KCON"],
+      "tags": [
+        "MUSIC",
+        "KCON"
+      ],
       "links": [
         {
           "label": "KCON",
@@ -73,7 +108,10 @@
       "focus": "",
       "people": [],
       "text": "김수현은 모범납세자로 두 차례 선정되었다.",
-      "tags": ["HONOR", "모범납세자"],
+      "tags": [
+        "HONOR",
+        "모범납세자"
+      ],
       "links": [
         {
           "label": "NEWS",
@@ -90,7 +128,9 @@
       "focus": "",
       "people": [],
       "text": "김수현은 본인은 길치가 아니라고 말했다.",
-      "tags": ["매력"],
+      "tags": [
+        "매력"
+      ],
       "links": [
         {
           "label": "CINEPLAY",
@@ -107,7 +147,9 @@
       "focus": "",
       "people": [],
       "text": "김수현은 사이클링 애니메이션 '겁쟁이 페달'을 재미있게 봤다고 말했다.",
-      "tags": ["ANIMATION"],
+      "tags": [
+        "ANIMATION"
+      ],
       "links": [
         {
           "label": "CINEPLAY",
@@ -124,7 +166,9 @@
       "focus": "",
       "people": [],
       "text": "김수현은 애니메이션 '귀멸의 칼날' 극장판을 보고 눈물을 흘렸다고 말했다.",
-      "tags": ["ANIMATION"],
+      "tags": [
+        "ANIMATION"
+      ],
       "links": [
         {
           "label": "CINEPLAY",
@@ -141,7 +185,10 @@
       "focus": "",
       "people": [],
       "text": "김수현은 드라마 '사이코지만 괜찮아'의 문강태를 떠올리며 패닉의 '달팽이'를 추천했다.",
-      "tags": ["MUSIC", "사이코지만괜찮아"],
+      "tags": [
+        "MUSIC",
+        "사이코지만괜찮아"
+      ],
       "links": [],
       "pick": true
     },
@@ -151,7 +198,9 @@
       "focus": "",
       "people": [],
       "text": "김수현은 코로나19 확산으로 피해가 컸던 대구 지역을 위해 1억 원을 기부하였다.",
-      "tags": ["DONATION"],
+      "tags": [
+        "DONATION"
+      ],
       "links": [
         {
           "label": "NEWS",
@@ -168,7 +217,9 @@
       "focus": "",
       "people": [],
       "text": "김수현은 본인의 가장 자신 있는 신체 부위로 왼손을 꼽았다.",
-      "tags": ["매력"],
+      "tags": [
+        "매력"
+      ],
       "links": [
         {
           "label": "KBS CoolFM",
@@ -185,7 +236,9 @@
       "focus": "",
       "people": [],
       "text": "김수현은 대학교 1학년 때 뮤지컬 '지킬 앤 하이드'의 모든 대사를 외웠다고 말했다.",
-      "tags": ["MUSICAL"],
+      "tags": [
+        "MUSICAL"
+      ],
       "links": [
         {
           "label": "KBS CoolFM",
@@ -201,7 +254,11 @@
       "focus": "",
       "people": [],
       "text": "김수현은 2014 인천 아시안게임 개막식에 참여하고, 난징 하계 청소년 올림픽 개막식에서 주제가를 불렀다.",
-      "tags": ["EVENT", "아시안게임", "OLYMPIC"],
+      "tags": [
+        "EVENT",
+        "아시안게임",
+        "OLYMPIC"
+      ],
       "links": [
         {
           "label": "OLYMPIC",
@@ -217,7 +274,9 @@
       "focus": "",
       "people": [],
       "text": "김수현은 세월호 침몰 사고 당시 단원고에 3억 원을 기부했다.",
-      "tags": ["DONATION"],
+      "tags": [
+        "DONATION"
+      ],
       "links": [
         {
           "label": "NEWS",
@@ -231,9 +290,15 @@
       "id": "tmi-2014-03",
       "year": 2014,
       "focus": "",
-      "people": ["", "gucci"],
+      "people": [
+        "",
+        "gucci"
+      ],
       "text": "김수현은 구찌와 함께 중국 아동·청소년을 위한 치료 센터 건립에 2억여 원을 기부했다.",
-      "tags": ["DONATION", "GUCCI"],
+      "tags": [
+        "DONATION",
+        "GUCCI"
+      ],
       "links": [
         {
           "label": "NEWS",
@@ -247,14 +312,37 @@
       "id": "tmi-choi-wooshik-shoutout-2014",
       "year": 2014,
       "focus": "최우식",
-      "people": ["최우식"],
+      "people": [
+        "최우식"
+      ],
       "text": "배우 최우식은 '라디오스타'에서 김수현과 친해지고 싶었다고 밝힌 데 이어, 다음 날 트위터에 \"수현이형 친해지고 싶어요. 진심으로\"라는 글을 올렸다.",
-      "tags": ["SHOUTOUT"],
+      "tags": [
+        "SHOUTOUT"
+      ],
       "links": [
         {
-          "label": "기사",
+          "label": "NEWS",
           "kind": "article",
           "url": "https://m.entertain.naver.com/home/article/311/0000305552"
+        }
+      ],
+      "pick": true
+    },
+    {
+      "id": "tmi-2012-01",
+      "year": 2012,
+      "focus": "",
+      "people": [],
+      "text": "김수현은 서울숲에서 맨발로 배드민턴을 치는 모습이 목격되었다.",
+      "tags": [
+        "HOBBY",
+        "BADMINTON"
+      ],
+      "links": [
+        {
+          "label": "NEWS",
+          "kind": "article",
+          "url": "https://m.entertain.naver.com/home/article/015/0002691059"
         }
       ],
       "pick": true
@@ -265,7 +353,11 @@
       "focus": "",
       "people": [],
       "text": "모든 국민은 사생활의 비밀과 자유를 침해받지 아니한다. (헌법 제17조)",
-      "tags": ["QUOTE", "CONSTITUTION", "PRIVACY"],
+      "tags": [
+        "QUOTE",
+        "CONSTITUTION",
+        "PRIVACY"
+      ],
       "links": [
         {
           "label": "대한민국 헌법 제17조",
