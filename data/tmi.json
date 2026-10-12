@@ -244,6 +244,22 @@
       "pick": false
     },
     {
+      "id": "tmi-choi-wooshik-shoutout-2014",
+      "year": 2014,
+      "focus": "최우식",
+      "people": ["최우식"],
+      "text": "배우 최우식은 '라디오스타'에서 김수현과 친해지고 싶었다고 밝힌 데 이어, 다음 날 트위터에 \"수현이형 친해지고 싶어요. 진심으로\"라는 글을 올렸다.",
+      "tags": ["SHOUTOUT"],
+      "links": [
+        {
+          "label": "기사",
+          "kind": "article",
+          "url": "https://m.entertain.naver.com/home/article/311/0000305552"
+        }
+      ],
+      "pick": true
+    },
+    {
       "id": "quote-constitution-17-01",
       "year": 1987,
       "focus": "",

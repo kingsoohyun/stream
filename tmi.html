@@ -74,6 +74,10 @@
             overflow-wrap: anywhere;
         }
 
+        .tmi-text-other {
+            color: #A05CC8;
+        }
+
         /* 출처 링크 */
 
         .tmi-links {
@@ -252,6 +256,10 @@
 
             .tmi-year {
                 color: #aab0b8;
+            }
+
+            .tmi-text-other {
+                color: #C99BE8;
             }
 
             .tmi-links a {
@@ -440,6 +448,11 @@
 
             const text = document.createElement('span');
             text.className = 'tmi-text';
+
+            if (item.focus && item.focus !== '김수현') {
+                text.classList.add('tmi-text-other');
+            }
+
             text.textContent = item.text;
             content.appendChild(text);
 
