@@ -46,8 +46,6 @@
       "year": 2025,
       "focus": "",
       "people": [
-        "",
-        "bigbang"
       ],
       "text": "김수현은 새해에 들을 노래로 빅뱅의 '꽃길'을 소개했다.",
       "tags": [
@@ -70,7 +68,8 @@
       "people": [],
       "text": "김수현은 요즘 취미를 묻는 질문에 '등산 화이팅'을 외쳤다.",
       "tags": [
-        "HOBBY"
+        "HOBBY",
+        "HIKING"
       ],
       "links": [
         {
@@ -86,7 +85,6 @@
       "year": 2024,
       "focus": "",
       "people": [
-        "infinite"
       ],
       "text": "김수현은 KCON LA에서 오늘의 추천 K-Pop으로 인피니트의 '파라다이스'를 소개했다.",
       "tags": [
@@ -98,6 +96,37 @@
           "label": "KCON",
           "kind": "youtube",
           "url": "https://youtu.be/l3h8Z5gV5KE?t=923"
+        }
+      ],
+      "pick": true
+    },
+    {
+      "id": "tmi-2024-01",
+      "year": 2024,
+      "focus": "",
+      "people": [],
+      "text": "김수현은 팬 소통 플랫폼에서 넷플릭스 시리즈 《젠틀맨: 더 시리즈》를 추천했다.",
+      "tags": [
+        "DRAMA"
+      ],
+      "links": [],
+      "pick": true
+    },
+    {
+      "id": "tmi-2024-02",
+      "year": 2024,
+      "focus": "",
+      "people": [
+      ],
+      "text": "'요즘 넷플 뭐 봄?' 질문에 김수현은 드라마 《SUITS》를 언급했다.",
+      "tags": [
+        "DRAMA"
+      ],
+      "links": [
+        {
+          "label": "Netflix Korea",
+          "kind": "youtube",
+          "url": "https://youtube.com/shorts/Nojabg23uoM?si=EKJU7GmtJxsTtcfL"
         }
       ],
       "pick": true
@@ -153,7 +182,8 @@
       "people": [],
       "text": "김수현은 사이클링 애니메이션 '겁쟁이 페달'을 재미있게 봤다고 말했다.",
       "tags": [
-        "ANIMATION"
+        "ANIMATION",
+        "BIKING"
       ],
       "links": [
         {
@@ -192,7 +222,7 @@
       "text": "김수현은 드라마 '사이코지만 괜찮아'의 문강태를 떠올리며 패닉의 '달팽이'를 추천했다.",
       "tags": [
         "MUSIC",
-        "사이코지만괜찮아"
+        "DRAMA"
       ],
       "links": [],
       "pick": true
@@ -296,8 +326,6 @@
       "year": 2014,
       "focus": "",
       "people": [
-        "",
-        "gucci"
       ],
       "text": "김수현은 구찌와 함께 중국 아동·청소년을 위한 치료 센터 건립에 2억여 원을 기부했다.",
       "tags": [
@@ -357,10 +385,28 @@
       "year": 2012,
       "focus": "",
       "people": [],
+      "text": "김수현은 이상형으로 영국 배우 카야 스코델라리오를 언급한 바 있다. 이후 두 사람은 같은 패션 브랜드의 광고에 출연했다.",
+      "tags": [
+        "이상형"
+      ],
+      "links": [
+        {
+          "label": "NEWS",
+          "kind": "article",
+          "url": "https://n.news.naver.com/mnews/article/011/0002261736?sid=101"
+        }
+      ],
+      "pick": true
+    },
+    {
+      "id": "tmi-2012-01",
+      "year": 2012,
+      "focus": "",
+      "people": [],
       "text": "김수현은 자전거를 잘 탄다.",
       "tags": [
         "HOBBY",
-        "Biking"
+        "BIKING"
       ],
       "links": [
         {
