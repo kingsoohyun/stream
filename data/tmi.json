@@ -366,6 +366,24 @@
       "year": 2012,
       "focus": "",
       "people": [],
+      "text": "김수현은 이상형으로 영국 배우 카야 스코델라리오를 언급한 바 있다. 이후 두 사람은 같은 패션 브랜드의 광고에 출연했다.",
+      "tags": [
+        "이상형"
+      ],
+      "links": [
+        {
+          "label": "NEWS",
+          "kind": "article",
+          "url": "https://n.news.naver.com/mnews/article/011/0002261736?sid=101"
+        }
+      ],
+      "pick": true
+    },
+    {
+      "id": "tmi-2012-01",
+      "year": 2012,
+      "focus": "",
+      "people": [],
       "text": "김수현은 서울숲에서 맨발로 배드민턴을 치는 모습이 목격되었다.",
       "tags": [
         "HOBBY",
@@ -376,24 +394,6 @@
           "label": "NEWS",
           "kind": "article",
           "url": "https://m.entertain.naver.com/home/article/015/0002691059"
-        }
-      ],
-      "pick": true
-    },
-    {
-      "id": "tmi-2012-01",
-      "year": 2012,
-      "focus": "",
-      "people": [],
-      "text": "김수현은 이상형으로 영국 배우 카야 스코델라리오를 언급한 바 있다. 이후 두 사람은 같은 패션 브랜드의 광고에 출연했다.",
-      "tags": [
-        "이상형"
-      ],
-      "links": [
-        {
-          "label": "NEWS",
-          "kind": "article",
-          "url": "https://n.news.naver.com/mnews/article/011/0002261736?sid=101"
         }
       ],
       "pick": true
