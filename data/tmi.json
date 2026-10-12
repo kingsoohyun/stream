@@ -353,6 +353,25 @@
       "pick": true
     },
     {
+      "id": "tmi-2012-01",
+      "year": 2012,
+      "focus": "",
+      "people": [],
+      "text": "김수현은 자전거를 잘 탄다.",
+      "tags": [
+        "HOBBY",
+        "Biking"
+      ],
+      "links": [
+        {
+          "label": "BEANPOLE",
+          "kind": "youtube",
+          "url": "https://www.youtube.com/watch?v=cGZyeL3MDh8"
+        }
+      ],
+      "pick": true
+    },
+    {
       "id": "quote-constitution-17-01",
       "year": 1987,
       "focus": "",
