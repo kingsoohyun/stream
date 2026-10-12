@@ -462,7 +462,9 @@
             }
 
             if (Array.isArray(item.tags) &&
-                item.tags.some(tag => tag.trim().toLowerCase() === 'fact check')) {
+                item.tags.some(tag =>
+                    ['fact check', 'privacy'].includes(tag.trim().toLowerCase())
+                )) {
                 text.classList.add('tmi-text-fact-check');
             }
 
