@@ -352,12 +352,12 @@
     <div class="tmi-filter-bar" id="tmi-filter-bar" aria-live="polite">
         <span class="tmi-filter-label" id="tmi-filter-label"></span>
         <button type="button" class="tmi-clear-filter" id="tmi-clear-filter">
-            전체 보기
+            View All
         </button>
     </div>
 
     <div class="tmi-list" id="tmi-list" aria-live="polite">
-        <div class="tmi-empty">불러오는 중...</div>
+        <div class="tmi-empty">Loading...</div>
     </div>
 </main>
 
@@ -420,7 +420,7 @@
 
         } catch (error) {
             console.error('TMI:', error);
-            showTmiMessage(container, 'TMI를 불러오지 못했습니다.');
+            showTmiMessage(container, 'Failed to load content.');
         }
     }
 
@@ -439,7 +439,7 @@
         container.replaceChildren();
 
         if (!items.length) {
-            showTmiMessage(container, '해당 태그의 기록이 없습니다.');
+            showTmiMessage(container, 'No items found for this tag.');
             return;
         }
 
@@ -503,7 +503,7 @@
                 anchor.target = '_blank';
                 anchor.rel = 'noopener noreferrer';
 
-                const label = link.label || link.kind || '관련 링크';
+                const label = link.label || link.kind || 'LINK';
                 anchor.textContent = label + ' ↗';
 
                 linkList.appendChild(anchor);
@@ -524,7 +524,7 @@
 
         const tagList = document.createElement('div');
         tagList.className = 'tmi-tags';
-        tagList.setAttribute('aria-label', '태그');
+        tagList.setAttribute('aria-label', 'tag');
 
         tags.forEach(tag => {
             if (typeof tag !== 'string' || !tag.trim()) {
@@ -539,7 +539,7 @@
                 'aria-pressed',
                 String(tmiState.activeTag === tag)
             );
-            button.setAttribute('aria-label', `태그 ${tag}로 필터링`);
+            button.setAttribute('aria-label', `Filter by tag ${tag}`);
 
             button.addEventListener('click', () => {
                 tmiState.activeTag =
@@ -569,7 +569,7 @@
 
         bar.classList.add('visible');
         label.textContent =
-            `태그: ${tmiState.activeTag} · ${resultCount}개 기록`;
+            `TAG: ${tmiState.activeTag} · ${resultCount}`;
 
         clearButton.onclick = () => {
             tmiState.activeTag = null;
