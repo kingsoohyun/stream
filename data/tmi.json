@@ -114,9 +114,14 @@
       ],
       "links": [
         {
-          "label": "NEWS",
+          "label": "2015",
           "kind": "article",
           "url": "https://m.entertain.naver.com/home/article/213/0000642733"
+        },
+        {
+          "label": "2023",
+          "kind": "article",
+          "url": "https://n.news.naver.com/mnews/article/468/0000940015?sid=101"
         }
       ],
       "pick": true
