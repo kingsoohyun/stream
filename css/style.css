@@ -955,7 +955,10 @@ footer {
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 630px) {
+    .brand img {
+        width: 150px;
+    }
 
     .site-nav {
         display: none;
