@@ -3,7 +3,7 @@
   "items": [
     {
       "id": "event-01",
-      "date": "2025.03.10",
+      "date": "2025.03.10 ~",
       "side": "left",
       "top": 20,
       "major": true,
@@ -27,7 +27,7 @@
     },
     {
       "id": "event-02",
-      "date": "2025.03.10",
+      "date": "2025.03.10 ~",
       "side": "right",
       "top": 220,
       "major": false,
@@ -159,7 +159,7 @@
     },
     {
       "id": "event-07",
-      "date": "2026.09",
+      "date": "2026.07 ~",
       "side": "left",
       "top": 1300,
       "major": true,
