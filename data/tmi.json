@@ -86,6 +86,25 @@
       "focus": "",
       "people": [
       ],
+      "text": "김수현은 2024 K-엑스포에서 '문체부장관상'을 수상했다.",
+      "tags": [
+        "AWARD", "HONOR"
+      ],
+      "links": [
+        {
+          "label": "수상기록",
+          "kind": "",
+          "url": "https://kingsoohyun.github.io/stream/records.html"
+        }
+      ],
+      "pick": true
+    },
+    {
+      "id": "tmi-2024-01",
+      "year": 2024,
+      "focus": "",
+      "people": [
+      ],
       "text": "김수현은 KCON LA에서 오늘의 추천 K-Pop으로 인피니트의 '파라다이스'를 소개했다.",
       "tags": [
         "MUSIC",
