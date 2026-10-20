@@ -110,6 +110,16 @@
     "value": "연합뉴스TV · 신새롬"
   },
   {
+    "type": "reporter",
+    "label": "시사저널 · 이석",
+    "value": "시사저널 · 이석"
+  },
+  {
+    "type": "reporter",
+    "label": "이데일리 · 김미영",
+    "value": "이데일리 · 김미영"
+  },
+  {
     "type": "media",
     "label": "티브이데일리",
     "value": "티브이데일리"
