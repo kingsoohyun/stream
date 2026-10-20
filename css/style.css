@@ -753,10 +753,10 @@ footer {
    ========================================================= */
 
 .random-message {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 12px 20px 0;
+   width: 100%;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 12px 20px 0;
 }
 
 .random-message-inner {
@@ -765,7 +765,7 @@ footer {
     gap: 8px;
     min-width: 0;
     padding: 9px 12px;
-    background: #E5ECEF;
+    background: #E9F0F2;
     color: #405C66;
     font-size: 11px;
     line-height: 1.5;
@@ -774,7 +774,7 @@ footer {
 
 .random-message-year {
     flex-shrink: 0;
-    color: #858b95;
+    color: #71858C;
     font-size: 10px;
     font-variant-numeric: tabular-nums;
 }
@@ -802,7 +802,7 @@ footer {
     border: 1px solid transparent;
     border-radius: 50%;
     background: transparent;
-    color: #858b95;
+    color: #71858C;
     cursor: pointer;
     transition:
             color .15s ease,
@@ -822,8 +822,8 @@ footer {
 }
 
 .random-message-refresh:hover {
-    background: rgba(128, 135, 145, .09);
-    color: #397a91;
+    background: rgba(64, 92, 102, .08);
+    color: #405C66;
 }
 
 .random-message-refresh:active {
@@ -833,7 +833,7 @@ footer {
 .random-message-tmi {
     flex: 0 0 auto;
     margin: 0 0 0 2px;
-    color: #858b95;
+    color: #71858C;
     font-size: 10px;
     text-decoration: none;
     white-space: nowrap;
@@ -842,14 +842,13 @@ footer {
 }
 
 .random-message-tmi:hover {
-    color: #4a78a8;
+    color: #405C66;
 }
 
 .random-message-year,
 .random-message-text {
-   transition: opacity 0.35s ease;
+    transition: opacity 0.35s ease;
 }
-
 
 .random-message-inner.is-changing .random-message-year,
 .random-message-inner.is-changing .random-message-text {
