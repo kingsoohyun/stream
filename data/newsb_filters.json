@@ -81,6 +81,11 @@
   },
   {
     "type": "reporter",
+    "label": "뉴스1 · 김학진",
+    "value": "뉴스1 · 김학진"
+  },
+  {
+    "type": "reporter",
     "label": "마이데일리 · 김지우",
     "value": "마이데일리 · 김지우"
   },
