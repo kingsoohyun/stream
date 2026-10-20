@@ -766,7 +766,9 @@ footer {
     min-width: 0;
     padding: 9px 12px;
     background: #edf4f5;
+    background: #D6E4E8;
     color: #354f59;
+    color: #405C66;
     font-size: 11px;
     line-height: 1.5;
     border-radius: 5px;
@@ -1282,13 +1284,13 @@ footer {
     }
 
     .random-message-inner {
-        background: #1b292e;
-        color: #a9cbd5;
+        background: #172B4D;
+        color: #ffffff;
     }
 
     .random-message-year,
     .random-message-refresh {
-        color: #8caab5;
+        color: #ffffff;
     }
 
     .random-message-refresh:hover {
