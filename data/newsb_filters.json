@@ -148,5 +148,10 @@
     "type": "media",
     "label": "동행미디어 시대",
     "value": "동행미디어 시대"
+  },
+  {
+    "type": "media",
+    "label": "YTN",
+    "value": "YTN"
   }
 ]
