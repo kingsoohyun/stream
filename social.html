@@ -1712,12 +1712,10 @@
                     .forEach(dayButton => dayButton.classList.remove("selected"));
                 button.classList.add("selected");
 
-                const isTouchDevice = window.matchMedia("(hover: none), (pointer: coarse)").matches;
-                if (isTouchDevice && previewDate === button.dataset.date && preview.classList.contains("open")) {
-                    closeDatePreview();
-                } else {
-                    openDatePreview(button.dataset.date, button);
-                }
+                // On iOS Safari, tapping a button may fire focus before click.
+                // Do not toggle the preview closed on the same tap; keep it open
+                // until the user taps outside or selects another date.
+                openDatePreview(button.dataset.date, button);
             });
         });
 
