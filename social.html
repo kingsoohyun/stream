@@ -37,7 +37,7 @@
         .social-page {
             max-width: 760px;
             margin: 0 auto;
-            padding: 28px 24px 10px;
+            padding: 32px 24px 16px;
         }
 
         /* =========================================================
@@ -53,18 +53,20 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 20px;
+            min-height: 34px;
+            margin-bottom: 24px;
         }
 
         .social-month-nav {
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 16px;
         }
 
         .social-month-button {
-            width: 28px;
-            height: 28px;
+            width: 32px;
+            height: 32px;
+            flex: 0 0 32px;
 
             display: flex;
             align-items: center;
@@ -73,10 +75,11 @@
             padding: 0;
 
             border: 0;
+            border: 1px solid transparent;
             border-radius: 50%;
 
             background: transparent;
-            color: #8b9098;
+            color: #858b95;
 
             font-size: 17px;
             line-height: 1;
@@ -90,37 +93,54 @@
         }
 
         .social-month-button:hover {
-            background: #f1f2f4;
-            color: #151922;
+            background: #f3f5f6;
+            border-color: #e9edef;
+            color: #27343a;
+        }
+
+        .social-month-button:active {
+            background: #e9eef0;
+        }
+
+        .social-month-button:focus-visible,
+        .social-today-button:focus-visible {
+            outline: 2px solid #9bb6bf;
+            outline-offset: 2px;
         }
 
         .social-month-title {
-            min-width: 150px;
+            min-width: 154px;
 
             margin: 0;
 
             text-align: center;
 
-            font-size: 22px;
-            line-height: 1.2;
+            font-size: 21px;
+            line-height: 1.25;
 
             font-weight: 600;
-            letter-spacing: -.035em;
+            letter-spacing: -.025em;
 
             color: #151922;
         }
 
         .social-today-button {
-            padding: 5px 9px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 7px 10px;
+            min-height: 28px;
 
-            border: 1px solid #e5e7eb;
-            border-radius: 6px;
+            border: 1px solid #e2e7e9;
+            border-radius: 7px;
 
             background: #fff;
-            color: #858b95;
+            color: #687780;
 
             font-size: 10px;
-            font-weight: 500;
+            font-weight: 600;
+            letter-spacing: .01em;
             line-height: 1;
 
             cursor: pointer;
@@ -132,9 +152,13 @@
         }
 
         .social-today-button:hover {
-            background: #f5f6f8;
-            border-color: #d5d9df;
-            color: #151922;
+            background: #f3f7f8;
+            border-color: #cbd8dc;
+            color: #354e57;
+        }
+
+        .social-today-button:active {
+            background: #eaf1f3;
         }
 
 
@@ -146,17 +170,17 @@
             display: grid;
             grid-template-columns: repeat(7, 1fr);
 
-            margin-bottom: 3px;
+            margin-bottom: 7px;
         }
 
         .social-weekday {
-            padding: 5px 0;
+            padding: 7px 0;
 
             text-align: center;
 
             font-size: 9px;
-            font-weight: 500;
-            letter-spacing: .03em;
+            font-weight: 600;
+            letter-spacing: .10em;
 
             color: #9a9fa7;
         }
@@ -170,23 +194,26 @@
             display: grid;
             grid-template-columns: repeat(7, 1fr);
 
-            row-gap: 2px;
+            row-gap: 4px;
         }
 
         .social-calendar-day {
             position: relative;
 
-            min-height: 58px;
+            min-height: 60px;
 
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
 
-            padding: 7px 4px 5px;
+            padding: 7px 4px 6px;
 
             border: 0;
+            border-radius: 10px;
             background: transparent;
+
+            transition: background .16s ease;
 
             color: #151922;
 
@@ -202,7 +229,12 @@
         }
 
         .social-calendar-day.has-posts:hover {
-            background: transparent;
+            background: #f8f0f2;
+        }
+
+        .social-calendar-day:focus-visible {
+            outline: 2px solid rgba(183, 101, 115, .55);
+            outline-offset: -2px;
         }
 
 
@@ -242,7 +274,7 @@
         .social-calendar-number {
             text-decoration: underline;
             text-decoration-thickness: 1px;
-            text-underline-offset: 8px;
+            text-underline-offset: 6px;
         }
 
 
@@ -268,7 +300,7 @@
             justify-content: center;
             gap: 3px;
 
-            margin-top: 5px;
+            margin-top: 6px;
         }
 
         .social-calendar-dot {
@@ -291,9 +323,7 @@
             color: #fff;
             font-weight: 600;
 
-            box-shadow:
-                    0 1px 3px
-                    rgba(120, 50, 65, .15);
+            box-shadow: 0 1px 2px rgba(120, 50, 65, .10);
         }
 
 
@@ -559,11 +589,11 @@
         @media (max-width: 600px) {
 
             .social-page {
-                padding: 20px 12px 10px;
+                padding: 22px 12px 12px;
             }
 
             .social-calendar-head {
-                margin-bottom: 17px;
+                margin-bottom: 18px;
             }
 
             .social-calendar-grid {
@@ -587,25 +617,25 @@
             }
 
             .social-month-button {
-                width: 27px;
-                height: 27px;
+                width: 29px;
+                height: 29px;
+                flex-basis: 29px;
 
                 font-size: 16px;
             }
 
             .social-today-button {
-                position: absolute;
                 right: 4px;
-                top: 50%;
-                transform: translateY(-50%);
-                padding: 7px 9px;
+                padding: 6px 8px;
+                min-height: 26px;
                 font-size: 9px;
             }
 
             .social-calendar-day {
                 min-height: 52px;
 
-                padding-top: 5px;
+                padding: 5px 2px 5px;
+                border-radius: 8px;
             }
 
             .social-calendar-number {
@@ -617,6 +647,10 @@
 
             .social-calendar-dots {
                 margin-top: 4px;
+            }
+
+            .social-calendar-day.has-posts:hover {
+                background: #f8f0f2;
             }
 
             .social-posts {
@@ -660,7 +694,7 @@
             box-sizing: border-box;
             padding: 12px;
             border: 1px solid #e5e7eb;
-            border-radius: 12px;
+            border-radius: 13px;
             background: #fff;
             color: #252932;
             box-shadow: 0 8px 28px rgba(20, 25, 35, .16);
@@ -825,6 +859,7 @@
 
             .social-month-button:hover {
                 background: #252930;
+                border-color: #30343b;
                 color: #eceef1;
             }
 
@@ -835,7 +870,7 @@
             .social-today-button {
                 background: #16191e;
                 border-color: #30343b;
-                color: #858b95;
+                color: #a7b7bd;
             }
 
             .social-today-button:hover {
@@ -851,6 +886,14 @@
             .social-calendar-day {
                 background: transparent;
                 color: #eceef1;
+            }
+
+            .social-calendar-day.has-posts:hover {
+                background: #292329;
+            }
+
+            .social-calendar-day:focus-visible {
+                outline-color: rgba(185, 107, 122, .7);
             }
 
             .social-calendar-day.empty {
