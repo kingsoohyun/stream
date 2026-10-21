@@ -128,7 +128,12 @@
       "tags": [
         "DRAMA"
       ],
-      "links": [],
+      "links": [
+        {
+          "label": "GOLD bubble",
+          "url": "https://store.dearu.com/GOLDMEDALIST/home/startalk/PRO1712649992t1goN/buying?lang=ko&currency=KRW"
+        }
+      ],
       "pick": true
     },
     {
