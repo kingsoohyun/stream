@@ -1298,6 +1298,11 @@ footer {
         color: #E6E6F0;
     }
 
+    .random-message-refresh:hover {
+        background: rgba(64, 92, 102, .08);
+        color: #A47FF1;
+    }
+
     .random-message-tmi {
         color: #E6E6F0;
     }
