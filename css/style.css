@@ -833,8 +833,8 @@ footer {
 .random-message-tmi {
     flex: 0 0 auto;
     margin: 0 0 0 2px;
-    color: #71858C;
-    font-size: 10px;
+    color: #0f1114;
+    font-size: 11px;
     text-decoration: none;
     white-space: nowrap;
     position: relative;
@@ -1292,5 +1292,9 @@ footer {
 
     .random-message-refresh:hover {
         color: #7eb2c4;
+    }
+
+    .random-message-tmi {
+        color: #ffffff;
     }
 }
