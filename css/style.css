@@ -1288,16 +1288,16 @@ footer {
     }
 
     .random-message-inner {
-        background: #172B4D;
-        color: #ffffff;
+        background: #10112F;
+        color: #E6E6F0;
     }
 
     .random-message-year,
     .random-message-refresh {
-        color: #ffffff;
+        color: #E6E6F0;
     }
 
     .random-message-tmi {
-        color: #ffffff;
+        color: #E6E6F0;
     }
 }
