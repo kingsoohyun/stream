@@ -1,7 +1,3 @@
-/* Soft Editorial palette
-   Light: page #EDF4F5 | surface #FFFFFF | text #263746
-   Accent: #405C66 | muted text #5F737C | border #DCE6E9
-*/
 * {
     box-sizing: border-box;
 }
@@ -15,8 +11,8 @@ html {
 body {
     min-height: 100vh;
     margin: 0;
-    background: #EDF4F5;
-    color: #263746;
+    background: #f7f8fa;
+    color: #151922;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", Arial, sans-serif;
     display: flex;
     flex-direction: column;
@@ -36,7 +32,7 @@ body {
     align-items: center;
     padding: 0 12px;
     background: #fff;
-    border-bottom: 1px solid #DCE6E9;
+    border-bottom: 1px solid #e8e9ed;
 }
 
 .brand {
@@ -58,7 +54,7 @@ body {
 .brand span {
     margin-top: 4px;
     margin-left: 2px;
-    color: #71858C;
+    color: #858b95;
     font-size: 11px;
     letter-spacing: -0.04em;
 }
@@ -71,9 +67,9 @@ body {
     display: inline-flex;
     align-items: center;
     padding: 8px 11px;
-    border: 1px solid #405C66;
+    border: 1px solid #c94c4c;
     border-radius: 7px;
-    background: #405C66;
+    background: #c94c4c;
     color: #fff;
     font-size: 10px;
     font-weight: 600;
@@ -85,8 +81,8 @@ body {
 }
 
 .header-action a:hover {
-    background: #314A53;
-    border-color: #314A53;
+    background: #b94a48;
+    border-color: #b94a48;
 }
 
 
@@ -119,7 +115,7 @@ main {
     align-items: center;
     gap: 14px;
     padding: 18px 20px;
-    border: 1px solid #DCE6E9;
+    border: 1px solid #e5e7eb;
     border-radius: 14px;
     background: #fff;
     box-shadow: 0 4px 16px rgba(20, 25, 35, .04);
@@ -163,7 +159,7 @@ main {
     max-width: 1280px;
     margin: 0 auto;
     padding: 24px 24px 10px;
-    color: #5F737C;
+    color: #888;
     font-size: 12px;
     line-height: 1.6;
     text-align: center;
@@ -233,7 +229,7 @@ main {
 .archive-section {
     margin-bottom: 16px;
     padding: 20px;
-    border: 1px solid #DCE6E9;
+    border: 1px solid #e5e7eb;
     border-radius: 14px;
     background: #fff;
 }
@@ -261,7 +257,7 @@ main > .archive-section:last-child {
 }
 
 .section-head span {
-    color: #5F737C;
+    color: #666c75;
     font-size: 12px;
 }
 
@@ -285,7 +281,7 @@ main > .archive-section:last-child {
 
 a:focus-visible,
 button:focus-visible {
-    outline: 3px solid #405C66;
+    outline: 3px solid #397a91;
     outline-offset: 3px;
 }
 
@@ -303,7 +299,7 @@ button:focus-visible {
    ========================================================= */
 
 .social-home-section {
-    border-left: 3px solid #D9B84A;
+    border-left: 3px solid #FFCC00;
 }
 
 .social-home-cards {
@@ -316,7 +312,7 @@ button:focus-visible {
     display: block;
     overflow: hidden;
     min-width: 0;
-    border: 1px solid #DCE6E9;
+    border: 1px solid #e8e9ed;
     border-radius: 9px;
     background: #fff;
     color: inherit;
@@ -328,7 +324,7 @@ button:focus-visible {
     width: 100%;
     aspect-ratio: 1 / 1.25;
     object-fit: cover;
-    background: #E4ECEF;
+    background: #dfe2e7;
 }
 
 .social-home-card-body {
@@ -338,7 +334,7 @@ button:focus-visible {
 .social-home-platform {
     display: block;
     overflow: hidden;
-    color: #5F737C;
+    color: #666c75;
     font-size: 9px;
     font-weight: 600;
     letter-spacing: .02em;
@@ -366,7 +362,7 @@ button:focus-visible {
 
 .card {
     overflow: hidden;
-    border: 1px solid #DCE6E9;
+    border: 1px solid #e8e9ed;
     border-radius: 10px;
     background: #fff;
     color: inherit;
@@ -378,7 +374,7 @@ button:focus-visible {
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
-    background: #E4ECEF;
+    background: #dfe2e7;
 }
 
 .card-body {
@@ -403,7 +399,7 @@ button:focus-visible {
 .meta {
     display: flex;
     justify-content: space-between;
-    color: #71858C;
+    color: #858b95;
     font-size: 10px;
 }
 
@@ -439,12 +435,12 @@ button:focus-visible {
     width: 28px;
     height: 28px;
     border-radius: 50%;
-    background: #DCE6E9;
+    background: #d9dce2;
 }
 
 .tweet-date {
     margin-left: auto;
-    color: #5F737C;
+    color: #666c75;
     font-size: 10px;
     white-space: nowrap;
 }
@@ -459,7 +455,7 @@ button:focus-visible {
 .tweet-stats {
     display: flex;
     justify-content: space-between;
-    color: #71858C;
+    color: #858b95;
     font-size: 10px;
 }
 
@@ -469,12 +465,12 @@ button:focus-visible {
    ========================================================= */
 
 .common-count {
-    color: #5F737C;
+    color: #666c75;
     font-size: 12px;
 }
 
 .common-count strong {
-    color: #263746;
+    color: #151922;
     display: inline-block;
     min-width: 5ch;
     text-align: left;
@@ -500,10 +496,10 @@ button:focus-visible {
     width: 24px;
     height: 24px;
     padding: 0;
-    border: 1px solid #DCE6E9;
+    border: 1px solid #d9dce1;
     border-radius: 50%;
     background: rgba(255, 255, 255, .92);
-    color: #71858C;
+    color: #858b95;
     font-family: Georgia, serif;
     font-size: 14px;
     font-style: italic;
@@ -520,7 +516,7 @@ button:focus-visible {
 .common-info-button:focus-visible {
     background: #f8f9fa;
     border-color: #cfd3d9;
-    color: #405C66;
+    color: #5f7f91;
     outline: none;
 }
 
@@ -533,10 +529,10 @@ button:focus-visible {
     max-width: min(280px, calc(100vw - 40px));
     box-sizing: border-box;
     padding: 8px 10px;
-    border: 1px solid #DCE6E9;
+    border: 1px solid #e1e3e7;
     border-radius: 7px;
     background: rgba(255, 255, 255, .96);
-    color: #5F737C;
+    color: #656b75;
     font-size: 10px;
     line-height: 1.6;
     text-align: left;
@@ -571,7 +567,7 @@ button:focus-visible {
 
 .note {
     margin: 13px 0 0;
-    color: #5F737C;
+    color: #777d87;
     font-size: 10px;
 }
 
@@ -584,11 +580,11 @@ footer {
     max-width: 1200px;
     margin: 32px auto 0;
     padding: 24px 20px 32px;
-    border-top: 1px solid #DCE6E9;
+    border-top: 1px solid #e5e7eb;
 }
 
 .footer-notice {
-    color: #5F737C;
+    color: #666c75;
     font-size: 11px;
     line-height: 1.7;
     text-align: center;
@@ -599,7 +595,7 @@ footer {
 }
 
 .footer-notice strong {
-    color: #5F737C;
+    color: #656b75;
     font-weight: 600;
     letter-spacing: -0.05em;
 }
@@ -621,10 +617,10 @@ footer {
     width: 56px;
     height: 56px;
 
-    border: 1px solid #DCE6E9;
+    border: 1px solid #e1e3e6;
     border-radius: 50%;
     background: rgba(255, 255, 255, .96);
-    color: #405C66;
+    color: #4a4d52;
 
     font-size: 30px;
     font-weight: 300;
@@ -661,7 +657,7 @@ footer {
 .privacy-rights-link {
     display: inline-block;
     margin-top: 4px;
-    color: #405C66;
+    color: #aa2828;
     font-size: 12px;
     line-height: 1.5;
     text-decoration: none;
@@ -681,7 +677,7 @@ footer {
     align-items: center;
     gap: 10px;
     margin-left: 12px;
-    color: #5F737C;
+    color: #666c75;
     font-size: 11px;
     font-weight: 500;
     letter-spacing: .04em;
@@ -694,16 +690,16 @@ footer {
 }
 
 .site-nav a:hover {
-    color: #263746;
+    color: #151922;
 }
 
 .site-nav a[aria-current="page"] {
-    color: #263746;
+    color: #151922;
     font-weight: 600;
 }
 
 .site-nav span {
-    color: #B5C4C9;
+    color: #d5d8dd;
 }
 
 
@@ -722,7 +718,7 @@ footer {
 .empty-quote blockquote {
     margin: 0;
     padding: 0;
-    color: #405C66;
+    color: #555;
     font-size: 15px;
     font-weight: 400;
     line-height: 1.9;
@@ -732,7 +728,7 @@ footer {
     content: "“";
     display: block;
     margin-bottom: 4px;
-    color: #9BAEB4;
+    color: #b8b8b8;
     font-family: Georgia, serif;
     font-size: 34px;
     line-height: 1;
@@ -741,14 +737,14 @@ footer {
 .empty-quote cite {
     display: block;
     margin-top: 16px;
-    color: #71858C;
+    color: #999;
     font-size: 11px;
     font-style: normal;
     line-height: 1.6;
 }
 
 .empty-quote cite strong {
-    color: #5F737C;
+    color: #777;
     font-weight: 500;
 }
 
@@ -769,7 +765,7 @@ footer {
     gap: 8px;
     min-width: 0;
     padding: 9px 12px;
-    background: #EDF4F5;
+    background: #E9F0F2;
     color: #405C66;
     font-size: 11px;
     line-height: 1.5;
@@ -1052,20 +1048,20 @@ footer {
 
     html {
         color-scheme: dark;
-        background: #11181C;
+        background: #0f1114;
     }
 
     body {
-        background: #11181C;
-        color: #EAF0F2;
+        background: #0f1114;
+        color: #eceef1;
     }
 
     /* ---------------------------------------------------------
        Header / Footer
        --------------------------------------------------------- */
     .site-header {
-        background: #151C20;
-        border-bottom-color: #34434B;
+        background: #121418;
+        border-bottom-color: #30353d;
     }
 
     .brand img {
@@ -1073,13 +1069,13 @@ footer {
     }
 
     .brand strong {
-        color: #EAF0F2;
+        color: #eceef1;
     }
 
     .brand span,
     .platform small,
     .section-head span {
-        color: #71858C;
+        color: #858b95;
     }
 
     .header-action a {
@@ -1087,11 +1083,11 @@ footer {
     }
 
     footer {
-        border-top-color: #34434B;
+        border-top-color: #30353d;
     }
 
     .footer-notice strong {
-        color: #B5C4C9;
+        color: #aab0b8;
     }
 
     /* ---------------------------------------------------------
@@ -1099,30 +1095,30 @@ footer {
        --------------------------------------------------------- */
     .platform,
     .archive-section {
-        background: #182126;
-        border-color: #34434B;
+        background: #16191e;
+        border-color: #30353d;
     }
 
     .platform:hover {
-        background: #202A30;
-        border-color: #3B4A53;
+        background: #1c2026;
+        border-color: #383d46;
     }
 
     /* ---------------------------------------------------------
        Cards
        --------------------------------------------------------- */
     .card {
-        background: #202A30;
-        border-color: #3B4A53;
+        background: #1c2026;
+        border-color: #383d46;
     }
 
     .card .title,
     .card .rank {
-        color: #EAF0F2;
+        color: #eceef1;
     }
 
     .card .meta {
-        color: #71858C;
+        color: #858b95;
     }
 
     /* ---------------------------------------------------------
@@ -1136,7 +1132,7 @@ footer {
     }
 
     .back-to-top:hover {
-        background: #202A30;
+        background: #1c2026;
     }
 
     /* ---------------------------------------------------------
@@ -1158,26 +1154,26 @@ footer {
        Social
        --------------------------------------------------------- */
     .social-card {
-        background: #202A30;
-        border-color: #3B4A53;
-        color: #EAF0F2;
+        background: #1c2026;
+        border-color: #383d46;
+        color: #eceef1;
     }
 
     .social-card:hover {
-        background: #202A30;
-        border-color: #3B4A53;
+        background: #20242a;
+        border-color: #383d46;
         box-shadow: 0 5px 16px rgba(0, 0, 0, .22);
     }
 
     .social-year-title,
     .social-day {
-        color: #EAF0F2;
+        color: #eceef1;
     }
 
     .social-month,
     .social-label,
     .social-arrow {
-        color: #71858C;
+        color: #858b95;
     }
 
     .social-info {
@@ -1185,36 +1181,36 @@ footer {
     }
 
     .social-account {
-        color: #B5C4C9;
+        color: #d5d8dd;
     }
 
     .social-card:hover .social-arrow {
-        color: #EAF0F2;
+        color: #eceef1;
     }
 
     /* ---------------------------------------------------------
        Social Home
        --------------------------------------------------------- */
     .social-home-card {
-        background: #182126;
-        border-color: #34434B;
-        color: #EAF0F2;
+        background: #16191e;
+        border-color: #30353d;
+        color: #eceef1;
     }
 
     .social-home-platform {
-        color: #71858C;
+        color: #858b95;
     }
 
     /* ---------------------------------------------------------
        Site Navigation
        --------------------------------------------------------- */
     .site-nav {
-        color: #71858C;
+        color: #858b95;
     }
 
     .site-nav a:hover,
     .site-nav a[aria-current="page"] {
-        color: #EAF0F2;
+        color: #eceef1;
     }
 
     .site-nav span {
@@ -1245,25 +1241,25 @@ footer {
        --------------------------------------------------------- */
     .common-count,
     .common-info {
-        color: #71858C;
+        color: #858b95;
     }
 
     .common-count strong {
-        color: #EAF0F2;
+        color: #eceef1;
     }
 
     .common-info-button {
         background: rgba(22, 25, 30, .94);
         border-color: #353a42;
-        color: #71858C;
+        color: #858b95;
         box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
     }
 
     .common-info-button:hover,
     .common-info-button:focus-visible {
-        background: #202A30;
+        background: #1c2026;
         border-color: #4a5059;
-        color: #9CC2CE;
+        color: #6fa1b5;
     }
 
     .common-info-tooltip {
@@ -1281,11 +1277,11 @@ footer {
     .records .icon,
     .love-sh .icon,
     .privacy .icon {
-        background: #202A30;
+        background: #20242a;
     }
 
     .random-message-inner {
-        background: #263746;
+        background: #172B4D;
         color: #ffffff;
     }
 
@@ -1295,6 +1291,6 @@ footer {
     }
 
     .random-message-refresh:hover {
-        color: #B5D0D8;
+        color: #7eb2c4;
     }
 }
