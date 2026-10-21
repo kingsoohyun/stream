@@ -267,6 +267,10 @@ main > .archive-section:last-child {
     text-decoration: none;
 }
 
+.section-head a:hover {
+    color: #44A162;
+}
+
 .sr-only {
     position: absolute;
     width: 1px;
@@ -762,11 +766,13 @@ footer {
 .random-message-inner {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 3px;
     min-width: 0;
     padding: 9px 12px;
     background: #E9F0F2;
+    background: #9BBBEF;
     color: #405C66;
+    color: #ffffff;
     font-size: 11px;
     line-height: 1.5;
     border-radius: 5px;
@@ -774,8 +780,8 @@ footer {
 
 .random-message-year {
     flex-shrink: 0;
-    color: #71858C;
-    font-size: 10px;
+    color: #ffffff;
+    font-size: 11px;
     font-variant-numeric: tabular-nums;
 }
 
@@ -802,7 +808,7 @@ footer {
     border: 1px solid transparent;
     border-radius: 50%;
     background: transparent;
-    color: #0f1114;
+    color: #ffffff;
     cursor: pointer;
     transition:
             color .15s ease,
@@ -823,7 +829,8 @@ footer {
 
 .random-message-refresh:hover {
     background: rgba(64, 92, 102, .08);
-    color: #405C66;
+    color: #A47FF1;
+    color: #0f1114;
 }
 
 .random-message-refresh:active {
@@ -833,7 +840,7 @@ footer {
 .random-message-tmi {
     flex: 0 0 auto;
     margin: 0 0 0 2px;
-    color: #0f1114;
+    color: #ffffff;
     font-size: 11px;
     text-decoration: none;
     white-space: nowrap;
@@ -842,7 +849,7 @@ footer {
 }
 
 .random-message-tmi:hover {
-    color: #405C66;
+    color: #44A162;
 }
 
 .random-message-year,
@@ -944,7 +951,7 @@ footer {
     }
 
     .random-message-inner {
-        gap: 7px;
+        gap: 3px;
         font-size: 10px;
     }
 
@@ -1288,10 +1295,6 @@ footer {
     .random-message-year,
     .random-message-refresh {
         color: #ffffff;
-    }
-
-    .random-message-refresh:hover {
-        color: #7eb2c4;
     }
 
     .random-message-tmi {
