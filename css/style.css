@@ -1,3 +1,7 @@
+/* Soft Editorial palette
+   Light: page #EDF4F5 | surface #FFFFFF | text #263746
+   Accent: #405C66 | muted text #5F737C | border #DCE6E9
+*/
 * {
     box-sizing: border-box;
 }
@@ -11,8 +15,8 @@ html {
 body {
     min-height: 100vh;
     margin: 0;
-    background: #f7f8fa;
-    color: #151922;
+    background: #EDF4F5;
+    color: #263746;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", Arial, sans-serif;
     display: flex;
     flex-direction: column;
@@ -32,7 +36,7 @@ body {
     align-items: center;
     padding: 0 12px;
     background: #fff;
-    border-bottom: 1px solid #e8e9ed;
+    border-bottom: 1px solid #DCE6E9;
 }
 
 .brand {
@@ -54,7 +58,7 @@ body {
 .brand span {
     margin-top: 4px;
     margin-left: 2px;
-    color: #858b95;
+    color: #71858C;
     font-size: 11px;
     letter-spacing: -0.04em;
 }
@@ -67,9 +71,9 @@ body {
     display: inline-flex;
     align-items: center;
     padding: 8px 11px;
-    border: 1px solid #c94c4c;
+    border: 1px solid #405C66;
     border-radius: 7px;
-    background: #c94c4c;
+    background: #405C66;
     color: #fff;
     font-size: 10px;
     font-weight: 600;
@@ -81,8 +85,8 @@ body {
 }
 
 .header-action a:hover {
-    background: #b94a48;
-    border-color: #b94a48;
+    background: #314A53;
+    border-color: #314A53;
 }
 
 
@@ -115,7 +119,7 @@ main {
     align-items: center;
     gap: 14px;
     padding: 18px 20px;
-    border: 1px solid #e5e7eb;
+    border: 1px solid #DCE6E9;
     border-radius: 14px;
     background: #fff;
     box-shadow: 0 4px 16px rgba(20, 25, 35, .04);
@@ -159,7 +163,7 @@ main {
     max-width: 1280px;
     margin: 0 auto;
     padding: 24px 24px 10px;
-    color: #888;
+    color: #5F737C;
     font-size: 12px;
     line-height: 1.6;
     text-align: center;
@@ -229,7 +233,7 @@ main {
 .archive-section {
     margin-bottom: 16px;
     padding: 20px;
-    border: 1px solid #e5e7eb;
+    border: 1px solid #DCE6E9;
     border-radius: 14px;
     background: #fff;
 }
@@ -257,7 +261,7 @@ main > .archive-section:last-child {
 }
 
 .section-head span {
-    color: #666c75;
+    color: #5F737C;
     font-size: 12px;
 }
 
@@ -281,7 +285,7 @@ main > .archive-section:last-child {
 
 a:focus-visible,
 button:focus-visible {
-    outline: 3px solid #397a91;
+    outline: 3px solid #405C66;
     outline-offset: 3px;
 }
 
@@ -299,7 +303,7 @@ button:focus-visible {
    ========================================================= */
 
 .social-home-section {
-    border-left: 3px solid #FFCC00;
+    border-left: 3px solid #D9B84A;
 }
 
 .social-home-cards {
@@ -312,7 +316,7 @@ button:focus-visible {
     display: block;
     overflow: hidden;
     min-width: 0;
-    border: 1px solid #e8e9ed;
+    border: 1px solid #DCE6E9;
     border-radius: 9px;
     background: #fff;
     color: inherit;
@@ -324,7 +328,7 @@ button:focus-visible {
     width: 100%;
     aspect-ratio: 1 / 1.25;
     object-fit: cover;
-    background: #dfe2e7;
+    background: #E4ECEF;
 }
 
 .social-home-card-body {
@@ -334,7 +338,7 @@ button:focus-visible {
 .social-home-platform {
     display: block;
     overflow: hidden;
-    color: #666c75;
+    color: #5F737C;
     font-size: 9px;
     font-weight: 600;
     letter-spacing: .02em;
@@ -362,7 +366,7 @@ button:focus-visible {
 
 .card {
     overflow: hidden;
-    border: 1px solid #e8e9ed;
+    border: 1px solid #DCE6E9;
     border-radius: 10px;
     background: #fff;
     color: inherit;
@@ -374,7 +378,7 @@ button:focus-visible {
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
-    background: #dfe2e7;
+    background: #E4ECEF;
 }
 
 .card-body {
@@ -399,7 +403,7 @@ button:focus-visible {
 .meta {
     display: flex;
     justify-content: space-between;
-    color: #858b95;
+    color: #71858C;
     font-size: 10px;
 }
 
@@ -435,12 +439,12 @@ button:focus-visible {
     width: 28px;
     height: 28px;
     border-radius: 50%;
-    background: #d9dce2;
+    background: #DCE6E9;
 }
 
 .tweet-date {
     margin-left: auto;
-    color: #666c75;
+    color: #5F737C;
     font-size: 10px;
     white-space: nowrap;
 }
@@ -455,7 +459,7 @@ button:focus-visible {
 .tweet-stats {
     display: flex;
     justify-content: space-between;
-    color: #858b95;
+    color: #71858C;
     font-size: 10px;
 }
 
@@ -465,12 +469,12 @@ button:focus-visible {
    ========================================================= */
 
 .common-count {
-    color: #666c75;
+    color: #5F737C;
     font-size: 12px;
 }
 
 .common-count strong {
-    color: #151922;
+    color: #263746;
     display: inline-block;
     min-width: 5ch;
     text-align: left;
@@ -496,10 +500,10 @@ button:focus-visible {
     width: 24px;
     height: 24px;
     padding: 0;
-    border: 1px solid #d9dce1;
+    border: 1px solid #DCE6E9;
     border-radius: 50%;
     background: rgba(255, 255, 255, .92);
-    color: #858b95;
+    color: #71858C;
     font-family: Georgia, serif;
     font-size: 14px;
     font-style: italic;
@@ -516,7 +520,7 @@ button:focus-visible {
 .common-info-button:focus-visible {
     background: #f8f9fa;
     border-color: #cfd3d9;
-    color: #5f7f91;
+    color: #405C66;
     outline: none;
 }
 
@@ -529,10 +533,10 @@ button:focus-visible {
     max-width: min(280px, calc(100vw - 40px));
     box-sizing: border-box;
     padding: 8px 10px;
-    border: 1px solid #e1e3e7;
+    border: 1px solid #DCE6E9;
     border-radius: 7px;
     background: rgba(255, 255, 255, .96);
-    color: #656b75;
+    color: #5F737C;
     font-size: 10px;
     line-height: 1.6;
     text-align: left;
@@ -567,7 +571,7 @@ button:focus-visible {
 
 .note {
     margin: 13px 0 0;
-    color: #777d87;
+    color: #5F737C;
     font-size: 10px;
 }
 
@@ -580,11 +584,11 @@ footer {
     max-width: 1200px;
     margin: 32px auto 0;
     padding: 24px 20px 32px;
-    border-top: 1px solid #e5e7eb;
+    border-top: 1px solid #DCE6E9;
 }
 
 .footer-notice {
-    color: #666c75;
+    color: #5F737C;
     font-size: 11px;
     line-height: 1.7;
     text-align: center;
@@ -595,7 +599,7 @@ footer {
 }
 
 .footer-notice strong {
-    color: #656b75;
+    color: #5F737C;
     font-weight: 600;
     letter-spacing: -0.05em;
 }
@@ -617,10 +621,10 @@ footer {
     width: 56px;
     height: 56px;
 
-    border: 1px solid #e1e3e6;
+    border: 1px solid #DCE6E9;
     border-radius: 50%;
     background: rgba(255, 255, 255, .96);
-    color: #4a4d52;
+    color: #405C66;
 
     font-size: 30px;
     font-weight: 300;
@@ -657,7 +661,7 @@ footer {
 .privacy-rights-link {
     display: inline-block;
     margin-top: 4px;
-    color: #aa2828;
+    color: #405C66;
     font-size: 12px;
     line-height: 1.5;
     text-decoration: none;
@@ -677,7 +681,7 @@ footer {
     align-items: center;
     gap: 10px;
     margin-left: 12px;
-    color: #666c75;
+    color: #5F737C;
     font-size: 11px;
     font-weight: 500;
     letter-spacing: .04em;
@@ -690,16 +694,16 @@ footer {
 }
 
 .site-nav a:hover {
-    color: #151922;
+    color: #263746;
 }
 
 .site-nav a[aria-current="page"] {
-    color: #151922;
+    color: #263746;
     font-weight: 600;
 }
 
 .site-nav span {
-    color: #d5d8dd;
+    color: #B5C4C9;
 }
 
 
@@ -718,7 +722,7 @@ footer {
 .empty-quote blockquote {
     margin: 0;
     padding: 0;
-    color: #555;
+    color: #405C66;
     font-size: 15px;
     font-weight: 400;
     line-height: 1.9;
@@ -728,7 +732,7 @@ footer {
     content: "“";
     display: block;
     margin-bottom: 4px;
-    color: #b8b8b8;
+    color: #9BAEB4;
     font-family: Georgia, serif;
     font-size: 34px;
     line-height: 1;
@@ -737,14 +741,14 @@ footer {
 .empty-quote cite {
     display: block;
     margin-top: 16px;
-    color: #999;
+    color: #71858C;
     font-size: 11px;
     font-style: normal;
     line-height: 1.6;
 }
 
 .empty-quote cite strong {
-    color: #777;
+    color: #5F737C;
     font-weight: 500;
 }
 
@@ -753,10 +757,10 @@ footer {
    ========================================================= */
 
 .random-message {
-   width: 100%;
-   max-width: 1200px;
-   margin: 0 auto;
-   padding: 12px 20px 0;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 20px 0;
 }
 
 .random-message-inner {
@@ -765,7 +769,7 @@ footer {
     gap: 8px;
     min-width: 0;
     padding: 9px 12px;
-    background: #E9F0F2;
+    background: #EDF4F5;
     color: #405C66;
     font-size: 11px;
     line-height: 1.5;
@@ -1048,20 +1052,20 @@ footer {
 
     html {
         color-scheme: dark;
-        background: #0f1114;
+        background: #11181C;
     }
 
     body {
-        background: #0f1114;
-        color: #eceef1;
+        background: #11181C;
+        color: #EAF0F2;
     }
 
     /* ---------------------------------------------------------
        Header / Footer
        --------------------------------------------------------- */
     .site-header {
-        background: #121418;
-        border-bottom-color: #30353d;
+        background: #151C20;
+        border-bottom-color: #34434B;
     }
 
     .brand img {
@@ -1069,13 +1073,13 @@ footer {
     }
 
     .brand strong {
-        color: #eceef1;
+        color: #EAF0F2;
     }
 
     .brand span,
     .platform small,
     .section-head span {
-        color: #858b95;
+        color: #71858C;
     }
 
     .header-action a {
@@ -1083,11 +1087,11 @@ footer {
     }
 
     footer {
-        border-top-color: #30353d;
+        border-top-color: #34434B;
     }
 
     .footer-notice strong {
-        color: #aab0b8;
+        color: #B5C4C9;
     }
 
     /* ---------------------------------------------------------
@@ -1095,30 +1099,30 @@ footer {
        --------------------------------------------------------- */
     .platform,
     .archive-section {
-        background: #16191e;
-        border-color: #30353d;
+        background: #182126;
+        border-color: #34434B;
     }
 
     .platform:hover {
-        background: #1c2026;
-        border-color: #383d46;
+        background: #202A30;
+        border-color: #3B4A53;
     }
 
     /* ---------------------------------------------------------
        Cards
        --------------------------------------------------------- */
     .card {
-        background: #1c2026;
-        border-color: #383d46;
+        background: #202A30;
+        border-color: #3B4A53;
     }
 
     .card .title,
     .card .rank {
-        color: #eceef1;
+        color: #EAF0F2;
     }
 
     .card .meta {
-        color: #858b95;
+        color: #71858C;
     }
 
     /* ---------------------------------------------------------
@@ -1132,7 +1136,7 @@ footer {
     }
 
     .back-to-top:hover {
-        background: #1c2026;
+        background: #202A30;
     }
 
     /* ---------------------------------------------------------
@@ -1154,26 +1158,26 @@ footer {
        Social
        --------------------------------------------------------- */
     .social-card {
-        background: #1c2026;
-        border-color: #383d46;
-        color: #eceef1;
+        background: #202A30;
+        border-color: #3B4A53;
+        color: #EAF0F2;
     }
 
     .social-card:hover {
-        background: #20242a;
-        border-color: #383d46;
+        background: #202A30;
+        border-color: #3B4A53;
         box-shadow: 0 5px 16px rgba(0, 0, 0, .22);
     }
 
     .social-year-title,
     .social-day {
-        color: #eceef1;
+        color: #EAF0F2;
     }
 
     .social-month,
     .social-label,
     .social-arrow {
-        color: #858b95;
+        color: #71858C;
     }
 
     .social-info {
@@ -1181,36 +1185,36 @@ footer {
     }
 
     .social-account {
-        color: #d5d8dd;
+        color: #B5C4C9;
     }
 
     .social-card:hover .social-arrow {
-        color: #eceef1;
+        color: #EAF0F2;
     }
 
     /* ---------------------------------------------------------
        Social Home
        --------------------------------------------------------- */
     .social-home-card {
-        background: #16191e;
-        border-color: #30353d;
-        color: #eceef1;
+        background: #182126;
+        border-color: #34434B;
+        color: #EAF0F2;
     }
 
     .social-home-platform {
-        color: #858b95;
+        color: #71858C;
     }
 
     /* ---------------------------------------------------------
        Site Navigation
        --------------------------------------------------------- */
     .site-nav {
-        color: #858b95;
+        color: #71858C;
     }
 
     .site-nav a:hover,
     .site-nav a[aria-current="page"] {
-        color: #eceef1;
+        color: #EAF0F2;
     }
 
     .site-nav span {
@@ -1241,25 +1245,25 @@ footer {
        --------------------------------------------------------- */
     .common-count,
     .common-info {
-        color: #858b95;
+        color: #71858C;
     }
 
     .common-count strong {
-        color: #eceef1;
+        color: #EAF0F2;
     }
 
     .common-info-button {
         background: rgba(22, 25, 30, .94);
         border-color: #353a42;
-        color: #858b95;
+        color: #71858C;
         box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
     }
 
     .common-info-button:hover,
     .common-info-button:focus-visible {
-        background: #1c2026;
+        background: #202A30;
         border-color: #4a5059;
-        color: #6fa1b5;
+        color: #9CC2CE;
     }
 
     .common-info-tooltip {
@@ -1277,11 +1281,11 @@ footer {
     .records .icon,
     .love-sh .icon,
     .privacy .icon {
-        background: #20242a;
+        background: #202A30;
     }
 
     .random-message-inner {
-        background: #172B4D;
+        background: #263746;
         color: #ffffff;
     }
 
@@ -1291,6 +1295,6 @@ footer {
     }
 
     .random-message-refresh:hover {
-        color: #7eb2c4;
+        color: #B5D0D8;
     }
 }
