@@ -638,6 +638,185 @@
            Dark Mode
            ========================================================= */
 
+
+        /* =========================================================
+           Calendar Date Preview
+           ========================================================= */
+
+        .social-calendar-day.has-posts {
+            z-index: 1;
+        }
+
+        .social-calendar-day.has-posts:hover,
+        .social-calendar-day.has-posts:focus-visible {
+            z-index: 20;
+        }
+
+        .social-date-preview {
+            position: fixed;
+            z-index: 1000;
+            width: 290px;
+            max-width: calc(100vw - 24px);
+            box-sizing: border-box;
+            padding: 12px;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            background: #fff;
+            color: #252932;
+            box-shadow: 0 8px 28px rgba(20, 25, 35, .16);
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transform: translateY(4px);
+            transition: opacity .14s ease, transform .14s ease, visibility .14s ease;
+        }
+
+        .social-date-preview.open {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            transform: translateY(0);
+        }
+
+        .social-preview-top,
+        .social-preview-controls {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .social-preview-top {
+            margin-bottom: 9px;
+        }
+
+        .social-preview-date {
+            font-size: 11px;
+            font-weight: 600;
+            color: #64717c;
+        }
+
+        .social-preview-count {
+            font-size: 10px;
+            color: #858b95;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .social-preview-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 11px;
+            min-width: 0;
+        }
+
+        .social-preview-thumbnail,
+        .social-preview-placeholder {
+            flex: 0 0 88px;
+            width: 88px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 7px;
+            background: #f0f2f4;
+        }
+
+        .social-preview-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #a1a6af;
+            font-size: 10px;
+        }
+
+        .social-preview-info {
+            min-width: 0;
+            flex: 1;
+        }
+
+        .social-preview-platform {
+            margin-bottom: 5px;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: .06em;
+            color: #b76573;
+        }
+
+        .social-preview-desc {
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 4;
+            font-size: 12px;
+            line-height: 1.5;
+            overflow-wrap: anywhere;
+            color: #353a44;
+        }
+
+        .social-preview-account {
+            margin-top: 6px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 10px;
+            color: #858b95;
+        }
+
+        .social-preview-controls {
+            margin-top: 10px;
+            padding-top: 9px;
+            border-top: 1px solid #eceef1;
+        }
+
+        .social-preview-nav {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .social-preview-button {
+            width: 27px;
+            height: 27px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #e5e7eb;
+            border-radius: 50%;
+            background: #fff;
+            color: #555d68;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .social-preview-button:disabled {
+            opacity: .3;
+            cursor: default;
+        }
+
+        .social-preview-open-link {
+            font-size: 10px;
+            font-weight: 600;
+            color: #647d8a;
+            text-decoration: none;
+        }
+
+        .social-preview-open-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .social-date-preview {
+                width: 300px;
+                max-width: calc(100vw - 24px);
+                padding: 11px;
+            }
+
+            .social-preview-thumbnail,
+            .social-preview-placeholder {
+                flex-basis: 82px;
+                width: 82px;
+                height: 94px;
+            }
+        }
+
         @media (prefers-color-scheme: dark) {
 
             .social-month-button {
@@ -749,6 +928,42 @@
             .social-post-card:hover
             .social-post-arrow {
                 color: #eceef1;
+            }
+
+            .social-date-preview {
+                background: #1c2026;
+                border-color: #30343b;
+                color: #eceef1;
+                box-shadow: 0 8px 28px rgba(0, 0, 0, .35);
+            }
+
+            .social-preview-date,
+            .social-preview-count,
+            .social-preview-account {
+                color: #9ba2ad;
+            }
+
+            .social-preview-desc {
+                color: #e0e3e8;
+            }
+
+            .social-preview-placeholder {
+                background: #292d34;
+                color: #858b95;
+            }
+
+            .social-preview-controls {
+                border-top-color: #30343b;
+            }
+
+            .social-preview-button {
+                background: #20242a;
+                border-color: #383d46;
+                color: #e0e3e8;
+            }
+
+            .social-preview-open-link {
+                color: #9cb8c5;
             }
 
         }
@@ -1282,10 +1497,12 @@
 
                 </div>
 
-
                 <div
-                    class="social-posts"
-                    id="social-posts"
+                    class="social-date-preview"
+                    id="social-date-preview"
+                    role="dialog"
+                    aria-label="Social post preview"
+                    aria-live="polite"
                 ></div>
 
 
@@ -1362,57 +1579,203 @@
         );
 
         /* =====================================================
-           Date Selection
+           Date Preview Interaction
            ===================================================== */
 
-        document
-            .querySelectorAll(
-                ".social-calendar-day.has-posts"
-            )
-            .forEach(button => {
+        const preview = document.getElementById("social-date-preview");
+        const dateButtons = document.querySelectorAll(".social-calendar-day.has-posts");
+        let previewDate = "";
+        let previewIndex = 0;
+        let hidePreviewTimer = null;
 
-                button.addEventListener(
-                    "click",
-                    () => {
+        function openDatePreview(dateKey, button, index = 0) {
+            const posts = dateGroups[dateKey] || [];
+            if (!posts.length || !preview) return;
 
-                        selectedDate =
-                            button.dataset.date;
+            previewDate = dateKey;
+            previewIndex = Math.max(0, Math.min(index, posts.length - 1));
+            renderDatePreview();
 
+            const rect = button
+                ? button.getBoundingClientRect()
+                : document.querySelector(`[data-date="${dateKey}"]`)?.getBoundingClientRect();
 
-                        renderCalendar();
+            if (rect) {
+                const popupWidth = Math.min(300, window.innerWidth - 24);
+                const popupHeight = preview.offsetHeight || 190;
+                let left = rect.left + rect.width / 2 - popupWidth / 2;
+                left = Math.max(12, Math.min(left, window.innerWidth - popupWidth - 12));
 
+                let top = rect.bottom + 8;
+                if (top + popupHeight > window.innerHeight - 8) {
+                    top = rect.top - popupHeight - 8;
+                }
+                top = Math.max(8, Math.min(top, window.innerHeight - popupHeight - 8));
 
-                        requestAnimationFrame(() => {
+                preview.style.left = `${left}px`;
+                preview.style.top = `${top}px`;
+            }
 
-                            const posts =
-                                document.getElementById(
-                                    "social-posts"
-                                );
+            preview.classList.add("open");
+        }
 
+        function closeDatePreview() {
+            if (!preview) return;
+            preview.classList.remove("open");
+        }
 
-                            if (posts) {
+        function schedulePreviewClose() {
+            clearTimeout(hidePreviewTimer);
+            hidePreviewTimer = setTimeout(() => {
+                if (!preview.matches(":hover") &&
+                    !document.querySelector(".social-calendar-day:focus")) {
+                    closeDatePreview();
+                }
+            }, 180);
+        }
 
-                                posts.scrollIntoView({
-                                    behavior: "smooth",
-                                    block: "start"
-                                });
+        function renderDatePreview() {
+            const posts = dateGroups[previewDate] || [];
+            const item = posts[previewIndex];
+            if (!item || !preview) return;
 
-                            }
+            const desc = item.desc || item.account || "Social post";
+            const account = item.account ? `@${item.account}` : "";
+            const platform = getPlatformName(item.platform);
 
-                        });
+            preview.innerHTML = `
+                <div class="social-preview-top">
+                    <span class="social-preview-date">${escapeHtml(formatLongDate(previewDate))}</span>
+                    <span class="social-preview-count">${previewIndex + 1} / ${posts.length}</span>
+                </div>
+                <div class="social-preview-content">
+                    ${item.thumbnail
+                ? `<img class="social-preview-thumbnail" src="${escapeHtml(item.thumbnail)}" alt="" loading="lazy">`
+                : `<div class="social-preview-placeholder">No image</div>`}
+                    <div class="social-preview-info">
+                        <div class="social-preview-platform">${escapeHtml(platform)}</div>
+                        <div class="social-preview-desc">${escapeHtml(desc)}</div>
+                        ${account ? `<div class="social-preview-account">${escapeHtml(account)}</div>` : ""}
+                    </div>
+                </div>
+                <div class="social-preview-controls">
+                    <div class="social-preview-nav">
+                        <button type="button" class="social-preview-button" data-preview-prev aria-label="Previous post" ${previewIndex === 0 ? "disabled" : ""}>‹</button>
+                        <button type="button" class="social-preview-button" data-preview-next aria-label="Next post" ${previewIndex === posts.length - 1 ? "disabled" : ""}>›</button>
+                    </div>
+                    <a class="social-preview-open-link" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">Open post ↗</a>
+                </div>
+            `;
 
-                    }
-                );
-
+            preview.querySelector("[data-preview-prev]")?.addEventListener("click", event => {
+                event.stopPropagation();
+                if (previewIndex > 0) {
+                    previewIndex--;
+                    renderDatePreview();
+                    repositionPreview();
+                }
             });
 
+            preview.querySelector("[data-preview-next]")?.addEventListener("click", event => {
+                event.stopPropagation();
+                if (previewIndex < posts.length - 1) {
+                    previewIndex++;
+                    renderDatePreview();
+                    repositionPreview();
+                }
+            });
+        }
 
-        renderSelectedPosts(
-            dateGroups[selectedDate] || []
-        );
+        function repositionPreview() {
+            const button = document.querySelector(`.social-calendar-day[data-date="${previewDate}"]`);
+            if (button) openDatePreview(previewDate, button, previewIndex);
+        }
 
+        dateButtons.forEach(button => {
+            button.addEventListener("mouseenter", () => {
+                clearTimeout(hidePreviewTimer);
+                openDatePreview(button.dataset.date, button);
+            });
+
+            button.addEventListener("mouseleave", schedulePreviewClose);
+
+            button.addEventListener("focus", () => {
+                openDatePreview(button.dataset.date, button);
+            });
+
+            button.addEventListener("click", event => {
+                event.preventDefault();
+                clearTimeout(hidePreviewTimer);
+
+                selectedDate = button.dataset.date;
+                document.querySelectorAll(".social-calendar-day.selected")
+                    .forEach(dayButton => dayButton.classList.remove("selected"));
+                button.classList.add("selected");
+
+                const isTouchDevice = window.matchMedia("(hover: none), (pointer: coarse)").matches;
+                if (isTouchDevice && previewDate === button.dataset.date && preview.classList.contains("open")) {
+                    closeDatePreview();
+                } else {
+                    openDatePreview(button.dataset.date, button);
+                }
+            });
+        });
+
+        preview.addEventListener("mouseenter", () => clearTimeout(hidePreviewTimer));
+        preview.addEventListener("mouseleave", schedulePreviewClose);
+
+        /* Touch swipe between posts inside the preview */
+        let previewTouchStartX = 0;
+        let previewTouchStartY = 0;
+
+        preview.addEventListener("touchstart", event => {
+            const touch = event.touches[0];
+            previewTouchStartX = touch.clientX;
+            previewTouchStartY = touch.clientY;
+        }, { passive: true });
+
+        preview.addEventListener("touchend", event => {
+            const touch = event.changedTouches[0];
+            const dx = touch.clientX - previewTouchStartX;
+            const dy = touch.clientY - previewTouchStartY;
+
+            if (Math.abs(dx) < 35 || Math.abs(dx) <= Math.abs(dy)) return;
+
+            const posts = dateGroups[previewDate] || [];
+            if (dx < 0 && previewIndex < posts.length - 1) {
+                previewIndex++;
+            } else if (dx > 0 && previewIndex > 0) {
+                previewIndex--;
+            } else {
+                return;
+            }
+
+            renderDatePreview();
+            repositionPreview();
+        }, { passive: true });
+
+        if (!window.socialPreviewOutsideHandlerAdded) {
+            window.socialPreviewOutsideHandlerAdded = true;
+            document.addEventListener("pointerdown", event => {
+                const currentPreview = document.getElementById("social-date-preview");
+                if (currentPreview &&
+                    !currentPreview.contains(event.target) &&
+                    !event.target.closest(".social-calendar-day.has-posts")) {
+                    currentPreview.classList.remove("open");
+                }
+            });
+        }
+
+        window.addEventListener("resize", () => {
+            if (preview.classList.contains("open")) repositionPreview();
+        });
+
+        window.addEventListener("scroll", () => {
+            if (preview.classList.contains("open")) closeDatePreview();
+        }, { passive: true });
+
+        /* Keep the calendar compact: previews replace the card list below. */
     }
-
 
     /* =========================================================
        Change Month
