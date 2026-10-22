@@ -2180,9 +2180,15 @@
       "city": "온라인",
       "venue": "네이버 NOW. 스튜디오",
       "title": "드라마 《사이코지만 괜찮아》 프로모션",
-      "lat": null,
-      "lng": null,
-      "links": []
+      "lat": 37.5665,
+      "lng": 126.978,
+      "links": [
+        {
+          "label": "tvN",
+          "kind": "youtube",
+          "url": "https://youtu.be/x-_jPuIAfS0"
+        }
+      ]
     },
     {
       "date": "2020.11.28",
@@ -3123,7 +3129,6 @@
           "kind": "article",
           "url": "https://philstarlife.com/celebrity/758982-tears-cheers-long-awaited-reunion-kim-soo-hyun"
         },
-
         {
           "label": "BENCH/",
           "kind": "x",
