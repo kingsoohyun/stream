@@ -9,7 +9,7 @@
       "major": true,
       "current": false,
       "title": "사건 발생: 허위 폭로 및 사생활 무단 유출",
-      "meta": "故김새론 유족·유튜버, 유튜브 방송과 세 차례 공개 기자회견",
+      "meta": "유족 측과 유튜버의 유튜브 방송 및 세 차례 공개 기자회견",
       "links": [
         {
           "label": "① 故김새론 유족, 유튜버 A 고소…\"김수현측 법적대응 검토\"",
@@ -33,7 +33,7 @@
       "major": false,
       "current": false,
       "title": "공식 반박 및 법적 대응",
-      "meta": "당사자 측 허위 주장 반박 공식 입장 발표",
+      "meta": "소속사 공식 입장 발표 및 법적 대응 예고·진행",
       "links": [
         {
           "label": "① 공식 입장(묶음)",
@@ -68,8 +68,8 @@
       "top": 410,
       "major": true,
       "current": false,
-      "title": "경찰·검찰 수사",
-      "meta": "관련 고소·고발 사건 수사 진행",
+      "title": "경찰·검찰 수사 진행",
+      "meta": "허위사실 유포 및 녹취 조작 의혹 관련 수사",
       "links": [
         {
           "label": "① 뉴욕총영사관 \"故김새론 제보자 피습 사건 없었다\"",
@@ -105,11 +105,11 @@
       "id": "event-04",
       "date": "2026.05.26",
       "side": "right",
-      "top": 620,
-      "major": false,
+      "top": 630,
+      "major": true,
       "current": false,
       "title": "피고인 김세의 구속",
-      "meta": "구속영장 발부 및 신병 확보",
+      "meta": "구속영장 발부로 신병 확보",
       "links": [
         {
           "label": "① 구속영장 청구",
@@ -129,11 +129,11 @@
       "id": "event-05",
       "date": "2026.06.03",
       "side": "left",
-      "top": 850,
+      "top": 860,
       "major": false,
       "current": false,
       "title": "김세의 검찰 송치",
-      "meta": "경찰 수사 후 검찰로 사건 송치",
+      "meta": "구속 상태로 검찰 송치",
       "links": [
         {
           "label": "경찰, '배우 김수현 명예훼손' 김세의 구속 송치",
@@ -145,11 +145,11 @@
       "id": "event-06",
       "date": "2026.06.23",
       "side": "right",
-      "top": 1090,
+      "top": 1100,
       "major": true,
       "current": false,
       "title": "김세의 구속 기소",
-      "meta": "서울중앙지검에서 구속 상태로 기소",
+      "meta": "서울중앙지검, 구속 상태로 기소",
       "links": [
         {
           "label": "검찰, '김수현 명예훼손 혐의' 가세연 김세의 구속 기소",
@@ -161,11 +161,11 @@
       "id": "event-07",
       "date": "2026.07 ~",
       "side": "left",
-      "top": 1300,
+      "top": 1320,
       "major": true,
-      "current": true,
+      "current": false,
       "title": "김세의 재판 진행 중",
-      "meta": "공판 절차 진행 · 현재 단계",
+      "meta": "공판 절차 진행 중",
       "links": [
         {
           "label": "① 공판 연기",
@@ -190,6 +190,22 @@
         {
           "label": "⑥ 김세의, 정신건강 이유로 보석 호소",
           "url": "https://n.news.naver.com/mnews/article/277/0005829162?sid=102"
+        }
+      ]
+    },
+    {
+      "id": "event-08",
+      "date": "2026.10.20",
+      "side": "right",
+      "top": 1540,
+      "major": true,
+      "current": true,
+      "title": "공범들 검찰 송치",
+      "meta": "김새론 모친·이모 사칭자·모친 측 변호인·권영찬 검찰 송치",
+      "links": [
+        {
+          "label": "경찰, 故김새론 모친·변호인 등 김수현 허위사실 유포 공범 무더기 송치",
+          "url": "https://m.entertain.naver.com/home/article/312/0000781602"
         }
       ]
     }

@@ -1094,6 +1094,9 @@
                     event.current ? 'current' : ''
                 ].filter(Boolean).join(' ');
 
+                const maxTop = Math.max(0, ...items.map(event => Number(event.top) || 0));
+                timeline.style.minHeight = `${maxTop + 250}px`;
+
                 const links = (event.links || []).map(link => `
                     <a href="${escapeHtml(link.url || '#')}"
                        ${link.url && link.url !== '#' ? 'target="_blank" rel="noopener noreferrer"' : 'onclick="return false;"'}>
