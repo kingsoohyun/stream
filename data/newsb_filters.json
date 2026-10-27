@@ -81,6 +81,11 @@
   },
   {
     "type": "reporter",
+    "label": "뉴스엔 · 김명미",
+    "value": "뉴스엔 · 김명미"
+  },
+  {
+    "type": "reporter",
     "label": "뉴스1 · 김학진",
     "value": "뉴스1 · 김학진"
   },
@@ -88,6 +93,21 @@
     "type": "reporter",
     "label": "마이데일리 · 김지우",
     "value": "마이데일리 · 김지우"
+  },
+  {
+    "type": "reporter",
+    "label": "스포츠서울 · 이승록",
+    "value": "스포츠서울 · 이승록"
+  },
+  {
+    "type": "reporter",
+    "label": "스포츠조선 · 이유나",
+    "value": "스포츠조선 · 이유나"
+  },
+  {
+    "type": "reporter",
+    "label": "엑스포츠뉴스 · 이창규",
+    "value": "엑스포츠뉴스 · 이창규"
   },
   {
     "type": "reporter",
