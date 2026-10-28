@@ -1257,7 +1257,21 @@
 
     newsSearchForm.addEventListener("submit", event => {
         event.preventDefault();
-        searchNews(newsSearchInput.value);
+
+        const query = newsSearchInput.value.trim();
+
+        // 검색어를 URL에 반영
+        const url = new URL(window.location.href);
+
+        if (query) {
+            url.searchParams.set("q", query);
+        } else {
+            url.searchParams.delete("q");
+        }
+
+        history.replaceState(null, "", url);
+
+        searchNews(query);
     });
 
     async function loadFilterShortcuts() {
@@ -2577,7 +2591,20 @@
     renderCalendar();
 
     loadFilterShortcuts();
-    loadNews();
+
+    async function initNewsPage() {
+        await loadNews();
+
+        const params = new URLSearchParams(window.location.search);
+        const query = params.get("q") || "";
+
+        if (query) {
+            newsSearchInput.value = query;
+            searchNews(query);
+        }
+    }
+
+    initNewsPage();
 
 </script>
 
