@@ -168,11 +168,11 @@
       "meta": "공판 절차 진행 중",
       "links": [
         {
-          "label": "① 공판 연기",
+          "label": "① 7/24 공판 연기",
           "url": "https://m.entertain.naver.com/home/article/108/0003450001"
         },
         {
-          "label": "② 공판 연기",
+          "label": "② 8/14 공판 연기",
           "url": "https://m.entertain.naver.com/home/article/440/0000041141"
         },
         {
@@ -180,7 +180,7 @@
           "url": "https://m.entertain.naver.com/home/article/108/0003466215"
         },
         {
-          "label": "④ 법원, 국민참여재판 배제",
+          "label": "④ 9/11 공판 준비 기일 (1차) 법원, 국민참여재판 배제",
           "url": "https://n.news.naver.com/mnews/article/001/0016305507?sid=102"
         },
         {
@@ -188,8 +188,36 @@
           "url": "https://n.news.naver.com/mnews/article/001/0016312304?sid=102"
         },
         {
-          "label": "⑥ 김세의, 정신건강 이유로 보석 호소",
+          "label": "⑥ 10/15 공판 준비 기일 (2차) 김세의, 정신건강 이유로 보석 호소",
           "url": "https://n.news.naver.com/mnews/article/277/0005829162?sid=102"
+        },
+        {
+          "label": "⑦ 10/15 공판 준비 기일 (2차) 김세의, 정신건강 이유로 보석 호소",
+          "url": "https://n.news.naver.com/mnews/article/277/0005829162?sid=102"
+        },
+        {
+          "label": "⑧ 10/15 공판 준비 기일 (2차) 김세의, 정신건강 이유로 보석 호소",
+          "url": "https://n.news.naver.com/mnews/article/277/0005829162?sid=102"
+        },
+        {
+          "label": "⑨ 10/15 공판 준비 기일 (2차) 김세의, 정신건강 이유로 보석 호소",
+          "url": "https://n.news.naver.com/mnews/article/277/0005829162?sid=102"
+        },
+        {
+          "label": "⑩ 10/15 공판 준비 기일 (3차)",
+          "url": "https://m.entertain.naver.com/home/article/108/0003482356"
+        },
+        {
+          "label": "⑪ 11/11 공판 기일 (1차)",
+          "url": ""
+        },
+        {
+          "label": "⑫ 11/13 공판 기일 (2차, 3차)",
+          "url": ""
+        },
+        {
+          "label": "⑬ 11/16 공판 기일 (4차)",
+          "url": ""
         }
       ]
     },
