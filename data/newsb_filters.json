@@ -96,6 +96,11 @@
   },
   {
     "type": "reporter",
+    "label": "마이데일리 · 서기찬",
+    "value": "마이데일리 · 서기찬"
+  },
+  {
+    "type": "reporter",
     "label": "스포츠서울 · 이승록",
     "value": "스포츠서울 · 이승록"
   },
