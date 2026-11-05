@@ -300,7 +300,7 @@ async function renderMap(events) {
 
             return count
                 ? tealScale(count)
-                : "#f1f2f4";
+                : null;
         });
 
 
