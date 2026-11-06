@@ -96,6 +96,11 @@
   },
   {
     "type": "reporter",
+    "label": "마이데일리 · 박서연",
+    "value": "마이데일리 · 박서연"
+  },
+  {
+    "type": "reporter",
     "label": "마이데일리 · 서기찬",
     "value": "마이데일리 · 서기찬"
   },
@@ -108,6 +113,11 @@
     "type": "reporter",
     "label": "스포츠조선 · 이유나",
     "value": "스포츠조선 · 이유나"
+  },
+  {
+    "type": "reporter",
+    "label": "스포츠조선 · 이지현",
+    "value": "스포츠조선 · 이지현"
   },
   {
     "type": "reporter",
