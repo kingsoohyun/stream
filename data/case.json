@@ -163,7 +163,7 @@
       "side": "left",
       "top": 1320,
       "major": true,
-      "current": false,
+      "current": true,
       "title": "김세의 재판 진행 중",
       "meta": "공판 절차 진행 중",
       "links": [
@@ -231,7 +231,7 @@
       "side": "right",
       "top": 1540,
       "major": true,
-      "current": true,
+      "current": false,
       "title": "경찰, 공범들 무더기 송치",
       "meta": "故김새론 엄마·이모·변호사도 공범",
       "links": [
