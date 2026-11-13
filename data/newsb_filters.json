@@ -198,5 +198,10 @@
     "type": "media",
     "label": "YTN",
     "value": "YTN"
+  },
+  {
+    "type": "media",
+    "label": "일간스포츠",
+    "value": "일간스포츠"
   }
 ]
