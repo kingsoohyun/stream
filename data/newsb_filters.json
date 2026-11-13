@@ -101,11 +101,6 @@
   },
   {
     "type": "reporter",
-    "label": "마이데일리 · 서기찬",
-    "value": "마이데일리 · 서기찬"
-  },
-  {
-    "type": "reporter",
     "label": "스포츠서울 · 이승록",
     "value": "스포츠서울 · 이승록"
   },
@@ -113,11 +108,6 @@
     "type": "reporter",
     "label": "스포츠조선 · 이유나",
     "value": "스포츠조선 · 이유나"
-  },
-  {
-    "type": "reporter",
-    "label": "스포츠조선 · 이지현",
-    "value": "스포츠조선 · 이지현"
   },
   {
     "type": "reporter",
@@ -133,6 +123,11 @@
     "type": "reporter",
     "label": "헤럴드경제 · 박영훈",
     "value": "헤럴드경제 · 박영훈"
+  },
+  {
+    "type": "reporter",
+    "label": "헤럴드경제 · 김성훈",
+    "value": "헤럴드경제 · 김성훈"
   },
   {
     "type": "reporter",
@@ -158,6 +153,26 @@
     "type": "reporter",
     "label": "티브이데일리 · 김지현",
     "value": "티브이데일리 · 김지현"
+  },
+  {
+    "type": "reporter",
+    "label": "마이데일리 · 서기찬",
+    "value": "마이데일리 · 서기찬"
+  },
+  {
+    "type": "reporter",
+    "label": "스포츠조선 · 이지현",
+    "value": "스포츠조선 · 이지현"
+  },
+  {
+    "type": "reporter",
+    "label": "엑스포츠뉴스 · 이창규",
+    "value": "엑스포츠뉴스 · 이창규"
+  },
+  {
+    "type": "reporter",
+    "label": "MK스포츠 · 진주희",
+    "value": "MK스포츠 · 진주희"
   },
   {
     "type": "media",
