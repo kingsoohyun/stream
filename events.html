@@ -289,10 +289,39 @@
             font-size: 16px;
         }
 
-        .events-timeline-head > span {
+        .events-timeline-controls {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .events-timeline-head > .events-timeline-controls > span {
+            display: flex;
+            align-items: center;
+            gap: 7px;
             color: #858b95;
             font-size: 11px;
-            margin-right: 8px;
+            white-space: nowrap;
+        }
+
+        .timeline-year-select {
+            min-width: 104px;
+            padding: 7px 30px 7px 10px;
+            border: 1px solid #e1e4e8;
+            border-radius: 7px;
+            background: #fff;
+            color: #454b54;
+            font: inherit;
+            font-size: 11px;
+            cursor: pointer;
+        }
+
+        .timeline-empty {
+            padding: 28px 0;
+            border-top: 1px solid #eee;
+            color: #999;
+            font-size: 12px;
+            text-align: center;
         }
 
 
@@ -568,6 +597,19 @@
 
         @media (max-width: 800px) {
 
+            .events-timeline-controls {
+                gap: 8px;
+            }
+
+            .events-timeline-head > .events-timeline-controls > span {
+                gap: 5px;
+            }
+
+            .timeline-year-select {
+                min-width: 88px;
+                padding: 7px 22px 7px 8px;
+            }
+
             .events-page {
                 padding: 20px 12px 0;
             }
@@ -700,6 +742,7 @@
 
             .events-map-section,
             .events-timeline-section,
+            .timeline-year-select,
             .global-data-link,
             .global-popularity-link {
                 background: #16191e;
@@ -716,6 +759,17 @@
             .global-data-arrow,
             .global-popularity-text small,
             .global-popularity-arrow {
+                color: #858b95;
+            }
+
+            .timeline-year-select {
+                background: #1b1f25;
+                border-color: #353a42;
+                color: #eceef1;
+            }
+
+            .timeline-empty {
+                border-color: #292d34;
                 color: #858b95;
             }
 
@@ -922,26 +976,9 @@
         <div class="events-timeline-head">
             <h2>ACTIVITY TIMELINE</h2>
 
-            <span>
-                <span class="common-info">
-                    <button
-                            type="button"
-                            class="common-info-button"
-                            aria-label="Activity records information"
-                            aria-describedby="activity-notice-tooltip"
-                    >i</button>
-
-                    <span
-                            class="common-info-tooltip left"
-                            id="activity-notice-tooltip"
-                            role="status"
-                    >Filming dates may differ from release dates.</span>
-<!--                    >실제 촬영일과 공개일에는 차이가 있을 수 있으며, 국가별 시차에 따라 날짜가 다르게 표시될 수 있습니다.</span>-->
-                </span>
-
-<!--                주요 활동 기록-->
-                Key Activities
-            </span>
+            <div class="events-timeline-controls">
+                <select id="timeline-year-select" class="timeline-year-select" aria-label="Select activity year"></select>
+            </div>
         </div>
 
         <div id="event-timeline"></div>
