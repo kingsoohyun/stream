@@ -3193,6 +3193,22 @@
       ]
     },
     {
+      "date": "2026.11.19",
+      "country": "🇯🇵 일본",
+      "city": "도쿄",
+      "venue": "THE STRINGS OMOTESANDOH",
+      "title": "Tokyo Beauty Week 2026",
+      "lat": 35.6762,
+      "lng": 139.6503,
+      "links": [
+        {
+          "label": "TBW",
+          "kind": "instagram",
+          "url": "https://www.instagram.com/tbw_official_jp/"
+        }
+      ]
+    },
+    {
       "date": "2026.12.05",
       "country": "🇹🇼 대만",
       "city": "가오슝",
