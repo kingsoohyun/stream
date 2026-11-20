@@ -544,7 +544,7 @@ function renderTimeline(events) {
     const years = [...new Set(
         events.map(event => String(event.date).substring(0, 4))
             .filter(year => /^\d{4}$/.test(year))
-    )].sort((a, b) => Number(b) - Number(a));
+    )].sort((a, b) => Number(a) - Number(b));
 
     const currentYear = String(new Date().getFullYear());
 
