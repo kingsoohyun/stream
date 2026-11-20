@@ -544,7 +544,7 @@ function renderTimeline(events) {
     const years = [...new Set(
         events.map(event => String(event.date).substring(0, 4))
             .filter(year => /^\d{4}$/.test(year))
-    )].sort((a, b) => Number(a) - Number(b));
+    )].sort((a, b) => Number(b) - Number(a));
 
     const currentYear = String(new Date().getFullYear());
 
@@ -570,7 +570,7 @@ function renderTimeline(events) {
         const timelineHtml = selectedYears.map(year => {
             const yearEvents = events
                 .filter(event => String(event.date).substring(0, 4) === year)
-                .sort((a, b) => String(b.date).localeCompare(String(a.date)));
+                .sort((a, b) => String(a.date).localeCompare(String(b.date)));
 
             if (!yearEvents.length) return "";
 
