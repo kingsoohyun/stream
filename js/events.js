@@ -300,7 +300,7 @@ async function renderMap(events) {
 
             return count
                 ? tealScale(count)
-                : "#f1f2f4";
+                : null;
         });
 
 
@@ -537,137 +537,123 @@ async function renderMap(events) {
 function renderTimeline(events) {
 
     const container = document.querySelector("#event-timeline");
+    const yearSelect = document.querySelector("#timeline-year-select");
 
-    if (!container) return;
+    if (!container || !yearSelect) return;
 
-    const years = {};
+    const years = [...new Set(
+        events.map(event => String(event.date).substring(0, 4))
+            .filter(year => /^\d{4}$/.test(year))
+    )].sort((a, b) => Number(b) - Number(a));
 
-    events.forEach(event => {
+    const currentYear = String(new Date().getFullYear());
 
-        const year = String(event.date).substring(0, 4);
+    // All을 첫 번째 옵션으로 두고, 실제 데이터가 있는 연도만 표시한다.
+    const options = [...new Set([currentYear, ...years])];
+    yearSelect.innerHTML = `
+        <option value="all">All</option>
+        ${options.map(year => `
+            <option value="${escapeHtml(year)}">${escapeHtml(year)}</option>
+        `).join("")}
+    `;
 
-        if (!years[year]) {
-            years[year] = [];
+    // 최초 진입은 현재 연도로 설정한다.
+    yearSelect.value = currentYear;
+
+    function renderSelectedYear() {
+
+        const selectedYear = yearSelect.value;
+        const selectedYears = selectedYear === "all"
+            ? years
+            : [selectedYear];
+
+        const timelineHtml = selectedYears.map(year => {
+            const yearEvents = events
+                .filter(event => String(event.date).substring(0, 4) === year)
+                .sort((a, b) => String(a.date).localeCompare(String(b.date)));
+            if (!yearEvents.length) return "";
+
+            return `
+                <section class="timeline-year">
+                    <div class="timeline-year-title">${escapeHtml(year)}</div>
+
+                    <div class="timeline-events">
+                        ${yearEvents.map(event => `
+                            <article class="timeline-event">
+                                <div class="timeline-main">
+                                    <span class="timeline-date" title="${escapeHtml(event.date)}">
+                                        <span class="date-full">${escapeHtml(event.date.slice(0, 7))}</span>
+                                        <span class="date-short">${escapeHtml(event.date.slice(0, 7))}</span>
+                                        <span class="date-mm">${escapeHtml(event.date.slice(5, 7))}</span>
+                                    </span>
+
+                                    <span class="timeline-location">
+                                        ${escapeHtml(event.country)}
+                                    </span>
+
+                                    <span class="timeline-title">
+                                        ${escapeHtml(event.title)}
+                                        ${
+                Array.isArray(event.links) && event.links.length
+                    ? `
+                                                    <span class="timeline-links">
+                                                        ${event.links.map(link => `
+                                                            <a
+                                                                href="${escapeHtml(link.url)}"
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                data-kind="${escapeHtml(link.kind || "") }"
+                                                            >
+                                                                ${escapeHtml(link.label)}
+                                                                ${link.kind ? `
+                                                                    <span class="timeline-link-tooltip">
+                                                                        ${escapeHtml({
+                        article: "News",
+                        instagram: "Instagram",
+                        youtube: "YouTube",
+                        x: "\uD835\uDD4F",
+                        official: "Official Site",
+                    }[link.kind] || link.kind)}
+                                                                    </span>
+                                                                ` : ""}
+                                                            </a>
+                                                        `).join("")}
+                                                    </span>
+                                                `
+                    : ""
+            }
+                                    </span>
+                                </div>
+
+                                ${event.venue ? `
+                                    <div class="timeline-venue">
+                                        <span></span>
+                                        <span></span>
+                                        <span>${escapeHtml(event.venue)}</span>
+                                    </div>
+                                ` : ""}
+                            </article>
+                        `).join("")}
+                    </div>
+                </section>
+            `;
+        }).join("");
+
+        if (!timelineHtml) {
+            container.innerHTML = `
+                <div class="timeline-empty">
+                    No activities recorded for ${escapeHtml(selectedYear)}.
+                </div>
+            `;
+            return;
         }
 
-        years[year].push(event);
-    });
+        container.innerHTML = timelineHtml;
+    }
 
-
-    container.innerHTML =
-        Object.keys(years)
-
-            .sort(
-                (a, b) =>
-                    Number(b) - Number(a)
-            )
-
-            .map(year => {
-
-                return `
-                    <section class="timeline-year">
-
-                        <div class="timeline-year-title">
-                            ${escapeHtml(year)}
-                        </div>
-
-                        <div class="timeline-events">
-
-                            ${years[year]
-                    .map(event => `
-
-                                    <article class="timeline-event">
-
-                                        <div class="timeline-main">
-
-                                            <span
-                                                class="timeline-date"
-                                                title="${escapeHtml(event.date)}"
-                                            >
-                                                <span class="date-full">${escapeHtml(event.date.slice(0, 7))}</span>
-                                                <span class="date-short">${escapeHtml(event.date.slice(0, 7))}</span>
-                                                <span class="date-mm">${escapeHtml(event.date.slice(5, 7))}</span>
-                                            </span>
-
-                                            <span class="timeline-location">
-                                                ${escapeHtml(event.country)}
-                                            </span>
-
-                                            <span class="timeline-title">
-
-                                                ${escapeHtml(event.title)}
-
-                                                ${
-                        Array.isArray(event.links) && event.links.length
-                            ? `
-                                                            <span class="timeline-links">
-
-                                                                ${event.links.map(link => `
-                                                                    <a
-                                                                        href="${escapeHtml(link.url)}"
-                                                                        target="_blank"
-                                                                        rel="noopener noreferrer"
-                                                                        data-kind="${escapeHtml(link.kind || "")}"
-                                                                    >
-                                                                        ${escapeHtml(link.label)}
-                                                                        ${link.kind ? `
-                                                                            <span class="timeline-link-tooltip">
-                                                                                ${escapeHtml({
-                                article: "News",
-                                instagram: "Instagram",
-                                youtube: "YouTube",
-                                x: "\uD835\uDD4F",
-                                official: "Official Site",
-                            }[link.kind] || link.kind)}
-                                                                            </span>
-                                                                        ` : ""}
-                                                                    </a>
-                                                                    `).join("")}
-
-                                                            </span>
-                                                        `
-                            : ""
-                    }
-
-                                            </span>
-
-                                        </div>
-
-
-                                        ${
-                        event.venue
-                            ? `
-
-                                                    <div class="timeline-venue">
-
-                                                        <span></span>
-                                                        <span></span>
-
-                                                        <span>
-                                                            ${escapeHtml(event.venue)}
-                                                        </span>
-
-                                                    </div>
-
-                                                `
-                            : ""
-                    }
-
-                                    </article>
-
-                                `)
-                    .join("")}
-
-                        </div>
-
-                    </section>
-                `;
-
-            })
-
-            .join("");
+    yearSelect.addEventListener("change", renderSelectedYear);
+    renderSelectedYear();
 }
-
 
 /* =========================================================
    HTML Escape
