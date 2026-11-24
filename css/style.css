@@ -770,9 +770,6 @@ footer {
     min-width: 0;
     padding: 9px 12px;
     background: #E9F0F2;
-    /*background: #9BBBEF;*/
-    /*color: #405C66;*/
-    /*color: #ffffff;*/
     color: #243B60;
     font-size: 11px;
     line-height: 1.5;
@@ -1274,7 +1271,7 @@ footer {
     }
 
     .random-message-inner {
-        background: #10112F;
+        background: #192536;
         color: #E6E6F0;
     }
 
