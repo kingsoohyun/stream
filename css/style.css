@@ -852,6 +852,10 @@ footer {
     transform: none;
 }
 
+.platform-nav {
+    display: none;
+}
+
 
 /* =========================================================
    Mobile
@@ -877,7 +881,6 @@ footer {
         padding: 6px 8px;
         font-size: 9px;
     }
-
 
     .platform-nav {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -943,6 +946,10 @@ footer {
 @media (max-width: 630px) {
     .site-nav {
         display: none;
+    }
+
+    .platform-nav {
+        display: grid;
     }
 
     .empty-quote {
