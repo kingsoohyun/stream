@@ -766,7 +766,7 @@ footer {
 .random-message-inner {
     display: flex;
     align-items: center;
-    gap: 3px;
+    gap: 8px;
     min-width: 0;
     padding: 9px 12px;
     background: #E9F0F2;
@@ -777,6 +777,28 @@ footer {
     font-size: 11px;
     line-height: 1.5;
     border-radius: 5px;
+}
+
+.random-message-content {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    gap: 3px;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    line-height: inherit;
+    text-align: left;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.random-message-content:active {
+    opacity: .72;
 }
 
 .random-message-year {
@@ -795,52 +817,12 @@ footer {
     display: flex;
     align-items: center;
     flex: 0 0 auto;
-    gap: 0;
-}
-
-.random-message-refresh {
-    display: grid;
-    flex-shrink: 0;
-    place-items: center;
-    width: 26px;
-    height: 26px;
-    margin: 0;
-    padding: 5px;
-    border: 1px solid transparent;
-    border-radius: 50%;
-    background: transparent;
-    color: #243B60;
-    cursor: pointer;
-    transition:
-            color .15s ease,
-            background-color .15s ease,
-            transform .2s ease;
-}
-
-.random-message-refresh svg {
-    display: block;
-    width: 14px;
-    height: 14px;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 1.6;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-}
-
-.random-message-refresh:hover {
-    background: rgba(64, 92, 102, .08);
-    color: #A47FF1;
-    color: #0f1114;
-}
-
-.random-message-refresh:active {
-    transform: rotate(-30deg);
 }
 
 .random-message-tmi {
     flex: 0 0 auto;
-    margin: 0 0 0 2px;
+    margin: 0 8px 0 2px;
+    padding: 4px 0 4px 4px;
     color: #243B60;
     font-size: 11px;
     text-decoration: none;
@@ -956,10 +938,6 @@ footer {
         font-size: 10px;
     }
 
-    .random-message-refresh {
-        width: 24px;
-        height: 24px;
-    }
 }
 
 @media (max-width: 630px) {
@@ -1293,14 +1271,12 @@ footer {
         color: #E6E6F0;
     }
 
-    .random-message-year,
-    .random-message-refresh {
+    .random-message-year {
         color: #E6E6F0;
     }
 
-    .random-message-refresh:hover {
-        background: rgba(64, 92, 102, .08);
-        color: #ffffff;
+    .random-message-content {
+        color: #E6E6F0;
     }
 
     .random-message-tmi {

@@ -133,9 +133,9 @@ async function loadRandomMessage() {
     const container = document.querySelector(".random-message-inner");
     const yearEl = document.getElementById("random-message-year");
     const textEl = document.getElementById("random-message-text");
-    const refreshBtn = document.getElementById("random-message-refresh");
+    const changeBtn = document.getElementById("random-message-change");
 
-    if (!container || !yearEl || !textEl || !refreshBtn) {
+    if (!container || !yearEl || !textEl || !changeBtn) {
         return;
     }
 
@@ -240,9 +240,10 @@ async function loadRandomMessage() {
             }, 5000);
         }
 
-        refreshBtn.addEventListener("click", () => {
+        changeBtn.addEventListener("click", () => {
             renderMessage(pickRandomIndex(), true);
 
+            // 사용자가 직접 변경하면 자동 변경 주기도 새로 시작합니다.
             stopAutoChange();
             startAutoChange();
         });
