@@ -171,6 +171,11 @@
   },
   {
     "type": "reporter",
+    "label": "파이낸셜뉴스 · 김수연",
+    "value": "파이낸셜뉴스 · 김수연"
+  },
+  {
+    "type": "reporter",
     "label": "MK스포츠 · 진주희",
     "value": "MK스포츠 · 진주희"
   },
