@@ -268,7 +268,7 @@ main > .archive-section:last-child {
 }
 
 .section-head a:hover {
-    color: #44A162;
+    color: #2563EB;
 }
 
 .sr-only {
@@ -769,8 +769,8 @@ footer {
     gap: 8px;
     min-width: 0;
     padding: 9px 12px;
-    background: #E9F0F2;
-    color: #243B60;
+    background: #E6E9EF;
+    color: #282C34;
     font-size: 11px;
     line-height: 1.5;
     border-radius: 5px;
@@ -800,7 +800,7 @@ footer {
 
 .random-message-year {
     flex-shrink: 0;
-    color: #243B60;
+    color: #282C34;
     font-size: 11px;
     font-variant-numeric: tabular-nums;
 }
@@ -820,7 +820,7 @@ footer {
     flex: 0 0 auto;
     margin: 0 8px 0 2px;
     padding: 4px 0 4px 4px;
-    color: #243B60;
+    color: #282C34;
     font-size: 11px;
     text-decoration: none;
     white-space: nowrap;
@@ -829,7 +829,7 @@ footer {
 }
 
 .random-message-tmi:hover {
-    color: #44A162;
+    color: #2563EB;
 }
 
 .random-message-year,
